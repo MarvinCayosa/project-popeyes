@@ -1,0 +1,30 @@
+body {
+    color: black;
+}
+
+.land-page-student {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.land-page-student-header {
+    color: aqua;
+}
+
+.land-page-student-sub-header {
+    color: brown;
+}
+
+.land-page-student-signIn-container {
+    width: 460px;
+    height: 724px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+.signIn-container-content {
+    text-align: center;
+}
