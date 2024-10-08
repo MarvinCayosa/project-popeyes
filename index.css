@@ -422,3 +422,48 @@ body {
     }
 
 }
+
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #FFFFFF;
+        background-color: #303030;
+    }
+
+    .land-page-student-header {
+        color: #C00411;
+    }
+
+    .land-page-student-signIn-container {
+        background-color: #303030;
+        box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.1-);
+    }
+
+    .signIn-container-content .link-container a{
+        color: #76AAFF;
+    }
+
+    .signIn-container-content .selector-container a {
+        color: #e0e0e0;
+    }
+
+    .email-textbox {
+        background-color: #2a2a2a;
+        border: 1px solid #555;
+        color: #e0e0e0;
+    }
+
+    .signIn-button {
+        background-color: #C00411;
+    }
+
+    .google-button {
+        background-color: #FBBC05;
+        color: #303030;
+    }
+
+    .footer {
+        color: #bbbbbb;
+    }
+}
