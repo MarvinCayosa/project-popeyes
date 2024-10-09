@@ -4,6 +4,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- automatic dark mode -->
+        <meta name="theme-color" content="#C00411">
+
         <title>UEnventory</title>
 
         <link rel="stylesheet" href="index.css">
@@ -15,22 +19,25 @@
     
     <body>
 
-        <!-- automatic dark mode -->
-        <meta name="theme-color" content="#C00411">
-
-        <!-- <div class="dark-mode-toggle">
-            <label class="switch">
-                <input type="checkbox" id="darkModeToggle">
-                <span class="slider round"></span>
-            </label>
-            <span class="dark-mode-text">Dark Mode</span>
-        </div> -->
-        
+        <div class="page-background-container">
+            <div class="background-container">
+                <img id="bg_light" src="assets/bg_image_l.svg">
+                <img id="bg_dark" src="assets/bg_image_dark.svg">
+            </div>
+        </div>
 
         <div class="land-page-student poppins-regular">
 
             <div class="land-page-student-header">
-                UEnventory
+
+                <div class="light-mode-logo">
+                    <img class="logo-light" src="assets/logo_light.png">
+                </div>
+
+                <div class="dark-mode-logo">
+                    <img class="logo-dark" src="assets/logo_dark.png">
+                </div>
+
             </div>
 
             <div class="land-page-student-sub-header">
@@ -61,7 +68,23 @@
                         <div class="password-container">
                             <label for="password" class="password">Password</label>
                             <input type="password" class="email-textbox" id="password" name="password" required>
+
+                            <!-- Checkbox to toggle visibility -->
+                            <label for="togglePassword" class="toggle-password-label">Show Password</label>
+                            <input type="checkbox" id="togglePassword" class="toggle-password-checkbox">
                         </div>
+
+                        <style>
+                            /* Hide the checkbox */
+                            .show-password {
+                                display: none;
+                            }
+                        
+                            /* CSS to change the input type based on the checkbox state */
+                            .show-password:checked + .password-container input[type="password"] {
+                                -webkit-text-security: none;
+                            }
+                        </style>
                         
 
                     </div>
