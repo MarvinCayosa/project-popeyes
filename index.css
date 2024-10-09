@@ -2,6 +2,12 @@ body {
     color: #454545;
 }
 
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 .land-page-student {
     display: flex;
     flex-direction: column;
@@ -10,23 +16,27 @@ body {
 }
 
 .land-page-student-header {
-    color: aqua;
+    color: #C00411;
+    font-size: 62px;
+    margin-top: 8px;
 }
 
 .land-page-student-sub-header {
     font-style: italic;
+    font-size: 12px;
 }
 
 .land-page-student-signIn-container {
-    width: 360px;
-    height: 624px;
-    margin-top: 100px;
+    width: 410px;
+    height: 649px;
+    margin-top: 36px;
     border-radius: 25px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
 }
 
 .signIn-container-content {
     display: flex;
+    padding: 20px;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
@@ -44,6 +54,7 @@ body {
     display: flex;
     justify-content: center;
     width: 80%;
+    font-size: 12px;
 }
 .signIn-container-content .selector-container a{
     text-decoration: none;
@@ -55,11 +66,16 @@ body {
 
 .signIn-signUp-container{
     width: 90%;
+    font-size: 12px;
 }
 
 .signIn-signUp-container .email-container{
     margin-bottom: 15px;
         
+}
+
+.signIn-signUp-container .password-container {
+    margin-bottom: 15px;
 }
 
 .signIn-signUp-container .email-container .ue-mail {
@@ -80,13 +96,39 @@ body {
     box-sizing: border-box;
 }
 
+.link-container {
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+
 .signIn-button {
     color: #FFFFFF;
+    margin-bottom: 15px;
     display: block;
-    width: 100%;
+    width: 80%;
     padding: 14px;
-    font-size: 18px;
+    font-size: 14px;
     background-color: #C00411;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.seperator {
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+.google-button {
+    color: #454545;
+    margin-bottom: 15px;
+    display: block;
+    width: 60%;
+    padding: 12px;
+    font-size: 12px;
+    background-color: #FBBC05;
     /* color: #fff; */
     border: none;
     border-radius: 4px;
@@ -95,17 +137,333 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.google-button {
-    color: #454545;
-    display: block;
-    width: 100%;
-    padding: 14px;
-    font-size: 18px;
-    background-color: #FBBC05;
-    /* color: #fff; */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
+.footer {
+    font-size: 10px;
+    margin-top: 98px;
+}
+
+/* responsive */
+
+@media (max-width: 1024px) {
+
+    .land-page-student poppins-regular{
+        margin-top: 65px;
+    }
+
+    .land-page-student {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    
+    .land-page-student-header {
+        color: #C00411;
+        font-size: 85px;
+        margin-top: 25px;
+    }
+    
+    .land-page-student-sub-header {
+        font-style: italic;
+        font-size: 16px;
+    }
+    
+    .land-page-student-signIn-container {
+        width: 550px;   
+        height: 733px;
+        margin-top: 36px;
+        border-radius: 25px;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    .signIn-container-content {
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    
+    .signIn-container-content .signIn-header-container {
+        font-size: 36px;
+        font-weight: bolder;
+        text-align: center;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+    
+    .signIn-container-content .selector-container {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        font-size: 12px;
+    }
+    .signIn-container-content .selector-container a{
+        text-decoration: none;
+        color: #454545;
+        padding: 0px 15px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+    
+    .signIn-signUp-container{
+        width: 90%;
+        font-size: 12px;
+    }
+    
+    .signIn-signUp-container .email-container{
+        margin-bottom: 15px;
+            
+    }
+    
+    .signIn-signUp-container .password-container {
+        margin-bottom: 15px;
+    }
+    
+    .signIn-signUp-container .email-container .ue-mail {
+        margin-bottom: 5px;
+    }
+    
+    .signIn-signUp-container label .ue-mail .password{
+        text-align: left;
+        font-size: 12px;
+    }
+    
+    
+    .email-textbox {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    .link-container {
+        font-size: 11px;
+        margin-bottom: 15px;
+    }
+    
+    .signIn-button {
+        color: #FFFFFF;
+        margin-bottom: 15px;
+        display: block;
+        width: 80%;
+        padding: 14px;
+        font-size: 14px;
+        background-color: #C00411;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+    
+    .seperator {
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+    
+    .google-button {
+        color: #454545;
+        margin-bottom: 15px;
+        display: block;
+        width: 60%;
+        padding: 12px;
+        font-size: 12px;
+        background-color: #FBBC05;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+    
+    .footer {
+        font-size: 10px;
+        margin-top: 170px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .land-page-student {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    
+    .land-page-student-header {
+        color: #C00411;
+        font-size: 50px;
+        margin-top: 25px;
+    }
+    
+    .land-page-student-sub-header {
+        font-style: italic;
+        font-size: 12px;
+    }
+    
+    .land-page-student-signIn-container {
+        width: 382px;   
+        height: 561px;
+        margin-top: 36px;
+        border-radius: 25px;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    .signIn-container-content {
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    
+    .signIn-container-content .signIn-header-container {
+        font-size: 36px;
+        font-weight: bolder;
+        text-align: center;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+    
+    .signIn-container-content .selector-container {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        font-size: 12px;
+    }
+    .signIn-container-content .selector-container a{
+        text-decoration: none;
+        color: #454545;
+        padding: 0px 15px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+    
+    .signIn-signUp-container{
+        width: 90%;
+        font-size: 12px;
+    }
+    
+    .signIn-signUp-container .email-container{
+        margin-bottom: 15px;
+            
+    }
+    
+    .signIn-signUp-container .password-container {
+        margin-bottom: 15px;
+    }
+    
+    .signIn-signUp-container .email-container .ue-mail {
+        margin-bottom: 5px;
+    }
+    
+    .signIn-signUp-container label .ue-mail .password{
+        text-align: left;
+        font-size: 12px;
+    }
+    
+    
+    .email-textbox {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    .link-container {
+        font-size: 11px;
+        margin-bottom: 15px;
+    }
+    
+    .signIn-button {
+        color: #FFFFFF;
+        margin-bottom: 15px;
+        display: block;
+        width: 80%;
+        padding: 14px;
+        font-size: 14px;
+        background-color: #C00411;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+    
+    .seperator {
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+    
+    .google-button {
+        color: #454545;
+        margin-bottom: 15px;
+        display: block;
+        width: 60%;
+        padding: 12px;
+        font-size: 12px;
+        background-color: #FBBC05;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+    
+    .footer {
+        font-size: 10px;
+        margin-top: 26px;
+    }
+
+}
+
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #FFFFFF;
+        background-color: #303030;
+    }
+
+    .land-page-student-header {
+        color: #C00411;
+    }
+
+    .land-page-student-signIn-container {
+        background-color: #303030;
+        box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.1-);
+    }
+
+    .signIn-container-content .link-container a{
+        color: #76AAFF;
+    }
+
+    .signIn-container-content .selector-container a {
+        color: #e0e0e0;
+    }
+
+    .email-textbox {
+        background-color: #2a2a2a;
+        border: 1px solid #555;
+        color: #e0e0e0;
+    }
+
+    .signIn-button {
+        background-color: #C00411;
+    }
+
+    .google-button {
+        background-color: #FBBC05;
+        color: #303030;
+    }
+
+    .footer {
+        color: #bbbbbb;
+    }
 }
