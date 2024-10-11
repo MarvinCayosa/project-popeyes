@@ -22,6 +22,20 @@ hr {
   z-index: 999; 
 }
 
+.logo{
+  width: 250px;
+  height:70px;
+  user-select: none;
+}
+
+
+.logo-light{
+  display: inline;
+}
+.logo-dark{
+  display: none;
+}
+
 /* Main White Part */
 .main_body {
   background-color: #FDFDFD;
@@ -132,11 +146,6 @@ hr {
 }
 
 /* Nav Bar */
-.logo{
-  width: 250px;
-  height:70px;
-  user-select: none;
-}
 
 .user_profile .icon_name {
   font-size: 12px;
@@ -223,3 +232,62 @@ hr {
   color: #474747
 }
 
+@media (prefers-color-scheme: dark) {
+  .main_body {
+    background-color: #202633;
+  }
+
+  .sidebar_custom, .frame_1 {
+    background-color: #1E1E1E;
+  }
+
+  .logo-light{
+    display: none;
+  }
+  .logo-dark{
+    display: block;
+  }
+
+  .sidebar .nav-link.active .icon {
+    color:  #202633;
+  }
+
+    
+  .search-bar{
+    color: #f6f6f6;
+    background-color: #202633;
+  }
+
+  .search-bar:focus {
+    border-color: var(--main-red); 
+    border-width: 2px;
+    box-shadow: 0 0 0px ; 
+    color: #f6f6f6;
+    background-color: #202633;
+  }
+  .search-btn{
+    
+    background-color: #202c48;
+  }
+
+  .search-btn:hover {
+    background-color: #4285F4;
+  }
+  .search-btn:hover .icon-search{
+    color: #f6f6f6;
+  }
+  
+  .icon-search{
+    color: #f6f6f6;
+  }
+  
+  .search-form{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: #474747
+  }
+  
+
+}
