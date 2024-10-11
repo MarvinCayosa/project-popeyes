@@ -50,7 +50,9 @@
           <hr />
           <!--Navigation Icons-->
           <ul class="nav nav-pills flex-column d-flex align-items-center">
-            <li class="nav-item d-flex justify-content-center icon-container">
+            <li
+              class="nav-item  d-flex justify-content-center icon-container"
+            >
               <a href="home.html">
                 <svg class="icon" fill="currentColor">
                   <use xlink:href="icons.svg#icon-home"></use>
@@ -58,9 +60,7 @@
               </a>
               <span class="icon_name">Home</span>
             </li>
-            <li
-              class="nav-item nav-link active d-flex justify-content-center icon-container"
-            >
+            <li class="nav-item d-flex nav-link active justify-content-center icon-container">
               <a href="inbox.html">
                 <svg class="icon" fill="currentColor">
                   <use xlink:href="icons.svg#icon-inbox"></use>
@@ -83,6 +83,17 @@
               <svg class="icon" fill="currentColor">
                 <use xlink:href="icons.svg#icon-archive"></use>
               </svg>
+            </li>
+            <!-- Expand/Collapse Button -->
+            <li class="nav-item d-flex justify-content-center icon-container">
+              <button class="btn" id="toggleSidebar">
+                <svg class="icon" fill="currentColor">
+                  <use
+                    xlink:href="icons.svg#icon-right"
+                    id="sidebarToggleIcon"
+                  ></use>
+                </svg>
+              </button>
             </li>
           </ul>
 
@@ -144,5 +155,28 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const toggleButton = document.getElementById("toggleSidebar");
+      const sidebar = document.querySelector(".sidebar_custom");
+      const iconNames = document.querySelectorAll(".icon_name");
+      const toggleIcon = document.getElementById("sidebarToggleIcon"); // Get the icon element
+
+      toggleButton.addEventListener("click", () => {
+        sidebar.classList.toggle("expanded");
+
+        // Toggle icon names visibility
+        iconNames.forEach((name) => {
+          name.classList.toggle("visible"); // Toggle visibility
+        });
+
+        // Change the icon based on sidebar state
+        if (sidebar.classList.contains("expanded")) {
+          toggleIcon.setAttribute("xlink:href", "icons.svg#icon-left"); // Change to icon-left
+        } else {
+          toggleIcon.setAttribute("xlink:href", "icons.svg#icon-right"); // Change to icon-right
+        }
+      });
+    </script>
   </body>
 </html>
