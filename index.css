@@ -522,7 +522,7 @@ body {
 
 
 /* Dark mode styles */
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
     body {
         color: #FFFFFF;
     }
