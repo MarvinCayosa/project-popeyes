@@ -215,3 +215,45 @@ hr {
   color: #474747
 }
 
+/* Card */
+.card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(25, 25, 25, 0.3); /* Increased blur radius */
+  margin: 5px;
+  padding: 10px;
+  width: 265px;
+  height: 300px;
+  position: relative;
+  margin-left: 3%;
+  margin-top: 150px; /* Add enough margin to account for the navbar height */
+}
+
+.card-img-top {
+  width: 100%; 
+  height: 70%; 
+  object-fit: cover; 
+  border-radius: 10px; 
+}
+
+.card-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1; 
+}
+
+.card-menu button {
+  background: none;
+  border: none;
+  padding: 0;
+  display: none;
+}
+
+.card:hover .card-menu button {
+  display: block;
+}
+
+.card-menu svg {
+  cursor: pointer;
+}
