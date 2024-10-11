@@ -54,8 +54,8 @@
                     </div>
 
                     <div class="selector-container">
-                        <a href="#faculty">Faculty</a>
-                        <a href="#student">Student</a>
+                        <a href="#faculty" id="faculty-link" class="active">Faculty</a>
+                        <a href="#student" id="student-link">Student</a>
                     </div>
 
                     <div class="signIn-signUp-container">
@@ -67,37 +67,61 @@
 
                         <div class="password-container">
                             <label for="password" class="password">Password</label>
-                            <input type="password" class="email-textbox" id="password" name="password" required>
-
-                            <!-- Checkbox to toggle visibility -->
-                            <label for="togglePassword" class="toggle-password-label">Show Password</label>
-                            <input type="checkbox" id="togglePassword" class="toggle-password-checkbox">
+                            <div class="password-wrapper">
+                                <input type="password" class="email-textbox" id="password" name="password" required>
+                                <span class="eye-icon" onclick="togglePassword()">
+                                    <img src="assets/eye-slash-fill.svg" id="toggleIcon" alt="Show/Hide Password">
+                                </span>
+                            </div>
                         </div>
 
+                        <!--Styles for password-->
+                
                         <style>
-                            /* Hide the checkbox */
-                            .show-password {
-                                display: none;
+                            .password-wrapper {
+                                position: relative;
                             }
-                        
-                            /* CSS to change the input type based on the checkbox state */
-                            .show-password:checked + .password-container input[type="password"] {
-                                -webkit-text-security: none;
+                
+                            .password-wrapper input {
+                                width: 100%;
+                                padding-right: 40px;
+                            }
+                
+                            .eye-icon {
+                                position: absolute;
+                                right: 10px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                cursor: pointer;
+                                width: 18px;
+                                height: 18px;
+                                display: none; /* Initially hidden */
+                            }
+                
+                            .eye-icon img {
+                                width: 18px;
+                                height: 18px;
+                                fill: #818181a5;
                             }
                         </style>
+                
                         
 
                     </div>
 
                     <div class="link-container">
                         <a href="#forgot-pass" class="forgot-password-link">Forgot Password?</a>
-                        Don't have an account?
-                        <a href="#sign-up" class="sign-up-link">Sign Up</a>
+                        <span class="sign-up-link">    
+                            Don't have an account?
+                            <a href="#sign-up" >Sign Up</a>
+                        </span>
+                    
                     </div>
 
                     <div class="captcha"></div>
 
-                    <button type="signin" class="signIn-button">Sign In</button>
+                    <button type="button" class="signIn-button" onclick="window.location.href='home.html';">Sign In</button>
+
 
                     <div class="seperator">
                         or
@@ -114,7 +138,56 @@
             </div>
 
         </div>
+    
 
+        <script>
+            function togglePassword() {
+                const passwordInput = document.getElementById('password');
+                const toggleIcon = document.getElementById('toggleIcon');
+                
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    toggleIcon.src = 'assets/eye-fill.svg'; // Switch to "closed eye" icon
+                } else {
+                    passwordInput.type = 'password';
+                    toggleIcon.src = 'assets/eye-slash-fill.svg'; // Switch back to "open eye" icon
+                }
+            }
+
+            // Show/hide eye icon based on focus
+            const passwordInput = document.getElementById('password');
+            const eyeIcon = document.querySelector('.eye-icon');
+
+            passwordInput.addEventListener('focus', () => {
+                eyeIcon.style.display = 'inline-block';
+            });
+
+            passwordInput.addEventListener('blur', () => {
+                // Only hide if the input is not being typed into
+                if (!passwordInput.value) {
+                    eyeIcon.style.display = 'none';
+                }
+            });
+
+
+            // Active Link on Faculty or Student
+
+            document.getElementById('faculty-link').addEventListener('click', function() {
+                setActiveLink('faculty-link', 'student-link');
+            });
+
+            document.getElementById('student-link').addEventListener('click', function() {
+                setActiveLink('student-link', 'faculty-link');
+            });
+
+            function setActiveLink(activeId, inactiveId) {
+                document.getElementById(activeId).classList.add('active');
+                document.getElementById(inactiveId).classList.remove('active');
+            }
+
+
+
+        </script>
     </body>
 
 </html>
