@@ -15,8 +15,11 @@ hr {
   width: 220%;
 }
 
-.user_dropdown{
-  z-index: 5;
+.user_dropdown {
+  position: relative; 
+  top: 0; 
+  left: 0;
+  z-index: 999; 
 }
 
 /* Main White Part */
@@ -25,7 +28,7 @@ hr {
   border-top-left-radius: 55px;
   border-bottom-left-radius: 55px;
   box-shadow: -25px 4px 45.8px rgba(0, 0, 0, 0.24);
-  z-index: 2;
+  z-index: 0;
   height: 200vh;
   margin-left: 110px;
   transition: margin-left 0.3s ease-out; 
@@ -35,6 +38,7 @@ hr {
 .frame_1 {
   height: auto; /* Full height of the viewport */
   background-color: var(--main-red);
+  z-index: 0;
 }
 
 
@@ -76,10 +80,10 @@ hr {
   position: absolute;
 }
 
-.sidebar_custom:hover .icon_name {
-  visibility: visible;
-  opacity: 1; 
+.sidebar_custom.expanded .icon_name {
+  opacity: 1;
 }
+
 
 .sidebar_custom .icon_name {
   opacity: 0;
@@ -114,12 +118,16 @@ hr {
   transition: width 0.3s ease-out;
 }
 
-.sidebar_custom:hover {
-  width: 210px; /* Expanded width on hover */
+.nav-item .btn{
+  border: none;
 }
 
-/* Adjust main body margin on sidebar hover */
-.sidebar_custom:hover + .main_body {
+.sidebar_custom.expanded {
+  width: 210px; /* Expanded width */
+}
+
+/* Adjust the main body margin on sidebar expanded */
+.sidebar_custom.expanded + .main_body {
   margin-left: 210px; 
 }
 
