@@ -48,7 +48,7 @@ body {
 .land-page-student-header {
     color: #C00411;
     font-size: 62px;
-    margin-top: 8px;
+    margin-top: 20px;
 }
 
 
@@ -73,11 +73,11 @@ body {
 
 .land-page-student-signIn-container {
     background: #ffffffdb;
-    width: 410px;
-    height: 549px;
-    margin-top: 36px;
+    width: 450px;
+    height: 590px;
+    margin-top: 50px;
     border-radius: 25px;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.225);
 }
 
 .signIn-container-content {
@@ -89,26 +89,52 @@ body {
 }
 
 .signIn-container-content .signIn-header-container {
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bolder;
     text-align: center;
-    margin-top: 35px;
-    margin-bottom: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.signIn-container-content .selector-container {
+/* Eto binago ko sa Faculty Student*/
+.selector-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 80%;
     font-size: 12px;
+    position: relative;
 }
-.signIn-container-content .selector-container a{
+
+.selector-container a {
     text-decoration: none;
     color: #454545;
     padding: 0px 15px;
+    margin: 0 15px;  
+    position: relative;
     box-sizing: border-box;
     margin-bottom: 15px;
+    text-align: center; /* Center text within anchor */
 }
+
+.selector-container a::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Centering starts from the left of the anchor */
+    bottom: -2px; /* Adjust this based on your design */
+    width: 0;
+    height: 2px;
+    background-color: #C00411;
+    transition: width 0.3s ease; /* Smooth transition */
+    transform: translateX(-50%); /* Shift to the left by 50% of its own width */
+}
+
+.selector-container a.active::after {
+    width: 80%; 
+}
+
+
+/* Eto binago ko sa Faculty Student*/
 
 .signIn-signUp-container{
     width: 90%;
@@ -149,16 +175,34 @@ body {
     box-sizing: border-box;
 }
 
+.email-textbox:focus {
+    border: 0.5px solid #C00411; 
+    outline: none; 
+}
+
 .link-container {
-    font-size: 11px;
-    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%; 
+    margin-top: 10px;
+    font-size: 10px;
+    margin-bottom: 30px;
+}
+
+.forgot-password-link {
+    text-align: left;
+}
+
+.sign-up-link {
+    text-align: right;
 }
 
 .signIn-button {
     color: #FFFFFF;
     margin-bottom: 15px;
     display: block;
-    width: 80%;
+    width: 90%;
     padding: 14px;
     font-size: 14px;
     background-color: #C00411;
@@ -190,8 +234,9 @@ body {
 }
 
 .footer {
+    position: relative;
     font-size: 10px;
-    margin-top: -18px;
+    bottom: -50px;
 }
 
 /* responsive */
@@ -221,8 +266,8 @@ body {
     }
     
     .land-page-student-signIn-container {
-        width: 550px;   
-        height: 733px;
+        width: 500px;   
+        height: 600px;
         margin-top: 36px;
         border-radius: 25px;
         box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
@@ -359,11 +404,11 @@ body {
     }
     
     .land-page-student-signIn-container {
-        width: 382px;   
-        height: 536px;
-        margin-top: 36px;
+        width: 450px;   
+        height: 600px;
+        margin-top: 45px;
         border-radius: 25px;
-        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
     }
     
     .signIn-container-content {
@@ -477,7 +522,7 @@ body {
 
 
 /* Dark mode styles */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     body {
         color: #FFFFFF;
     }
@@ -511,7 +556,7 @@ body {
 
     .land-page-student-signIn-container {
         background-color: #212837;
-        box-shadow: 0px 0px 30px #454545;
+        box-shadow: 0px 0px 50px #000000a7;
     }
 
     .signIn-container-content .link-container a{
