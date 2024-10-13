@@ -232,7 +232,7 @@ hr {
   color: #474747
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   .main_body {
     background-color: #202633;
   }
