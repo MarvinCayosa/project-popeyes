@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 598.06 176.22">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: SoftAuraFree-Regular, 'Soft Aura Free';
+        font-size: 119.19px;
+      }
+
+      .cls-2 {
+        fill: #c00411;
+        font-family: Roboto-Black, Roboto;
+        font-size: 156.44px;
+        font-weight: 800;
+        letter-spacing: -.06em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.01em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2-2" data-name="Layer_2">
+    <text class="cls-2" transform="translate(0 133.83)"><tspan x="0" y="0">UE</tspan></text>
+    <text class="cls-1" transform="translate(164.95 133.61) scale(.94) skewX(-20)"><tspan class="cls-4" x="0" y="0">n</tspan><tspan class="cls-3" x="57.69" y="0">v</tspan><tspan x="113.35" y="0">en</tspan><tspan class="cls-3" x="234.08" y="0">t</tspan><tspan x="267.57" y="0">ory</tspan></text>
+  </g>
+</svg>

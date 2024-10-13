@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --icon-width: 35px; 
+  --main-red: #8F1019;
+  --dark-mode:#1a1a1a;
+}
+
+hr {
+  color: #FDFDFD;
+  transition: all 0.3s ease-out;
+}
+
+.sidebar:hover hr {
+  width: 220%;
+}
+
+.user_dropdown{
+  z-index: 5;
+}
+
+/* Main White Part */
+.main_body {
+  background-color: #FDFDFD;
+  border-top-left-radius: 55px;
+  border-bottom-left-radius: 55px;
+  box-shadow: -25px 4px 45.8px rgba(0, 0, 0, 0.24);
+  z-index: 2;
+  height: 200vh;
+  margin-left: 110px;
+  transition: margin-left 0.3s ease-out; 
+  overflow: hidden;
+}
+
+.frame_1 {
+  height: auto; /* Full height of the viewport */
+  background-color: var(--main-red);
+}
+
+
+/* Sidebar */
+.avatar {
+  width: var(--icon-width);
+  height: var(--icon-width);
+}
+
+.icon-container {
+  width: 60px; 
+  height: 60px; 
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  width: var(--icon-width);
+  height: var(--icon-width);
+  color: rgb(255, 255, 255);
+}
+
+.nav-pills {
+  flex: 1; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+}
+
+.icon_name {
+  margin-left: 165px;
+  transition: opacity 0.3s ease-out; 
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  color: #ffffff;
+  visibility: hidden;
+  position: absolute;
+}
+
+.sidebar_custom.expanded .icon_name {
+  opacity: 1;
+}
+
+
+.sidebar_custom .icon_name {
+  opacity: 0;
+}
+
+.nav-item {
+  margin-bottom: 25px; 
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;          
+  justify-content: center; 
+  align-items: center;    
+}
+
+.nav-item:hover .icon {
+  transform: scale(1.15);
+  transition: all 0.3s ease-in;
+}
+
+.sidebar .nav-link.active {
+  background-color: #ffffff;
+}
+
+.sidebar .nav-link.active .icon {
+  color: var(--main-red);
+}
+
+.sidebar_custom {
+  z-index: 0;
+  background-color: var(--main-red);
+  transition: width 0.3s ease-out;
+}
+
+.nav-item .btn{
+  border: none;
+}
+
+.sidebar_custom.expanded {
+  width: 210px; /* Expanded width */
+}
+
+/* Adjust the main body margin on sidebar expanded */
+.sidebar_custom.expanded + .main_body {
+  margin-left: 210px; 
+}
+
+
+.user_profile .icon_name {
+  font-size: 12px;
+  width: fit-content;
+  white-space: nowrap;
+  
+}
+
+.user_profile .identifier{
+  margin-top: 18px;
+  margin-left: 141px;
+  justify-content: start;
+  font-weight: 400;
+  font-size: 10px;
+  font-style: italic;
+  color: rgb(238, 238, 238);
+}
+
+.options .icon_name{
+  margin-top: 9px;
+}
+
+.navbar-main{
+  position: fixed;
+  width:  1000px;
+  margin-left: 30px;
+  height: 100px;
+  margin-top: 15px;
+}
+
+.container-nav{
+  height: 80px;
+}
+
+.inbox-section {
+  background-color: #F6F6F6;
+  width: calc(100% - 80px); /* Adjust the width to account for left and right padding */
+  height: 600px; 
+  margin: 130px auto;
+  padding: 30px 30px; /* 20px padding on top and bottom, 30px on left and right */
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.inbox-item {
+  background-color: #FFFFFF;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-width: 3px;
+  box-sizing: border-box;
+  border: 0.5px solid #c2c2c2bc;
+  border-radius: 11px;
+  
+
+}
+
+.message-header h5 {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+
+
+.student_pic{
+  width: 55px;
+  height: 55px;
+  top: calc(50% - 55px/2 - 197.5px);
+  color: none;
+  background: url(user.png);
+
+}

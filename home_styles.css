@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --icon-width: 35px; 
+  --main-red: #8F1019;
+  --dark-mode:#1a1a1a;
+}
+
+hr {
+  color: #FDFDFD;
+  transition: all 0.3s ease-out;
+}
+
+.sidebar:hover hr {
+  width: 220%;
+}
+
+.user_dropdown {
+  position: relative; 
+  top: 0; 
+  left: 0;
+  z-index: 999; 
+}
+
+/* Main White Part */
+.main_body {
+  background-color: #FDFDFD;
+  border-top-left-radius: 55px;
+  border-bottom-left-radius: 55px;
+  box-shadow: -25px 4px 45.8px rgba(0, 0, 0, 0.24);
+  z-index: 0;
+  height: 200vh;
+  margin-left: 110px;
+  transition: margin-left 0.3s ease-out; 
+  overflow: hidden;
+}
+
+.frame_1 {
+  height: auto; /* Full height of the viewport */
+  background-color: var(--main-red);
+  z-index: 0;
+}
+
+
+/* Sidebar */
+.avatar {
+  width: var(--icon-width);
+  height: var(--icon-width);
+}
+
+.icon-container {
+  width: 60px; 
+  height: 60px; 
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  width: var(--icon-width);
+  height: var(--icon-width);
+  color: rgb(255, 255, 255);
+}
+
+.nav-pills {
+  flex: 1; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+}
+
+.icon_name {
+  margin-left: 165px;
+  transition: opacity 0.3s ease-out; 
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  color: #ffffff;
+  visibility: hidden;
+  position: absolute;
+}
+
+.sidebar_custom.expanded .icon_name {
+  opacity: 1;
+}
+
+
+.sidebar_custom .icon_name {
+  opacity: 0;
+}
+
+.nav-item {
+  margin-bottom: 25px; 
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;          
+  justify-content: center; 
+  align-items: center;    
+}
+
+.nav-item:hover .icon {
+  transform: scale(1.15);
+  transition: all 0.3s ease-in;
+}
+
+.sidebar .nav-link.active {
+  background-color: #ffffff;
+}
+
+.sidebar .nav-link.active .icon {
+  color: var(--main-red);
+}
+
+.sidebar_custom {
+  z-index: 0;
+  background-color: var(--main-red);
+  transition: width 0.3s ease-out;
+}
+
+.nav-item .btn{
+  border: none;
+}
+
+.sidebar_custom.expanded {
+  width: 210px; /* Expanded width */
+}
+
+/* Adjust the main body margin on sidebar expanded */
+.sidebar_custom.expanded + .main_body {
+  margin-left: 210px; 
+}
+
+/* Nav Bar */
+.logo{
+  width: 250px;
+  height:70px;
+  user-select: none;
+}
+
+.user_profile .icon_name {
+  font-size: 12px;
+  width: fit-content;
+  white-space: nowrap;
+  
+}
+
+.user_profile .identifier{
+  margin-top: 18px;
+  margin-left: 141px;
+  justify-content: start;
+  font-weight: 400;
+  font-size: 10px;
+  font-style: italic;
+  color: rgb(238, 238, 238);
+}
+
+.options .icon_name{
+  margin-top: 9px;
+}
+
+.navbar-main{
+  position: fixed;
+  width:  1000px;
+  margin-left: 30px;
+  height: 100px;
+  margin-top: 15px;
+}
+
+.container-nav{
+  height: 80px;
+}
+
+
+.search-bar{
+  width: 400px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #474747;
+}
+
+.search-bar:focus {
+  border-color: #97befd; 
+  border-width: 3px;
+  box-shadow: 0 0 0px ; 
+}
+
+.search-btn{
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  padding: 5px;
+  height: 40px;
+  width:40px;
+  transition: all 0.2s ease-out;
+}
+
+.search-btn:hover {
+  background-color: #4285F4;
+}
+.search-btn:hover .icon-search{
+  color: #ffffff;
+}
+
+.icon-search{
+  margin-bottom: 3px;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+  height: 20px;
+  width: 20px;
+  transition: all 0.2s ease-out;
+}
+
+.search-form{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #474747
+}
+
