@@ -5,21 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inbox</title>
     
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="inbox_styles.css" />
   </head>
+
   <body>
+    <!-- Main Frame -->
     <div class="frame_1">
       <div class="d-flex">
+
+        <!-- Sidebar -->
         <div
           class="sidebar_custom sidebar d-flex flex-column flex-shrink-0 p-3 fixed-top"
           style="width: 110px; height: 100vh"
         >
-          <!--User Icon Dropdown-->
+          <!-- User Icon Dropdown -->
           <a
             href="#"
             class="user_profile m-2 d-flex justify-content-center text-white text-decoration-none"
@@ -33,7 +42,6 @@
               xmlns="http://www.w3.org/2000/svg"
               class="avatar"
               fill="currentColor"
-              class="bi bi-person-circle"
               viewBox="0 0 16 16"
             >
               <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
@@ -43,17 +51,18 @@
               />
             </svg>
           </a>
+
+          <!-- User Dropdown -->
           <ul class="user_dropdown dropdown-menu">
             <li><a class="dropdown-item" href="#">View Profile</a></li>
-            <li><a class="dropdown-item" href="index.html">Log Out</a></li>
+            <li><a class="dropdown-item" href="#">Log Out</a></li>
           </ul>
 
           <hr />
-          <!--Navigation Icons-->
+
+          <!-- Navigation Icons -->
           <ul class="nav nav-pills flex-column d-flex align-items-center">
-            <li
-              class="nav-item  d-flex justify-content-center icon-container"
-            >
+            <li class="nav-item d-flex justify-content-center icon-container">
               <a href="home.html">
                 <svg class="icon" fill="currentColor">
                   <use xlink:href="icons.svg#icon-home"></use>
@@ -61,38 +70,36 @@
               </a>
               <span class="icon_name">Home</span>
             </li>
+
             <li class="nav-item d-flex nav-link active justify-content-center icon-container">
               <a href="inbox.html">
                 <svg class="icon" fill="currentColor">
                   <use xlink:href="icons.svg#icon-inbox"></use>
                 </svg>
               </a>
-              <span
-                class="position-absolute translate-middle badge rounded-pill bg-danger"
-                >10</span
-              >
+              <span class="position-absolute translate-middle badge rounded-pill bg-danger">10</span>
               <span class="icon_name">Inbox</span>
             </li>
+
             <li class="nav-item d-flex justify-content-center icon-container">
               <svg class="icon" fill="currentColor">
                 <use xlink:href="icons.svg#icon-profile"></use>
               </svg>
               <span class="icon_name">Records</span>
             </li>
+
             <li class="nav-item d-flex justify-content-center icon-container">
-              <span class="icon_name">Archive</span>
               <svg class="icon" fill="currentColor">
                 <use xlink:href="icons.svg#icon-archive"></use>
               </svg>
+              <span class="icon_name">Archive</span>
             </li>
+
             <!-- Expand/Collapse Button -->
             <li class="nav-item d-flex justify-content-center icon-container">
               <button class="btn" id="toggleSidebar">
                 <svg class="icon" fill="currentColor">
-                  <use
-                    xlink:href="icons.svg#icon-right"
-                    id="sidebarToggleIcon"
-                  ></use>
+                  <use xlink:href="icons.svg#icon-right" id="sidebarToggleIcon"></use>
                 </svg>
               </button>
             </li>
@@ -100,7 +107,7 @@
 
           <hr />
 
-          <!--Options Icon-->
+          <!-- Options Icon -->
           <a
             href="#"
             class="options m-2 d-flex justify-content-center text-white text-decoration-none"
@@ -112,9 +119,12 @@
             </svg>
           </a>
         </div>
+        <!-- End of Sidebar -->
 
+        <!-- Main Body -->
         <div class="main_body flex-grow-1">
           <section class="inbox-section d-flex flex-column">
+            <!-- Inbox Messages -->
             <div class="inbox-item">
               <div class="message-header">
                 <div class="student_pic"></div>
@@ -127,26 +137,8 @@
                 <h5>Message 2</h5>
               </div>
             </div>
-            <div class="inbox-item">
-              <div class="message-header">
-                <h5>Message 2</h5>
-              </div>
-            </div>
-            <div class="inbox-item">
-              <div class="message-header">
-                <h5>Message 2</h5>
-              </div>
-            </div>
-            <div class="inbox-item">
-              <div class="message-header">
-                <h5>Message 2</h5>
-              </div>
-            </div>
-            <div class="inbox-item">
-              <div class="message-header">
-                <h5>Message 2</h5>
-              </div>
-            </div>
+
+            <!-- Repeat similar messages (Message 2) as needed -->
             <div class="inbox-item">
               <div class="message-header">
                 <h5>Message 2</h5>
@@ -154,28 +146,30 @@
             </div>
           </section>
         </div>
+        <!-- End of Main Body -->
       </div>
     </div>
 
+    <!-- JavaScript for Sidebar Toggle -->
     <script>
       const toggleButton = document.getElementById("toggleSidebar");
       const sidebar = document.querySelector(".sidebar_custom");
       const iconNames = document.querySelectorAll(".icon_name");
-      const toggleIcon = document.getElementById("sidebarToggleIcon"); // Get the icon element
+      const toggleIcon = document.getElementById("sidebarToggleIcon");
 
       toggleButton.addEventListener("click", () => {
         sidebar.classList.toggle("expanded");
 
         // Toggle icon names visibility
         iconNames.forEach((name) => {
-          name.classList.toggle("visible"); // Toggle visibility
+          name.classList.toggle("visible");
         });
 
         // Change the icon based on sidebar state
         if (sidebar.classList.contains("expanded")) {
-          toggleIcon.setAttribute("xlink:href", "icons.svg#icon-left"); // Change to icon-left
+          toggleIcon.setAttribute("xlink:href", "icons.svg#icon-left");
         } else {
-          toggleIcon.setAttribute("xlink:href", "icons.svg#icon-right"); // Change to icon-right
+          toggleIcon.setAttribute("xlink:href", "icons.svg#icon-right");
         }
       });
     </script>
