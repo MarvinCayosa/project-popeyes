@@ -232,7 +232,7 @@ hr {
   color: #474747
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   .main_body {
     background-color: #202633;
   }
@@ -266,8 +266,7 @@ hr {
     background-color: #202633;
   }
   .search-btn{
-    
-    background-color: #202c48;
+    background-color: #354563;
   }
 
   .search-btn:hover {
@@ -288,6 +287,7 @@ hr {
     font-size: 14px;
     color: #474747
   }
+  
   
 
 }

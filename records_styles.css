@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --icon-width: 35px; 
+  --main-red: #8F1019;
+  --dark-mode:#1a1a1a;
+}
+
+hr {
+  color: #FDFDFD;
+  transition: all 0.3s ease-out;
+}
+
+
+.user_dropdown {
+  position: relative; 
+  top: 0; 
+  left: 0; 
+}
+
+
+
+/* Main White Part */
+.main_body {
+  background-color: #FDFDFD;
+  border-top-left-radius: 55px;
+  border-bottom-left-radius: 55px;
+  box-shadow: -25px 4px 45.8px rgba(0, 0, 0, 0.24);
+  height: 100vh;
+  margin-left: 110px;
+  transition: margin-left 0.3s ease-out; 
+  overflow: hidden;
+  z-index: 0;
+}
+
+.frame_1 {
+  height: auto; /* Full height of the viewport */
+  background-color: var(--main-red);
+    z-index: 0;
+}
+
+
+/* Sidebar */
+.avatar {
+  width: var(--icon-width);
+  height: var(--icon-width);
+}
+
+.icon-container {
+  width: 60px; 
+  height: 60px; 
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  width: var(--icon-width);
+  height: var(--icon-width);
+  color: rgb(255, 255, 255);
+}
+
+.nav-pills {
+  flex: 1; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+}
+
+.icon_name {
+  margin-left: 165px;
+  transition: opacity 0.3s ease-out; 
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  color: #ffffff;
+  visibility: hidden;
+  position: absolute;
+}
+
+.sidebar_custom.expanded .icon_name {
+  opacity: 1;
+}
+.sidebar_custom.expanded hr {
+width: 220%;
+}
+
+
+.sidebar_custom .icon_name {
+  opacity: 0;
+}
+
+.nav-item {
+  margin-bottom: 25px; 
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;          
+  justify-content: center; 
+  align-items: center;    
+}
+
+.nav-item:hover .icon {
+  transform: scale(1.15);
+  transition: all 0.3s ease-in;
+}
+
+.sidebar .nav-link.active {
+  background-color: #ffffff;
+}
+
+.sidebar .nav-link.active .icon {
+  color: var(--main-red);
+}
+
+.sidebar_custom {
+  z-index: 0;
+  background-color: var(--main-red);
+  transition: width 0.3s ease-out;
+}
+
+.nav-item .btn{
+  border: none;
+}
+
+.sidebar_custom.expanded {
+  width: 210px; /* Expanded width */
+}
+
+/* Adjust the main body margin on sidebar expanded */
+.sidebar_custom.expanded + .main_body {
+  margin-left: 210px; 
+}
+
+/* Nav Bar */
+
+.user_profile .icon_name {
+  font-size: 12px;
+  width: fit-content;
+  white-space: nowrap;
+  
+}
+
+.user_profile .identifier{
+  margin-top: 18px;
+  margin-left: 141px;
+  justify-content: start;
+  font-weight: 400;
+  font-size: 10px;
+  font-style: italic;
+  color: rgb(238, 238, 238);
+}
+
+.options .icon_name{
+  margin-top: 9px;
+}
+
+.navbar-main{
+  position: fixed;
+  width:  60%;
+  margin-left: 60px;
+  height: 100px;
+  margin-top: 40px;
+  z-index: 1000;
+}
+
+.container-nav{
+  height: 80px;
+}
+
+.header {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 26px;
+  color: #474747;
+}
+
+
+.search-bar{
+  width: 400px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #474747;
+  border: 1px solid #8d8d8d;
+}
+
+.search-bar:focus {
+  border-color: #97befd; 
+  border-width: 3px;
+  box-shadow: 0 0 0px ; 
+}
+
+.search-btn{
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  padding: 5px;
+  height: 40px;
+  width:40px;
+  transition: all 0.2s ease-out;
+}
+
+.search-btn:hover {
+  background-color: #4285F4;
+}
+.search-btn:hover .icon-search{
+  color: #ffffff;
+}
+
+.icon-search{
+  margin-bottom: 3px;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+  height: 20px;
+  width: 20px;
+  transition: all 0.2s ease-out;
+}
+
+.search-form{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #474747
+}
+
+
+
+/* Records Page */
+/* Add scroll to the section containing the cards */
+
+.scrollable-section {
+  margin: 150px 10px 0 10px; /* Add margin as requested */
+  max-height: 75%;
+  overflow-y: auto; 
+  z-index: 0;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px; /* Space between cards */
+  justify-content: space-between; /* Distribute evenly */
+  margin-bottom: 30px;
+}
+
+.utility-button .menu-dot{
+  color: #474747;
+  height: 30px;
+  width: 30px;
+}
+
+.utility-button {
+  border: none;
+  background: none;
+}
+
+ul.dropdown-menu.show{
+  user-select: none;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: 0.5px solid #dfdfdf;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.dropdown-item{
+  background-color: none;
+}  
+
+.dropdown-item:hover{
+  background-color: white;
+  color: rgb(99, 99, 99);
+}
+
+
+
+
+
+/* Responsive for medium screens (tablets) */
+@media (max-width: 992px) {
+  .card {
+    width: calc(50% - 20px); /* 2 cards per row on medium screens */
+  }
+}
+
+/* Responsive for small screens (phones) */
+@media (max-width: 576px) {
+  .card {
+    width: calc(100% - 20px); /* Full width card on small screens */
+  }
+}
+
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 280px;
+  height: 380px;
+  background-color: #f6f6f6;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.card:hover{
+  background-color: #ffffff;
+  transform: scale(1.02);
+}
+
+.card-content hr {
+  color: #000;
+  width: 75%;
+  margin: 10px auto; 
+  margin-bottom: 18px;
+}
+
+.avatar-student{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.card-avatar {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.card-subtitle {
+  font-size: 14px;
+  color: #383838;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.card-due {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px 30px 20px;
+}
+
+.due-label {
+  font-size: 12px;
+  color: #4d4d4d;
+}
+
+.due-date {
+  font-size: 12px;
+  background-color: #f9a825;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+
+.view-details {
+  background-color: #4285F4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  width: 80%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 600;
+}
+
+.view-details:hover {
+  background-color: #2864c5;
+}
+
+.list-mode .card {
+  width: 93%; /* Keeps card width consistent */
+  height: 100px; /* Fixed height */
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center align items vertically */
+  margin-bottom: 5px; /* Fixed space between cards */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.096);
+  padding: 20px; /* Padding inside card for consistent spacing */
+}
+
+.list-mode .card-content {
+  flex-grow: 1; /* Allow card content to grow */
+  display: flex;
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Center align items vertically */
+}
+.list-mode .card-container {
+  gap : 25px;
+}
+
+.list-mode .card-name {
+    flex: 1; /* Allow the name to take up space */
+    margin-right: 20px; /* Space between name and subtitle */
+    text-align: left; /* Align text to the left */
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.list-mode .card-subtitle {
+    flex: 1; /* Allow the subtitle to take up space */
+    margin-right: 20px; /* Space between subtitle and button */
+    text-align: left; /* Align text to the left */
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.list-mode .view-details {
+    width: 150px; /* Fixed width for button */
+}
+
+.list-mode .card-avatar {
+    margin: 0 25px; /* Fixed margins around avatar */
+    margin-bottom: 0;
+}
+
+.list-mode .avatar-student {
+    width: 50px; /* Fixed width for avatars */
+    height: 50px; /* Fixed height for avatars */
+    border-radius: 50%; /* Make avatar circular */
+}
+
+
+.list-mode .card-content hr{
+  display: none;
+}
+.list-mode .card-due{
+  display: none;
+}
+  
+.modal-backdrop.show {
+    z-index: 10;
+}
+
+@media (prefers-color-scheme: dark) {
+  .main_body {
+    background-color: #202633;
+    
+  }
+
+  .header {
+    color: #f6f6f6;
+  }
+
+  .sidebar_custom, .frame_1 {
+    background-color: #1E1E1E;
+  }
+
+  .logo-light{
+    display: none;
+  }
+  .logo-dark{
+    display: block;
+  }
+
+  .sidebar .nav-link.active .icon {
+    color:  #202633;
+  }
+
+    
+  .search-bar{
+    color: #f6f6f6;
+    background-color: #202633;
+  }
+
+  .search-bar:focus {
+    border-color: var(--main-red); 
+    border-width: 2px;
+    box-shadow: 0 0 0px ; 
+    color: #f6f6f6;
+    background-color: #202633;
+  }
+  .search-btn{
+    
+    background-color: #354563;
+  }
+
+  .search-btn:hover {
+    background-color: #4285F4;
+  }
+  .search-btn:hover .icon-search{
+    color: #f6f6f6;
+  }
+  
+  .icon-search{
+    color: #f6f6f6;
+  }
+  
+  .search-form{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: #474747
+  }
+  
+  .card {
+    background-color: #232935;
+    color: #f6f6f6;
+  }
+
+  .card:hover{
+    background-color: #2b313d;
+    transform: scale(1.02);
+  }
+  .card-subtitle {
+    color: #f6f6f6;
+  }
+  .due-label {
+    color: #f6f6f6;
+  }
+
+  .card-container hr{
+    color: #f6f6f6;
+  }
+
+  .utility-button .menu-dot{
+    color: #f6f6f6;
+
+  }
+  .utility-button {
+    border: none;
+    background: none;
+  }
+
+  .dropdown-menu{
+    background-color: #2b313d;
+  }
+  .dropdown-item{
+    color: #ffffff;
+  }
+
+  .dropdown-item:hover{
+    background-color: #2b313d;
+    color: #dddddd;
+  }
+
+  ul.dropdown-menu.show{
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 0.5px solid #272727;
+  }
+
+  .list-mode .card-subtitle {
+    font-size: 14px;
+    color: #f6f6f6;
+    font-style: italic;
+    margin: 0;
+}
+}
+
+
+
+/* Modal */
+/* Remove border from modal header and footer */
+.modal-header,
+.modal-footer {
+  border: none; /* Removes the border */
+}
+
+.modal-custom {
+  max-width: 900px; /* Set custom width */
+  height: 500px; 
+
+}
+
+
+.modal-content {
+  padding: 25px 50px 25px 50px; /* Top, Right, Bottom, Left */
+  border-radius: 20px; /* Adjust the value for more or less rounded corners */  
+  position: relative;
+  height: 500px;
+}
