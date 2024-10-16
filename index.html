@@ -90,7 +90,7 @@
                             .eye-icon {
                                 position: absolute;
                                 right: 10px;
-                                top: 50%;
+                                top: 58%;
                                 transform: translateY(-50%);
                                 cursor: pointer;
                                 width: 18px;
@@ -118,20 +118,63 @@
                     
                     </div>
 
-                    <div class="captcha"></div>
-
-                    <button type="button" class="signIn-button" onclick="window.location.href='home.html';">Sign In</button>
 
 
-                    <div class="seperator">
-                        or
+                    <div class="captcha-container">
+                        
+                        <!-- <img id="captcha_light" src="assets/captcha.svg"> -->
+                        
+                        <div class="content-container">
+                            <div class="left-side">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="checkbox-input">
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                            </div>
+
+                            <div class="middle-side">
+                                I'm not a robot
+                            </div>
+
+                            <div class="right-side">
+                                <div class="captcha-logo">
+                                    <img id="captcha_light" src="assets/captcha_logo.svg">
+                                </div>
+                                
+                            </div>
+                        </div>
+
                     </div>
 
-                    <button type="signin" class="google-button">Continue with Google</button>
 
-                    <div class="footer">
-                        <p>Copyright 2024</p>
+
+                
+                    <div class="button-section">
+
+                        
+                        <button type="button" class="signIn-button" onclick="window.location.href='home.html';">Sign In</button>
+
+
+                        <div class="seperator">
+                            <div class="line"></div>
+                            <div class="or"> or </div>
+                            <div class="line"></div>
+                        </div>
+
+                        <button type="signin" class="google-button">
+                            <img src="assets/google_logo.svg" alt="Google logo" class="google-logo">
+                            <span class="google-text">Continue with Google</span>
+                        </button>
+
+                        
+
+                        <div class="footer">
+                            <p>Copyright 2024</p>
+                        </div>
+
                     </div>
+
+                    
 
                 </div>
 
@@ -188,6 +231,7 @@
 
 
         </script>
+
     </body>
 
 </html>

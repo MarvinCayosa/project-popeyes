@@ -155,18 +155,19 @@ width: 220%;
   margin-top: 9px;
 }
 
-.navbar-main{
-  position: fixed;
-  width:  60%;
-  margin-left: 60px;
-  height: 100px;
-  margin-top: 40px;
+.navbar-main {
+  width: calc(100% - 35px); /* Adjust width to take full width minus left and right margins */
+  margin: 40px 30px 0 30px; /* Set top margin to 30px and left/right margins to 30px */
   z-index: 1000;
 }
 
-.container-nav{
+.container-nav {
   height: 80px;
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center vertically */
+  justify-content: space-between; /* Space out elements */
 }
+
 
 .header {
   font-family: "Poppins", sans-serif;
@@ -174,6 +175,8 @@ width: 220%;
   font-style: normal;
   font-size: 26px;
   color: #474747;
+  display: flex; 
+  flex-grow: 1;
 }
 
 
@@ -185,6 +188,7 @@ width: 220%;
   font-size: 14px;
   color: #474747;
   border: 1px solid #8d8d8d;
+
 }
 
 .search-bar:focus {
@@ -226,7 +230,10 @@ width: 220%;
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
-  color: #474747
+  color: #474747;
+  display: flex; /* Ensure form elements are in a row */
+  align-items: center;
+  
 }
 
 
@@ -234,25 +241,14 @@ width: 220%;
 /* Records Page */
 /* Add scroll to the section containing the cards */
 
-.scrollable-section {
-  margin: 150px 10px 0 10px; /* Add margin as requested */
-  max-height: 75%;
-  overflow-y: auto; 
-  z-index: 0;
-}
 
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px; /* Space between cards */
-  justify-content: space-between; /* Distribute evenly */
-  margin-bottom: 30px;
-}
 
 .utility-button .menu-dot{
   color: #474747;
   height: 30px;
   width: 30px;
+  display: flex;
+  margin-left: 20px;
 }
 
 .utility-button {
@@ -262,8 +258,8 @@ width: 220%;
 
 ul.dropdown-menu.show{
   user-select: none;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 15px;
+  margin-left: -110px;
   border: 0.5px solid #dfdfdf;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -280,10 +276,6 @@ ul.dropdown-menu.show{
   color: rgb(99, 99, 99);
 }
 
-
-
-
-
 /* Responsive for medium screens (tablets) */
 @media (max-width: 992px) {
   .card {
@@ -298,18 +290,29 @@ ul.dropdown-menu.show{
   }
 }
 
+.scrollable-section {
+  margin: 0 30px 0 30px; /* Add margin as requested */
+  max-height: 75%;
+  overflow-y: auto; 
+  z-index: 0;
+  background-color: #f7f7f7;
+  padding: 30px;
+  border-radius: 20px;
+}
 
 .card-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  flex-wrap: wrap; /* Allow cards to wrap onto new lines */
+  gap: 40px; /* Space between cards */
+  justify-content: flex-start; /* Align items to the left */
+  margin-left: 2.5%;
 }
+
 
 .card {
   width: 280px;
   height: 380px;
-  background-color: #f6f6f6;
+  background-color: #fafafa;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   padding: 20px;
@@ -487,7 +490,10 @@ ul.dropdown-menu.show{
     color:  #202633;
   }
 
-    
+  .scrollable-section{
+    background-color: #0d0f133b;
+  }
+
   .search-bar{
     color: #f6f6f6;
     background-color: #202633;
@@ -525,12 +531,12 @@ ul.dropdown-menu.show{
   }
   
   .card {
-    background-color: #232935;
-    color: #f6f6f6;
+    background-color: #262d3a;
+    color: #ffffff;
   }
 
   .card:hover{
-    background-color: #2b313d;
+    background-color: #262d3b;
     transform: scale(1.02);
   }
   .card-subtitle {
@@ -566,8 +572,6 @@ ul.dropdown-menu.show{
   }
 
   ul.dropdown-menu.show{
-    margin-top: 10px;
-    margin-left: 10px;
     border: 0.5px solid #272727;
   }
 
@@ -576,7 +580,21 @@ ul.dropdown-menu.show{
     color: #f6f6f6;
     font-style: italic;
     margin: 0;
-}
+  }
+
+  .view-details{
+    background-color: #354563;
+  }
+
+  .due-date{
+    background-color: #f1ab3b;
+
+  }
+
+  .search-bar::placeholder {
+    color: #8d8d8d; /* Change this to your desired color */
+
+  }
 }
 
 
