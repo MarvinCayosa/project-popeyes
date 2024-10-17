@@ -24,15 +24,18 @@ hr {
 
 /* Main White Part */
 .main_body {
-  background-color: #FDFDFD;
   border-top-left-radius: 55px;
   border-bottom-left-radius: 55px;
   box-shadow: -25px 4px 45.8px rgba(0, 0, 0, 0.24);
   z-index: 0;
-  height: 200vh;
+  height: 100vh;
   margin-left: 110px;
   transition: margin-left 0.3s ease-out; 
   overflow: hidden;
+}
+
+.main_body, .cards-container, .status-container {
+  background-color: #FDFDFD;
 }
 
 .frame_1 {
@@ -40,7 +43,6 @@ hr {
   background-color: var(--main-red);
   z-index: 0;
 }
-
 
 /* Sidebar */
 .avatar {
@@ -171,7 +173,6 @@ hr {
   height: 80px;
 }
 
-
 .search-bar{
   width: 400px;
   font-family: "Poppins", sans-serif;
@@ -223,3 +224,391 @@ hr {
   color: #474747
 }
 
+.filter-btn {
+  position: relative;
+  z-index: 1000;
+  bottom: 10px;
+  left: 800px;
+}
+
+.add-btn{ 
+  position: fixed;
+  bottom: 55px;
+  right: 350px;
+  z-index: 1000;
+}
+
+.inventory-container {
+  display: flex;
+  align-items: center;  /* Vertically center the text and icon */
+  justify-content: flex-start;  /* Align items horizontally */
+  position: fixed;
+  z-index: 1;
+}
+
+.inventory-section {
+  position: absolute; /* You can change this based on your layout */
+  top: 135px; /* Adjust the top positioning */
+  left: 110px; /* Adjust the left positioning */
+  width: 70%; /* Adjust width as per your requirement */
+  height: auto;
+  padding: 0 0 0 0;
+  border-radius: 10px;
+  overflow: hidden;background-color: aqua;
+}
+
+.inventory-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  font-style: normal;
+  color: #000000;
+  margin-left: 55px;  /* Remove the left margin so the text stays close to the icon */
+}
+
+/* Scrollable Section */
+.scrollable-section {
+  margin: 150px 30px 0px 0; /* Add margin as requested */
+  width: 75%;
+  max-height: 80%;
+  overflow-y: auto; 
+  z-index: 0;
+  background-color: #f7f7f7;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap onto new lines */
+  gap: 40px; /* Space between cards */
+  justify-content: flex-start; /* Align items to the left */
+  margin-left: 2.5%;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.card {
+  width: 290px; /* Set a fixed width for the cards */
+  height: 310px; /* Set a fixed height for the cards */
+  background-color: #fafafa;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.card:hover {
+  transform: scale(1.02); /* Slightly increase the size of the card on hover */
+}
+
+.card-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1; 
+}
+
+.card-menu button {
+  background: none;
+  border: none;
+  padding: 0;
+  display: none;
+}
+
+.card-menu svg {
+  cursor: pointer;
+}
+
+.card:hover .card-menu button {
+  display: block;
+  transition: all 0.3s ease-in;
+}
+
+.card-img-top {
+  width: 70%; 
+  height: auto; 
+  object-fit: cover; 
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1); 
+  transition: all 0.3s ease-in;
+}
+
+
+.card-title {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+  margin-top: -10px;
+}
+/* Styling for the stock numbers */
+.available-number {
+  background-color: #0d8a20; /* Light background color for contrast */
+  padding: 1px 5px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  color: #ffffff; /* Main red color */
+  font-size: 12px;
+}
+
+.stock-number {
+  background-color: #313231; /* Light background color for contrast */
+  padding: 1px 5px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  color: #ffffff; /* Main red color */
+  font-size: 12px;
+}
+.available-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #282928; /* semi-transparent white */
+  padding: 5px;
+  border-radius: 4px; /* rounded corners */
+  z-index: 10; /* ensure it stays above other content */
+}
+
+/* Ensure the text and numbers are aligned on the same line */
+.card-text {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between; /* Pushes the number to the right */
+  align-items: center; /* Vertically centers the text and number */
+  font-size: 14px;
+}
+
+/* Modal */
+/* Remove border from modal header and footer */
+.modal-header,
+.modal-footer {
+  border: none; /* Removes the border */
+}
+
+.modal-backdrop.show {
+  z-index: 10;
+}
+
+.modal-custom {
+  max-width: 900px; /* Set custom width */
+  height: 500px; 
+ 
+}
+
+.modal-content {
+  padding: 25px 50px 25px 50px; /* Top, Right, Bottom, Left */
+  border-radius: 20px; /* Adjust the value for more or less rounded corners */  
+  position: relative;
+  z-index: 1050;
+}
+
+.form-label{
+  font-family: "Poppins", sans-serif;
+}
+
+.input-custom {
+  width: 200px; /* Fixed width for all inputs */
+  margin-right: 120px; /* Optional: Space between the inputs */
+}
+
+.input-custom-1 {
+  margin-right: 40px; /* Optional: Space between the inputs */
+}
+
+.input-id {
+  width: 100px; /* Full width of the modal */
+}
+
+.input-item-name {
+  width: 280px; /* Adjusted width */
+}
+
+.input-date {
+  width: 280px; /* Adjusted width for date fields */
+}
+
+.input-quantity {
+  width: 100px; /* Adjusted width for quantity fields */
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+}
+
+.form-row {
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: space-between; /* Space between inputs */
+  align-items: center;
+  margin-bottom: 15px; /* Space between rows */
+}
+
+/* Image Preview */
+/* Container for the image preview */
+.image-preview-container {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px;
+  height: 250px;
+}
+
+/* Style for the image preview */
+.image-preview {
+  position: absolute;
+  right: 60%;
+  top: 30%;
+  transform: translate(50%, -50%);
+  width: 250px;
+  height: 250px;
+  background-color: #f0f0f0; /* Light background if no image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.image-preview:hover {
+  background-color: #47474771;
+}
+
+/* Image preview styles */
+.preview-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+/* SVG Icon */
+.svg-icon {
+  position: absolute;
+  top: 45%; /* Center the icon vertically */
+  left: 50%; /* Center the icon horizontally */
+  transform: translate(-50%, -100%); /* Move it slightly above its default position */
+  width: 40px;
+  height: 40px;
+  color: #000;
+  z-index: 1;
+  transition: opacity 0.3s ease; /* Fade in and out effect */
+  opacity: 0; /* Hidden by default */
+}
+
+/* Style for the button (hidden by default) */
+.btn-upload {
+  position: absolute;
+  bottom: 40%; /* Center the button vertically */
+  left: 50%; /* Center the button horizontally */
+  transform: translate(-50%, 50%);
+  padding: 9px 9px;
+  background-color: #4285F4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none; /* Button is hidden by default */
+  transition: opacity 0.3s ease; /* Fade in and out effect */
+  font-family: "Poppins", sans-serif;
+  font-size: 11.5px;
+  width: 150px; 
+}
+
+/* Hover effect: Show both SVG icon and button */
+.image-preview:hover .svg-icon,
+.image-preview:hover .btn-upload {
+  opacity: 1; /* Make both fully visible on hover */
+  display: block; /* Show both elements */
+}
+
+/* File input styles - hidden by default */
+.file-input {
+  display: none;
+}
+
+/* Style for the Save Changes button */
+.btn-save-changes {
+  padding: 10px 15px;
+  background-color: #C00411; /* Set the background color to red */
+  color: white; /* Set the text color to white */
+  border: none; /* Remove border */
+  border-radius: 10px; /* Optional: Rounded corners */
+  cursor: pointer;
+  font-size: 16px; /* Optional: Font size */
+  transition: background-color 0.3s ease; /* Optional: Smooth hover transition */
+}
+
+.btn-save-changes:hover {
+  background-color: darkred; /* Darker red on hover */
+}
+
+/* Status Container Right */
+
+/* Section styling */
+
+.status-section {
+  position: fixed;         /* Fix the section in place */
+  right: 0;                /* Align it to the right side of the window */
+  top: 0;                  /* Start from the top */
+  height: 100vh;           /* Full viewport height */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center;     /* Center content vertically */
+  background-color: #fdfdfd; /* Light background for contrast */
+  width: 22%;              /* Section takes 30% of the window width */
+  margin-right: 15px;
+}
+
+.status-container {
+  display: flex;
+  flex-direction: column;  /* Stack rectangles vertically */
+  gap: 20px;               /* Add space between the rectangles */
+  align-items: center;     /* Center rectangles horizontally */
+  width: 100%;             /* Make container take full width of section */
+  height: 90%;             /* Set height of the container */
+  margin: 0 auto;          /* Ensure rectangles stay centered */
+}
+
+.rectangle {
+  border-radius: 20px;
+  display: flex;
+  justify-content: center; /* Center text horizontally */
+  align-items: center;     /* Center text vertically */
+  padding: 10px;
+  width: 90%;              /* Adjust width relative to container width */
+}
+
+.request-status {
+  background-color: #4285F4;
+  height: 80%;             /* Adjust height for the first rectangle */
+  color: white;            /* White text for contrast */
+}
+
+.return-status {
+  background-color: #FBBC05;
+  height: 50%;             /* Adjust height for the second rectangle */
+  color: black;            /* Black text for contrast */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .card-grid {
+    width: calc(50% - 20px); /* 2 cards per row on medium screens */  }
+
+}
+
+@media (max-width: 576px) {
+  .card-grid {
+    width: calc(100% - 20px); /* Full width card on small screens */  }
+
+}
