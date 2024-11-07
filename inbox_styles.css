@@ -337,7 +337,7 @@ hr {
 /* Set modal content to the desired height */
 .modal-content {
   border-radius: 50px;
-  height: 73%; /* Set content height */
+  height: 78%; /* Set content height */
   max-height: 773px; /* Limit maximum height */
   overflow-y: auto; /* Add scroll if content exceeds max height */
 }
@@ -1024,6 +1024,13 @@ hr {
 
   .inbox-navigation a {
     color: #f6f6f6;
+  }
+
+  .dropdown-menu{
+    background-color: #2b313d;
+  }
+  .dropdown-item{
+    color: #ffffff;
   }
   
 }

@@ -23,6 +23,8 @@
     />
     <link rel="stylesheet" href="records_styles.css" />
     <link rel="stylesheet" href="scrollbar.css" />
+    <link rel="stylesheet" href="options.css" />
+    <script src="options.js" defer></script>
   </head>
   <body>
     <div class="frame_1">
@@ -119,7 +121,8 @@
           <a
             href="#"
             class="options m-2 d-flex justify-content-center text-white text-decoration-none"
-            aria-expanded="false"
+            data-bs-toggle="modal"
+            data-bs-target="#optionsModal"
           >
             <span class="icon_name">Options</span>
             <svg class="icon" fill="currentColor">
@@ -149,7 +152,7 @@
               <!--Utilities Button-->
               <div class="dropdown">
                 <button
-                  class="utility-button "
+                  class="utility-button"
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -170,186 +173,185 @@
           </nav>
 
           <div class="scrollable-section">
-            
             <div class="card-container">
-
-                <div class="card">
-                  <div class="card-avatar">
-                    <img src="user.png" alt="Avatar" class="avatar-student" />
-                  </div>
-                  <div class="card-content">
-                    <h3 class="card-name">Marvin Cayosa</h3>
-                    <p class="card-subtitle">3rd Year</p>
-                    <hr />
-                    <div class="card-due">
-                      <span class="due-label">Due</span>
-                      <span class="due-date">May 30, 2024</span>
-                    </div>
-                    <button
-                      class="view-details"
-                      data-bs-toggle="modal"
-                      data-bs-target="#detailsModal"
-                    >
-                      View Details
-                    </button>
-                  </div>
+              <div class="card">
+                <div class="card-avatar">
+                  <img src="user.png" alt="Avatar" class="avatar-student" />
                 </div>
-                <div class="card">
-                  <div class="card-avatar">
-                    <img src="user.png" alt="Avatar" class="avatar-student" />
+                <div class="card-content">
+                  <h3 class="card-name">Marvin Cayosa</h3>
+                  <p class="card-subtitle">3rd Year</p>
+                  <hr />
+                  <div class="card-due">
+                    <span class="due-label">Due</span>
+                    <span class="due-date">May 30, 2024</span>
                   </div>
-                  <div class="card-content">
-                    <h3 class="card-name">Alliya Virtucio</h3>
-                    <p class="card-subtitle">3rd Year</p>
-                    <hr />
-                    <div class="card-due">
-                      <span class="due-label">Due</span>
-                      <span class="due-date">May 30, 2024</span>
-                    </div>
-                    <button
-                      class="view-details"
-                      data-bs-toggle="modal"
-                      data-bs-target="#detailsModal"
-                    >
-                      View Details
-                    </button>
-                  </div>
+                  <button
+                    class="view-details"
+                    data-bs-toggle="modal"
+                    data-bs-target="#detailsModal"
+                  >
+                    View Details
+                  </button>
                 </div>
-                <div class="card">
-                  <div class="card-avatar">
-                    <img src="user.png" alt="Avatar" class="avatar-student" />
-                  </div>
-                  <div class="card-content">
-                    <h3 class="card-name">Vince Vinas</h3>
-                    <p class="card-subtitle">3rd Year</p>
-                    <hr />
-                    <div class="card-due">
-                      <span class="due-label">Due</span>
-                      <span class="due-date">May 30, 2024</span>
-                    </div>
-                    <button
-                      class="view-details"
-                      data-bs-toggle="modal"
-                      data-bs-target="#detailsModal"
-                    >
-                      View Details
-                    </button>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-avatar">
-                    <img src="user.png" alt="Avatar" class="avatar-student" />
-                  </div>
-                  <div class="card-content">
-                    <h3 class="card-name">Clarizza Reyes</h3>
-                    <p class="card-subtitle">3rd Year</p>
-                    <hr />
-                    <div class="card-due">
-                      <span class="due-label">Due</span>
-                      <span class="due-date">May 30, 2024</span>
-                    </div>
-                    <button
-                      class="view-details"
-                      data-bs-toggle="modal"
-                      data-bs-target="#detailsModal"
-                    >
-                      View Details
-                    </button>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-avatar">
-                    <img src="user.png" alt="Avatar" class="avatar-student" />
-                  </div>
-                  <div class="card-content">
-                    <h3 class="card-name">Marvin Cayosa</h3>
-                    <p class="card-subtitle">3rd Year</p>
-                    <hr />
-                    <div class="card-due">
-                      <span class="due-label">Due</span>
-                      <span class="due-date">May 30, 2024</span>
-                    </div>
-                    <button
-                      class="view-details"
-                      data-bs-toggle="modal"
-                      data-bs-target="#detailsModal"
-                    >
-                      View Details
-                    </button>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-avatar">
-                    <img src="user.png" alt="Avatar" class="avatar-student" />
-                  </div>
-                  <div class="card-content">
-                    <h3 class="card-name">Marvin Cayosa</h3>
-                    <p class="card-subtitle">3rd Year</p>
-                    <hr />
-                    <div class="card-due">
-                      <span class="due-label">Due</span>
-                      <span class="due-date">May 30, 2024</span>
-                    </div>
-                    <button
-                      class="view-details"
-                      data-bs-toggle="modal"
-                      data-bs-target="#detailsModal"
-                    >
-                      View Details
-                    </button>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-avatar">
-                    <img src="user.png" alt="Avatar" class="avatar-student" />
-                  </div>
-                  <div class="card-content">
-                    <h3 class="card-name">Marvin Cayosa</h3>
-                    <p class="card-subtitle">3rd Year</p>
-                    <hr />
-                    <div class="card-due">
-                      <span class="due-label">Due</span>
-                      <span class="due-date">May 30, 2024</span>
-                    </div>
-                    <button
-                      class="view-details"
-                      data-bs-toggle="modal"
-                      data-bs-target="#detailsModal"
-                    >
-                      View Details
-                    </button>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-avatar">
-                    <img src="user.png" alt="Avatar" class="avatar-student" />
-                  </div>
-                  <div class="card-content">
-                    <h3 class="card-name">Marvin Cayosa</h3>
-                    <p class="card-subtitle">3rd Year</p>
-                    <hr />
-                    <div class="card-due">
-                      <span class="due-label">Due</span>
-                      <span class="due-date">May 30, 2024</span>
-                    </div>
-                    <button
-                      class="view-details"
-                      data-bs-toggle="modal"
-                      data-bs-target="#detailsModal"
-                    >
-                      View Details
-                    </button>
-                  </div>
-                </div>
-
-                <!-- Add more cards here -->
               </div>
-            
+              <div class="card">
+                <div class="card-avatar">
+                  <img src="user.png" alt="Avatar" class="avatar-student" />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-name">Alliya Virtucio</h3>
+                  <p class="card-subtitle">3rd Year</p>
+                  <hr />
+                  <div class="card-due">
+                    <span class="due-label">Due</span>
+                    <span class="due-date">May 30, 2024</span>
+                  </div>
+                  <button
+                    class="view-details"
+                    data-bs-toggle="modal"
+                    data-bs-target="#detailsModal"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-avatar">
+                  <img src="user.png" alt="Avatar" class="avatar-student" />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-name">Vince Vinas</h3>
+                  <p class="card-subtitle">3rd Year</p>
+                  <hr />
+                  <div class="card-due">
+                    <span class="due-label">Due</span>
+                    <span class="due-date">May 30, 2024</span>
+                  </div>
+                  <button
+                    class="view-details"
+                    data-bs-toggle="modal"
+                    data-bs-target="#detailsModal"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-avatar">
+                  <img src="user.png" alt="Avatar" class="avatar-student" />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-name">Clarizza Reyes</h3>
+                  <p class="card-subtitle">3rd Year</p>
+                  <hr />
+                  <div class="card-due">
+                    <span class="due-label">Due</span>
+                    <span class="due-date">May 30, 2024</span>
+                  </div>
+                  <button
+                    class="view-details"
+                    data-bs-toggle="modal"
+                    data-bs-target="#detailsModal"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-avatar">
+                  <img src="user.png" alt="Avatar" class="avatar-student" />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-name">Marvin Cayosa</h3>
+                  <p class="card-subtitle">3rd Year</p>
+                  <hr />
+                  <div class="card-due">
+                    <span class="due-label">Due</span>
+                    <span class="due-date">May 30, 2024</span>
+                  </div>
+                  <button
+                    class="view-details"
+                    data-bs-toggle="modal"
+                    data-bs-target="#detailsModal"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-avatar">
+                  <img src="user.png" alt="Avatar" class="avatar-student" />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-name">Marvin Cayosa</h3>
+                  <p class="card-subtitle">3rd Year</p>
+                  <hr />
+                  <div class="card-due">
+                    <span class="due-label">Due</span>
+                    <span class="due-date">May 30, 2024</span>
+                  </div>
+                  <button
+                    class="view-details"
+                    data-bs-toggle="modal"
+                    data-bs-target="#detailsModal"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-avatar">
+                  <img src="user.png" alt="Avatar" class="avatar-student" />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-name">Marvin Cayosa</h3>
+                  <p class="card-subtitle">3rd Year</p>
+                  <hr />
+                  <div class="card-due">
+                    <span class="due-label">Due</span>
+                    <span class="due-date">May 30, 2024</span>
+                  </div>
+                  <button
+                    class="view-details"
+                    data-bs-toggle="modal"
+                    data-bs-target="#detailsModal"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-avatar">
+                  <img src="user.png" alt="Avatar" class="avatar-student" />
+                </div>
+                <div class="card-content">
+                  <h3 class="card-name">Marvin Cayosa</h3>
+                  <p class="card-subtitle">3rd Year</p>
+                  <hr />
+                  <div class="card-due">
+                    <span class="due-label">Due</span>
+                    <span class="due-date">May 30, 2024</span>
+                  </div>
+                  <button
+                    class="view-details"
+                    data-bs-toggle="modal"
+                    data-bs-target="#detailsModal"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+
+              <!-- Add more cards here -->
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+
+    <!-- Modal for Details -->
     <div
       class="modal fade"
       id="detailsModal"
@@ -359,29 +361,14 @@
       aria-hidden="true"
     >
       <div
-        class="modal-dialog modal-dialog-centered modal-custom"
+        class="modal-dialog modal-dialog-centered detail-modal"
         role="document"
       >
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title" id="detailsModalLabel">
-              Edit
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                class="bi bi-pencil-square"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
-                />
-                <path
-                  fill-rule="evenodd"
-                  d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
-                />
-              </svg>
+            <h2 class="modal-tag" id="detailsModalLabel">
+              <img src="user.png" alt="Avatar" class="avatar-student " />
+              Marvin Cayosa
             </h2>
           </div>
 
@@ -389,8 +376,51 @@
         </div>
       </div>
     </div>
+    <!-- Modal for Options -->
 
-    <script>
+    <div
+      class="modal fade"
+      id="optionsModal"
+      tabindex="-1"
+      aria-labelledby="optionsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered options-modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="optionsModalLabel">Options</h1>
+          </div>
+          <div class="modal-body">
+
+            <div class="themes-dropdown dropdown d-flex justify-content-between align-items-center">
+              <h5>Select a theme</h5>
+              <button class="btn themes-btn btn-secondary dropdown-toggle" type="button" id="themeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                Select Theme
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="themeDropdown">
+                <li><a class="dropdown-item" href="#" data-theme="light">Light</a></li>
+                <li><a class="dropdown-item" href="#" data-theme="dark">Dark</a></li>
+                <li><a class="dropdown-item" href="#" data-theme="system">System</a></li>
+              </ul>
+            </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-cancel"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-save">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script>
       const toggleButton = document.getElementById("toggleSidebar");
       const sidebar = document.querySelector(".sidebar_custom");
       const iconNames = document.querySelectorAll(".icon_name");
@@ -425,6 +455,6 @@
           toggleButton_2.textContent = "List View";
         }
       });
-    </script>
+    </script> 
   </body>
 </html>

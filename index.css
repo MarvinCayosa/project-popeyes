@@ -80,7 +80,7 @@ body {
 .land-page-student-signIn-container {
 
     background: #ffffffdb;
-    width: 440px;
+    width: 420px;
     margin-top: 50px;
     border-radius: 25px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.225);
@@ -215,6 +215,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 3px;
     box-sizing: border-box;
+    margin-left: 6%;
 }
 
 .captcha-container .left-side {
@@ -298,11 +299,9 @@ body {
     color: #FFFFFF;
     margin-bottom: 15px;
     display: block;
-
-    width: 359px;
+    width: 146%;
     height: 35px;
     text-align: center;
-    
     font-size: 14px;
     background-color: #C00411;
     border: none;
@@ -496,7 +495,8 @@ body {
     
     .google-button {
         color: #454545;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+        
         display: block;
         height: 35px;
         width: 170px;
@@ -508,10 +508,10 @@ body {
         cursor: pointer;
         font-weight: 600;
         transition: background-color 0.3s ease;
-
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+      
     }
     
     .footer {

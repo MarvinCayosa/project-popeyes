@@ -6,6 +6,8 @@
   --dark-mode:#1a1a1a;
 }
 
+
+
 hr {
   color: #FDFDFD;
   transition: all 0.3s ease-out;
@@ -240,9 +242,6 @@ width: 220%;
 
 /* Records Page */
 /* Add scroll to the section containing the cards */
-
-
-
 .utility-button .menu-dot{
   color: #474747;
   height: 30px;
@@ -307,7 +306,6 @@ ul.dropdown-menu.show{
   justify-content: flex-start; /* Align items to the left */
   margin-left: 2.5%;
 }
-
 
 .card {
   width: 280px;
@@ -462,8 +460,48 @@ ul.dropdown-menu.show{
 }
   
 .modal-backdrop.show {
-    z-index: 10;
+    z-index: 5;
 }
+
+
+
+
+
+
+/* Modal */
+/* Remove border from modal header and footer */
+.detail-modal .modal-header,
+.modal-footer {
+  border: none; /* Removes the border */
+}
+
+.detail-modal {
+  max-width: 900px; /* Set custom width */
+  height: 500px; 
+
+}
+
+
+.detail-modal .modal-content {
+  padding: 25px 50px 25px 50px; /* Top, Right, Bottom, Left */
+  border-radius: 20px; /* Adjust the value for more or less rounded corners */  
+  position: relative;
+  height: 500px;
+}
+
+.modal-content h2{
+
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.modal-tag img{
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
 
 @media (prefers-color-scheme: dark) {
   .main_body {
@@ -531,7 +569,7 @@ ul.dropdown-menu.show{
   }
   
   .card {
-    background-color: #262d3a;
+    background-color: #232935;
     color: #ffffff;
   }
 
@@ -595,27 +633,4 @@ ul.dropdown-menu.show{
     color: #8d8d8d; /* Change this to your desired color */
 
   }
-}
-
-
-
-/* Modal */
-/* Remove border from modal header and footer */
-.modal-header,
-.modal-footer {
-  border: none; /* Removes the border */
-}
-
-.modal-custom {
-  max-width: 900px; /* Set custom width */
-  height: 500px; 
-
-}
-
-
-.modal-content {
-  padding: 25px 50px 25px 50px; /* Top, Right, Bottom, Left */
-  border-radius: 20px; /* Adjust the value for more or less rounded corners */  
-  position: relative;
-  height: 500px;
 }
