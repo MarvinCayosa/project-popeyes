@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($result->num_rows == 1) {
             // Successful login
-            header("Location: inbox.html");
+            header("Location: home.html");
             exit();
         } else {
             // Failed login
