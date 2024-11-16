@@ -28,6 +28,7 @@
 
 <?php include 'config.php'; ?>
 
+
 <div class="frame_1">
     <div class="d-flex">
         <div
@@ -204,437 +205,8 @@
 
                 <div class="card-container">
                     <!-- Example Card 1 -->
-                    <div class="card custom-spacing">
-                        <div class="card-menu">
-                            <button
-                                class="btn card-menu-btn"
-                                type="button"
-                                data-bs-toggle="modal"
-                                data-bs-target="#editModal"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    fill="currentColor"
-                                    class="bi bi-pencil-square"
-                                    viewBox="0 0 16 16"
-                                    style="position: absolute; top: 10px; right: 10px"
-                                >
-                                    <path
-                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
-                                    />
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
-                                    />
-                                </svg>
-                            </button>
-                        </div>
-                        <img src="../png/arduino.png" class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">Arduino Uno R3</h5>
-                            <div class="available-text">
-                                In stock:
-                                <span
-                                    class="available-number"
-                                    style="background-color: #d31111"
-                                    id="available-stock"
-                                >3</span
-                                >
-                            </div>
-                            <p
-                                class="card-text d-flex justify-content-between align-items-center"
-                            >
-                                Total Stock:
-                                <span class="stock-number" id="total-stock">25</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Example Card 2 -->
-                    <div class="card custom-spacing">
-                        <div class="card-menu">
-                            <button
-                                class="btn card-menu-btn"
-                                type="button"
-                                data-bs-toggle="modal"
-                                data-bs-target="#editModal"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    fill="currentColor"
-                                    class="bi bi-pencil-square"
-                                    viewBox="0 0 16 16"
-                                    style="position: absolute; top: 10px; right: 10px"
-                                >
-                                    <path
-                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
-                                    />
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
-                                    />
-                                </svg>
-                            </button>
-                        </div>
-                        <img src="../png/breadboard.png" class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">Breadboard</h5>
-                            <div class="available-text">
-                                In stock:
-                                <span class="available-number" id="available-stock"
-                                >55</span
-                                >
-                            </div>
-                            <p
-                                class="card-text d-flex justify-content-between align-items-center"
-                            >
-                                Total Stock:
-                                <span class="stock-number" id="total-stock">75</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Example Card 3 -->
-                    <div class="card custom-spacing">
-                        <div class="card-menu">
-                            <button
-                                class="btn card-menu-btn"
-                                type="button"
-                                data-bs-toggle="modal"
-                                data-bs-target="#editModal"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    fill="currentColor"
-                                    class="bi bi-pencil-square"
-                                    viewBox="0 0 16 16"
-                                    style="position: absolute; top: 10px; right: 10px"
-                                >
-                                    <path
-                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
-                                    />
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
-                                    />
-                                </svg>
-                            </button>
-                        </div>
-                        <img src="../png/esp32.png" class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">ESP32</h5>
-                            <div class="available-text">
-                                In stock:
-                                <span
-                                    class="available-number"
-                                    style="background-color: #ff9408"
-                                    id="available-stock"
-                                >35</span
-                                >
-                            </div>
-                            <p
-                                class="card-text d-flex justify-content-between align-items-center"
-                            >
-                                Total Stock:
-                                <span class="stock-number" id="total-stock">60</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Example Card 4 -->
-                    <div class="card custom-spacing">
-                        <div class="card-menu">
-                            <button
-                                class="btn card-menu-btn"
-                                type="button"
-                                data-bs-toggle="modal"
-                                data-bs-target="#editModal"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    fill="currentColor"
-                                    class="bi bi-pencil-square"
-                                    viewBox="0 0 16 16"
-                                    style="position: absolute; top: 10px; right: 10px"
-                                >
-                                    <path
-                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
-                                    />
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
-                                    />
-                                </svg>
-                            </button>
-                        </div>
-                        <img src="../png/flame_sensor.png" class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">Flame Sensor</h5>
-                            <div class="available-text">
-                                In stock:
-                                <span class="available-number" id="available-stock"
-                                >15</span
-                                >
-                            </div>
-                            <p
-                                class="card-text d-flex justify-content-between align-items-center"
-                            >
-                                Total Stock:
-                                <span class="stock-number" id="total-stock">25</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Example Card 5 -->
-                    <div class="card custom-spacing">
-                        <div class="card-menu">
-                            <button
-                                class="btn card-menu-btn"
-                                type="button"
-                                data-bs-toggle="modal"
-                                data-bs-target="#editModal"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    fill="currentColor"
-                                    class="bi bi-pencil-square"
-                                    viewBox="0 0 16 16"
-                                    style="position: absolute; top: 10px; right: 10px"
-                                >
-                                    <path
-                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
-                                    />
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
-                                    />
-                                </svg>
-                            </button>
-                        </div>
-                        <img src="../png/soldering_iron.png" class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">Soldering Iron</h5>
-                            <div class="available-text">
-                                In stock:
-                                <span class="available-number" id="available-stock">5</span>
-                            </div>
-                            <p
-                                class="card-text d-flex justify-content-between align-items-center"
-                            >
-                                Total Stock:
-                                <span class="stock-number" id="total-stock">10</span>
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Example Card 6 -->
-                    <div class="card custom-spacing">
-                        <div class="card-menu">
-                            <button
-                                class="btn card-menu-btn"
-                                type="button"
-                                data-bs-toggle="modal"
-                                data-bs-target="#editModal"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    fill="currentColor"
-                                    class="bi bi-pencil-square"
-                                    viewBox="0 0 16 16"
-                                    style="position: absolute; top: 10px; right: 10px"
-                                >
-                                    <path
-                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
-                                    />
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
-                                    />
-                                </svg>
-                            </button>
-                        </div>
-                        <img
-                            src="../png/ultrasonic_sensor.png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <div class="card-body">
-                            <h5 class="card-title">Ultrasonic Sensor</h5>
-                            <div class="available-text">
-                                In stock:
-                                <span class="available-number" id="available-stock"
-                                >26</span
-                                >
-                            </div>
-                            <p
-                                class="card-text d-flex justify-content-between align-items-center"
-                            >
-                                Total Stock:
-                                <span class="stock-number" id="total-stock">30</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Example Card 7 -->
-                    <div class="card custom-spacing">
-                        <div class="card-menu">
-                            <button
-                                class="btn card-menu-btn"
-                                type="button"
-                                data-bs-toggle="modal"
-                                data-bs-target="#editModal"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    fill="currentColor"
-                                    class="bi bi-pencil-square"
-                                    viewBox="0 0 16 16"
-                                    style="position: absolute; top: 10px; right: 10px"
-                                >
-                                    <path
-                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
-                                    />
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
-                                    />
-                                </svg>
-                            </button>
-                        </div>
-                        <img
-                            src="../png/ultrasonic_sensor.png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <div class="card-body">
-                            <h5 class="card-title">Ultrasonic Sensor</h5>
-                            <div class="available-text">
-                                In stock:
-                                <span class="available-number" id="available-stock"
-                                >15</span
-                                >
-                            </div>
-                            <p
-                                class="card-text d-flex justify-content-between align-items-center"
-                            >
-                                Total Stock:
-                                <span class="stock-number" id="total-stock">75</span>
-                            </p>
-                        </div>
-                    </div>
+                    <?php include 'fetch_items.php'; ?>
                     <!-- Example Card 8 -->
-                    <div class="card custom-spacing">
-                        <div class="card-menu">
-                            <button
-                                class="btn card-menu-btn"
-                                type="button"
-                                data-bs-toggle="modal"
-                                data-bs-target="#editModal"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    fill="currentColor"
-                                    class="bi bi-pencil-square"
-                                    viewBox="0 0 16 16"
-                                    style="position: absolute; top: 10px; right: 10px"
-                                >
-                                    <path
-                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
-                                    />
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
-                                    />
-                                </svg>
-                            </button>
-                        </div>
-                        <img
-                            src="../png/ultrasonic_sensor.png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <div class="card-body">
-                            <h5 class="card-title">Ultrasonic Sensor</h5>
-                            <div class="available-text">
-                                In stock:
-                                <span class="available-number" id="available-stock"
-                                >15</span
-                                >
-                            </div>
-                            <p
-                                class="card-text d-flex justify-content-between align-items-center"
-                            >
-                                Total Stock:
-                                <span class="stock-number" id="total-stock">75</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Example Card 9-->
-                    <div class="card custom-spacing">
-                        <div class="card-menu">
-                            <button
-                                class="btn card-menu-btn"
-                                type="button"
-                                data-bs-toggle="modal"
-                                data-bs-target="#editModal"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    fill="currentColor"
-                                    class="bi bi-pencil-square"
-                                    viewBox="0 0 16 16"
-                                    style="position: absolute; top: 10px; right: 10px"
-                                >
-                                    <path
-                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
-                                    />
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
-                                    />
-                                </svg>
-                            </button>
-                        </div>
-                        <img
-                            src="../png/ultrasonic_sensor.png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <div class="card-body">
-                            <h5 class="card-title">Ultrasonic Sensor</h5>
-                            <div class="available-text">
-                                In stock:
-                                <span class="available-number" id="available-stock"
-                                >15</span
-                                >
-                            </div>
-                            <p
-                                class="card-text d-flex justify-content-between align-items-center"
-                            >
-                                Total Stock:
-                                <span class="stock-number" id="total-stock">75</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
             </section>
 
             <section class="status-section">
@@ -1106,6 +678,62 @@
             alertBox.remove();
         }, duration);
     }
+</script>
+
+<script>
+    document.getElementById("addItemForm").addEventListener("submit", function(e) {
+        e.preventDefault();  // Prevent form from submitting the normal way
+
+        // Create a FormData object to send the form data
+        const formData = new FormData(this);
+
+        // Send the data using AJAX
+        fetch('add_items.php', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Create new item element in the same format as the form
+                    const itemElement = document.createElement("div");
+                    itemElement.classList.add("form-row");
+
+                    // HTML structure for displaying the item
+                    itemElement.innerHTML = `
+                    <div class="input-group">
+                        <div class="input-custom-1">
+                            <label for="itemId" class="form-label">ID</label>
+                            <input
+                                type="text"
+                                class="form-control input-id"
+                                value="${data.id}"
+                                readonly
+                            />
+                        </div>
+                        <div class="input-custom-1">
+                            <label for="itemName" class="form-label">Item Name</label>
+                            <input
+                                type="text"
+                                class="form-control input-item-name"
+                                value="${data.itemName}"
+                                readonly
+                            />
+                        </div>
+                    </div>
+                `;
+
+                    // Append the new item to the items list
+                    document.getElementById("itemsList").appendChild(itemElement);
+
+                    // Optionally, clear the form
+                    document.getElementById("addItemForm").reset();
+                } else {
+                    alert("Error adding item: " + data.error);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    });
 </script>
 </body>
 </html>
