@@ -135,10 +135,10 @@
                 <div class="container-nav container-fluid">
                     <a class="navbar-brand" href="#">
                         <svg class="logo logo-light">
-                            <use xlink:href="SVG/Asset_1.svg#Layer_2"></use>
+                            <use xlink:href="../SVG/Asset_1.svg#Layer_2"></use>
                         </svg>
                         <svg class="logo logo-dark">
-                            <use xlink:href="SVG/Asset 2.svg#Layer_2"></use>
+                            <use xlink:href="../SVG/Asset 2.svg#Layer_2"></use>
                         </svg>
                     </a>
 
