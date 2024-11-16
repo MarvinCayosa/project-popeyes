@@ -1,0 +1,770 @@
+body {
+    color: #454545;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.page-background-container{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+}
+
+.page-background-container .background-container{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.page-background-container .background-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#bg_light {
+    display: block;
+}
+
+#bg_dark {
+    display: none;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .land-page-student {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 100vh; /* Ensure the container takes full viewport height */
+
+}
+
+
+.land-page-student-header {
+    color: #C00411;
+    font-size: 62px;
+
+}
+
+
+.land-page-student-header .light-mode-logo .logo-light {
+    width: 304px;
+    height: 99px;
+    display: block;
+}
+
+.land-page-student-header .dark-mode-logo .logo-dark {
+    width: 250px;
+    height: auto;
+    display: none;
+}
+
+.land-page-student-sub-header {
+    font-style: italic;
+    font-size: 12px;
+    margin-bottom: -15px;
+}
+
+.land-page-student-signIn-container {
+
+    background: #ffffffdb;
+    width: 420px;
+    margin-top: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.225);
+}
+
+.signIn-container-content {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.signIn-container-content .signIn-header-container {
+    font-size: 26px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Eto binago ko sa Faculty Student*/
+.selector-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    font-size: 12px;
+    position: relative;
+}
+
+.selector-container a {
+    text-decoration: none;
+    color: #454545;
+    padding: 0px 15px;
+    margin: 0 15px;  
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    text-align: center; /* Center text within anchor */
+}
+
+.selector-container a::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Centering starts from the left of the anchor */
+    bottom: -2px; /* Adjust this based on your design */
+    width: 0;
+    height: 2px;
+    background-color: #C00411;
+    transition: width 0.3s ease; /* Smooth transition */
+    transform: translateX(-50%); /* Shift to the left by 50% of its own width */
+}
+
+.selector-container a.active::after {
+    width: 80%; 
+}
+
+
+/* Eto binago ko sa Faculty Student*/
+
+.signIn-signUp-container{
+    width: 90%;
+    font-size: 12px;
+}
+
+.signIn-signUp-container .email-container{
+    margin-bottom: 15px;
+        
+}
+
+.signIn-signUp-container .password-container {
+    margin-bottom: 15px;
+}
+
+.signIn-signUp-container .email-container .ue-mail {
+    margin-bottom: 5px;
+}
+
+.signIn-signUp-container label .ue-mail .password{
+    text-align: left;
+    font-size: 12px;
+}
+
+
+.email-textbox {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 8px;
+}
+
+.email-textbox:focus {
+    border: 0.5px solid #C00411; 
+    outline: none; 
+}
+
+.link-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%; 
+    margin-top: 10px;
+    font-size: 10px;
+    margin-bottom: 25px;
+}
+
+.forgot-password-link {
+    text-align: left;
+}
+
+.sign-up-link {
+    text-align: right;
+}
+
+.captcha-container {
+    margin-right: 175px;
+    margin-bottom: 20px;
+}
+
+.captcha-container .content-container {
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 38px;
+    width: 193px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-left: 6%;
+}
+
+.captcha-container .left-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.captcha-container .left-side .checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.captcha-container .left-side .checkbox-input {
+    display: none;
+}
+
+.captcha-container .left-side .checkbox-custom {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #C1C1C1;
+    border-radius: 4px;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.captcha-container .left-side .checkbox-input:checked + .checkbox-custom {
+    background-color: #C1C1C1;
+    border-color: #C1C1C1;
+}
+
+.captcha-container .left-side .checkbox-input:checked + .checkbox-custom::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg); /* Centered and rotated */
+    box-sizing: border-box;
+}
+
+.captcha-container .middle-side {
+    font-size: 10px;
+    text-align: center;
+}
+
+.captcha-container .right-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.captcha-container .captcha-logo img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+
+.captcha-container .middle-side {
+    font-size: 10px;
+}
+
+.button-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.signIn-button {
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    display: block;
+    width: 146%;
+    height: 35px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #C00411;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.seperator {
+    margin-bottom: 15px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.seperator .or {
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.seperator .line {
+    background-color: #000000;
+    width: 101px;
+    height: 1px;
+}
+
+.google-button {
+    color: #454545;
+    margin-bottom: 15px;
+    height: 35px;
+    width: 180px;
+    padding: 0 12px; /* Adjust padding */
+    font-size: 12px;
+    background-color: #FBBC05;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align logo and text at the start */
+    gap: 8px; /* Space between logo and text */
+    white-space: nowrap; /* Ensure text stays in one line */
+}
+
+.google-button img.google-logo {
+    width: 18px;  /* Adjust logo size */
+    height: 18px;
+}
+
+.google-button .google-text {
+    font-size: 12px;
+    line-height: 1;
+}
+
+
+.footer {
+    position: relative;
+    font-size: 10px;
+    margin-top: 15px;
+}
+
+/* responsive */
+
+@media (max-width: 1024px) {
+
+    .land-page-student poppins-regular{
+        margin-top: 65px;
+    }
+
+    .land-page-student {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    
+    .land-page-student-header {
+        color: #C00411;
+        font-size: 85px;
+        margin-top: 25px;
+    }
+    
+    .land-page-student-sub-header {
+        font-style: italic;
+        font-size: 16px;
+    }
+    
+    .land-page-student-signIn-container {
+        width: 500px;   
+        height: 600px;
+        margin-top: 36px;
+        border-radius: 25px;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    .signIn-container-content {
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    
+    .signIn-container-content .signIn-header-container {
+        font-size: 36px;
+        font-weight: bolder;
+        text-align: center;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+    
+    .signIn-container-content .selector-container {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        font-size: 12px;
+    }
+    .signIn-container-content .selector-container a{
+        text-decoration: none;
+        color: #454545;
+        padding: 0px 15px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+    
+    .signIn-signUp-container{
+        width: 90%;
+        font-size: 12px;
+    }
+    
+    .signIn-signUp-container .email-container{
+        margin-bottom: 15px;
+            
+    }
+    
+    .signIn-signUp-container .password-container {
+        margin-bottom: 15px;
+    }
+    
+    .signIn-signUp-container .email-container .ue-mail {
+        margin-bottom: 5px;
+    }
+    
+    .signIn-signUp-container label .ue-mail .password{
+        text-align: left;
+        font-size: 12px;
+    }
+    
+    
+    .email-textbox {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    .link-container {
+        font-size: 11px;
+        margin-bottom: 25px;
+    }
+    
+    .signIn-button {
+        color: #FFFFFF;
+        margin-bottom: 15px;
+        display: block;
+        /* width: 80%; */
+
+        width: 330px;
+        height: 40px;
+        text-align: center;
+
+        font-size: 14px;
+        background-color: #C00411;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+    
+    .seperator {
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+    
+    .google-button {
+        color: #454545;
+        margin-bottom: 20px;
+        
+        display: block;
+        height: 35px;
+        width: 170px;
+        padding: 12px;
+        font-size: 12px;
+        background-color: #FBBC05;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      
+    }
+    
+    .footer {
+        font-size: 10px;
+        margin-top: -8px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .land-page-student {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    
+    .land-page-student-header {
+        color: #C00411;
+        font-size: 50px;
+        margin-top: 12px;
+    }
+    
+    .land-page-student-sub-header {
+        font-style: italic;
+        font-size: 12px;
+    }
+    
+    .land-page-student-signIn-container {
+        width: 450px;   
+        height: 600px;
+        margin-top: 45px;
+        border-radius: 25px;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .signIn-container-content {
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    
+    .signIn-container-content .signIn-header-container {
+        font-size: 36px;
+        font-weight: bolder;
+        text-align: center;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+    
+    .signIn-container-content .selector-container {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        font-size: 12px;
+    }
+    .signIn-container-content .selector-container a{
+        text-decoration: none;
+        color: #454545;
+        padding: 0px 15px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+    
+    .signIn-signUp-container{
+        width: 90%;
+        font-size: 12px;
+    }
+    
+    .signIn-signUp-container .email-container{
+        margin-bottom: 15px;
+            
+    }
+    
+    .signIn-signUp-container .password-container {
+        margin-bottom: 15px;
+    }
+    
+    .signIn-signUp-container .email-container .ue-mail {
+        margin-bottom: 5px;
+    }
+    
+    .signIn-signUp-container label .ue-mail .password{
+        text-align: left;
+        font-size: 12px;
+    }
+    
+    
+    .email-textbox {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    .link-container {
+        font-size: 11px;
+        margin-bottom: 25px;
+    }
+    
+    .signIn-button {
+        color: #FFFFFF;
+        margin-bottom: 15px;
+        display: block;
+        /* width: 80%; */
+        
+        width: 330px;
+        height: 40px;
+        text-align: center;
+        
+        font-size: 14px;
+        background-color: #C00411;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+    
+    .seperator {
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+    
+    .google-button {
+        color: #454545;
+        margin-bottom: 15px;
+        display: block;
+        height: 35px;
+        width: 170px;
+        padding: 12px;
+        font-size: 12px;
+        background-color: #FBBC05;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .footer {
+        font-size: 10px;
+        margin-top: -10px;
+    }
+
+}
+
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #FFFFFF;
+    }
+
+        
+    #bg_light {
+        display: none;
+    }
+
+    #bg_dark {
+        display: block;
+    }
+ 
+
+    .land-page-student-header {
+        color: #202837;
+    }
+
+    .land-page-student-header .light-mode-logo .logo-light {
+        width: 304px;
+        height: 99px;
+        display: none;
+    }
+
+    .land-page-student-header .dark-mode-logo .logo-dark {
+    
+        display: block;
+    }
+
+
+    .land-page-student-signIn-container {
+        background-color: #212837;
+        box-shadow: 0px 0px 50px #000000a7;
+    }
+
+    .signIn-container-content .link-container a{
+        color: #76AAFF;
+    }
+
+    .signIn-container-content .selector-container a {
+        color: #e0e0e0;
+    }
+
+    .email-textbox {
+        background-color: #212837;
+        border: 1px solid #555;
+        color: #e0e0e0;
+    }
+
+    .captcha-container {
+        margin-right: 175px;
+        margin-bottom: 20px;
+    }
+    
+    
+    .captcha-container .content-container {
+        background-color: #FAFAFA;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        height: 38px;
+        width: 193px;
+        margin-bottom: 15px;
+        color: #4f4f4f;
+    
+    
+        /* width: 100%; */
+        /* padding: 12px; */
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+
+
+    .captcha-container .left-side .checkbox-input:checked + .checkbox-custom {
+        background-color: #4f4f4f;
+    }
+
+    .signIn-button {
+        background-color: #8F1019;
+    }
+
+    .seperator .line {
+        background-color: #FFFFFF;
+    }
+
+    .google-button {
+        background-color: #FBBC05;
+        color: #303030;
+    }
+
+    .footer {
+        color: #bbbbbb;
+    }
+}

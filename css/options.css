@@ -1,0 +1,60 @@
+.options-modal .modal-header, .modal-footer {
+    border: none; /* Removes the border */
+  }
+  
+  .options-modal .modal-content {
+    padding: 25px; /* Top, Right, Bottom, Left */
+    border-radius: 20px; /* Adjust the value for more or less rounded corners */  
+    position: relative;
+    height: 320px; 
+    font-family: "Poppins", sans-serif;
+    
+  }
+
+  .themes-btn{
+    font-size: 14px;
+  }
+
+  .themes-dropdown h5{
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .options-modal h1{
+    font-size: 26px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .options-modal .btn-cancel{
+    background-color: #bfbfbf;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+  }
+  
+  .options-modal .btn-save{
+    background-color: #8F1019;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+  
+  }
+  
+  .btn-theme{
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  
+  
