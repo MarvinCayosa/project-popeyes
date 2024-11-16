@@ -687,7 +687,7 @@
             </div>
 
             <div class="modal-body">
-                <form>
+                <form method="POST" action="add_items.php" id="add_items">
                     <!-- First row: ID Input and Item Name Input -->
                     <div class="form-row">
                         <div class="input-group">
@@ -695,20 +695,23 @@
                             <div class="input-custom-1">
                                 <label for="itemId" class="form-label">ID</label>
                                 <input
-                                    type="text"
-                                    class="form-control input-id"
-                                    id="itemId"
-                                    placeholder="#XXXX"
+                                        type="text"
+                                        class="form-control input-id"
+                                        id="itemIdd"
+                                        name="itemId"
+                                        placeholder="#XXXX"
                                 />
                             </div>
                             <!-- Item Name Input -->
                             <div class="input-custom-1">
                                 <label for="itemName" class="form-label">Item Name</label>
                                 <input
-                                    type="text"
-                                    class="form-control input-item-name"
-                                    id="itemName"
-                                    placeholder="Item Name"
+                                        type="text"
+                                        class="form-control input-item-name"
+                                        id="itemName"
+                                        name="itemName"
+                                        placeholder="Item Name"
+                                        required
                                 />
                             </div>
                         </div>
@@ -721,21 +724,22 @@
                             <div class="input-custom">
                                 <label for="dateAdded" class="form-label">Date Added</label>
                                 <input
-                                    type="date"
-                                    class="form-control input-date"
-                                    id="dateAdded"
+                                        type="date"
+                                        class="form-control input-date"
+                                        id="dateAdded"
+                                        name="dateAdded"
+                                        required
                                 />
                             </div>
                             <!-- Total Quantity Input -->
                             <div class="input-custom">
-                                <label for="totalQuantity" class="form-label"
-                                >Total Quantity</label
-                                >
+                                <label for="totalQuantity" class="form-label">Total Quantity</label>
                                 <input
-                                    type="number"
-                                    class="form-control input-quantity"
-                                    id="totalQuantity"
-                                    placeholder=""
+                                        type="number"
+                                        class="form-control input-quantity"
+                                        id="totalQuantity"
+                                        name="totalQuantity"
+                                        required
                                 />
                             </div>
                         </div>
@@ -746,29 +750,30 @@
                         <div class="input-group">
                             <!-- Date Edited Input -->
                             <div class="input-custom">
-                                <label for="dateEdited" class="form-label"
-                                >Date Edited</label
-                                >
+                                <label for="dateEdited" class="form-label">Date Edited</label>
                                 <input
-                                    type="date"
-                                    class="form-control input-date"
-                                    id="dateEdited"
+                                        type="date"
+                                        class="form-control input-date"
+                                        id="dateEdited"
+                                        name="dateEdited"
+                                        required
                                 />
                             </div>
                             <!-- Available Quantity Input -->
                             <div class="input-custom">
-                                <label for="availableQuantity" class="form-label"
-                                >Available</label
-                                >
+                                <label for="availableQuantity" class="form-label">Available</label>
                                 <input
-                                    type="number"
-                                    class="form-control input-quantity"
-                                    id="availableQuantity"
-                                    placeholder=""
+                                        type="number"
+                                        class="form-control input-quantity"
+                                        id="availableQuantity"
+                                        name="availableQuantity"
+                                        required
                                 />
                             </div>
                         </div>
                     </div>
+
+                    <!-- Submit Button -->
                 </form>
 
                 <div class="image-preview-container">
@@ -786,11 +791,11 @@
                             class="bi bi-image"
                             viewBox="0 0 16 16"
                             style="
-                    position: absolute;
-                    top: 45%;
-                    left: 50%;
-                    transform: translate(-50%, -100%);
-                  "
+                                position: absolute;
+                                top: 45%;
+                                left: 50%;
+                                transform: translate(-50%, -100%);
+                                "
                         >
                             <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
                             <path
@@ -837,9 +842,11 @@
                         Cancel
                     </button>
                     <button
-                        type="button"
+                        type="submit"
                         class="btn-save-changes"
                         data-bs-dismiss="modal"
+                        form="add_items"
+                        name="addItem"
                         onclick="showTemporaryAlert('Changes saved!', 3000)"
                     >
                         Add Item
