@@ -6,27 +6,28 @@
     <meta name="theme-color" content="#C00411">
     <title>UEnventory</title>
 
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<?php include '..//config.php'; ?>
+<?php include 'php/config.php'; ?>
+
 
 <div class="page-background-container">
     <div class="background-container">
-        <img id="bg_light" src="../assets/bg_image_l.svg">
-        <img id="bg_dark" src="../assets/bg_image_dark.svg">
+        <img id="bg_light" src="assets/bg_image_l.svg">
+        <img id="bg_dark" src="assets/bg_image_dark.svg">
     </div>
 </div>
 
 <div class="land-page-student poppins-regular">
     <div class="land-page-student-header">
         <div class="light-mode-logo">
-            <img class="logo-light" src="../assets/logo_light.png">
+            <img class="logo-light" src="assets/logo_light.png">
         </div>
         <div class="dark-mode-logo">
-            <img class="logo-dark" src="../assets/logo_dark.png">
+            <img class="logo-dark" src="assets/logo_dark.png">
         </div>
     </div>
 
@@ -36,7 +37,7 @@
 
     <div class="land-page-student-signIn-container">
 
-        <form method="POST" action="read.php" id="signin-form">
+        <form method="POST" action="php/read.php" id="signin-form">
             <input type="hidden" name="form_name" value="signin_form">
             <input type="hidden" name="user_type" id="user_type" value="faculty">
 
@@ -61,7 +62,7 @@
                         <div class="password-wrapper">
                             <input type="password" class="email-textbox" id="password" name="password" required>
                             <span class="eye-icon" onclick="togglePassword()">
-                                <img src="../assets/eye-slash-fill.svg" id="toggleIcon" alt="Show/Hide Password">
+                                <img src="assets/eye-slash-fill.svg" id="toggleIcon" alt="Show/Hide Password">
                             </span>
                         </div>
                     </div>
@@ -83,7 +84,7 @@
                         <div class="middle-side">I'm not a robot</div>
                         <div class="right-side">
                             <div class="captcha-logo">
-                                <img id="captcha_light" src="../assets/captcha_logo.svg">
+                                <img id="captcha_light" src="assets/captcha_logo.svg">
                             </div>
                         </div>
                     </div>
@@ -151,7 +152,7 @@
                     </div>
 
                     <button type="button" class="google-button">
-                        <img src="../assets/google_logo.svg" alt="Google logo" class="google-logo">
+                        <img src="assets/google_logo.svg" alt="Google logo" class="google-logo">
                         <span class="google-text">Continue with Google</span>
                     </button>
                 </div>

@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         } else {
             // Failed login
-            header("Location: index.php?error=invalid_credentials");
+            header("Location: ../index.php");
             exit();
         }
 

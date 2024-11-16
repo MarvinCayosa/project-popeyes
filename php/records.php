@@ -49,9 +49,8 @@
                 <span class="icon_name identifier">Administrator</span>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="avatar"
+                    class="avatar bi bi-person-circle"
                     fill="currentColor"
-                    class="bi bi-person-circle"
                     viewBox="0 0 16 16"
                 >
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
@@ -63,7 +62,7 @@
             </a>
             <ul class="user_dropdown dropdown-menu">
                 <li><a class="dropdown-item" href="#">View Profile</a></li>
-                <li><a class="dropdown-item" href="index.php">Log Out</a></li>
+                <li><a class="dropdown-item" href="../index.php">Log Out</a></li>
             </ul>
 
             <hr />

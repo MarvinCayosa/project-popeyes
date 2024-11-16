@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Added Log In conditions, only faculty can access faculty website, same goes to students,&#10;&#10;Included &quot;read.php&quot; for verifying credentials." />
+    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Added Log In conditions, only faculty can access faculty website, same goes to students,&#10;&#10;Included &quot;read.php&quot; for verifying credentials.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/inbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/inbox.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/read.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/records.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/records.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,12 +47,12 @@
     &quot;assignee&quot;: &quot;Lo-tus11&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/MarvinCayosa/project-popeyes.git&quot;,
-    &quot;accountId&quot;: &quot;68c3b3fb-3cca-4c54-ae9f-c9902d839325&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MarvinCayosa/project-popeyes.git",
+    "accountId": "d7d1852b-0d79-4bf6-91d6-8c95b96f72c3"
   }
-}</component>
+}]]></component>
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -64,6 +71,8 @@
     "JavaScript Debug.inbox.html.executor": "Run",
     "JavaScript Debug.index.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "vinas-main",
     "last_opened_file_path": "C:/xampp/htdocs/vinas-main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -76,11 +85,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\vinas-main" />
       <recent name="C:\xampp\htdocs\vinas-branch\php" />
       <recent name="C:\xampp\htdocs\vinas-branch" />
       <recent name="C:\xampp\htdocs\vinas-branch\SVG" />
       <recent name="C:\xampp\htdocs\vinas-branch\css" />
-      <recent name="C:\xampp\htdocs\vinas-branch\png" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -111,7 +120,8 @@
       <workItem from="1731724411936" duration="15000" />
       <workItem from="1731733545743" duration="792000" />
       <workItem from="1731734353067" duration="2260000" />
-      <workItem from="1731736906390" duration="13000" />
+      <workItem from="1731736906390" duration="730000" />
+      <workItem from="1731737649357" duration="4741000" />
     </task>
     <task id="LOCAL-00001" summary="Added Log In conditions, only faculty can access faculty website, same goes to students,&#10;&#10;Included &quot;read.php&quot; for verifying credentials.">
       <option name="closed" value="true" />
