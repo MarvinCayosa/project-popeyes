@@ -298,9 +298,10 @@ hr {
 .card-container {
   display: flex;
   flex-wrap: wrap; /* Allow cards to wrap onto new lines */
-  gap: 40px; /* Space between cards */
+  gap: 10px; /* Space between cards */
+  margin-bottom: 20px;
   justify-content: flex-start; /* Align items to the left */
-  margin-left: 2.5%;
+  margin-right: 2.5%;
 }
 
 .card-container::-webkit-scrollbar {

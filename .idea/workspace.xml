@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Able to add items on the database // cannot display added items yet">
-      <change afterPath="$PROJECT_DIR$/php/fetch_items.php" afterDir="false" />
+    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Able to add items and display on the webapp, as well as its corresponding images. Will add manual insertion of images.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/add_items.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/add_items.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/uenventory.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/uenventory.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/fetch_items.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/fetch_items.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/home.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +130,9 @@
       <workItem from="1731736906390" duration="730000" />
       <workItem from="1731737649357" duration="5587000" />
       <workItem from="1731744055692" duration="2392000" />
-      <workItem from="1731764670391" duration="7547000" />
+      <workItem from="1731764670391" duration="7809000" />
+      <workItem from="1731775254475" duration="36000" />
+      <workItem from="1731856069456" duration="3849000" />
     </task>
     <task id="LOCAL-00001" summary="Added Log In conditions, only faculty can access faculty website, same goes to students,&#10;&#10;Included &quot;read.php&quot; for verifying credentials.">
       <option name="closed" value="true" />
@@ -163,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731767735915</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Able to add items and display on the webapp, as well as its corresponding images. Will add manual insertion of images.">
+      <option name="closed" value="true" />
+      <created>1731772324327</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731772324327</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +195,7 @@
     <MESSAGE value="Added Log In conditions, only faculty can access faculty website, same goes to students,&#10;&#10;Included &quot;read.php&quot; for verifying credentials." />
     <MESSAGE value="Refactored Files; Added custom domain name. Will improve further" />
     <MESSAGE value="Able to add items on the database // cannot display added items yet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Able to add items on the database // cannot display added items yet" />
+    <MESSAGE value="Able to add items and display on the webapp, as well as its corresponding images. Will add manual insertion of images." />
+    <option name="LAST_COMMIT_MESSAGE" value="Able to add items and display on the webapp, as well as its corresponding images. Will add manual insertion of images." />
   </component>
 </project>

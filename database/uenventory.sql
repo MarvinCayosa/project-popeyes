@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2024 at 07:46 AM
+-- Generation Time: Nov 17, 2024 at 04:22 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -48,10 +48,10 @@ INSERT INTO `faculty` (`id`, `name`, `email`, `password`) VALUES
 --
 
 CREATE TABLE `items` (
-  `id` int(4) NOT NULL,
-  `name` varchar(64) NOT NULL,
-  `quantity` int(3) NOT NULL,
-  `available` int(3) NOT NULL,
+  `item_id` int(4) NOT NULL,
+  `item_name` varchar(64) NOT NULL,
+  `total_quantity` int(3) NOT NULL,
+  `available_quantity` int(3) NOT NULL,
   `date_added` date NOT NULL,
   `date_edited` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -60,8 +60,9 @@ CREATE TABLE `items` (
 -- Dumping data for table `items`
 --
 
-INSERT INTO `items` (`id`, `name`, `quantity`, `available`, `date_added`, `date_edited`) VALUES
-(1, 'Arduino', 50, 50, '2024-11-15', '2024-11-15');
+INSERT INTO `items` (`item_id`, `item_name`, `total_quantity`, `available_quantity`, `date_added`, `date_edited`) VALUES
+(1, 'Arduino', 50, 50, '2024-11-15', '2024-11-15'),
+(30, 'Arduino', 23, 23, '2024-11-02', '2024-11-22');
 
 -- --------------------------------------------------------
 
@@ -97,7 +98,8 @@ ALTER TABLE `faculty`
 -- Indexes for table `items`
 --
 ALTER TABLE `items`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`item_id`),
+  ADD UNIQUE KEY `unique_item` (`item_id`,`item_name`);
 
 --
 -- Indexes for table `students`
@@ -113,7 +115,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `item_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

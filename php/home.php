@@ -204,7 +204,7 @@
                 </div>
 
                 <div class="card-container">
-                    <!-- Example Card 1 -->
+                    <link rel="stylesheet" href="../css/home_styles.css" />
                     <?php include 'fetch_items.php'; ?>
                     <!-- Example Card 8 -->
             </section>
