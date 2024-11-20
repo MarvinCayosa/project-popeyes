@@ -1,0 +1,16 @@
+<div class="student_pic"></div>
+    <div class="inbox-student-name">
+        <h5
+            class="student-link"
+            data-bs-toggle="modal"
+            data-bs-target="#studentModal"
+            data-name="Marvin Cayosa"
+            data-status="Pending"
+            data-date="Oct. 28, 2024"
+        >
+            Marvin Cayosa
+        </h5>
+    </div>
+<div class="inbox-status-circle status-pending"></div>
+<div class="inbox-status">Pending</div>
+<div class="inbox-date">Oct. 28, 2024</div>

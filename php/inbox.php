@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -20,7 +20,7 @@
 </head>
 
 <body>
-
+<?php global $filter ?>
 <?php include 'config.php'; ?>
 
 <!-- Main Frame -->
@@ -141,88 +141,14 @@
             </div>
 
             <div class="inbox-navigation">
-                <a href="#all" class="padding active">All</a>
-                <a href="#pending" class="padding">Pending</a>
-                <a href="#approved" class="padding">Approved</a>
-                <a href="#rejected" class="padding">Rejected</a>
+                <a href="?status=all" id="all-link" class="filter-link padding active">All</a>
+                <a href="?status=pending" id="pending-link" class="filter-link padding">Pending</a>
+                <a href="?status=approved" id="approved-link" class="filter-link padding">Approved</a>
+                <a href="?status=rejected" id="rejected-link" class="filter-link padding">Rejected</a>
             </div>
 
             <section class="inbox-section d-flex flex-column">
-                <div class="inbox-item d-flex flex-row">
-                    <div class="student_pic"></div>
-                    <div class="inbox-student-name">
-                        <h5
-                            class="student-link"
-                            data-bs-toggle="modal"
-                            data-bs-target="#studentModal"
-                            data-name="Marvin Cayosa"
-                            data-status="Pending"
-                            data-date="Oct. 28, 2024"
-                        >
-                            Marvin Cayosa
-                        </h5>
-                    </div>
-                    <div class="inbox-status-circle status-pending"></div>
-                    <div class="inbox-status">Pending</div>
-                    <div class="inbox-date">Oct. 28, 2024</div>
-                </div>
-
-                <div class="inbox-item d-flex flex-row">
-                    <div class="student_pic"></div>
-                    <div class="inbox-student-name">
-                        <h5
-                            class="student-link"
-                            data-bs-toggle="modal"
-                            data-bs-target="#studentModal"
-                            data-name="Alliya Bernadette Virtucio"
-                            data-status="Accepted"
-                            data-date="Oct. 28, 2024"
-                        >
-                            Alliya Bernadette Virtucio
-                        </h5>
-                    </div>
-                    <div class="inbox-status-circle status-approved"></div>
-                    <div class="inbox-status">Approved</div>
-                    <div class="inbox-date">Oct. 28, 2024</div>
-                </div>
-
-                <div class="inbox-item d-flex flex-row">
-                    <div class="student_pic"></div>
-                    <div class="inbox-student-name">
-                        <h5
-                            class="student-link"
-                            data-bs-toggle="modal"
-                            data-bs-target="#studentModal"
-                            data-name="Sean Vincent Vien Viñas"
-                            data-status="Rejected"
-                            data-date="Oct. 28, 2024"
-                        >
-                            Sean Vincent Vien Viñas
-                        </h5>
-                    </div>
-                    <div class="inbox-status-circle status-rejected"></div>
-                    <div class="inbox-status">Rejected</div>
-                    <div class="inbox-date">Oct. 28, 2024</div>
-                </div>
-
-                <div class="inbox-item d-flex flex-row">
-                    <div class="student_pic"></div>
-                    <div class="inbox-student-name">
-                        <h5
-                            class="student-link"
-                            data-bs-toggle="modal"
-                            data-bs-target="#studentModal"
-                            data-name="Clarizza Reyes"
-                            data-status="Pending"
-                            data-date="Oct. 28, 2024"
-                        >
-                            Clarizza Reyes
-                        </h5>
-                    </div>
-                    <div class="inbox-status-circle status-pending"></div>
-                    <div class="inbox-status">Pending</div>
-                    <div class="inbox-date">Oct. 28, 2024</div>
-                </div>
+                    <?php include 'fetch_inbox.php'; ?>
             </section>
 
             <div id="all"></div>
@@ -378,6 +304,30 @@
 <!-- Modal -->
 
 <!-- JavaScript for Sidebar Toggle -->
+
+
+
+
+<script>
+    // JavaScript to add the active class
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all filter links
+        const filterLinks = document.querySelectorAll('.filter-link');
+
+        // Add click event to each filter link
+        filterLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                // Remove 'active' class from all links
+                filterLinks.forEach(link => link.classList.remove('active'));
+
+                // Add 'active' class to the clicked link
+                event.target.classList.add('active');
+            });
+        });
+    });
+
+</script>
+
 
 <script>
     // Get elements

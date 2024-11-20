@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Rearrange Cards. Made it responsive.&#10;Other contents need to be rearranged">
+    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Workspace xml update">
+      <change afterPath="$PROJECT_DIR$/php/fetch_inbox.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/inbox template" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/inbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/inbox.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +132,8 @@
       <workItem from="1731764670391" duration="7809000" />
       <workItem from="1731775254475" duration="36000" />
       <workItem from="1731856069456" duration="3994000" />
-      <workItem from="1732070549327" duration="397000" />
+      <workItem from="1732070549327" duration="750000" />
+      <workItem from="1732073157183" duration="6073000" />
     </task>
     <task id="LOCAL-00001" summary="Added Log In conditions, only faculty can access faculty website, same goes to students,&#10;&#10;Included &quot;read.php&quot; for verifying credentials.">
       <option name="closed" value="true" />
@@ -179,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731860092175</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Workspace xml update">
+      <option name="closed" value="true" />
+      <created>1732070965953</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732070965953</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +214,7 @@
     <MESSAGE value="Able to add items on the database // cannot display added items yet" />
     <MESSAGE value="Able to add items and display on the webapp, as well as its corresponding images. Will add manual insertion of images." />
     <MESSAGE value="Rearrange Cards. Made it responsive.&#10;Other contents need to be rearranged" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rearrange Cards. Made it responsive.&#10;Other contents need to be rearranged" />
+    <MESSAGE value="Workspace xml update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Workspace xml update" />
   </component>
 </project>
