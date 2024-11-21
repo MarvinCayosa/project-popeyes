@@ -6,13 +6,12 @@
     <meta name="theme-color" content="#C00411">
     <title>UEnventory</title>
 
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css?v=2.2">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 <?php include 'php/config.php'; ?>
-
 
 <div class="page-background-container">
     <div class="background-container">
@@ -66,6 +65,37 @@
                             </span>
                         </div>
                     </div>
+
+                    <!--Styles for password-->
+
+                    <!-- <style>
+                        .password-wrapper {
+                            position: relative;
+                        }
+            
+                        .password-wrapper input {
+                            width: 100%;
+                            padding-right: 40px;
+                        }
+            
+                        .eye-icon {
+                            position: absolute;
+                            right: 10px;
+                            top: 58%;
+                            transform: translateY(-50%);
+                            cursor: pointer;
+                            width: 18px;
+                            height: 18px;
+                            display: none; /* Initially hidden */
+                        }
+            
+                        .eye-icon img {
+                            width: 18px;
+                            height: 18px;
+                            fill: #818181a5;
+                        }
+                    </style> -->
+
                 </div>
 
                 <div class="link-container">
