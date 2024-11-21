@@ -385,7 +385,6 @@ hr {
 }
 .modal-student-sched {
   margin-left: 38%;
-  margin-top: %;
   justify-content: right;
   white-space: nowrap;
 }
@@ -454,10 +453,6 @@ hr {
   margin-top: 3%;
 }
 
-.item-label,
-.quantity-label {
-  font-weight: ;
-}
 
 .modal-item-section {
   justify-content: space-between;
