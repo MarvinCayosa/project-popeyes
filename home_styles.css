@@ -487,7 +487,7 @@ hr {
 }
 
 .input-item-name {
-  
+
   width: 370px; /* Adjusted width */
 }
 
@@ -704,7 +704,7 @@ hr {
   justify-content: center; /* Center content horizontally */
   background-color: none; /* Light background for contrast */
   width: 20%;
-  top: 60px;
+  top: 50px;
   right: 0;
   margin-right: 10px;
 }
@@ -712,10 +712,10 @@ hr {
 .status-container {
   display: flex;
   flex-direction: column; /* Stack rectangles vertically */
-  gap: 30px; /* Add space between the rectangles */
+  gap: 20px; /* Add space between the rectangles */
   align-items: center; /* Center rectangles horizontally */
   width: 100%; /* Make container take full width of section */
-  height: 800px; /* Set height of the container */
+  max-height: 600px; /* Set height of the container */
   margin-left: 5px;
 }
 
@@ -725,14 +725,14 @@ hr {
   justify-content: flex-start; /* Keeps items aligned to the left */
   position: relative;
   flex-direction: column; /* Arrange elements vertically */
-  width: 90%; /* Adjust width relative to container width */
+  width: 80%; /* Adjust width relative to container width */
   padding: 30px; /* Padding in vw for better scaling */
   box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
 .request-status {
   background-color: #4285f4;
-  height: 700px; /* Adjust height for the first rectangle */
+  height: 400px; /* Adjust height for the first rectangle */
   color: white; /* White text for contrast */
 }
 
@@ -768,10 +768,10 @@ hr {
 }
 
 .student_pic {
-  margin-left: 20px;
+  margin-left: 10px;
   margin-top: -10px;
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   background: url("user.png") no-repeat center center; /* Centers the image */
   background-size: cover; /* Ensures the image covers the container, scaling properly */
   border-radius: 50%; /* Makes the container a perfect circle */
@@ -780,7 +780,7 @@ hr {
 
 .student-name {
   font-family: "Poppins", sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;
   color: #fdfdfd; /* Customize color as desired */
   margin-left: 10px;
@@ -789,7 +789,7 @@ hr {
 
 .request-date {
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 11px;
   font-style: italic;
   color: #fdfdfdc2; /* Customize color as desired */
   margin-left: 10px;
@@ -815,7 +815,7 @@ hr {
 
 .return-date {
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 11px;
   font-style: italic;
   color: #fdfdfdc2; /* Customize color as desired */
   margin-top: 10px;
