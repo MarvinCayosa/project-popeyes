@@ -565,13 +565,23 @@
                 <!-- ID Input -->
                 <div class="input-custom-1">
                   <label for="itemId" class="form-label">ID</label>
-                  <input type="text" class="form-control input-id form-label" id="itemId" placeholder="#XXXX" />
+                  <input 
+                  type="text" 
+                  class="form-control input-id form-label" 
+                  id="itemId" 
+                  placeholder="#XXXX"
+                  style="font-family: Poppins, sans-serif; font-size: 14px;" />
                 </div>
 
                  <!-- Item Name Input -->
                <div class="input-custom-1">
                 <label for="itemName" class="form-label">Item Name</label>
-                <input type="text" class="form-control input-item-name" id="itemName" placeholder="Item Name" />
+                <input 
+                type="text" 
+                class="form-control input-item-name" 
+                id="itemName" 
+                placeholder="Item Name" 
+                style="font-family: Poppins, sans-serif; font-size: 14px;"/>
               </div>
               </div>
             </div>
@@ -582,23 +592,28 @@
               <!-- Total Quantity Input -->
               <div class="input-custom">
                 <label for="totalQuantity" class="form-label">Quantity</label>
-                <input type="number" class="form-control input-quantity" id="totalQuantity" placeholder="" />
+                <input 
+                type="number" 
+                class="form-control input-quantity" 
+                id="totalQuantity" 
+                placeholder=""
+                style="font-family: Poppins, sans-serif; font-size: 14px;" />
               </div>
 
               <!-- Property Input -->
               <div class="input-custom">
-                <label for="propertyType" class="form-label">Property</label>
+                <label for="propertyType" class="form-label" style="font-family: Poppins, sans-serif; font-size: 14px;">Property</label>
                 <div class="dropdown-wrapper">
-                  <select class="form-control input-property dropdown-toggle" id="propertyType">
+                  <select class="form-control input-property dropdown-toggle" id="propertyType" >
                     <option value="" disabled selected style="display: none; font-family: 'Poppins', sans-serif;">Select a Property</option>
-                    <option value="consumable" style="font-family: 'Poppins', sans-serif;">Consumable</option>
+                    <option value="consumable" style="font-family: 'Poppins', sans-serif; ">Consumable</option>
                     <option value="non-consumable" style="font-family: 'Poppins', sans-serif;">Non-Consumable</option>
                   </select>
                   <span class="dropdown-icon">&#9662;</span> <!-- Unicode for the dropdown arrow -->
                 </div>
               </div>
               
-              
+
               </div>
             </div>
 
@@ -616,6 +631,7 @@
                       maxlength="120"
                       oninput="updateCharacterCount()"
                       placeholder="Enter a brief description of the item."
+                      style="font-family: Poppins, sans-serif; font-size: 14px;"
                     ></textarea>
                     <span id="charCount" class="char-counter">0/80</span>
                   </div>
@@ -623,8 +639,6 @@
               </div>
             </div>
           </form>
-
-
 
           <div class="image-preview-container">
             <!-- Image Preview -->
@@ -704,17 +718,29 @@
             <!-- First row: ID Input and Item Name Input -->
             <div class="form-row">
               <div class="input-group">
+
                 <!-- ID Input -->
                 <div class="input-custom-1">
                   <label for="itemId" class="form-label">ID</label>
-                  <input type="text" class="form-control input-id" id="itemId" placeholder="0001" disabled />
+                  <input 
+                  type="text" 
+                  class="form-control input-id" 
+                  id="itemId" 
+                  placeholder="0001" 
+                  style="font-family: Poppins, sans-serif; font-size: 14px;"
+                  disabled />
                 </div>
               
                 <!-- Item Name Input -->
                 <div class="input-custom-1">
                   <label for="itemName" class="form-label">Item Name
                   </label>
-                  <input type="text" class="form-control input-item-name" id="itemName" placeholder="Arduino Uno R3" />
+                  <input 
+                  type="text" 
+                  class="form-control input-item-name" 
+                  id="itemName" 
+                  placeholder="Arduino Uno R3" 
+                  style="font-family: Poppins, sans-serif; font-size: 14px;" />
                 </div>
 
               </div>
@@ -727,22 +753,33 @@
                 <!-- Date Added Input -->
                 <div class="input-custom">
                   <label for="dateAdded" class="form-label">Date Added</label>
-                  <input type="date" class="form-control input-date" id="dateAdded" disabled />
+                  <input 
+                  type="date" 
+                  class="form-control input-date" 
+                  id="dateAdded" 
+                  style="font-family: Poppins, sans-serif; font-size: 14px;"
+                  disabled />
                 </div>
+
                 <!-- Total Quantity Input -->
                 <div class="input-custom">
                   <label for="totalQuantity" class="form-label">Quantity</label>
-                  <input type="number" class="form-control input-quantity" id="totalQuantity" placeholder="75" />
+                  <input 
+                  type="number" 
+                  class="form-control input-quantity" 
+                  id="totalQuantity" 
+                  placeholder="75"
+                  style="font-family: Poppins, sans-serif; font-size: 14px;"/>
                 </div>
 
                 <!-- Property Input -->
                 <div class="input-custom">
-                  <label for="propertyType" class="form-label">Property</label>
+                  <label for="propertyType" class="form-label" style="font-family: Poppins, sans-serif; font-size: 14px; color: #888888;">Property</label>
                   <div class="dropdown-wrapper">
                     <select class="form-control input-property dropdown-toggle" id="propertyType">
-                      <option value="" disabled selected style="display: none; font-family: 'Poppins', sans-serif;">Select a Property</option>
-                      <option value="consumable" style="font-family: 'Poppins', sans-serif;">Consumable</option>
-                      <option value="non-consumable" style="font-family: 'Poppins', sans-serif;">Non-Consumable</option>
+                      <option value="" disabled selected style="display: none; font-family: 'Poppins', sans-serif; font-size: 14px;">Select a Property</option>
+                      <option value="consumable" style="font-family: 'Poppins', sans-serif; font-size: 14px;">Consumable</option>
+                      <option value="non-consumable" style="font-family: 'Poppins', sans-serif; font-size: 14px;">Non-Consumable</option>
                     </select>
                     <span class="dropdown-icon">&#9662;</span> <!-- Unicode for the dropdown arrow -->
                   </div>
@@ -764,6 +801,7 @@
                       maxlength="120"
                       oninput="updateCharacterCount()"
                       placeholder="Enter a brief description of the item."
+                      style="font-family: Poppins, sans-serif; font-size: 14px;"
                     ></textarea>
                     <span id="charCount" class="char-counter">0/120</span>
                   </div>

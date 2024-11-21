@@ -416,7 +416,6 @@ hr {
   color: #ffffff; /* Main red color */
   font-size: 12px;
   margin-left: 5px; /* Adjust space between text and number */
-
 }
 
 .available-text {
@@ -488,6 +487,7 @@ hr {
 }
 
 .input-item-name {
+  
   width: 370px; /* Adjusted width */
 }
 
