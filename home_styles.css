@@ -176,13 +176,7 @@ hr {
   margin-top: 15px;
 }
 
-.available-text {
-  position: absolute;
-  top: 10px;
-  left: 15px;
-  padding: 20px;
-  border-radius: 4px;
-}
+
 
 .container-nav {
   height: 80px;
@@ -413,13 +407,16 @@ hr {
   justify-content: flex-start;
   display: flex;
 }
+
 /* Styling for the stock numbers */
 .available-number {
   background-color: #0d8a20; /* Light background color for contrast */
   padding: 1px 5px; /* Padding around the text */
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 10px; /* Rounded corners */
   color: #ffffff; /* Main red color */
   font-size: 12px;
+  margin-left: 5px; /* Adjust space between text and number */
+
 }
 
 .available-text {
@@ -429,7 +426,7 @@ hr {
   font-size: 12px;
   background-color: transparent;
   padding: 10px;
-  border-radius: 4px; /* rounded corners */
+  border-radius: 15px; /* rounded corners */
   z-index: 10; /* ensure it stays above other content */
 }
 
@@ -448,6 +445,7 @@ hr {
   justify-content: space-between; /* Pushes the number to the right */
   align-items: center; /* Vertically centers the text and number */
   font-size: 14px;
+  
 }
 
 /* ADD-EDIT Modal */
