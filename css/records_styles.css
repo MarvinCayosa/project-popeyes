@@ -1,36 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --icon-width: 35px; 
-  --main-red: #8F1019;
-  --dark-mode:#1a1a1a;
+  --icon-width: 35px;
+  --main-red: #8f1019;
+  --dark-mode: #1a1a1a;
 }
 
-
-
 hr {
-  color: #FDFDFD;
+  color: #fdfdfd;
   transition: all 0.3s ease-out;
 }
 
-
 .user_dropdown {
-  position: relative; 
-  top: 0; 
-  left: 0; 
+  position: relative;
+  top: 0;
+  left: 0;
 }
-
-
 
 /* Main White Part */
 .main_body {
-  background-color: #FDFDFD;
+  background-color: #fdfdfd;
   border-top-left-radius: 55px;
   border-bottom-left-radius: 55px;
   box-shadow: -25px 4px 45.8px rgba(0, 0, 0, 0.24);
   height: 100vh;
   margin-left: 110px;
-  transition: margin-left 0.3s ease-out; 
+  transition: margin-left 0.3s ease-out;
   overflow: hidden;
   z-index: 0;
 }
@@ -38,9 +33,8 @@ hr {
 .frame_1 {
   height: auto; /* Full height of the viewport */
   background-color: var(--main-red);
-    z-index: 0;
+  z-index: 0;
 }
-
 
 /* Sidebar */
 .avatar {
@@ -49,8 +43,8 @@ hr {
 }
 
 .icon-container {
-  width: 60px; 
-  height: 60px; 
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
 }
@@ -62,15 +56,15 @@ hr {
 }
 
 .nav-pills {
-  flex: 1; 
+  flex: 1;
   display: flex;
-  flex-direction: column; 
-  justify-content: center; 
+  flex-direction: column;
+  justify-content: center;
 }
 
 .icon_name {
   margin-left: 165px;
-  transition: opacity 0.3s ease-out; 
+  transition: opacity 0.3s ease-out;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -84,22 +78,21 @@ hr {
   opacity: 1;
 }
 .sidebar_custom.expanded hr {
-width: 220%;
+  width: 220%;
 }
-
 
 .sidebar_custom .icon_name {
   opacity: 0;
 }
 
 .nav-item {
-  margin-bottom: 25px; 
+  margin-bottom: 25px;
   margin-top: 20px;
   padding: 10px;
   border-radius: 6px;
-  display: flex;          
-  justify-content: center; 
-  align-items: center;    
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-item:hover .icon {
@@ -121,7 +114,7 @@ width: 220%;
   transition: width 0.3s ease-out;
 }
 
-.nav-item .btn{
+.nav-item .btn {
   border: none;
 }
 
@@ -131,7 +124,7 @@ width: 220%;
 
 /* Adjust the main body margin on sidebar expanded */
 .sidebar_custom.expanded + .main_body {
-  margin-left: 210px; 
+  margin-left: 210px;
 }
 
 /* Nav Bar */
@@ -140,10 +133,9 @@ width: 220%;
   font-size: 12px;
   width: fit-content;
   white-space: nowrap;
-  
 }
 
-.user_profile .identifier{
+.user_profile .identifier {
   margin-top: 18px;
   margin-left: 141px;
   justify-content: start;
@@ -153,12 +145,14 @@ width: 220%;
   color: rgb(238, 238, 238);
 }
 
-.options .icon_name{
+.options .icon_name {
   margin-top: 9px;
 }
 
 .navbar-main {
-  width: calc(100% - 35px); /* Adjust width to take full width minus left and right margins */
+  width: calc(
+    100% - 35px
+  ); /* Adjust width to take full width minus left and right margins */
   margin: 40px 30px 0 30px; /* Set top margin to 30px and left/right margins to 30px */
   z-index: 1000;
 }
@@ -170,19 +164,17 @@ width: 220%;
   justify-content: space-between; /* Space out elements */
 }
 
-
 .header {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: 26px;
   color: #474747;
-  display: flex; 
+  display: flex;
   flex-grow: 1;
 }
 
-
-.search-bar{
+.search-bar {
   width: 400px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -190,34 +182,33 @@ width: 220%;
   font-size: 14px;
   color: #474747;
   border: 1px solid #8d8d8d;
-
 }
 
 .search-bar:focus {
-  border-color: #97befd; 
+  border-color: #97befd;
   border-width: 3px;
-  box-shadow: 0 0 0px ; 
+  box-shadow: 0 0 0px;
 }
 
-.search-btn{
+.search-btn {
   align-items: center;
   justify-content: center;
   border-radius: 8px;
   border: none;
   padding: 5px;
   height: 40px;
-  width:40px;
+  width: 40px;
   transition: all 0.2s ease-out;
 }
 
 .search-btn:hover {
-  background-color: #4285F4;
+  background-color: #4285f4;
 }
-.search-btn:hover .icon-search{
+.search-btn:hover .icon-search {
   color: #ffffff;
 }
 
-.icon-search{
+.icon-search {
   margin-bottom: 3px;
   align-items: center;
   justify-content: center;
@@ -227,7 +218,7 @@ width: 220%;
   transition: all 0.2s ease-out;
 }
 
-.search-form{
+.search-form {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -235,14 +226,11 @@ width: 220%;
   color: #474747;
   display: flex; /* Ensure form elements are in a row */
   align-items: center;
-  
 }
-
-
 
 /* Records Page */
 /* Add scroll to the section containing the cards */
-.utility-button .menu-dot{
+.utility-button .menu-dot {
   color: #474747;
   height: 30px;
   width: 30px;
@@ -255,7 +243,7 @@ width: 220%;
   background: none;
 }
 
-ul.dropdown-menu.show{
+ul.dropdown-menu.show {
   user-select: none;
   margin-top: 15px;
   margin-left: -110px;
@@ -266,11 +254,11 @@ ul.dropdown-menu.show{
   font-size: 14px;
 }
 
-.dropdown-item{
+.dropdown-item {
   background-color: none;
-}  
+}
 
-.dropdown-item:hover{
+.dropdown-item:hover {
   background-color: white;
   color: rgb(99, 99, 99);
 }
@@ -292,7 +280,7 @@ ul.dropdown-menu.show{
 .scrollable-section {
   margin: 0 30px 0 30px; /* Add margin as requested */
   max-height: 75%;
-  overflow-y: auto; 
+  overflow-y: auto;
   z-index: 0;
   background-color: #f7f7f7;
   padding: 30px;
@@ -309,7 +297,7 @@ ul.dropdown-menu.show{
 
 .card {
   width: 280px;
-  height: 380px;
+  height: 350px;
   background-color: #fafafa;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
@@ -320,7 +308,7 @@ ul.dropdown-menu.show{
   transition: background-color 0.3s ease-out, transform 0.3s ease-out;
 }
 
-.card:hover{
+.card:hover {
   background-color: #ffffff;
   transform: scale(1.02);
 }
@@ -328,11 +316,11 @@ ul.dropdown-menu.show{
 .card-content hr {
   color: #000;
   width: 75%;
-  margin: 10px auto; 
+  margin: 8px auto;
   margin-bottom: 18px;
 }
 
-.avatar-student{
+.avatar-student {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -350,14 +338,14 @@ ul.dropdown-menu.show{
 .card-name {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .card-subtitle {
   font-size: 14px;
   color: #383838;
-  font-style: italic;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  font-weight: 300;
 }
 
 .card-due {
@@ -368,22 +356,21 @@ ul.dropdown-menu.show{
 }
 
 .due-label {
-  font-size: 12px;
+  font-size: 14px;
   color: #4d4d4d;
 }
 
 .due-date {
   font-size: 12px;
-  background-color: #f9a825;
+  background-color: #25f965;
   color: white;
   padding: 5px 10px;
   border-radius: 8px;
   font-weight: 600;
 }
 
-
 .view-details {
-  background-color: #4285F4;
+  background-color: #4285f4;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -417,56 +404,50 @@ ul.dropdown-menu.show{
   align-items: center; /* Center align items vertically */
 }
 .list-mode .card-container {
-  gap : 25px;
+  gap: 25px;
 }
 
 .list-mode .card-name {
-    flex: 1; /* Allow the name to take up space */
-    margin-right: 20px; /* Space between name and subtitle */
-    text-align: left; /* Align text to the left */
-    font-size: 16px;
-    margin-bottom: 0;
+  flex: 1; /* Allow the name to take up space */
+  margin-right: 20px; /* Space between name and subtitle */
+  text-align: left; /* Align text to the left */
+  font-size: 16px;
+  margin-bottom: 0;
 }
 
 .list-mode .card-subtitle {
-    flex: 1; /* Allow the subtitle to take up space */
-    margin-right: 20px; /* Space between subtitle and button */
-    text-align: left; /* Align text to the left */
-    margin-bottom: 0;
-    font-size: 14px;
+  flex: 1; /* Allow the subtitle to take up space */
+  margin-right: 20px; /* Space between subtitle and button */
+  text-align: left; /* Align text to the left */
+  margin-bottom: 0;
+  font-size: 14px;
 }
 
 .list-mode .view-details {
-    width: 150px; /* Fixed width for button */
+  width: 150px; /* Fixed width for button */
 }
 
 .list-mode .card-avatar {
-    margin: 0 25px; /* Fixed margins around avatar */
-    margin-bottom: 0;
+  margin: 0 25px; /* Fixed margins around avatar */
+  margin-bottom: 0;
 }
 
 .list-mode .avatar-student {
-    width: 50px; /* Fixed width for avatars */
-    height: 50px; /* Fixed height for avatars */
-    border-radius: 50%; /* Make avatar circular */
+  width: 50px; /* Fixed width for avatars */
+  height: 50px; /* Fixed height for avatars */
+  border-radius: 50%; /* Make avatar circular */
 }
 
+.list-mode .card-content hr {
+  display: none;
+}
+.list-mode .card-due {
+  display: none;
+}
 
-.list-mode .card-content hr{
-  display: none;
-}
-.list-mode .card-due{
-  display: none;
-}
-  
 .modal-backdrop.show {
-    z-index: 5;
+  z-index: 5;
 }
-
-
-
-
-
 
 /* Modal */
 /* Remove border from modal header and footer */
@@ -476,104 +457,299 @@ ul.dropdown-menu.show{
 }
 
 .detail-modal {
-  max-width: 900px; /* Set custom width */
-  height: 500px; 
-
-}
-
-
-.detail-modal .modal-content {
-  padding: 25px 50px 25px 50px; /* Top, Right, Bottom, Left */
-  border-radius: 20px; /* Adjust the value for more or less rounded corners */  
-  position: relative;
+  max-width: 1100px; /* Set custom width */
   height: 500px;
 }
 
-.modal-content h2{
+.detail-modal .modal-content {
+  padding: 25px 50px 25px 50px; /* Top, Right, Bottom, Left */
+  border-radius: 20px; /* Adjust the value for more or less rounded corners */
+  position: relative;
+}
 
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px; /* space between avatar and tag */
+}
+
+.btn-close {
+  background-color: transparent; /* Remove default background */
+}
+
+.btn-close:hover {
+  opacity: 0.8; /* Add a hover effect */
+}
+
+
+
+.avatar-student.details {
+  width: 50px;
+  height: 50px;
+}
+
+.vertical-line {
+  border-left: 2px solid #9b9b9b;
+  height: 10px; /* Adjust this value as needed */
+}
+
+.subtext {
+  margin-top: 3px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+.modal-tag {
   font-size: 20px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
+  margin: 0;
 }
 
-.modal-tag img{
-  width: 40px;
-  height: 40px;
-  margin-right: 12px;
+.modal-body {
+  border-radius: 22px;
+  background: rgba(217, 217, 217, 0.25);
+  max-height: 400px; /* Adjust the height as necessary */
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  padding: 25px;
 }
 
+.detail-modal .modal-content {
+  height: 550px;
+  padding: 25px 50px 50px 50px;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+  background-color: var(--main-red);
+  color: #fafafa;
+  border: none;
+  box-shadow: none;
+}
+
+.btn-close:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: none; /* Remove any box shadow applied on focus */
+}
+
+.custom-accordion .accordion-body {
+  background-color: #fafafa;
+  color: #272727;
+  border: none;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+.custom-accordion .accordion-collapse {
+  border-radius: 0 0 10px 10px;
+  border: none;
+}
+
+.accordion-button:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: none; /* Remove any box shadow applied on focus */
+}
+
+.accordion-button::after {
+  color: #f7f7f7 !important; /* Force the icon color */
+}
+
+.accordion-button.collapsed::after {
+  color: #f7f7f7 !important; /* Force icon color for collapsed state */
+}
+.custom-accordion .accordion-item {
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+}
+
+.accordion-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.borrow-id,
+.item-due,
+.course {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.borrow-id {
+  flex-basis: 20%; /* Set width for ID */
+  max-width: 20%;
+}
+
+.item-due {
+  flex-basis: 30%; /* Set width for due date */
+  max-width: 30%;
+}
+
+.course {
+  flex-basis: 50%; /* Set width for course */
+  max-width: 50%;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table-custom {
+  background: none !important; /* Removes any background color */
+}
+
+.table-custom th,
+.table-custom td {
+  background: none !important; /* Removes background for table headers and cells */
+}
+
+
+.table-custom th,
+.table-custom td {
+  border-left: none; /* No vertical grid lines */
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.accordion-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px; /* Adjust based on your content */
+}
+
+.button-container {
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.checkbox-cell {
+  text-align: center; /* Center horizontally */
+  vertical-align: middle; /* Center vertically */
+}
+.qt-cell {
+  text-align: center; /* Center horizontally */
+  vertical-align: middle; /* Center vertically */
+}
+
+.select-col {
+  text-align: center; /* Center horizontally */
+  vertical-align: middle; /* Center vertically */
+}
+.qt-col {
+  text-align: center; /* Center horizontally */
+  vertical-align: middle; /* Center vertically */
+}
+
+.checkbox-cell input[type="checkbox"] {
+  transform: scale(1.2); /* Optional: adjust the size of the checkbox */
+}
+
+.accordion-button .borrow-id,
+.accordion-button .date-requested {
+  padding-right: 60px; /* Adjust spacing as needed */
+}
+
+.accordion-button .borrow-id {
+  min-width: 50px; /* Ensure IDs take a consistent amount of space */
+}
+
+.custom-accordion .accordion-button {
+  border-radius: 10px;
+  background-color: #c00411;
+  color: #fafafa;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  position: relative;
+  padding-right: 60px;
+  text-align: left;
+}
 
 @media (prefers-color-scheme: dark) {
   .main_body {
     background-color: #202633;
-    
   }
 
   .header {
     color: #f6f6f6;
   }
 
-  .sidebar_custom, .frame_1 {
-    background-color: #1E1E1E;
+  .sidebar_custom,
+  .frame_1 {
+    background-color: #1e1e1e;
   }
 
-  .logo-light{
+  .logo-light {
     display: none;
   }
-  .logo-dark{
+  .logo-dark {
     display: block;
   }
 
   .sidebar .nav-link.active .icon {
-    color:  #202633;
+    color: #202633;
   }
 
-  .scrollable-section{
+  .scrollable-section {
     background-color: #0d0f133b;
   }
 
-  .search-bar{
+  .search-bar {
     color: #f6f6f6;
     background-color: #202633;
   }
 
   .search-bar:focus {
-    border-color: var(--main-red); 
+    border-color: var(--main-red);
     border-width: 2px;
-    box-shadow: 0 0 0px ; 
+    box-shadow: 0 0 0px;
     color: #f6f6f6;
     background-color: #202633;
   }
-  .search-btn{
-    
+  .search-btn {
     background-color: #354563;
   }
 
   .search-btn:hover {
-    background-color: #4285F4;
+    background-color: #4285f4;
   }
-  .search-btn:hover .icon-search{
+  .search-btn:hover .icon-search {
     color: #f6f6f6;
   }
-  
-  .icon-search{
+
+  .icon-search {
     color: #f6f6f6;
   }
-  
-  .search-form{
+
+  .search-form {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
-    color: #474747
+    color: #474747;
   }
-  
+
   .card {
     background-color: #232935;
     color: #ffffff;
   }
 
-  .card:hover{
+  .card:hover {
     background-color: #262d3b;
     transform: scale(1.02);
   }
@@ -584,53 +760,101 @@ ul.dropdown-menu.show{
     color: #f6f6f6;
   }
 
-  .card-container hr{
+  .card-container hr {
     color: #f6f6f6;
   }
 
-  .utility-button .menu-dot{
+  .utility-button .menu-dot {
     color: #f6f6f6;
-
   }
   .utility-button {
     border: none;
     background: none;
   }
 
-  .dropdown-menu{
+  .dropdown-menu {
     background-color: #2b313d;
   }
-  .dropdown-item{
+  .dropdown-item {
     color: #ffffff;
   }
 
-  .dropdown-item:hover{
+  .dropdown-item:hover {
     background-color: #2b313d;
     color: #dddddd;
   }
 
-  ul.dropdown-menu.show{
+  ul.dropdown-menu.show {
     border: 0.5px solid #272727;
   }
 
   .list-mode .card-subtitle {
     font-size: 14px;
     color: #f6f6f6;
-    font-style: italic;
     margin: 0;
   }
 
-  .view-details{
+  .view-details {
     background-color: #354563;
   }
 
-  .due-date{
-    background-color: #f1ab3b;
-
+  .due-date {
+    background-color: #28a745;
   }
 
   .search-bar::placeholder {
     color: #8d8d8d; /* Change this to your desired color */
+  }
 
+  #detailsModal .modal-content {
+    background-color: #232935;
+  }
+
+  #detailsModal .modal-body {
+    background-color: #0d0f132a;
+  }
+
+  #detailsModal .modal-header .modal-tag {
+    color: #f7f7f7;
+  }
+  #detailsModal .modal-header .text {
+    color: #fafafab6;
+  }
+
+  .btn-close {
+    background-color: transparent; /* Remove default background */
+    filter: brightness(0) invert(1); /* Turn icon white */
+  }
+  
+
+  #detailsModal .custom-accordion .accordion-body {
+    background-color: #0d0f1325;
+  }
+
+  .table-custom {
+    background: none !important; /* Removes any background */
+    color: #f7f7f7 !important; /* Makes the text white */
+  }
+
+  .table-custom tbody tr,
+  .table-custom thead th {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.322); /* Lower-contrast row lines */
+  }
+  
+
+
+  .table-custom th,
+  .table-custom td {
+    color: #dfdfdf !important; /* Ensures headers and cells have white text */
+  }
+
+  #detailsModal .custom-accordion .accordion-button {
+    background-color: #8f1019;
+  }
+  #detailsModal .custom-accordion .accordion-button:not(.collapsed) {
+    background-color: #701016;
   }
 }
+
+
+
