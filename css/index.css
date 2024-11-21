@@ -201,6 +201,11 @@ body {
     margin-top: 8px;
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #212837 inset;/* Change background color on autofill */
+    -webkit-text-fill-color: #fff; /* Change text color on autofill */
+}
+
 .email-textbox:focus {
     border: 0.5px solid #C00411; 
     outline: none; 

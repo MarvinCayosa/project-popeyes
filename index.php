@@ -66,35 +66,6 @@
                         </div>
                     </div>
 
-                    <!--Styles for password-->
-
-                    <!-- <style>
-                        .password-wrapper {
-                            position: relative;
-                        }
-            
-                        .password-wrapper input {
-                            width: 100%;
-                            padding-right: 40px;
-                        }
-            
-                        .eye-icon {
-                            position: absolute;
-                            right: 10px;
-                            top: 58%;
-                            transform: translateY(-50%);
-                            cursor: pointer;
-                            width: 18px;
-                            height: 18px;
-                            display: none; /* Initially hidden */
-                        }
-            
-                        .eye-icon img {
-                            width: 18px;
-                            height: 18px;
-                            fill: #818181a5;
-                        }
-                    </style> -->
 
                 </div>
 
@@ -175,6 +146,8 @@
                         });
                     </script>
 
+
+                    
                     <div class="seperator">
                         <div class="line"></div>
                         <div class="or">or</div>
