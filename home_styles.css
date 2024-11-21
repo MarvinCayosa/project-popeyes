@@ -255,22 +255,22 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px; /* Space between SVG and text */
-  width: 50px;
-  height: 50px;
-  border: none;
+  gap: 5px; /* Space between SVG and text */
+  width: 55px;
+  height: 55px;
+  border-radius: 20px;
   background-color: transparent;
-  transition: width 0.3s ease-in-out, padding 0.3s ease-in-out; /* Smooth transition */
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transition */
   overflow: hidden; /* Hide text when not expanded */
   white-space: nowrap; /* Prevent text wrapping */
   cursor: pointer;
+  padding: 0; /* Remove button padding */
 }
 
 .add-btn:hover {
   width: 150px; /* Expanded width */
   padding: 0 10px; /* Add padding to fit text */
-  background-color: #8f1019; /* Red background color */
-
+  background-color: #C00411; /* Red background color */
 }
 
 .add-btn span {
@@ -283,6 +283,11 @@ hr {
 .add-btn:hover span {
   display: inline; /* Show text on hover */
 }
+
+.add-btn svg {
+  margin: 0; /* Remove extra margin */
+  padding: 0; /* Remove padding */
+  display: block; /* Ensure no inline spacing */}
 
 .filter-svg {
   flex-shrink: 0; /* Prevent SVG from resizing */
