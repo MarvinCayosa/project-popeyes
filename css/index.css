@@ -195,7 +195,7 @@ body {
 .email-textbox {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #555;
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 8px;
@@ -213,7 +213,7 @@ input:-webkit-autofill {
 
 .link-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     width: 90%; 
     margin-top: 10px;
@@ -223,15 +223,91 @@ input:-webkit-autofill {
 
 .forgot-password-link {
     text-align: left;
+    display: none;
 }
 
-.sign-up-link {
+.sign-up-link, .sign-in-link {
+    display: flex;
     text-align: right;
+    font-size: 11px;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.sign-in-link{
+    margin-bottom: 20px;
+}
+
+.signup-btn, .signin-btn{
+    color: blue;
+}
+
+
+.signup-btn:hover, .signin-btn:hover{
+    color: #454545;
+    cursor: pointer;
+}
+
+.signup-form-container{
+    display: none;   
+    padding: 20px;
+}
+
+.signin-form-container{
+    display: block;
+}
+
+.signup-form-container h2{
+    text-align: center;
+}
+
+.signup-form-container form{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.signup-form-container label{
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.signup-form-container input{
+    background-color: #FFFFFF;
+    border: 1px solid #555;
+    color: #e0e0e0;
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.signup-form-container .create-acc-btn{
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: block;
+    height: 35px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #C00411;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+
 }
 
 .captcha-container {
     margin-right: 175px;
     margin-bottom: 20px;
+    display: none;
 }
 
 .captcha-container .content-container {
@@ -328,9 +404,9 @@ input:-webkit-autofill {
 
 .signIn-button {
     color: #FFFFFF;
-    margin-bottom: 15px;
+    margin-bottom: 100px;
     display: block;
-    width: 146%;
+    width: 359px;
     height: 35px;
     text-align: center;
     font-size: 14px;
@@ -342,12 +418,14 @@ input:-webkit-autofill {
     transition: background-color 0.3s ease;
 }
 
+
 .seperator {
     margin-bottom: 15px;
     display: flex;
     font-size: 12px;
     align-items: center;
     flex-wrap: nowrap;
+    display: none;
 }
 
 .seperator .or {
@@ -380,6 +458,7 @@ input:-webkit-autofill {
     justify-content: flex-start; /* Align logo and text at the start */
     gap: 8px; /* Space between logo and text */
     white-space: nowrap; /* Ensure text stays in one line */
+    display: none;
 }
 
 .google-button img.google-logo {
@@ -506,7 +585,7 @@ input:-webkit-autofill {
         display: block;
         /* width: 80%; */
 
-        width: 330px;
+        /* width: 330px; */
         height: 40px;
         text-align: center;
 
@@ -542,7 +621,7 @@ input:-webkit-autofill {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-      
+        display: none;
     }
     
     .footer {
@@ -654,7 +733,7 @@ input:-webkit-autofill {
         display: block;
         /* width: 80%; */
         
-        width: 330px;
+        /* width: 330px; */
         height: 40px;
         text-align: center;
         
@@ -690,6 +769,7 @@ input:-webkit-autofill {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        display: none;
     }
     
     .footer {
@@ -784,7 +864,16 @@ input:-webkit-autofill {
 
     .signIn-button {
         background-color: #8F1019;
+        /* width: 359px; */
     }
+
+    .signup-btn:hover, .signin-btn:hover{
+        color: #FFFFFF;
+    }
+
+    .signup-form-container input {
+        background-color: #212837;
+    
 
     .seperator .line {
         background-color: #FFFFFF;
