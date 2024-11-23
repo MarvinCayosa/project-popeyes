@@ -1,5 +1,5 @@
 body {
-    color: #454545;
+    color: #131313;
     padding: 0;
     margin: 0;
     position: relative;
@@ -84,6 +84,11 @@ body {
     margin-top: 50px;
     border-radius: 25px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.225);
+    background: rgba(255, 255, 255, 0.493); /* Semi-transparent dark background */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    backdrop-filter: blur(15px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /
 }
 
 .signIn-container-content {
@@ -199,13 +204,13 @@ body {
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 8px;
+    background-color: transparent;
 }
 
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px #212837 inset;/* Change background color on autofill */
-    -webkit-text-fill-color: #fff; /* Change text color on autofill */
+    -webkit-box-shadow: 0 0 0 30px transparent inset; /* Make the background transparent */
+    -webkit-text-fill-color: #131313; /* Keep the text color white */
 }
-
 .email-textbox:focus {
     border: 0.5px solid #C00411; 
     outline: none; 
@@ -239,7 +244,7 @@ input:-webkit-autofill {
 }
 
 .signup-btn, .signin-btn{
-    color: blue;
+    color: #589bff; /* Ensure text is visible */
 }
 
 
@@ -399,8 +404,6 @@ input:-webkit-autofill {
     flex-direction: column;
     align-items: center;
 }
-
-
 
 .signIn-button {
     color: #FFFFFF;
@@ -783,7 +786,7 @@ input:-webkit-autofill {
 /* Dark mode styles */
 @media (prefers-color-scheme: dark) {
     body {
-        color: #FFFFFF;
+        color: #f7f7f7;
     }
 
         
@@ -797,7 +800,7 @@ input:-webkit-autofill {
  
 
     .land-page-student-header {
-        color: #202837;
+        color: #f7f7f7;
     }
 
     .land-page-student-header .light-mode-logo .logo-light {
@@ -813,8 +816,12 @@ input:-webkit-autofill {
 
 
     .land-page-student-signIn-container {
-        background-color: #212837;
-        box-shadow: 0px 0px 50px #000000a7;
+        background: rgba(33, 40, 55, 0.301); /* Semi-transparent dark background */
+        border-radius: 25px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        box-sizing: border-box;
+        backdrop-filter: blur(15px); /* Frosted glass effect */
+        -webkit-backdrop-filter: blur(10px); /* For Safari support */
     }
 
     .signIn-container-content .link-container a{
@@ -826,7 +833,6 @@ input:-webkit-autofill {
     }
 
     .email-textbox {
-        background-color: #212837;
         border: 1px solid #555;
         color: #e0e0e0;
     }
@@ -868,12 +874,12 @@ input:-webkit-autofill {
     }
 
     .signup-btn:hover, .signin-btn:hover{
-        color: #FFFFFF;
+        color: #589bff; /* Ensure text is visible */
     }
 
     .signup-form-container input {
         background-color: #212837;
-    
+    }
 
     .seperator .line {
         background-color: #FFFFFF;
@@ -887,4 +893,11 @@ input:-webkit-autofill {
     .footer {
         color: #bbbbbb;
     }
+
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 30px #252b38 inset;/* Change background color on autofill */
+        -webkit-text-fill-color: #fff; /* Change text color on autofill */
+    }
+    
+   
 }

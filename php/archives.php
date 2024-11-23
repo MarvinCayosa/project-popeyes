@@ -295,7 +295,7 @@
 
                 <!-- Modal Body -->
                 <div class="modal-body">
-                    <h2 class="modal-tag mb-3" id="header">History</h2>
+                    <h2 class="modal-tag mb-3" id="header">Past Borrow Logs</h2>
                     <div class="accordion accordion-flush custom-accordion" id="borrow-section-accordion">
                         <!-- Borrowed Item 1 -->
                         <div class="accordion-item">
