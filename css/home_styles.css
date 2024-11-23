@@ -41,10 +41,11 @@ hr {
   border-bottom-left-radius: 55px;
   box-shadow: -25px 4px 45.8px rgba(0, 0, 0, 0.24);
   z-index: 0;
-  height: 104vh;
+  height: 100vh;
   margin-left: 110px;
   transition: margin-left 0.3s ease-out;
   overflow: hidden;
+  overflow-y: hidden;
   background-color: #fdfdfd;
 }
 
@@ -241,6 +242,48 @@ hr {
   justify-content: left;
 }
 
+.filter-btn:focus {
+  outline: none; 
+  border: none; 
+}
+
+.filter-btn:active {
+  outline: none;
+  border: none; 
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.clear-filters-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.clear-filters-btn .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.clear-filters-btn:hover .icon {
+  fill: #ff6961; /* Optional: Add hover effect color */
+}
+
+.icon-reset {
+  fill: #f0f0f0;
+  width: 20px;
+  height: 20px;
+  margin-top: -7px;
+}
+
 .add-btn {
   position: absolute;
   bottom: 5%;
@@ -254,7 +297,7 @@ hr {
   height: 55px;
   border-radius: 20px;
   background-color: transparent;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transition */
+  transition: width 0.5s ease, background-color 0.5s ease, padding 0.5s ease; /* Smooth transitions */
   overflow: hidden; /* Hide text when not expanded */
   white-space: nowrap; /* Prevent text wrapping */
   cursor: pointer;
@@ -263,7 +306,7 @@ hr {
 
 .add-btn:hover {
   width: 150px; /* Expanded width */
-  padding: 0 10px; /* Add padding to fit text */
+  padding: 0; /* Add padding to fit text */
   background-color: #C00411; /* Red background color */
 }
 
@@ -276,12 +319,19 @@ hr {
 
 .add-btn:hover span {
   display: inline; /* Show text on hover */
+  opacity: 1; /* Ensure opacity is visible */
+  transition: opacity 0.5s ease; /* Smooth text appearance */
 }
 
+.add-btn:not(:hover) span {
+  transition: opacity 0.9s ease-out;
+}
+
+
 .add-btn svg {
-  margin: 0; /* Remove extra margin */
-  padding: 0; /* Remove padding */
-  display: block; /* Ensure no inline spacing */}
+  margin-left: -5px;
+  display: block; /* Ensure no inline spacing */
+}
 
 .filter-svg {
   flex-shrink: 0; /* Prevent SVG from resizing */
@@ -318,21 +368,20 @@ hr {
 
 /* Scrollable Section */
 .scrollable-section {
-  margin: 0px 40px 0px 40px;
+  margin: 0px 40px 0px 40px; 
   width: 75%;
   max-height: 70%;
   overflow-y: auto;
   background-color: #f7f7f7;
   padding: 30px;
   border-radius: 20px;
-
 }
 
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust card width based on available space */
   justify-content: space-between; /* Dynamically adjust spacing between cards */
-  gap: 5px; /* Space between rows */
+  gap: 25px; /* Space between rows */
   margin: 0 auto; /* Center container */
   padding: 20px; /* Optional padding around the grid */
 }
@@ -438,14 +487,135 @@ hr {
 }
 
 /* Ensure the text and numbers are aligned on the same line */
+.scrollable-section {
+  margin: 0px 40px 0px 40px; 
+  width: 75%;
+  max-height: 70%;
+  overflow-y: auto;
+  background-color: #f7f7f7;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust card width based on available space */
+  justify-content: space-between; /* Dynamically adjust spacing between cards */
+  gap: 20px; /* Space between rows */
+  margin: 0 auto; /* Center container */
+  padding: 5px; /* Optional padding around the grid */
+}
+
+.card-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.card {
+  width: 100%; /* Ensure the card takes full width of the grid column */
+  height: auto; /* Height is dynamic */
+  background-color: #291a1a;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.card:hover {
+  transform: scale(1.02); /* Slightly increase the size of the card on hover */
+}
+
+.card-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.card-menu button {
+  background: none;
+  visibility: hidden;
+  border: none;
+  padding: 0;
+}
+
+.card-menu svg {
+  cursor: pointer;
+}
+
+.card:hover .card-menu button {
+  visibility: visible;
+  transition: all 0.3s ease-in;
+}
+
+.card-img-top {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+  transition: all 0.3s ease-out;
+}
+
+.card-title {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+  margin-top: -10px;
+  justify-content: flex-start;
+  display: flex;
+}
+
+/* Styling for the stock numbers */
+.available-number {
+  background-color: #0d8a20; /* Light background color for contrast */
+  padding: 1px 5px; /* Padding around the text */
+  border-radius: 10px; /* Rounded corners */
+  color: #ffffff; /* Main red color */
+  font-size: 12px;
+  margin-left: 5px; /* Adjust space between text and number */
+}
+
+.available-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 15px; /* rounded corners */
+  z-index: 10; /* ensure it stays above other content */
+}
+
+.stock-number {
+  background-color: #313231; /* Light background color for contrast */
+  padding: 1px 5px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  color: #ffffff; /* Main red color */
+  font-size: 12px;
+}
+
+/* Ensure the text and numbers are aligned on the same line */
 .card-text {
   display: flex;
   margin-top: 10px;
   justify-content: space-between; /* Pushes the number to the right */
   align-items: center; /* Vertically centers the text and number */
   font-size: 14px;
-
+  
 }
+
 
 /* ADD-EDIT Modal */
 /* Remove border from modal header and footer */
@@ -453,6 +623,31 @@ hr {
 .modal-footer {
   border: none; /* Removes the border */
 }
+
+.delete-btn {
+  margin-bottom: 1%;
+  margin-left: 80%;
+}
+.icon-delete-btn {
+ width: 18px;
+ height: 18px;
+ fill: rgba(0, 0, 0, 0.356);
+ transition: fill 0.3s ease; /* Smooth color transition on hover */
+}
+
+.delete-btn:focus {
+  outline: none; 
+  border: none; 
+}
+
+.delete-btn:active {
+  outline: none;
+  border: none; 
+}
+
+.icon-delete-btn:hover {
+  fill: rgb(158, 11, 11);
+ }
 
 .modal-backdrop.show {
   z-index: 10;
@@ -704,9 +899,12 @@ hr {
   justify-content: center; /* Center content horizontally */
   background-color: none; /* Light background for contrast */
   width: 20%;
-  top: 50px;
+  top: 55px;
   right: 0;
   margin-right: 10px;
+  overflow: hidden;
+  max-height: calc(100vh - 65px); /* Prevent the section from exceeding the viewport */
+
 }
 
 .status-container {
@@ -715,8 +913,9 @@ hr {
   gap: 20px; /* Add space between the rectangles */
   align-items: center; /* Center rectangles horizontally */
   width: 100%; /* Make container take full width of section */
-  max-height: 600px; /* Set height of the container */
+  max-height: 100%;
   margin-left: 5px;
+  overflow-y: auto; /* Enable scrolling if content exceeds height */
 }
 
 .rectangle {
@@ -725,15 +924,16 @@ hr {
   justify-content: flex-start; /* Keeps items aligned to the left */
   position: relative;
   flex-direction: column; /* Arrange elements vertically */
-  width: 80%; /* Adjust width relative to container width */
-  padding: 30px; /* Padding in vw for better scaling */
+  width: 85%; /* Adjust width relative to container width */
+  padding: 25px; /* Padding in vw for better scaling */
   box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
 .request-status {
   background-color: #4285f4;
-  height: 400px; /* Adjust height for the first rectangle */
+  height: 360px; /* Adjust height for the first rectangle */
   color: white; /* White text for contrast */
+  overflow: hidden;
 }
 
 .quick-access-circle {
@@ -764,14 +964,15 @@ hr {
 .vertical-layout {
   display: flex;
   flex-direction: column; /* Ensure vertical arrangement */
+  margin-top: px;
   margin-left: 10px;
 }
 
 .student_pic {
-  margin-left: 10px;
-  margin-top: -10px;
-  width: 35px;
-  height: 35px;
+  margin-left: 12px;
+  margin-bottom: 12px;
+  width: 40px;
+  height: 40px;
   background: url("../png/user.png") no-repeat center center; /* Centers the image */
   background-size: cover; /* Ensures the image covers the container, scaling properly */
   border-radius: 50%; /* Makes the container a perfect circle */
@@ -784,7 +985,7 @@ hr {
   font-weight: bold;
   color: #fdfdfd; /* Customize color as desired */
   margin-left: 10px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .request-date {
@@ -802,52 +1003,49 @@ hr {
 
 .return-status {
   background-color: #fbbc05;
-  height: 345px; /* Adjust height for the second rectangle */
+  height: 350px; /* Adjust height for the second rectangle */
   color: white; /* Black text for contrast */
+  overflow: hidden;
 }
 
 .two-column-layout {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-  align-items: center; /* Center vertically in each row */
-
+  align-items:center; /* Center vertically in each row */
 }
 
 .return-date {
   font-family: "Poppins", sans-serif;
   font-size: 11px;
   font-style: italic;
+  text-align: left;
   color: #fdfdfdc2; /* Customize color as desired */
   margin-top: 10px;
-  margin-left: 25px;
-
+  margin-left: 30px;
 }
 
 .see-more-container {
   display: flex; /* Enables Flexbox */
   justify-content: center; /* Centers content horizontally */
   align-items: center; /* Centers content vertically */
+  margin-bottom: -15px;
 }
 
 .see-more-link {
   color: rgba(240, 248, 255, 0.432); /* Your custom color */
   text-decoration: none; /* Optional: removes underline */
   font-family: 'Poppins', sans-serif; /* Optional: apply your font */
-  font-size: 14px; /* Adjust size as needed */
+  font-size: 12px; /* Adjust size as needed */
 }
+
+@media (max-height: 800px) {
+  .status-container {
+    display: none; /* Hides the container */
+  }
+}
+
 
 /* Responsive adjustments */
-@media (max-width: 992px) {
-  .card-grid {
-    width: calc(50% - 20px); /* 2 cards per row on medium screens */
-  }
-}
-
-@media (max-width: 576px) {
-  .card-grid {
-    width: calc(100% - 20px); /* Full width card on small screens */
-  }
-}
 
 @media (prefers-color-scheme: dark) {
   .main_body {
@@ -945,16 +1143,33 @@ hr {
   .filter-text {
     font-family: "Poppins", sans-serif;
     color: #f6f6f6;
+    font-size: 14px;
     margin-left: 10px;
-    font-size: 15px;
   }
 
   /* Adjust dropdown width and height */
   .dropdown-menu {
-    width: 250px; /* Set desired width */
-    max-height: 250px; /* Set maximum height */
+    width: 200px; /* Adjust width to fit content */
+    max-height: 350px; /* Maximum height */
     overflow-y: auto; /* Enable scrolling if content exceeds height */
-    padding: 25px; /* Optional: Adjust padding */
+    padding: 15px; /* Add padding around items */
+    background-color: #2b313d; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+  }
+
+  .filter-category {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #f6f6f6;
+    margin-bottom: 10px;
+  }
+
+  .filter-separator {
+    border: none;
+    height: 1px;
+    background-color: #444;
+    margin: 10px 0;
   }
 
   .dropdown-menu li {
@@ -966,14 +1181,19 @@ hr {
     margin-bottom: 0; /* Removes spacing for the last list item */
   }
 
-  .form-check {
-    padding: 2px 20px; /* Adds vertical padding to each filter item */
+  .form-check-input {
+    width: 16px;
+    height: 16px;
   }
 
   .form-check-label {
-    margin-left: 5px; /* Adjust spacing between checkbox and text */
+      margin-left: 8px;
   }
 
+  /* Dropdown Item Styling */
+  .dropdown-item {
+      color: #ffffff;
+  }
 
   .search-bar::placeholder {
     color: #8d8d8d; /* Change this to your desired color */
@@ -990,4 +1210,55 @@ hr {
   .card-menu button {
     color: #f6f6f6;
   }
+
+  .modal-content {
+    background-color: #2b313d;
+    color: #f6f6f6;
+  }
+
+  .icon-delete-btn {
+    fill: #f6f6f6af;
+  }
+
+  .form-control {
+    background-color: #2b313d00;
+    border-color: #cccccc6e;
+    color: #f6f6f6;
+  }
+
+  .form-control:active {
+    background-color: #2b313d;
+    color: #f6f6f6;
+  }
+
+  .form-control::placeholder {
+    color: #f6f6f686; /* Change this to your desired color */
+  }
+
+  .form-control:disabled {
+    background-color: #2b313db4;
+    color: #f6f6f686;
+  }
+
+  .form-control:focus {
+    background-color: #2b313db4;
+    color: #f6f6f6;
+    border-color: #ccccccc2;
+    box-shadow: 0 0 0px;
+  }
+
+  .dropdown-menu:active {
+    background-color: #2b313d;
+  }
+
+  .dropdown-icon {
+    color: #f6f6f6;
+  }
+
+  .image-preview {
+    background-color: #2b313dab;
+    border-color: #cccccc6e;
+
+  }
+  
 }
