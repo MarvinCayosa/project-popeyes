@@ -6,13 +6,12 @@
     <meta name="theme-color" content="#C00411">
     <title>UEnventory</title>
 
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css?v=2.2">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 <?php include 'php/config.php'; ?>
-
 
 <div class="page-background-container">
     <div class="background-container">
@@ -37,129 +36,208 @@
 
     <div class="land-page-student-signIn-container">
 
-        <form method="POST" action="php/read.php" id="signin-form">
-            <input type="hidden" name="form_name" value="signin_form">
-            <input type="hidden" name="user_type" id="user_type" value="faculty">
+        <div class="signup-form-container" id="signup-form-container">
+            <h2>Create Account</h2>  
+            <form method="POST" action="#" id="signup-form">
 
-            <div class="signIn-container-content">
-                <div class="signIn-header-container">
-                    Sign In
+                
+                <label for="username" class="signup-username">Username: </label>
+                <input type="text" placeholder="Username" name="username" required>
+                
+                <label for="email" class="signup-email">E-Mail: </label>
+                <input type="email" placeholder="Email" name="email" required>
+                
+                <label for="id_num" class="signup-id-num">ID Number: </label>
+                <input type="text" placeholder="ID no." name="id_num" required>
+                
+                <label for="password" class="signup-password">Password: </label>
+                <input type="password" placeholder="Password" name="password" required>
+                
+                <input type="submit" class="create-acc-btn" value="Create Account">
+            </form>
+            
+            <span class="sign-in-link">
+                            
+                <div style="padding-right: 10px;">Already have an account?</div>
+            
+                <div class="signin-btn" onclick="toggleSignupForm()">
+                    Signin
                 </div>
+            </span>
+        </div>
 
-                <div class="selector-container">
-                    <a href="#faculty" id="faculty-link" class="active" onclick="setUserType('faculty')">Faculty</a>
-                    <a href="#student" id="student-link" onclick="setUserType('student')">Student</a>
-                </div>
+        <div class="signin-form-container" id="signin-form-container">
+            <form method="POST" action="php/read.php" id="signin-form">
+                <input type="hidden" name="form_name" value="signin_form">
+                <input type="hidden" name="user_type" id="user_type" value="faculty">
 
-                <div class="signIn-signUp-container">
-                    <div class="email-container">
-                        <label for="email" class="ue-mail">UE Email</label>
-                        <input type="email" class="email-textbox" id="email" name="email" required>
+                <div class="signIn-container-content">
+                    <div class="signIn-header-container">
+                        Sign In
                     </div>
 
-                    <div class="password-container">
-                        <label for="password" class="password">Password</label>
-                        <div class="password-wrapper">
-                            <input type="password" class="email-textbox" id="password" name="password" required>
-                            <span class="eye-icon" onclick="togglePassword()">
-                                <img src="assets/eye-slash-fill.svg" id="toggleIcon" alt="Show/Hide Password">
-                            </span>
-                        </div>
+                    <div class="selector-container">
+                        <a href="#faculty" id="faculty-link" class="active" onclick="setUserType('faculty')">Faculty</a>
+                        <a href="#student" id="student-link" onclick="setUserType('student')">Student</a>
                     </div>
-                </div>
 
-                <div class="link-container">
-                    <a id="#forgot-pass" class="forgot-password-link">Forgot Password?</a>
-                    <span class="sign-up-link">Don't have an account? <a id="#sign-up">Sign Up</a></span>
-                </div>
-
-                <div class="captcha-container">
-                    <div class="content-container">
-                        <div class="left-side">
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="checkbox-input">
-                                <span class="checkbox-custom"></span>
-                            </label>
+                    <div class="signIn-signUp-container">
+                        <div class="email-container">
+                            <label for="email" class="ue-mail">UE Email</label>
+                            <input type="email" class="email-textbox" id="email" name="email" required>
                         </div>
-                        <div class="middle-side">I'm not a robot</div>
-                        <div class="right-side">
-                            <div class="captcha-logo">
-                                <img id="captcha_light" src="assets/captcha_logo.svg">
+
+                        <div class="password-container">
+                            <label for="password" class="password">Password</label>
+                            <div class="password-wrapper">
+                                <input type="password" class="email-textbox" id="password" name="password" required>
+                                <span class="eye-icon" onclick="togglePassword()">
+                                    <img src="assets/eye-slash-fill.svg" id="toggleIcon" alt="Show/Hide Password">
+                                </span>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="link-container">
+                        <a id="#forgot-pass" class="forgot-password-link">Forgot Password?</a>
+                        <!-- <span class="sign-up-link">Don't have an account? <a id="#sign-up">Sign Up</a></span> -->
+
+                        <span class="sign-up-link">
+                            
+                            <div style="padding-right: 10px;">Don't have an account?</div>
+                        
+                            <div class="signup-btn" onclick="toggleSignupForm()">
+                                Signup
+                            </div>
+                        </span>
+
+                    </div>
+                    <div class="captcha-container">
+                        <div class="content-container">
+                            <div class="left-side">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="checkbox-input">
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                            </div>
+                            <div class="middle-side">I'm not a robot</div>
+                            <div class="right-side">
+                                <div class="captcha-logo">
+                                    <img id="captcha_light" src="assets/captcha_logo.svg">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="button-section">
-                    <button type="button" class="signIn-button" onclick="validateInputs()">Sign In</button>
+                    <div class="button-section">
+                        <!-- <button type="button" class="signIn-button" onclick="validateInputs()">Sign In</button> -->
+                        <button type="submit" class="signIn-button" onclick="validateInputs()">Sign In</button>
 
-                    <script>
-                        document.addEventListener("DOMContentLoaded", function () {
-                            const emailInput = document.getElementById("email");
-                            const passwordInput = document.getElementById("password");
-                            const userTypeInput = document.getElementById("user_type");
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                const emailInput = document.getElementById("email");
+                                const passwordInput = document.getElementById("password");
+                                const userTypeInput = document.getElementById("user_type");
 
-                            function validateInputs() {
-                                if (!emailInput || !passwordInput) {
-                                    alert("Unable to find input fields.");
-                                    return;
+                                function validateInputs() {
+                                    if(document.getElementById("sigin-form-container").style.display != "block"){
+                                        return;
+                                    }
+
+                                    if (!emailInput || !passwordInput) {
+                                        // alert("Unable to find input fields.");
+                                        return;
+                                    }
+
+                                    if (!emailInput.checkValidity()) {
+                                        // alert("Please enter a valid email address.");
+                                        emailInput.focus();
+                                    } else if (passwordInput.value.trim() === "") {
+                                        // alert("Please enter your password.");
+                                        passwordInput.focus();
+                                    } else {
+                                        // alert("SIGINING IN FROM VALIDATEINPUTS");
+                                        document.getElementById("signin-form").submit();
+                                    }
+                                    // document.getElementById("signin-form").submit();
                                 }
 
-                                if (!emailInput.checkValidity()) {
-                                    alert("Please enter a valid email address.");
-                                    emailInput.focus();
-                                } else if (passwordInput.value.trim() === "") {
-                                    alert("Please enter your password.");
-                                    passwordInput.focus();
-                                } else {
-                                    document.getElementById("signin-form").submit();
+                                function togglePassword() {
+                                    const toggleIcon = document.getElementById("toggleIcon");
+
+                                    if (passwordInput.type === "password") {
+                                        passwordInput.type = "text";
+                                        toggleIcon.src = "assets/eye-fill.svg";
+                                    } else {
+                                        passwordInput.type = "password";
+                                        toggleIcon.src = "assets/eye-slash-fill.svg";
+                                    }
                                 }
-                            }
 
-                            function togglePassword() {
-                                const toggleIcon = document.getElementById("toggleIcon");
-
-                                if (passwordInput.type === "password") {
-                                    passwordInput.type = "text";
-                                    toggleIcon.src = "assets/eye-fill.svg";
-                                } else {
-                                    passwordInput.type = "password";
-                                    toggleIcon.src = "assets/eye-slash-fill.svg";
+                                function setUserType(type) {
+                                    userTypeInput.value = type;
+                                    if (type === "faculty") {
+                                        document.getElementById("faculty-link").classList.add("active");
+                                        document.getElementById("student-link").classList.remove("active");
+                                    } else {
+                                        document.getElementById("student-link").classList.add("active");
+                                        document.getElementById("faculty-link").classList.remove("active");
+                                    }
                                 }
-                            }
 
-                            function setUserType(type) {
-                                userTypeInput.value = type;
-                                if (type === "faculty") {
-                                    document.getElementById("faculty-link").classList.add("active");
-                                    document.getElementById("student-link").classList.remove("active");
-                                } else {
-                                    document.getElementById("student-link").classList.add("active");
-                                    document.getElementById("faculty-link").classList.remove("active");
-                                }
-                            }
+                                window.validateInputs = validateInputs;
+                                window.togglePassword = togglePassword;
+                                window.setUserType = setUserType;
+                            });
+                        </script>
 
-                            window.validateInputs = validateInputs;
-                            window.togglePassword = togglePassword;
-                            window.setUserType = setUserType;
-                        });
-                    </script>
 
-                    <div class="seperator">
-                        <div class="line"></div>
-                        <div class="or">or</div>
-                        <div class="line"></div>
+                        
+                        <div class="seperator">
+                            <div class="line"></div>
+                            <div class="or">or</div>
+                            <div class="line"></div>
+                        </div>
+
+                        <button type="button" class="google-button">
+                            <img src="assets/google_logo.svg" alt="Google logo" class="google-logo">
+                            <span class="google-text">Continue with Google</span>
+                        </button>
                     </div>
-
-                    <button type="button" class="google-button">
-                        <img src="assets/google_logo.svg" alt="Google logo" class="google-logo">
-                        <span class="google-text">Continue with Google</span>
-                    </button>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
+
+
     </div>
 </div>
+
+<script>
+    function toggleSignupForm() {
+        const signinContainer = document.getElementById("signin-form-container");
+        const signupContainer = document.getElementById("signup-form-container");
+
+        // Get the computed display styles
+        const signinDisplay = window.getComputedStyle(signinContainer).display;
+        const signupDisplay = window.getComputedStyle(signupContainer).display;
+
+        // Toggle visibility
+        if (signinDisplay === "none") {
+            // Show sign-in and hide sign-up
+            signinContainer.style.display = "block";
+            signupContainer.style.display = "none";
+        } else {
+            // Show sign-up and hide sign-in
+            signinContainer.style.display = "none";
+            signupContainer.style.display = "block";
+        }
+    }
+
+</script> 
+
+
 </body>
 
 </html>

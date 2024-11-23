@@ -506,6 +506,7 @@ ul.dropdown-menu.show {
   margin: 0;
 }
 
+
 .modal-body {
   border-radius: 22px;
   background: rgba(217, 217, 217, 0.25);
@@ -521,7 +522,7 @@ ul.dropdown-menu.show {
 }
 
 .custom-accordion .accordion-button:not(.collapsed) {
-  background-color: var(--main-red);
+  background-color: #434343;
   color: #fafafa;
   border: none;
   box-shadow: none;
@@ -571,7 +572,7 @@ ul.dropdown-menu.show {
 }
 
 .borrow-id,
-.item-due,
+.item-req,
 .course {
   white-space: nowrap;
   overflow: hidden;
@@ -583,7 +584,7 @@ ul.dropdown-menu.show {
   max-width: 20%;
 }
 
-.item-due {
+.item-req {
   flex-basis: 30%; /* Set width for due date */
   max-width: 30%;
 }
@@ -669,7 +670,7 @@ ul.dropdown-menu.show {
 
 .custom-accordion .accordion-button {
   border-radius: 10px;
-  background-color: #c00411;
+  background-color: #676767;
   color: #fafafa;
   border: none;
   font-family: "Poppins", sans-serif;
@@ -817,6 +818,10 @@ ul.dropdown-menu.show {
   #detailsModal .modal-header .modal-tag {
     color: #f7f7f7;
   }
+
+  #header.modal-tag {
+    color: #f7f7f7;
+  }
   #detailsModal .modal-header .text {
     color: #fafafab6;
   }
@@ -841,19 +846,45 @@ ul.dropdown-menu.show {
     border-bottom: 1px solid rgba(255, 255, 255, 0.322); /* Lower-contrast row lines */
   }
   
-
-
   .table-custom th,
   .table-custom td {
     color: #dfdfdf !important; /* Ensures headers and cells have white text */
   }
 
   #detailsModal .custom-accordion .accordion-button {
-    background-color: #8f1019;
+    background-color: #252d3a;
   }
   #detailsModal .custom-accordion .accordion-button:not(.collapsed) {
-    background-color: #701016;
+    background-color: #262e3f;
   }
+}
+
+
+.scrollable-section.list-mode .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+
+.scrollable-section.list-mode .card-avatar {
+  margin-right: 15px;
+}
+
+.scrollable-section.list-mode .card-content {
+  flex-grow: 1;
+}
+
+.list-mode .card-container {
+  width: 100%; /* Span the full width of the scrollable section */
+  gap: 0; /* Remove gaps between cards */
+  justify-content: center; /* Center content horizontally */
+  margin: auto; /* Center the container itself */
+}
+
+.list-mode .card {
+  width: 95%; /* Adjust card width to fit neatly */
+  margin: 10px auto; /* Center each card and add vertical spacing */
 }
 
 

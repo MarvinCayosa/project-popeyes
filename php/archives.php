@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Records</title>
+    <title>Archives</title>
     <meta name="theme-color" content="#C00411" />
     <script
         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -21,7 +21,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
         crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../css/records_styles.css"/>
+    <link rel="stylesheet" href="../css/archive_styles.css"/>
     <link rel="stylesheet" href="../css/scrollbar.css"/>
     <link rel="stylesheet" href="../css/options.css"/>
     <script src="../php/options.js" defer></script>
@@ -91,22 +91,20 @@
             </li>
 
             <li
-              class="nav-item nav-link active d-flex justify-content-center icon-container"
+              class="nav-item nav-link d-flex justify-content-center icon-container"
             >
               <a href="records.php">
                 <svg class="icon" fill="currentColor">
                   <use xlink:href="icons.svg#icon-profile"></use>
                 </svg>
               </a>
-              <span class="icon_name">Records</span>
+              <span class="icon_name">Archives</span>
             </li>
-            <li class="nav-item d-flex justify-content-center icon-container">
+            <li class="nav-item nav-link active d-flex justify-content-center icon-container">
               <span class="icon_name">Archive</span>
-              <a href="archives.php">
               <svg class="icon" fill="currentColor">
                 <use xlink:href="icons.svg#icon-archive"></use>
               </svg>
-              </a>
             </li>
             <!-- Expand/Collapse Button -->
             <li class="nav-item d-flex justify-content-center icon-container">
@@ -140,7 +138,7 @@
         <div class="main_body flex-grow-1">
           <nav class="navbar-main navbar">
             <div class="container-nav container-fluid">
-              <h1 class="header">Records</h1>
+              <h1 class="header">Archives</h1>
               <form class="search-form d-flex search-container" role="search">
                 <input
                   class="search-bar form-control me-3"
@@ -178,7 +176,7 @@
             </div>
           </nav>
 
-          <div class="scrollable-section">
+          <div class="scrollable-section list-mode">
             <div class="card-container">
 
                 <!-- Card 1 -->
@@ -297,6 +295,7 @@
 
                 <!-- Modal Body -->
                 <div class="modal-body">
+                    <h2 class="modal-tag mb-3" id="header">History</h2>
                     <div class="accordion accordion-flush custom-accordion" id="borrow-section-accordion">
                         <!-- Borrowed Item 1 -->
                         <div class="accordion-item">
@@ -311,7 +310,7 @@
                                     aria-controls="flush-collapseOne"
                                 >
                                     <span class="borrow-id">0001</span>
-                                    <span class="item-due">Due: October 30, 2024</span>
+                                    <span class="item-req">Req: October 30, 2024</span>
                                     <span class="course">Course: NCP_3106 Software Design Laboratory</span>
                                 </button>
                             </h2>
@@ -327,35 +326,27 @@
                                             <tr>
                                                 <th scope="col">Items</th>
                                                 <th class="qt-col" scope="col">Quantity</th>
-                                                <th class="select-col" scope="col">Select</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>Arduino Uno R4</td>
                                                 <td class="qt-cell">1</td>
-                                                <td class="checkbox-cell"><input type="checkbox" unchecked /></td>
                                             </tr>
                                             <tr>
                                                 <td>ESP32</td>
                                                 <td class="qt-cell">3</td>
-                                                <td class="checkbox-cell"><input type="checkbox" unchecked /></td>
                                             </tr>
                                             <tr>
                                                 <td>IR Sensor</td>
                                                 <td class="qt-cell">5</td>
-                                                <td class="checkbox-cell"><input type="checkbox" unchecked /></td>
                                             </tr>
                                             <tr>
                                                 <td>Ultrasonic Sensor</td>
                                                 <td class="qt-cell">1</td>
-                                                <td class="checkbox-cell"><input type="checkbox" unchecked /></td>
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <div class="button-container">
-                                        <button class="btn btn-success">Save Changes</button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -372,7 +363,7 @@
                                     aria-controls="flush-collapseTwo"
                                 >
                                     <span class="borrow-id">0002</span>
-                                    <span class="item-due">Due: November 19, 2024</span>
+                                    <span class="item-req">Req: November 19, 2024</span>
                                     <span class="course">Course: NCP_3102 Embedded Systems Laboratory</span>
                                 </button>
                             </h2>
@@ -387,35 +378,27 @@
                                             <tr>
                                                 <th scope="col">Items</th>
                                                 <th class="qt-col" scope="col">Quantity</th>
-                                                <th class="select-col" scope="col">Select</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>Raspberry Pi 4</td>
                                                 <td class="qt-cell">2</td>
-                                                <td class="checkbox-cell"><input type="checkbox" unchecked /></td>
                                             </tr>
                                             <tr>
                                                 <td>OLED Display</td>
                                                 <td class="qt-cell">1</td>
-                                                <td class="checkbox-cell"><input type="checkbox" unchecked /></td>
                                             </tr>
                                             <tr>
                                                 <td>Temperature Sensor</td>
                                                 <td class="qt-cell">4</td>
-                                                <td class="checkbox-cell"><input type="checkbox" unchecked /></td>
                                             </tr>
                                             <tr>
                                                 <td>Servo Motor</td>
                                                 <td class="qt-cell">3</td>
-                                                <td class="checkbox-cell"><input type="checkbox" unchecked /></td>
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <div class="button-container">
-                                        <button class="btn btn-success">Save Changes</button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
