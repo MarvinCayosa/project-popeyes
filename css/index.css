@@ -816,7 +816,7 @@ input:-webkit-autofill {
 
 
     .land-page-student-signIn-container {
-        background: rgba(33, 40, 55, 0.13); /* Semi-transparent dark background */
+        background: rgba(33, 40, 55, 0.301); /* Semi-transparent dark background */
         border-radius: 25px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
         box-sizing: border-box;
