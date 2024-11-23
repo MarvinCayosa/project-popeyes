@@ -112,6 +112,8 @@
                                 const emailInput = document.getElementById("email");
                                 const passwordInput = document.getElementById("password");
                                 const userTypeInput = document.getElementById("user_type");
+                                const incorrectPasswordMessage = "The password you entered is incorrect.";
+                                
 
                                 function validateInputs() {
                                     if(document.getElementById("sigin-form-container").style.display != "block"){
@@ -129,12 +131,17 @@
                                     } else if (passwordInput.value.trim() === "") {
                                         // alert("Please enter your password.");
                                         passwordInput.focus();
+                                    } else if (!isPasswordCorrect(passwordInput.value)) {
+                                        alert(incorrectPasswordMessage);
+                                        passwordInput.focus();
                                     } else {
                                         // alert("SIGINING IN FROM VALIDATEINPUTS");
                                         document.getElementById("signin-form").submit();
                                     }
                                     // document.getElementById("signin-form").submit();
+                                
                                 }
+                                
 
                                 function togglePassword() {
                                     const toggleIcon = document.getElementById("toggleIcon");
