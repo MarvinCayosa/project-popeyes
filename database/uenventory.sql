@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2024 at 04:22 PM
+-- Generation Time: Nov 20, 2024 at 07:55 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -62,7 +62,12 @@ CREATE TABLE `items` (
 
 INSERT INTO `items` (`item_id`, `item_name`, `total_quantity`, `available_quantity`, `date_added`, `date_edited`) VALUES
 (1, 'Arduino', 50, 50, '2024-11-15', '2024-11-15'),
-(30, 'Arduino', 23, 23, '2024-11-02', '2024-11-22');
+(2, 'Arduino', 23, 23, '2024-11-02', '2024-11-22'),
+(31, 'ESP32', 24, 42, '2024-10-30', '2024-12-07'),
+(33, 'Flame Sensor', 15, 15, '2024-11-07', '2024-12-07'),
+(34, 'Soldering Iron', 50, 50, '2024-11-01', '2024-11-23'),
+(35, 'Arduino', 12, 12, '2024-11-01', '2024-12-07'),
+(36, 'Arduino', 12, 12, '2024-10-31', '2024-12-05');
 
 -- --------------------------------------------------------
 
@@ -99,7 +104,7 @@ ALTER TABLE `faculty`
 --
 ALTER TABLE `items`
   ADD PRIMARY KEY (`item_id`),
-  ADD UNIQUE KEY `unique_item` (`item_id`,`item_name`);
+  ADD UNIQUE KEY `UNIQUE` (`item_id`,`item_name`) USING BTREE;
 
 --
 -- Indexes for table `students`
@@ -115,7 +120,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `item_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `item_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

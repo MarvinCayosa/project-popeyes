@@ -176,13 +176,7 @@ hr {
   margin-top: 15px;
 }
 
-.available-text {
-  position: absolute;
-  top: 10px;
-  left: 15px;
-  padding: 20px;
-  border-radius: 4px;
-}
+
 
 .container-nav {
   height: 80px;
@@ -248,10 +242,49 @@ hr {
 }
 
 .add-btn {
-  position: fixed;
-  bottom: 55px;
-  right: 350px;
+  position: absolute;
+  bottom: 5%;
+  right: 18%;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px; /* Space between SVG and text */
+  width: 55px;
+  height: 55px;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transition */
+  overflow: hidden; /* Hide text when not expanded */
+  white-space: nowrap; /* Prevent text wrapping */
+  cursor: pointer;
+  padding: 0; /* Remove button padding */
+}
+
+.add-btn:hover {
+  width: 150px; /* Expanded width */
+  padding: 0 10px; /* Add padding to fit text */
+  background-color: #C00411; /* Red background color */
+}
+
+.add-btn span {
+  display: none; /* Hide text by default */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.add-btn:hover span {
+  display: inline; /* Show text on hover */
+}
+
+.add-btn svg {
+  margin: 0; /* Remove extra margin */
+  padding: 0; /* Remove padding */
+  display: block; /* Ensure no inline spacing */}
+
+.filter-svg {
+  flex-shrink: 0; /* Prevent SVG from resizing */
 }
 
 .inventory-container {
@@ -285,7 +318,7 @@ hr {
 
 /* Scrollable Section */
 .scrollable-section {
-  margin: 0px 40px 0px 40px; 
+  margin: 0px 40px 0px 40px;
   width: 75%;
   max-height: 70%;
   overflow-y: auto;
@@ -296,12 +329,12 @@ hr {
 }
 
 .card-container {
-  display: flex;
-  flex-wrap: wrap; /* Allow cards to wrap onto new lines */
-  gap: 10px; /* Space between cards */
-  margin-bottom: 20px;
-  justify-content: flex-start; /* Align items to the left */
-  margin-right: 2.5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust card width based on available space */
+  justify-content: space-between; /* Dynamically adjust spacing between cards */
+  gap: 25px; /* Space between rows */
+  margin: 0 auto; /* Center container */
+  padding: 20px; /* Optional padding around the grid */
 }
 
 .card-container::-webkit-scrollbar {
@@ -309,8 +342,8 @@ hr {
 }
 
 .card {
-  width: 290px; /* Set a fixed width for the cards */
-  height: 310px; /* Set a fixed height for the cards */
+  width: 100%; /* Ensure the card takes full width of the grid column */
+  height: auto; /* Height is dynamic */
   background-color: #fafafa;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
@@ -374,13 +407,15 @@ hr {
   justify-content: flex-start;
   display: flex;
 }
+
 /* Styling for the stock numbers */
 .available-number {
   background-color: #0d8a20; /* Light background color for contrast */
   padding: 1px 5px; /* Padding around the text */
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 10px; /* Rounded corners */
   color: #ffffff; /* Main red color */
   font-size: 12px;
+  margin-left: 5px; /* Adjust space between text and number */
 }
 
 .available-text {
@@ -390,7 +425,7 @@ hr {
   font-size: 12px;
   background-color: transparent;
   padding: 10px;
-  border-radius: 4px; /* rounded corners */
+  border-radius: 15px; /* rounded corners */
   z-index: 10; /* ensure it stays above other content */
 }
 
@@ -409,9 +444,10 @@ hr {
   justify-content: space-between; /* Pushes the number to the right */
   align-items: center; /* Vertically centers the text and number */
   font-size: 14px;
+
 }
 
-/* Modal */
+/* ADD-EDIT Modal */
 /* Remove border from modal header and footer */
 .modal-header,
 .modal-footer {
@@ -423,12 +459,12 @@ hr {
 }
 
 .modal-custom {
-  max-width: 900px; /* Set custom width */
+  max-width: 950px; /* Set custom width */
   height: 500px;
 }
 
 .modal-content {
-  padding: 25px 50px 25px 50px; /* Top, Right, Bottom, Left */
+  padding: 35px 50px 35px 50px; /* Top, Right, Bottom, Left */
   border-radius: 20px; /* Adjust the value for more or less rounded corners */
   position: relative;
   z-index: 1050;
@@ -439,28 +475,89 @@ hr {
 }
 
 .input-custom {
-  width: 200px; /* Fixed width for all inputs */
-  margin-right: 120px; /* Optional: Space between the inputs */
+  margin-right: 30px; /* Optional: Space between the inputs */
 }
 
 .input-custom-1 {
-  margin-right: 40px; /* Optional: Space between the inputs */
+  margin-right: 30px; /* Optional: Space between the inputs */
 }
 
 .input-id {
-  width: 100px; /* Full width of the modal */
+  width: 80px; /* Full width of the modal */
 }
 
 .input-item-name {
-  width: 280px; /* Adjusted width */
+
+  width: 370px; /* Adjusted width */
 }
 
 .input-date {
-  width: 280px; /* Adjusted width for date fields */
+  width: 150px; /* Adjusted width for date fields */
 }
 
 .input-quantity {
-  width: 100px; /* Adjusted width for quantity fields */
+  width: 80px; /* Adjusted width for quantity fields */
+}
+
+.input-property {
+  width: 180px; /* Adjusted width for quantity fields */
+}
+
+.input-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  resize: none; /* Prevent resizing by the user */
+  width: 480px;
+  box-sizing: border-box; /* Ensure padding doesn't overflow the container */
+  padding: 10px;
+  padding-bottom: 25px; /* Add space for the character counter */
+  position: relative;
+}
+
+.textarea-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.char-counter {
+  position: absolute;
+  bottom: 5px;
+  right: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #6c757d; /* Subtle text color */
+}
+
+/* Wrapper around the select and the dropdown icon */
+.dropdown-wrapper {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+/* Style for the select box */
+.input-property.dropdown-toggle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  appearance: none; /* Remove browser's default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 10px;
+  padding-right:10px; /* Space for the dropdown icon */
+  width: 190px;
+  box-sizing: border-box;
+  cursor: pointer; /* Indicate it's clickable */
+}
+
+/* Dropdown icon styling */
+.dropdown-icon {
+  position: absolute;
+  top: 50%;
+  right: 80px; /* Adjust spacing from the right */
+  transform: translateY(-50%);
+  pointer-events: none; /* Ensure clicks go to the select box */
+  font-size: 20px;
+  color: #292b2c; /* Subtle gray color for the arrow */
 }
 
 .input-group {
@@ -472,7 +569,7 @@ hr {
   display: flex; /* Use flexbox for horizontal alignment */
   justify-content: space-between; /* Space between inputs */
   align-items: center;
-  margin-bottom: 15px; /* Space between rows */
+  margin-bottom: 10px; /* Space between rows */
 }
 
 /* Image Preview */
@@ -489,11 +586,11 @@ hr {
 /* Style for the image preview */
 .image-preview {
   position: absolute;
-  right: 60%;
+  right: 65%;
   top: 30%;
   transform: translate(50%, -50%);
-  width: 250px;
-  height: 250px;
+  width: 270px;
+  height: 270px;
   background-color: #f0f0f0; /* Light background if no image */
   display: flex;
   justify-content: center;
@@ -517,8 +614,8 @@ hr {
   top: 45%; /* Center the icon vertically */
   left: 50%; /* Center the icon horizontally */
   transform: translate(
-    -50%,
-    -100%
+          -50%,
+          -100%
   ); /* Move it slightly above its default position */
   width: 40px;
   height: 40px;
@@ -559,20 +656,41 @@ hr {
   display: none;
 }
 
-/* Style for the Save Changes button */
-.btn-save-changes {
-  padding: 6px 15px;
-  background-color: #c00411; /* Set the background color to red */
+.btn-cancel {
+  font-family: "Poppins", sans-serif;
+  padding: 0.375rem 0.75rem;
+  background-color: #6c757d ; /* Set the background color to red */
   color: white; /* Set the text color to white */
   border: none; /* Remove border */
   border-radius: 8px; /* Optional: Rounded corners */
   cursor: pointer;
-  font-size: 16px; /* Optional: Font size */
+  font-weight: 400;
+  font-size: 1rem; /* Optional: Font size */
+  transition: background-color 0.3s ease; /* Optional: Smooth hover transition */
+}
+
+.btn-cancel:hover {
+  color: white; /* Set the text color to white */
+  background-color: #4f555b ; /* Darker red on hover */
+}
+
+/* Style for the Save Changes button */
+.btn-save-changes {
+  font-family: "Poppins", sans-serif;
+  padding: 0.375rem 0.75rem;
+  background-color: #149708; /* Set the background color to red */
+  color: white; /* Set the text color to white */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Optional: Rounded corners */
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1rem; /* Optional: Font size */
   transition: background-color 0.3s ease; /* Optional: Smooth hover transition */
 }
 
 .btn-save-changes:hover {
-  background-color: darkred; /* Darker red on hover */
+  color: white; /* Set the text color to white */
+  background-color: rgb(5, 108, 22); /* Darker red on hover */
 }
 
 /* Status Container Right */
@@ -586,44 +704,138 @@ hr {
   justify-content: center; /* Center content horizontally */
   background-color: none; /* Light background for contrast */
   width: 20%;
-  top: 55px;
+  top: 60px;
   right: 0;
-  margin-right: 5px;
-
-  height: 90%;
+  margin-right: 10px;
 }
 
 .status-container {
   display: flex;
   flex-direction: column; /* Stack rectangles vertically */
-  gap: 20px; /* Add space between the rectangles */
+  gap: 30px; /* Add space between the rectangles */
   align-items: center; /* Center rectangles horizontally */
   width: 100%; /* Make container take full width of section */
-  height: 685px; /* Set height of the container */
+  height: 800px; /* Set height of the container */
   margin-left: 5px;
 }
 
 .rectangle {
   border-radius: 20px;
   display: flex;
-  justify-content: center; /* Center text horizontally */
-  align-items: center; /* Center text vertically */
-  padding: 10px;
+  justify-content: flex-start; /* Keeps items aligned to the left */
+  position: relative;
+  flex-direction: column; /* Arrange elements vertically */
   width: 90%; /* Adjust width relative to container width */
+  padding: 30px; /* Padding in vw for better scaling */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
 .request-status {
   background-color: #4285f4;
-  height: 80%; /* Adjust height for the first rectangle */
+  height: 700px; /* Adjust height for the first rectangle */
   color: white; /* White text for contrast */
+}
+
+.quick-access-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-top: -38px;
+  margin-left:85%; /* Adjust margin to keep the circle relative to the text */
+}
+
+.request {
+  background-color: #f0ad4e; /* Orange */
+}
+
+.separator-line {
+  width: 95%; /* Adjust the width as desired */
+  height: 1px; /* Thickness of the line */
+  background-color: #dddddd86; /* Color of the separator line */
+  margin: 20px 1px 20px 1px; /* Center the line horizontally and add vertical spacing */
+}
+
+.student-container {
+  display: flex;
+  align-items: center; /* Align items (image and text) vertically */
+  gap: 5px; /* Space between the picture and the text */
+}
+
+.vertical-layout {
+  display: flex;
+  flex-direction: column; /* Ensure vertical arrangement */
+  margin-left: 10px;
+}
+
+.student_pic {
+  margin-left: 20px;
+  margin-top: -10px;
+  width: 45px;
+  height: 45px;
+  background: url("../png/user.png") no-repeat center center; /* Centers the image */
+  background-size: cover; /* Ensures the image covers the container, scaling properly */
+  border-radius: 50%; /* Makes the container a perfect circle */
+  overflow: hidden; /* Ensures no parts of the image overflow out of the circle */
+}
+
+.student-name {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fdfdfd; /* Customize color as desired */
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.request-date {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  color: #fdfdfdc2; /* Customize color as desired */
+  margin-left: 10px;
+  margin-top: -15px;
+}
+
+.return {
+  background-color: #d9534f; /* Red */
 }
 
 .return-status {
   background-color: #fbbc05;
-  height: 50%; /* Adjust height for the second rectangle */
+  height: 500px; /* Adjust height for the second rectangle */
   color: white; /* Black text for contrast */
 }
- 
+
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  align-items: center; /* Center vertically in each row */
+
+}
+
+.return-date {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  color: #fdfdfdc2; /* Customize color as desired */
+  margin-top: 10px;
+  margin-left: 25px;
+
+}
+
+.see-more-container {
+  display: flex; /* Enables Flexbox */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+}
+
+.see-more-link {
+  color: rgba(240, 248, 255, 0.432); /* Your custom color */
+  text-decoration: none; /* Optional: removes underline */
+  font-family: 'Poppins', sans-serif; /* Optional: apply your font */
+  font-size: 14px; /* Adjust size as needed */
+}
+
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .card-grid {
@@ -730,6 +942,39 @@ hr {
     color: #f6f6f6;
   }
 
+  .filter-text {
+    font-family: "Poppins", sans-serif;
+    color: #f6f6f6;
+    margin-left: 10px;
+    font-size: 15px;
+  }
+
+  /* Adjust dropdown width and height */
+  .dropdown-menu {
+    width: 250px; /* Set desired width */
+    max-height: 250px; /* Set maximum height */
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+    padding: 25px; /* Optional: Adjust padding */
+  }
+
+  .dropdown-menu li {
+    align-items: center;
+    margin-bottom: 5px; /* Adds spacing between the list items */
+  }
+
+  .dropdown-menu li:last-child {
+    margin-bottom: 0; /* Removes spacing for the last list item */
+  }
+
+  .form-check {
+    padding: 2px 20px; /* Adds vertical padding to each filter item */
+  }
+
+  .form-check-label {
+    margin-left: 5px; /* Adjust spacing between checkbox and text */
+  }
+
+
   .search-bar::placeholder {
     color: #8d8d8d; /* Change this to your desired color */
   }
@@ -737,6 +982,7 @@ hr {
   .dropdown-menu {
     background-color: #2b313d;
   }
+
   .dropdown-item {
     color: #ffffff;
   }
