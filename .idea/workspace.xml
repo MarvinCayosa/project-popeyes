@@ -4,22 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Successful Filtering of Inbox, UI/UX compromised, need help">
-      <change afterPath="$PROJECT_DIR$/php/status" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]2/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]3/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]4/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_4.xml" beforeDir="false" />
+    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Added Request Status and Quick Access, Backend needs to be implemented.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/home_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/uenventory.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/uenventory.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/home.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +134,8 @@
       <workItem from="1732073157183" duration="6073000" />
       <workItem from="1732085384316" duration="880000" />
       <workItem from="1732184728895" duration="3867000" />
+      <workItem from="1732352454307" duration="370000" />
+      <workItem from="1732352977774" duration="990000" />
     </task>
     <task id="LOCAL-00001" summary="Added Log In conditions, only faculty can access faculty website, same goes to students,&#10;&#10;Included &quot;read.php&quot; for verifying credentials.">
       <option name="closed" value="true" />
@@ -212,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732085632434</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added Request Status and Quick Access, Backend needs to be implemented.">
+      <option name="closed" value="true" />
+      <created>1732352535017</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732352535017</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +234,7 @@
     <MESSAGE value="Rearrange Cards. Made it responsive.&#10;Other contents need to be rearranged" />
     <MESSAGE value="Workspace xml update" />
     <MESSAGE value="Successful Filtering of Inbox, UI/UX compromised, need help" />
-    <option name="LAST_COMMIT_MESSAGE" value="Successful Filtering of Inbox, UI/UX compromised, need help" />
+    <MESSAGE value="Added Request Status and Quick Access, Backend needs to be implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Request Status and Quick Access, Backend needs to be implemented." />
   </component>
 </project>
