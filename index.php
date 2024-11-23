@@ -80,7 +80,7 @@
                             
                             <div style="padding-right: 10px;">Don't have an account?</div>
                         
-                            <a href="sign_up.php" class="signup-btn">
+                            <a href="php/sign_up.php" class="signup-btn">
                                 Sign Up
                             </a>
                         </span>

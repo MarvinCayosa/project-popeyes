@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="css/sign_up_styles.css">
+    <link rel="stylesheet" href="../css/sign_up_styles.css">
 </head>
 <body>
     <div class="page-background-container">
         <div class="background-container">
-            <img id="bg_light" src="assets/bg_image_l.svg">
-            <img id="bg_dark" src="assets/bg_image_dark.svg">
+            <img id="bg_light" src="../assets/bg_image_l.svg">
+            <img id="bg_dark" src="../assets/bg_image_dark.svg">
         </div>
     </div>
 
@@ -21,7 +21,7 @@
                 <h2>Sign Up</h2>
                 <p>Create an account</p>
                 <div class="sign-in-acc">Already have an account?
-                    <a href="index.php">Sign In</a>
+                    <a href="../index.php">Sign In</a>
                 </div>
             </div>
 
@@ -57,13 +57,13 @@
                     <label for="password">Password</label>
                     <div class="password-container">
                         <input type="password" id="password" name="password" placeholder="Enter a password" required>
-                        <img src="assets/eye-slash-fill.svg" id="toggleIcon" alt="Show/Hide Password" onclick="togglePasswordVisibility('password')">
+                        <img src="../assets/eye-slash-fill.svg" id="toggleIcon" alt="Show/Hide Password" onclick="togglePasswordVisibility('password')">
                     </div>
 
                     <label for="confirmPassword">Confirm Password</label>
                     <div class="password-container">
                         <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
-                        <img src="assets/eye-slash-fill.svg" id="toggleIconConfirm" alt="Show/Hide Password" onclick="togglePasswordVisibility('confirmPassword')">
+                        <img src="../assets/eye-slash-fill.svg" id="toggleIconConfirm" alt="Show/Hide Password" onclick="togglePasswordVisibility('confirmPassword')">
                     </div>
                     <div class="button-group">
                         <button type="button" onclick="prevStep(2)">Back</button>
@@ -74,7 +74,7 @@
                     <label for="profilePicture">Profile Picture</label>
                     <!-- Placeholder Avatar -->
                     <div class="avatar-container">
-                        <img id="avatar" src="png/user.png" alt="Avatar" class="avatar">
+                        <img id="avatar" src="../png/user.png" alt="Avatar" class="avatar">
                     </div>
                     
                     <!-- Upload Button below the preview -->
@@ -86,13 +86,12 @@
                     <div class="button-group">
                         <button type="button" onclick="prevStep(3)">Back</button>
                         <button type="button" onclick="submitForm(event)">Finish</button>
-
                     </div>
                 </div>
             </form>
         </div>
     </div>
 
-    <script src="js/sign_up_script.js"></script>
+    <script src="../js/sign_up_script.js"></script>
 </body>
 </html>
