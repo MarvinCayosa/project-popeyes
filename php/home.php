@@ -162,19 +162,50 @@
             <section class="inventory-section">
                 <div class="inventory-container">
                     <h4 class="inventory-text">Inventory</h4>
-                    <button class="btn filter-btn" type="button">
-                        <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
+                    <button class="btn filter-btn" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path
-                                d="M19 2H5C4.20435 2 3.44129 2.31607 2.87868 2.87868C2.31607 3.44129 2 4.20435 2 5V6.17C1.99986 6.58294 2.08497 6.99147 2.25 7.37V7.43C2.39128 7.75097 2.59139 8.04266 2.84 8.29L9 14.41V21C8.99966 21.1699 9.04264 21.3372 9.12487 21.4859C9.20711 21.6346 9.32589 21.7599 9.47 21.85C9.62914 21.9486 9.81277 22.0006 10 22C10.1565 21.9991 10.3107 21.9614 10.45 21.89L14.45 19.89C14.6149 19.8069 14.7536 19.6798 14.8507 19.5227C14.9478 19.3656 14.9994 19.1847 15 19V14.41L21.12 8.29C21.3686 8.04266 21.5687 7.75097 21.71 7.43V7.37C21.8888 6.99443 21.9876 6.58578 22 6.17V5C22 4.20435 21.6839 3.44129 21.1213 2.87868C20.5587 2.31607 19.7956 2 19 2ZM13.29 13.29C13.1973 13.3834 13.124 13.4943 13.0742 13.6161C13.0245 13.7379 12.9992 13.8684 13 14V18.38L11 19.38V14C11.0008 13.8684 10.9755 13.7379 10.9258 13.6161C10.876 13.4943 10.8027 13.3834 10.71 13.29L5.41 8H18.59L13.29 13.29ZM20 6H4V5C4 4.73478 4.10536 4.48043 4.29289 4.29289C4.48043 4.10536 4.73478 4 5 4H19C19.2652 4 19.5196 4.10536 19.7071 4.29289C19.8946 4.48043 20 4.73478 20 5V6Z"
-                            />
+                                    d="M19 2H5C4.20435 2 3.44129 2.31607 2.87868 2.87868C2.31607 3.44129 2 4.20435 2 5V6.17C1.99986 6.58294 2.08497 6.99147 2.25 7.37V7.43C2.39128 7.75097 2.59139 8.04266 2.84 8.29L9 14.41V21C8.99966 21.1699 9.04264 21.3372 9.12487 21.4859C9.20711 21.6346 9.32589 21.7599 9.47 21.85C9.62914 21.9486 9.81277 22.0006 10 22C10.1565 21.9991 10.3107 21.9614 10.45 21.89L14.45 19.89C14.6149 19.8069 14.7536 19.6798 14.8507 19.5227C14.9478 19.3656 14.9994 19.1847 15 19V14.41L21.12 8.29C21.3686 8.04266 21.5687 7.75097 21.71 7.43V7.37C21.8888 6.99443 21.9876 6.58578 22 6.17V5C22 4.20435 21.6839 3.44129 21.1213 2.87868C20.5587 2.31607 19.7956 2 19 2ZM13.29 13.29C13.1973 13.3834 13.124 13.4943 13.0742 13.6161C13.0245 13.7379 12.9992 13.8684 13 14V18.38L11 19.38V14C11.0008 13.8684 10.9755 13.7379 10.9258 13.6161C10.876 13.4943 10.8027 13.3834 10.71 13.29L5.41 8H18.59L13.29 13.29ZM20 6H4V5C4 4.73478 4.10536 4.48043 4.29289 4.29289C4.48043 4.10536 4.73478 4 5 4H19C19.2652 4 19.5196 4.10536 19.7071 4.29289C19.8946 4.48043 20 4.73478 20 5V6Z" />
                         </svg>
+                        <span class="filter-text">Filter</span>
                     </button>
+                    <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+                        <li>
+                            <div class="form-check filter-text">
+                                <input class="form-check-input" type="checkbox" value="" id="filterName">
+                                <label class="form-check-label" for="filterName">
+                                    Name
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check filter-text">
+                                <input class="form-check-input" type="checkbox" value="" id="filterQuantity">
+                                <label class="form-check-label" for="filterQuantity">
+                                    Quantity
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check filter-text">
+                                <input class="form-check-input" type="checkbox" value="" id="filterConsumable">
+                                <label class="form-check-label" for="filterConsumable">
+                                    Consumable
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check filter-text">
+                                <input class="form-check-input" type="checkbox" value="" id="filterNonConsumable">
+                                <label class="form-check-label" for="filterNonConsumable">
+                                    Non-Consumable
+                                </label>
+                            </div>
+                        </li>
+                        <li class="mt-3">
+                            <button class="btn btn-save-changes float-end" type="button" onclick="showTemporaryAlert('Filter Applied!', 5000)">Apply Filter</button>
+                        </li>
+                    </ul>
                 </div>
             </section>
 
@@ -211,14 +242,104 @@
 
             <section class="status-section">
                 <div class="status-container">
+
+                    <!-- Request Status Section -->
                     <div class="rectangle request-status">
-                        <p>Request Status</p>
+                        <p style="margin-left: 5px; font-size: 17px; font-weight: 700; font-family: 'Poppins', sans-serif;">
+                            Request Inbox
+                        </p>
+                        <div class="request quick-access-circle"></div>
+                        <div class="separator-line"></div>
+
+                        <!-- Request Entries -->
+                        <div class="student-container">
+                            <div class="student_pic"></div>
+                            <div class="vertical-layout">
+                                <p class="student-name">Alliya Virtucio</p>
+                                <p class="request-date">Nov. 19, 2024</p>
+                            </div>
+                        </div>
+
+                        <div class="student-container">
+                            <div class="student_pic"></div>
+                            <div class="vertical-layout">
+                                <p class="student-name">Marvin Cayosa</p>
+                                <p class="request-date">Nov. 21, 2024</p>
+                            </div>
+                        </div>
+
+                        <div class="student-container">
+                            <div class="student_pic"></div>
+                            <div class="vertical-layout">
+                                <p class="student-name">Clarizza Reyes</p>
+                                <p class="request-date">Nov. 30, 2024</p>
+                            </div>
+                        </div>
+
+                        <div class="student-container">
+                            <div class="student_pic"></div>
+                            <div class="vertical-layout">
+                                <p class="student-name">Vincent Vinas</p>
+                                <p class="request-date">Dec. 21, 2024</p>
+                            </div>
+                        </div>
+
+                        <!-- See More Link -->
+                        <div class="see-more-container">
+                            <a href="#" class="see-more-link" onclick="toggleRequestStatus()">
+                                See more
+                            </a>
+                        </div>
                     </div>
+
+                    <!-- Return Status Section -->
                     <div class="rectangle return-status">
-                        <p>Return Due Date</p>
+                        <p style="margin-left: 5px; font-size: 17px; font-weight: 700; font-family: 'Poppins', sans-serif;">
+                            Return Due Date
+                        </p>
+                        <div class="return quick-access-circle"></div>
+                        <div class="separator-line"></div>
+
+                        <!-- Return Entries -->
+                        <div class="student-container">
+                            <div class="two-column-layout">
+                                <p class="student-name">Alliya Virtucio</p>
+                                <p class="return-date">Nov. 19, 2024</p>
+                            </div>
+                        </div>
+
+                        <div class="student-container">
+                            <div class="two-column-layout">
+                                <p class="student-name">Marvin Cayosa</p>
+                                <p class="return-date">Nov. 21, 2024</p>
+                            </div>
+                        </div>
+
+                        <div class="student-container">
+                            <div class="two-column-layout">
+                                <p class="student-name">Sean Vinas</p>
+                                <p class="return-date">Nov. 21, 2024</p>
+                            </div>
+                        </div>
+
+                        <div class="student-container">
+                            <div class="two-column-layout">
+                                <p class="student-name">Rizza Reyes</p>
+                                <p class="return-date">Nov. 21, 2024</p>
+                            </div>
+                        </div>
+
+                        <!-- See More Link -->
+                        <div class="see-more-container">
+                            <a href="#" class="see-more-link" onclick="toggleRequestStatus()">
+                                See more
+                            </a>
+                        </div>
                     </div>
+
                 </div>
             </section>
+
         </div>
     </div>
 </div>
