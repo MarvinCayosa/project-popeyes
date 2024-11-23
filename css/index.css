@@ -882,7 +882,7 @@ input:-webkit-autofill {
 
     .signup-form-container input {
         background-color: #212837;
-    
+    }
 
     .seperator .line {
         background-color: #FFFFFF;
@@ -898,7 +898,9 @@ input:-webkit-autofill {
     }
 
     input:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0 30px transparent inset; /* Make the background transparent */
-        -webkit-text-fill-color: #f7f7f7; /* Keep the text color white */
+        -webkit-box-shadow: 0 0 0 30px #212837 inset;/* Change background color on autofill */
+        -webkit-text-fill-color: #fff; /* Change text color on autofill */
     }
-}}
+    
+   
+}
