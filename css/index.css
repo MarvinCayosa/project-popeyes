@@ -406,8 +406,6 @@ input:-webkit-autofill {
     align-items: center;
 }
 
-
-
 .signIn-button {
     color: #FFFFFF;
     margin-bottom: 100px;
@@ -820,7 +818,7 @@ input:-webkit-autofill {
 
     .land-page-student-signIn-container {
         background: rgba(33, 40, 55, 0.60); /* Semi-transparent dark background */
-        border-radius: 12px;
+        border-radius: 25px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
         box-sizing: border-box;
         backdrop-filter: blur(15px); /* Frosted glass effect */
