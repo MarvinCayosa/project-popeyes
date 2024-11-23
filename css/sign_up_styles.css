@@ -160,7 +160,7 @@ form input {
 }
 
 form input::placeholder {
-    color: #555555;
+    color: #8a8a8a;
 }
 
 form button {
@@ -408,7 +408,7 @@ input[type="file"] {
     }
     
     form input::placeholder {
-        color: #8E8E93;
+        color: #afafaf;
     }
 
     .role-options label {
