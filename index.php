@@ -36,35 +36,7 @@
 
     <div class="land-page-student-signIn-container">
 
-        <div class="signup-form-container" id="signup-form-container">
-            <h2>Create Account</h2>  
-            <form method="POST" action="#" id="signup-form">
 
-                
-                <label for="username" class="signup-username">Username: </label>
-                <input type="text" placeholder="Username" name="username" required>
-                
-                <label for="email" class="signup-email">E-Mail: </label>
-                <input type="email" placeholder="Email" name="email" required>
-                
-                <label for="id_num" class="signup-id-num">ID Number: </label>
-                <input type="text" placeholder="ID no." name="id_num" required>
-                
-                <label for="password" class="signup-password">Password: </label>
-                <input type="password" placeholder="Password" name="password" required>
-                
-                <input type="submit" class="create-acc-btn" value="Create Account">
-            </form>
-            
-            <span class="sign-in-link">
-                            
-                <div style="padding-right: 10px;">Already have an account?</div>
-            
-                <div class="signin-btn" onclick="toggleSignupForm()">
-                    Signin
-                </div>
-            </span>
-        </div>
 
         <div class="signin-form-container" id="signin-form-container">
             <form method="POST" action="php/read.php" id="signin-form">
@@ -108,9 +80,9 @@
                             
                             <div style="padding-right: 10px;">Don't have an account?</div>
                         
-                            <div class="signup-btn" onclick="toggleSignupForm()">
-                                Signup
-                            </div>
+                            <a href="sign_up.php" class="signup-btn">
+                                Sign Up
+                            </a>
                         </span>
 
                     </div>
