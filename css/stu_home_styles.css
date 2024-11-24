@@ -1,0 +1,1108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --icon-width: 35px;
+  --main-red: #8f1019;
+  --dark-mode: #1a1a1a;
+}
+
+hr {
+  color: #fdfdfd;
+  transition: all 0.3s ease-out;
+}
+
+.sidebar:hover hr {
+  width: 220%;
+}
+
+.user_dropdown {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.logo {
+  width: 250px;
+  height: 70px;
+  user-select: none;
+}
+
+.logo-light {
+  display: inline;
+}
+.logo-dark {
+  display: none;
+}
+
+/* Main White Part */
+.main_body {
+  border-top-left-radius: 55px;
+  border-bottom-left-radius: 55px;
+  box-shadow: -25px 4px 45.8px rgba(0, 0, 0, 0.24);
+  z-index: 0;
+  height: 100vh;
+  margin-left: 110px;
+  transition: margin-left 0.3s ease-out;
+  overflow: hidden;
+  overflow-y: hidden;
+  background-color: #fdfdfd;
+}
+
+.cards-container,
+.status-container {
+  background-color: none;
+}
+
+.frame_1 {
+  height: auto; /* Full height of the viewport */
+  background-color: var(--main-red);
+  z-index: 0;
+}
+
+/* Sidebar */
+.avatar {
+  width: var(--icon-width);
+  height: var(--icon-width);
+}
+
+.icon-container {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  width: var(--icon-width);
+  height: var(--icon-width);
+  color: rgb(255, 255, 255);
+}
+
+.nav-pills {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icon_name {
+  margin-left: 165px;
+  transition: opacity 0.3s ease-out;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  color: #ffffff;
+  visibility: hidden;
+  position: absolute;
+}
+
+.sidebar_custom.expanded .icon_name {
+  opacity: 1;
+}
+
+.sidebar_custom .icon_name {
+  opacity: 0;
+}
+
+.nav-item {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item:hover .icon {
+  transform: scale(1.15);
+  transition: all 0.3s ease-in;
+}
+
+.sidebar .nav-link.active {
+  background-color: #ffffff;
+}
+
+.sidebar .nav-link.active .icon {
+  color: var(--main-red);
+}
+
+.sidebar_custom {
+  z-index: 0;
+  background-color: var(--main-red);
+  transition: width 0.3s ease-out;
+}
+
+.nav-item .btn {
+  border: none;
+}
+
+.sidebar_custom.expanded {
+  width: 210px; /* Expanded width */
+}
+
+/* Adjust the main body margin on sidebar expanded */
+.sidebar_custom.expanded + .main_body {
+  margin-left: 210px;
+}
+
+/* Nav Bar */
+
+.user_profile .icon_name {
+  font-size: 12px;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.user_profile .identifier {
+  margin-top: 18px;
+  margin-left: 141px;
+  justify-content: start;
+  font-weight: 400;
+  font-size: 10px;
+  font-style: italic;
+  color: rgb(238, 238, 238);
+}
+
+.options .icon_name {
+  margin-top: 9px;
+}
+
+.navbar-main {
+    margin: 0 40px 0 30px; /* Top: 0, Right: 40px, Bottom: 0, Left: 40px */
+    width: calc(100% - 80px);
+  height: 100px;
+  margin-top: 15px;
+}
+
+
+
+.container-nav {
+  height: 80px;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.search-bar {
+  width: 400px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #474747;
+}
+
+.search-bar:focus {
+  border-color: #97befd;
+  border-width: 3px;
+  box-shadow: 0 0 0px;
+}
+
+.search-btn {
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  padding: 5px;
+  height: 40px;
+  width: 40px;
+  transition: all 0.2s ease-out;
+}
+
+.search-btn:hover {
+  background-color: #4285f4;
+}
+.search-btn:hover .icon-search {
+  color: #ffffff;
+}
+
+.icon-search {
+  margin-bottom: 3px;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+  height: 20px;
+  width: 20px;
+  transition: all 0.2s ease-out;
+}
+
+.search-form {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #474747;
+}
+
+.filter-btn {
+  z-index: 1000;
+  display: flex;
+  justify-content: left;
+}
+
+.filter-btn:focus {
+  outline: none; 
+  border: none; 
+}
+
+.filter-btn:active {
+  outline: none;
+  border: none; 
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.clear-filters-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.clear-filters-btn .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.clear-filters-btn:hover .icon {
+  fill: #ff6961; /* Optional: Add hover effect color */
+}
+
+.icon-reset {
+  fill: #f0f0f0;
+  width: 20px;
+  height: 20px;
+  margin-top: -7px;
+}
+
+.add-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px; /* Space between SVG and text */
+  width: 55px;
+  height: 55px;
+  border-radius: 20px;
+  background-color: transparent;
+  margin: 40px;
+  transition: width 0.5s ease, background-color 0.5s ease, padding 0.5s ease; /* Smooth transitions */
+  overflow: hidden; /* Hide text when not expanded */
+  white-space: nowrap; /* Prevent text wrapping */
+  cursor: pointer;
+  padding: 0; /* Remove button padding */
+}
+
+.add-btn:hover {
+  width: 150px; /* Expanded width */
+  padding: 0; /* Add padding to fit text */
+  background-color: #C00411; /* Red background color */
+}
+
+.add-btn span {
+  display: none; /* Hide text by default */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.add-btn:hover span {
+  display: inline; /* Show text on hover */
+  opacity: 1; /* Ensure opacity is visible */
+  transition: opacity 0.5s ease; /* Smooth text appearance */
+}
+
+.add-btn:not(:hover) span {
+  transition: opacity 0.9s ease-out;
+}
+
+
+.add-btn svg {
+  margin-left: -5px;
+  display: block; /* Ensure no inline spacing */
+}
+
+.filter-svg {
+  flex-shrink: 0; /* Prevent SVG from resizing */
+}
+
+.inventory-container {
+  display: flex;
+  justify-content: space-between; /* Aligns title and button on opposite sides */
+  align-items: center; /* Vertically center the items */
+  margin: 0 40px 0 40px; /* Top: 0, Right: 40px, Bottom: 0, Left: 40px */
+  width: calc(100% - 80px);
+  margin-top: 20px;
+
+  box-sizing: border-box; /* Ensures padding is included in the total width */
+}
+
+.inventory-section {
+  height: auto;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inventory-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  font-style: normal;
+  color: #1a1a1a;
+  flex-grow: 1; /* Remove the left margin so the text stays close to the icon */
+}
+
+/* Scrollable Section */
+.scrollable-section {
+    margin: 0 40px 0 40px; /* Top: 0, Right: 40px, Bottom: 0, Left: 40px */
+    width: calc(100% - 80px); /* Adjust width to account for both left and right margins */
+    max-height: 70%;
+    overflow-y: auto;
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 20px;
+  }
+  
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust card width based on available space */
+  justify-content: space-between; /* Dynamically adjust spacing between cards */
+  gap: 25px; /* Space between rows */
+  margin: 0 auto; /* Center container */
+  padding: 20px; /* Optional padding around the grid */
+}
+
+.card-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.card {
+  width: 100%; /* Ensure the card takes full width of the grid column */
+  height: auto; /* Height is dynamic */
+  background-color: #fafafa;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.card:hover {
+  transform: scale(1.02); /* Slightly increase the size of the card on hover */
+}
+
+.card-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.card-menu button {
+  background: none;
+  visibility: hidden;
+  border: none;
+  padding: 0;
+}
+
+.card-menu svg {
+  cursor: pointer;
+}
+
+.card:hover .card-menu button {
+  visibility: visible;
+  transition: all 0.3s ease-in;
+}
+
+.card-img-top {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+  transition: all 0.3s ease-out;
+}
+
+.card-title {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+  margin-top: -10px;
+  justify-content: flex-start;
+  display: flex;
+}
+
+/* Styling for the stock numbers */
+.available-number {
+  background-color: #0d8a20; /* Light background color for contrast */
+  padding: 1px 5px; /* Padding around the text */
+  border-radius: 10px; /* Rounded corners */
+  color: #ffffff; /* Main red color */
+  font-size: 12px;
+  margin-left: 5px; /* Adjust space between text and number */
+}
+
+.available-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 15px; /* rounded corners */
+  z-index: 10; /* ensure it stays above other content */
+}
+
+.stock-number {
+  background-color: #313231; /* Light background color for contrast */
+  padding: 1px 5px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  color: #ffffff; /* Main red color */
+  font-size: 12px;
+}
+
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust card width based on available space */
+  justify-content: space-between; /* Dynamically adjust spacing between cards */
+  gap: 20px; /* Space between rows */
+  margin: 0 auto; /* Center container */
+  padding: 5px; /* Optional padding around the grid */
+}
+
+.card-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.card {
+  width: 100%; /* Ensure the card takes full width of the grid column */
+  height: auto; /* Height is dynamic */
+  background-color: #291a1a;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.card:hover {
+  transform: scale(1.02); /* Slightly increase the size of the card on hover */
+}
+
+.card-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.card-menu button {
+  background: none;
+  visibility: hidden;
+  border: none;
+  padding: 0;
+}
+
+.card-menu svg {
+  cursor: pointer;
+}
+
+.card:hover .card-menu button {
+  visibility: visible;
+  transition: all 0.3s ease-in;
+}
+
+.card-img-top {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+  transition: all 0.3s ease-out;
+}
+
+.card-title {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+  margin-top: -10px;
+  justify-content: flex-start;
+  display: flex;
+}
+
+/* Styling for the stock numbers */
+.available-number {
+  background-color: #0d8a20; /* Light background color for contrast */
+  padding: 1px 5px; /* Padding around the text */
+  border-radius: 10px; /* Rounded corners */
+  color: #ffffff; /* Main red color */
+  font-size: 12px;
+  margin-left: 5px; /* Adjust space between text and number */
+}
+
+.available-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 15px; /* rounded corners */
+  z-index: 10; /* ensure it stays above other content */
+}
+
+.stock-number {
+  background-color: #313231; /* Light background color for contrast */
+  padding: 1px 5px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  color: #ffffff; /* Main red color */
+  font-size: 12px;
+}
+
+/* Ensure the text and numbers are aligned on the same line */
+.card-text {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between; /* Pushes the number to the right */
+  align-items: center; /* Vertically centers the text and number */
+  font-size: 14px;
+  
+}
+
+
+/* ADD-EDIT Modal */
+/* Remove border from modal header and footer */
+.modal-header,
+.modal-footer {
+  border: none; /* Removes the border */
+}
+
+.delete-btn {
+  margin-bottom: 1%;
+  margin-left: 80%;
+}
+.icon-delete-btn {
+ width: 18px;
+ height: 18px;
+ fill: rgba(0, 0, 0, 0.356);
+ transition: fill 0.3s ease; /* Smooth color transition on hover */
+}
+
+.delete-btn:focus {
+  outline: none; 
+  border: none; 
+}
+
+.delete-btn:active {
+  outline: none;
+  border: none; 
+}
+
+.icon-delete-btn:hover {
+  fill: rgb(158, 11, 11);
+ }
+
+.modal-backdrop.show {
+  z-index: 10;
+}
+
+.modal-custom {
+  max-width: 950px; /* Set custom width */
+  height: 500px;
+}
+
+.modal-content {
+  padding: 35px 50px 35px 50px; /* Top, Right, Bottom, Left */
+  border-radius: 20px; /* Adjust the value for more or less rounded corners */
+  position: relative;
+  z-index: 1050;
+}
+
+.form-label {
+  font-family: "Poppins", sans-serif;
+}
+
+.input-custom {
+  margin-right: 30px; /* Optional: Space between the inputs */
+}
+
+.input-custom-1 {
+  margin-right: 30px; /* Optional: Space between the inputs */
+}
+
+.input-id {
+  width: 80px; /* Full width of the modal */
+}
+
+.input-item-name {
+
+  width: 370px; /* Adjusted width */
+}
+
+.input-date {
+  width: 150px; /* Adjusted width for date fields */
+}
+
+.input-quantity {
+  width: 80px; /* Adjusted width for quantity fields */
+}
+
+.input-property {
+  width: 180px; /* Adjusted width for quantity fields */
+}
+
+.input-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  resize: none; /* Prevent resizing by the user */
+  width: 480px;
+  box-sizing: border-box; /* Ensure padding doesn't overflow the container */
+  padding: 10px;
+  padding-bottom: 25px; /* Add space for the character counter */
+  position: relative;
+}
+
+.textarea-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.char-counter {
+  position: absolute;
+  bottom: 5px;
+  right: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #6c757d; /* Subtle text color */
+}
+
+/* Wrapper around the select and the dropdown icon */
+.dropdown-wrapper {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+/* Style for the select box */
+.input-property.dropdown-toggle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  appearance: none; /* Remove browser's default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 10px;
+  padding-right:10px; /* Space for the dropdown icon */
+  width: 190px;
+  box-sizing: border-box;
+  cursor: pointer; /* Indicate it's clickable */
+}
+
+/* Dropdown icon styling */
+.dropdown-icon {
+  position: absolute;
+  top: 50%;
+  right: 80px; /* Adjust spacing from the right */
+  transform: translateY(-50%);
+  pointer-events: none; /* Ensure clicks go to the select box */
+  font-size: 20px;
+  color: #292b2c; /* Subtle gray color for the arrow */
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+}
+
+.form-row {
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: space-between; /* Space between inputs */
+  align-items: center;
+  margin-bottom: 10px; /* Space between rows */
+}
+
+/* Image Preview */
+/* Container for the image preview */
+.image-preview-container {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px;
+  height: 250px;
+}
+
+/* Style for the image preview */
+.image-preview {
+  position: absolute;
+  right: 65%;
+  top: 30%;
+  transform: translate(50%, -50%);
+  width: 270px;
+  height: 270px;
+  background-color: #f0f0f0; /* Light background if no image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.image-preview:hover {
+  background-color: #47474771;
+}
+
+/* Image preview styles */
+.preview-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+/* SVG Icon */
+.svg-icon {
+  position: absolute;
+  top: 45%; /* Center the icon vertically */
+  left: 50%; /* Center the icon horizontally */
+  transform: translate(
+          -50%,
+          -100%
+  ); /* Move it slightly above its default position */
+  width: 40px;
+  height: 40px;
+  color: #000;
+  z-index: 1;
+  transition: opacity 0.3s ease; /* Fade in and out effect */
+  opacity: 0; /* Hidden by default */
+}
+
+/* Style for the button (hidden by default) */
+.btn-upload {
+  position: absolute;
+  bottom: 40%; /* Center the button vertically */
+  left: 50%; /* Center the button horizontally */
+  transform: translate(-50%, 50%);
+  padding: 9px 9px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none; /* Button is hidden by default */
+  transition: opacity 0.3s ease; /* Fade in and out effect */
+  font-family: "Poppins", sans-serif;
+  font-size: 11.5px;
+  width: 150px;
+}
+
+/* Hover effect: Show both SVG icon and button */
+.image-preview:hover .svg-icon,
+.image-preview:hover .btn-upload {
+  opacity: 1; /* Make both fully visible on hover */
+  display: block; /* Show both elements */
+}
+
+/* File input styles - hidden by default */
+.file-input {
+  display: none;
+}
+
+.btn-cancel {
+  font-family: "Poppins", sans-serif;
+  padding: 0.375rem 0.75rem;
+  background-color: #6c757d ; /* Set the background color to red */
+  color: white; /* Set the text color to white */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Optional: Rounded corners */
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1rem; /* Optional: Font size */
+  transition: background-color 0.3s ease; /* Optional: Smooth hover transition */
+}
+
+.btn-cancel:hover {
+  color: white; /* Set the text color to white */
+  background-color: #4f555b ; /* Darker red on hover */
+}
+
+/* Style for the Save Changes button */
+.btn-save-changes {
+  font-family: "Poppins", sans-serif;
+  padding: 0.375rem 0.75rem;
+  background-color: #149708; /* Set the background color to red */
+  color: white; /* Set the text color to white */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Optional: Rounded corners */
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1rem; /* Optional: Font size */
+  transition: background-color 0.3s ease; /* Optional: Smooth hover transition */
+}
+
+.btn-save-changes:hover {
+  color: white; /* Set the text color to white */
+  background-color: rgb(5, 108, 22); /* Darker red on hover */
+}
+
+
+
+@media (max-height: 800px) {
+  .status-container {
+    display: none; /* Hides the container */
+  }
+}
+
+
+/* Responsive adjustments */
+
+@media (prefers-color-scheme: dark) {
+  .main_body {
+    background-color: #202633;
+  }
+
+  .sidebar_custom,
+  .frame_1 {
+    background-color: #1e1e1e;
+  }
+
+  .logo-light {
+    display: none;
+  }
+  .logo-dark {
+    display: block;
+  }
+
+  .sidebar .nav-link.active .icon {
+    color: #202633;
+  }
+
+  .search-bar {
+    color: #f6f6f6;
+    background-color: #202633;
+  }
+
+  .search-bar:focus {
+    border-color: var(--main-red);
+    border-width: 2px;
+    box-shadow: 0 0 0px;
+    color: #f6f6f6;
+    background-color: #202633;
+  }
+  .search-btn {
+    background-color: #354563;
+  }
+
+  .request-status {
+    background-color: #0d0f133b;
+  }
+
+  .return-status {
+    background-color: #0d0f133b;
+  }
+
+  .search-btn:hover {
+    background-color: #4285f4;
+  }
+  .search-btn:hover .icon-search {
+    color: #2e1313;
+  }
+
+  .icon-search {
+    color: #f6f6f6;
+  }
+
+  .search-form {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: #474747;
+  }
+
+  .scrollable-section {
+    background-color: #0d0f133b;
+  }
+
+  .card {
+    background-color: #2d323d;
+    color: #f6f6f6;
+  }
+
+  .card-title {
+    color: #f6f6f6;
+  }
+
+  .available-text {
+    background-color: #1e232f;
+  }
+
+  .inventory-section .inventory-text {
+    color: #f6f6f6;
+  }
+
+  .inventory-section {
+    color: #f6f6f6;
+  }
+
+  .filter-btn {
+    color: #f6f6f6;
+  }
+
+  .filter-text {
+    font-family: "Poppins", sans-serif;
+    color: #f6f6f6;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  /* Adjust dropdown width and height */
+  .dropdown-menu {
+    width: 200px; /* Adjust width to fit content */
+    max-height: 350px; /* Maximum height */
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+    padding: 15px; /* Add padding around items */
+    background-color: #2b313d; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+  }
+
+  .filter-category {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #f6f6f6;
+    margin-bottom: 10px;
+  }
+
+  .filter-separator {
+    border: none;
+    height: 1px;
+    background-color: #444;
+    margin: 10px 0;
+  }
+
+  .dropdown-menu li {
+    align-items: center;
+    margin-bottom: 5px; /* Adds spacing between the list items */
+  }
+
+  .dropdown-menu li:last-child {
+    margin-bottom: 0; /* Removes spacing for the last list item */
+  }
+
+  .form-check-input {
+    width: 16px;
+    height: 16px;
+  }
+
+  .form-check-label {
+      margin-left: 8px;
+  }
+
+  /* Dropdown Item Styling */
+  .dropdown-item {
+      color: #ffffff;
+  }
+
+  .search-bar::placeholder {
+    color: #8d8d8d; /* Change this to your desired color */
+  }
+
+  .dropdown-menu {
+    background-color: #2b313d;
+  }
+
+  .dropdown-item {
+    color: #ffffff;
+  }
+
+  .card-menu button {
+    color: #f6f6f6;
+  }
+
+  .modal-content {
+    background-color: #2b313d;
+    color: #f6f6f6;
+  }
+
+  .icon-delete-btn {
+    fill: #f6f6f6af;
+  }
+
+  .form-control {
+    background-color: #2b313d00;
+    border-color: #cccccc6e;
+    color: #f6f6f6;
+  }
+
+  .form-control:active {
+    background-color: #2b313d;
+    color: #f6f6f6;
+  }
+
+  .form-control::placeholder {
+    color: #f6f6f686; /* Change this to your desired color */
+  }
+
+  .form-control:disabled {
+    background-color: #2b313db4;
+    color: #f6f6f686;
+  }
+
+  .form-control:focus {
+    background-color: #2b313db4;
+    color: #f6f6f6;
+    border-color: #ccccccc2;
+    box-shadow: 0 0 0px;
+  }
+
+  .dropdown-menu:active {
+    background-color: #2b313d;
+  }
+
+  .dropdown-icon {
+    color: #f6f6f6;
+  }
+
+  .image-preview {
+    background-color: #2b313dab;
+    border-color: #cccccc6e;
+
+  }
+  
+}
