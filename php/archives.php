@@ -50,7 +50,7 @@
                   aria-label="Search"
                 />
                 <button class="search-btn" type="submit">
-                  <svg class="icon icon-search" fill="currentColor">
+                  <svg class="icon-search" fill="currentColor">
                     <use xlink:href="icons.svg#icon-search"></use>
                   </svg>
                 </button>

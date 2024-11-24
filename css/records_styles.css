@@ -53,6 +53,7 @@
   flex-grow: 1;
 }
 
+
 .search-bar {
   width: 400px;
   font-family: "Poppins", sans-serif;
@@ -60,7 +61,6 @@
   font-style: normal;
   font-size: 14px;
   color: #474747;
-  border: 1px solid #8d8d8d;
 }
 
 .search-bar:focus {
@@ -87,13 +87,14 @@
   color: #ffffff;
 }
 
-.icon-search {
+
+.icon .icon-search {
   margin-bottom: 3px;
   align-items: center;
   justify-content: center;
   color: #1a1a1a;
-  height: 20px;
-  width: 20px;
+  width: 25px;
+  height: 25px;
   transition: all 0.2s ease-out;
 }
 
@@ -103,10 +104,7 @@
   font-style: normal;
   font-size: 14px;
   color: #474747;
-  display: flex; /* Ensure form elements are in a row */
-  align-items: center;
 }
-
 /* Records Page */
 /* Add scroll to the section containing the cards */
 .utility-button .menu-dot {
