@@ -61,6 +61,7 @@
   font-style: normal;
   font-size: 14px;
   color: #474747;
+  border: 1px solid #8d8d8d;
 }
 
 .search-bar:focus {
@@ -87,16 +88,16 @@
   color: #ffffff;
 }
 
-
-.icon .icon-search {
+.icon-search {
   margin-bottom: 3px;
   align-items: center;
   justify-content: center;
   color: #1a1a1a;
-  width: 25px;
-  height: 25px;
+  height: 20px;
+  width: 20px;
   transition: all 0.2s ease-out;
 }
+
 
 .search-form {
   font-family: "Poppins", sans-serif;
