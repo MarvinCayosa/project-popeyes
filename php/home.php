@@ -59,7 +59,7 @@
                 </svg>
             </a>
             <ul class="user_dropdown dropdown-menu">
-                <li><a class="dropdown-item" href="#">View Profile</a></li>
+                <li><a class="dropdown-item" href="../php/view_profile.php">View Profile</a></li>
                 <li><a class="dropdown-item" href="../index.php">Log Out</a></li>
             </ul>
 

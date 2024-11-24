@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Adjustment of Scaling">
+    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Refactored sign_up.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sign_up.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/sign_up.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/archives.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/archives.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/records.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/records.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/view_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/view_profile.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +139,7 @@
       <workItem from="1732184728895" duration="3867000" />
       <workItem from="1732352454307" duration="370000" />
       <workItem from="1732352977774" duration="1850000" />
-      <workItem from="1732364139908" duration="1487000" />
+      <workItem from="1732364139908" duration="4024000" />
     </task>
     <task id="LOCAL-00001" summary="Added Log In conditions, only faculty can access faculty website, same goes to students,&#10;&#10;Included &quot;read.php&quot; for verifying credentials.">
       <option name="closed" value="true" />
@@ -219,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732354163243</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Refactored sign_up.php">
+      <option name="closed" value="true" />
+      <created>1732365680694</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732365680694</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +256,7 @@
     <MESSAGE value="Successful Filtering of Inbox, UI/UX compromised, need help" />
     <MESSAGE value="Added Request Status and Quick Access, Backend needs to be implemented." />
     <MESSAGE value="Adjustment of Scaling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjustment of Scaling" />
+    <MESSAGE value="Refactored sign_up.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored sign_up.php" />
   </component>
 </project>
