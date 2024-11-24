@@ -6,16 +6,6 @@
   --dark-mode: #1a1a1a;
 }
 
-hr {
-  color: #fdfdfd;
-  transition: all 0.3s ease-out;
-}
-
-.user_dropdown {
-  position: relative;
-  top: 0;
-  left: 0;
-}
 
 /* Main White Part */
 .main_body {
@@ -36,118 +26,7 @@ hr {
   z-index: 0;
 }
 
-/* Sidebar */
-.avatar {
-  width: var(--icon-width);
-  height: var(--icon-width);
-}
 
-.icon-container {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-}
-
-.icon {
-  width: var(--icon-width);
-  height: var(--icon-width);
-  color: rgb(255, 255, 255);
-}
-
-.nav-pills {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.icon_name {
-  margin-left: 165px;
-  transition: opacity 0.3s ease-out;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 14px;
-  color: #ffffff;
-  visibility: hidden;
-  position: absolute;
-}
-
-.sidebar_custom.expanded .icon_name {
-  opacity: 1;
-}
-.sidebar_custom.expanded hr {
-  width: 220%;
-}
-
-.sidebar_custom .icon_name {
-  opacity: 0;
-}
-
-.nav-item {
-  margin-bottom: 25px;
-  margin-top: 20px;
-  padding: 10px;
-  border-radius: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-item:hover .icon {
-  transform: scale(1.15);
-  transition: all 0.3s ease-in;
-}
-
-.sidebar .nav-link.active {
-  background-color: #ffffff;
-}
-
-.sidebar .nav-link.active .icon {
-  color: var(--main-red);
-}
-
-.sidebar_custom {
-  z-index: 0;
-  background-color: var(--main-red);
-  transition: width 0.3s ease-out;
-}
-
-.nav-item .btn {
-  border: none;
-}
-
-.sidebar_custom.expanded {
-  width: 210px; /* Expanded width */
-}
-
-/* Adjust the main body margin on sidebar expanded */
-.sidebar_custom.expanded + .main_body {
-  margin-left: 210px;
-}
-
-/* Nav Bar */
-
-.user_profile .icon_name {
-  font-size: 12px;
-  width: fit-content;
-  white-space: nowrap;
-}
-
-.user_profile .identifier {
-  margin-top: 18px;
-  margin-left: 141px;
-  justify-content: start;
-  font-weight: 400;
-  font-size: 10px;
-  font-style: italic;
-  color: rgb(238, 238, 238);
-}
-
-.options .icon_name {
-  margin-top: 9px;
-}
 
 .navbar-main {
   width: calc(
@@ -689,20 +568,12 @@ ul.dropdown-menu.show {
     color: #f6f6f6;
   }
 
-  .sidebar_custom,
-  .frame_1 {
-    background-color: #1e1e1e;
-  }
 
   .logo-light {
     display: none;
   }
   .logo-dark {
     display: block;
-  }
-
-  .sidebar .nav-link.active .icon {
-    color: #202633;
   }
 
   .scrollable-section {
