@@ -173,24 +173,36 @@
                         </svg>
                         <span class="filter-text">Filter</span>
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="filterDropdown"  data-bs-auto-close="outside">
+                    <ul class="dropdown-menu" aria-labelledby="filterDropdown">
                         <!-- Name Filter -->
                         <li>
                             <div class="filter-header">
                                 <div class="filter-category">Name</div>
-                                <button class="clear-filters-btn" title="Clear filters" aria-label="Clear filters">
-                                <svg class="icon-reset" fill="currentColor">
-                                    <use xlink:href="icons.svg#icon-filter-clear"></use>
-                                </svg>
+                                <button 
+                                    class="clear-filters-btn" 
+                                    title="Clear filters" 
+                                    aria-label="Clear filters">
+                                        <svg class="icon-reset" fill="currentColor">
+                                            <use xlink:href="icons.svg#icon-filter-clear"></use>
+                                        </svg>
                                 </button>
                             </div>
                             <div class="form-check filter-text">
-                                <input class="form-check-input" type="radio" name="nameFilter" id="filterNameAsc" value="asc">
-                                <label class="form-check-label" for="filterNameAsc">Ascending</label>
+                                <input 
+                                    class="form-check-input" 
+                                    type="radio" 
+                                    name="nameFilter" 
+                                    id="filterNameAsc" 
+                                    value="asc">
+                                        <label class="form-check-label" for="filterNameAsc">Ascending</label>
                             </div>
                             <div class="form-check filter-text">
-                                <input class="form-check-input" type="radio" name="nameFilter" id="filterNameDesc" value="desc">
-                                <label class="form-check-label" for="filterNameDesc">Descending</label>
+                                    <input 
+                                    class="form-check-input" 
+                                    type="radio" name="nameFilter" 
+                                    id="filterNameDesc" 
+                                    value="desc">
+                                        <label class="form-check-label" for="filterNameDesc">Descending</label>
                             </div>
                         </li>
                         <hr class="filter-separator">
@@ -200,16 +212,31 @@
                                 <div class="filter-category">Quantity</div>
                             </div>
                             <div class="form-check filter-text">
-                                <input class="form-check-input" type="radio" name="quantityFilter" id="filterLowStock" value="lowStock">
-                                <label class="form-check-label" for="filterLowStock">Low Stock</label>
+                                    <input 
+                                    class="form-check-input" 
+                                    type="radio" 
+                                    name="quantityFilter" 
+                                    id="filterLowStock" 
+                                    value="lowStock">
+                                    <label class="form-check-label" for="filterLowStock">Low Stock</label>
                             </div>
                             <div class="form-check filter-text">
-                                <input class="form-check-input" type="radio" name="quantityFilter" id="filterHighStock" value="highStock">
-                                <label class="form-check-label" for="filterHighStock">High Stock</label>
+                                <input 
+                                    class="form-check-input" 
+                                    type="radio" 
+                                    name="quantityFilter" 
+                                    id="filterHighStock" 
+                                    value="highStock">
+                                    <label class="form-check-label" for="filterHighStock">High Stock</label>
                             </div>
                             <div class="form-check filter-text">
-                                <input class="form-check-input" type="radio" name="quantityFilter" id="filterOutOfStock" value="outOfStock">
-                                <label class="form-check-label" for="filterOutOfStock">Out of Stock</label>
+                                <input 
+                                    class="form-check-input" 
+                                    type="radio" 
+                                    name="quantityFilter" 
+                                    id="filterOutOfStock" 
+                                    value="outOfStock">
+                                    <label class="form-check-label" for="filterOutOfStock">Out of Stock</label>
                             </div>
                         </li>
                         <hr class="filter-separator">
@@ -219,12 +246,22 @@
                                 <div class="filter-category">Property</div>
                             </div>
                             <div class="form-check filter-text">
-                                <input class="form-check-input" type="radio" name="propertyFilter" id="filterConsumable" value="consumable">
-                                <label class="form-check-label" for="filterConsumable">Consumable</label>
+                                <input 
+                                    class="form-check-input" 
+                                    type="radio" 
+                                    name="propertyFilter" 
+                                    id="filterConsumable" 
+                                    value="consumable">
+                                    <label class="form-check-label" for="filterConsumable">Consumable</label>
                             </div>
                             <div class="form-check filter-text">
-                                <input class="form-check-input" type="radio" name="propertyFilter" id="filterNonConsumable" value="nonConsumable">
-                                <label class="form-check-label" for="filterNonConsumable">Non-Consumable</label>
+                                <input 
+                                    class="form-check-input" 
+                                    type="radio" 
+                                    name="propertyFilter" 
+                                    id="filterNonConsumable" 
+                                    value="nonConsumable">
+                                    <label class="form-check-label" for="filterNonConsumable">Non-Consumable</label>
                             </div>
                         </li>
                     </ul>
@@ -271,7 +308,7 @@
 
                     <!-- Request Status Section -->
                     <div class="rectangle request-status">
-                        <p style="margin-left: 5px; font-size: 16px; font-weight: 700; font-family: 'Poppins', sans-serif;">
+                        <p style="margin-left: 5px; font-size: 14px; font-weight: 700; font-family: 'Poppins', sans-serif;">
                             Request Inbox
                         </p>
                         <div class="request quick-access-circle"></div>
@@ -320,7 +357,7 @@
 
                     <!-- Return Status Section -->
                     <div class="rectangle return-status">
-                        <p style="margin-left: 5px; font-size: 16px; font-weight: 700; font-family: 'Poppins', sans-serif;">
+                        <p style="margin-left: 5px; font-size: 14px; font-weight: 700; font-family: 'Poppins', sans-serif;">
                             Due Date
                         </p>
                         <div class="return quick-access-circle"></div>
@@ -463,7 +500,7 @@
                                     class="form-control input-property dropdown-toggle" 
                                     id="propertyType" 
                                     >
-                                        <option value="" disabled selected style="display: none; font-family: 'Poppins', sans-serif;">Select a Property</option>
+                                        <option value="" disabled selected style="display: none; font-family: 'Poppins', sans-serif; font-weight: 400;">Select a Property</option>
                                         <option value="consumable" style="font-family: 'Poppins', sans-serif; ">Consumable</option>
                                         <option value="non-consumable" style="font-family: 'Poppins', sans-serif;">Non-Consumable</option>
                                     </select>
@@ -807,13 +844,11 @@
         }
     });
 
-    // Cards Column Layout
-
     // Status Section Hidden Feature
     function toggleStatusSection() {
         const statusSection = document.querySelector(".status-section");
 
-        if (window.innerWidth < 1370) {
+        if (window.innerWidth < 1285) {
             statusSection.style.display = "none"; // Hide the status section
         } else {
             statusSection.style.display = "flex"; // Show the status section
