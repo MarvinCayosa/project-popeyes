@@ -172,13 +172,17 @@
             <div class="modal-content">
                 <div class="modal-header d-flex flex-row">
                     <div class="modal-student-picture">
-                        <div class="student_pic modal-pic modal-pic-pos"></div>
+                        <div class="modal-pic"></div>
                     </div>
+
                     <div class="modal-student-info">
-                        <div class="modal-student-name">Sean Vincent Vien Viñas</div>
-                        <div class="modal-student-year">3rd Year - BSCPE</div>
-                        <div class="modal-student-num">SN: 20220101011</div>
-                    </div>
+                        <div class="modal-student-name">Alliya Bernadette Virtucio</div>
+                            <div class="subtext d-flex align-items-center">
+                                <p class="modal-student-email text mb-0">virtucio.alliyabernadette@ue.edu.ph</p>
+                            <div class="vertical-line mx-2"></div>
+                        <   p class="modal-student-num text mb-0">20220126227</p>
+                        </div>
+                     </div>
 
                     <div class="modal-student-sched">
                         <div class="modal-student-date">October 28, 2024</div>
