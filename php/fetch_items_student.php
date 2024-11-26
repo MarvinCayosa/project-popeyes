@@ -32,7 +32,9 @@ if ($result->num_rows > 0) {
                                 class="btn card-menu-btn"
                                 type="button"
                                 data-bs-toggle="modal"
-                                data-bs-target="#editModal"
+                                data-bs-target="#addToListModal"
+                                data-bs-toggle="tooltip" 
+                                data-bs-title="Add to list"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"

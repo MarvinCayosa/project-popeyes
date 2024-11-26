@@ -113,11 +113,11 @@ function togglePasswordVisibility(inputId) {
     if (input.type === "password") {
         input.type = "text";
         // icon.src = "assets/eye-fill.svg";  // Show the eye icon
-        icon.src = "assets/eye-fill.svg";
+        icon.src = "../assets/eye-fill.svg";
 
     } else {
         input.type = "password";
-        icon.src = "assets/eye-slash-fill.svg";  // Show the eye-slash icon
+        icon.src = "../assets/eye-slash-fill.svg";  // Show the eye-slash icon
     }
 }
 
