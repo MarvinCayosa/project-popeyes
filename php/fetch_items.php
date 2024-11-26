@@ -28,13 +28,17 @@ if ($result->num_rows > 0) {
             <div class="card-container">
                     <div class="card custom-spacing">
                         <div class="card-menu">
-                            <button
-                                class="btn card-menu-btn"
-                                type="button"
-                                data-bs-toggle="modal"
-                                data-bs-target="#editModal"
-                            >
+                        <button
+                        class="btn card-menu-btn"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#editModal"
+                        data-bs-toggle="tooltip"
+                        title="Edit item details"
+                    >
+    
                                 <svg
+
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="20"
                                     height="20"
