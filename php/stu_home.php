@@ -173,12 +173,9 @@
                     <span>Add Item</span>
                 </button>
             </div>
-
-
                 <div class="card-container">
                     <link rel="stylesheet" href="../css/stu_home_styles.css" />
                     <?php include 'fetch_items_student.php'; ?>
-
             </section>
 
         </div>
@@ -397,10 +394,10 @@
 <!-- Edit Modal -->
 <div
     class="modal fade"
-    id="editModal"
+    id="addToListModal"
     data-bs-backdrop="true"
     tabindex="-1"
-    aria-labelledby="editModalLabel"
+    aria-labelledby="addToListModalLabel"
     aria-hidden="true"
 >
     <div
@@ -409,197 +406,57 @@
     >
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title" id="editModalLabel">
-                    Edit
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="40"
-                        height="40"
-                        fill="currentColor"
-                        class="bi bi-pencil-square"
-                        viewBox="0 0 20 20"
-                    >
-                        <path
-                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
-                        />
-                        <path
-                            fill-rule="evenodd"
-                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
-                        />
-                    </svg>
+                <h2 class="modal-title" id="addToListModalLabel">
+                    Add To List
                 </h2>
-
-                <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
-                    <svg class="icon-delete-btn" fill="currentColor">
-                        <use xlink:href="icons.svg#icon-delete-item"></use>
-                    </svg>
-                </button>
             </div>
 
             <div class="modal-body">
-                <form>
-                    <!-- First row: ID Input and Item Name Input -->
-                    <div class="form-row">
-                        <div class="input-group">
-                            <!-- ID Input -->
-                            <div class="input-custom-1">
-                                <label for="itemId" class="form-label">ID</label>
-                                <input
-                                    type="text"
-                                    class="form-control input-id"
-                                    id="itemId"
-                                    style="font-family: Poppins, sans-serif; font-size: 14px;"
-                                    placeholder="0001"
-                                    disabled
-                                />
-                            </div>
-                            <!-- Item Name Input -->
-                            <div class="input-custom-1">
-                                <label for="itemName" class="form-label">Item Name</label>
-                                <input
-                                    type="text"
-                                    class="form-control input-item-name"
-                                    id="itemName"
-                                    style="font-family: Poppins, sans-serif; font-size: 14px;"
-                                    placeholder="Arduino Uno R3"
-                                />
-                            </div>
-                        </div>
-                    </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Item Name</th>
+                            <th scope="qt_col">Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Arduino Uno R3</td>
+                            <td>
+                                <div class="quantity-control d-flex align-items-center">
+                                    <input
+                                        type="number"
+                                        id="quantity"
+                                        class="form-control mx-2 text-center"
+                                        value="1"
+                                        min="1"
+                                        style="width: 60px;"
+                                    />
 
-                    <!-- Second row: Date Added and Total Quantity Inputs -->
-                    <div class="form-row">
-                        <div class="input-group">
-                            <!-- Date Added Input -->
-                            <div class="input-custom">
-                                <label for="dateAdded" class="form-label">Date Added</label>
-                                <input
-                                    type="date"
-                                    class="form-control input-date"
-                                    id="dateAdded"
-                                    style="font-family: Poppins, sans-serif; font-size: 14px;"
-                                    disabled
-                                />
-                            </div>
-                            <!-- Total Quantity Input -->
-                            <div class="input-custom">
-                                <label for="totalQuantity" class="form-label">Quantity</label>
-                                <input
-                                    type="number"
-                                    class="form-control input-quantity"
-                                    id="totalQuantity"
-                                    style="font-family: Poppins, sans-serif; font-size: 14px;"
-                                    placeholder="75"
-                                />
-                            </div>
-
-                            <div class="input-custom">
-                                <label for="propertyType" class="form-label">Property</label>
-                                <div class="dropdown-wrapper">
-                                    <select 
-                                    class="form-control input-property dropdown-toggle" 
-                                    id="propertyType" 
-                                    >
-                                        <option value="" disabled selected style="display: none; font-family: 'Poppins', sans-serif;">Select a Property</option>
-                                        <option value="consumable" style="font-family: 'Poppins', sans-serif; ">Consumable</option>
-                                        <option value="non-consumable" style="font-family: 'Poppins', sans-serif;">Non-Consumable</option>
-                                    </select>
-                                    <span class="dropdown-icon">&#9662;</span> <!-- dropdown arrow -->
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-                   <!-- Third row: Edit Description -->
-                    <div class="form-row">
-                        <div class="input-group">
-                            <div class="input-custom">
-                                <label for="itemDescription" class="form-label">Item Description</label>
-                                <div class="textarea-wrapper">
-                                    <textarea
-                                        class="form-control input-description"
-                                        id="itemDescription"
-                                        rows="2"
-                                        maxlength="120"
-                                        oninput="updateCharacterCount()"
-                                        placeholder="Enter a brief description of the item."
-                                        style="font-family: Poppins, sans-serif; font-size: 14px;"
-                                        >
-                                    </textarea>
-                                    <span id="charCount" class="char-counter">0/120</span>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                </form>
-
-                <div class="image-preview-container">
-                    <!-- Image Preview -->
-                    <div class="image-preview">
-                        <!-- Added translucent grey background -->
-                        <img
-                            id="imagePreview"
-                            src="../png/arduino.png"
-                            alt="Image Preview"
-                            class="preview-img"
-                        />
-
-                        <!-- SVG Icon that appears by default -->
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="30"
-                            height="30"
-                            fill="#FDFDFD"
-                            class="bi bi-image svg-icon"
-                            viewBox="0 0 16 16"
-                        >
-                            <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-                            <path
-                                d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"
-                            />
-                        </svg>
-
-                        <!-- Button that replaces SVG on hover -->
-                        <button
-                            class="btn-upload"
-                            onclick="document.getElementById('fileInput').click();"
-                        >
-                            Select From Computer
-                        </button>
-                        <input
-                            type="file"
-                            id="fileInput"
-                            style="display: none"
-                            onchange="previewImage(event)"
-                        />
-                    </div>
-                </div>
-
-                <div class="modal-footer">
-                    <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                    >
-                        Cancel
-                    </button>
-                    <button
-                        type="button"
-                        class="btn-save-changes"
-                        data-bs-dismiss="modal"
-                        onclick="showTemporaryAlert('Changes saved!', 5000)"
-                    >
-                        Save changes
-                    </button>
-                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Cancel
+                </button>
+                <button type="button" class="btn btn-success">
+                    Save
+                </button>
             </div>
         </div>
     </div>
 </div>
 
+
 <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
     const toggleButton = document.getElementById("toggleSidebar");
     const sidebar = document.querySelector(".sidebar_custom");
     const iconNames = document.querySelectorAll(".icon_name");
