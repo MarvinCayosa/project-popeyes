@@ -29,15 +29,31 @@ document.addEventListener('DOMContentLoaded', () => {
 function validatePassword() {
     const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirmPassword").value;
+    const passwordPattern = /^(?=.*\d)(?=.*[\W_]).{8,}$/; // At least 8 chars, 1 digit, and 1 symbol
+
+
 
     console.log("Password: " + password);  // Debugging line
     console.log("Confirm Password: " + confirmPassword);  // Debugging line
+    if (!password || !confirmPassword) {
+        alert("Please enter both password and confirm password.");
+        return;
+    }
 
+    // Check if passwords do not match
     if (password !== confirmPassword) {
         alert("Passwords do not match. Please try again.");
         return;
     }
-    nextStep(4); // Proceed to the next step if passwords match
+
+    if (!passwordPattern.test(password)) {
+        alert("Password must be at least 8 characters long, include at least 1 digit, and 1 symbol.");
+        return; // Exit if password doesn't meet the criteria
+    }
+
+    // If passwords match and are not empty, proceed to the next step
+    
+    nextStep(4);
 }
 
 function validateStep2() {
@@ -45,16 +61,16 @@ function validateStep2() {
     const studentNumber = document.getElementById("studentNumber").value;
     
     // Check if the email matches the UE email pattern
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@ue\.edu\.ph$/;
+    const emailPattern = /^[a-z0-9._%+-]+@ue\.edu\.ph$/i; // Case-insensitive regex
     if (!emailPattern.test(email)) {
-        alert("Please enter a valid UE email ending with @ue.edu.ph.");
+        // alert("Please enter a valid UE email ending with @ue.edu.ph.");
         return false;
     }
 
     // Check if the student number is exactly 11 digits
     const studentNumberPattern = /^\d{11}$/;
     if (!studentNumberPattern.test(studentNumber)) {
-        alert("Student number must be exactly 11 digits.");
+        // alert("Student number must be exactly 11 digits.");
         return false;
     }
 
@@ -96,9 +112,12 @@ function togglePasswordVisibility(inputId) {
     // Toggle password visibility
     if (input.type === "password") {
         input.type = "text";
-        icon.src = "assets/eye-fill.svg";  // Show the eye icon
+        // icon.src = "assets/eye-fill.svg";  // Show the eye icon
+        icon.src = "assets/eye-fill.svg";
+
     } else {
         input.type = "password";
         icon.src = "assets/eye-slash-fill.svg";  // Show the eye-slash icon
     }
 }
+
