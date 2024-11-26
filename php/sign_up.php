@@ -28,8 +28,11 @@
             <!-- Form Section -->
             <form id="signupForm">
                 <div class="step active" id="step1">
+                    <!-- <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required> -->
+
                     <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                    <input type="text" placeholder="Enter your full name" name="fullName" required>
 
                     
                     <div class="button-group">
@@ -41,30 +44,58 @@
 
                 <div class="step" id="step2">
                     <label for="email">UE Email</label>
-                    <input type="email" id="email" name="email" placeholder="example@ue.edu.ph" required 
-                        pattern="^[a-zA-Z0-9._%+-]+@ue\.edu\.ph$" title="Email must end with @ue.edu.ph">
-                    
+                    <input type="email" id="email" name="email" 
+                        placeholder="example@ue.edu.ph" 
+                        required 
+                        pattern="^[a-zA-Z0-9._%+-]+@ue\.edu\.ph$" 
+                        title="Email must end with @ue.edu.ph"
+                    >
+                        
                     <label for="studentNumber">Student Number</label>
-                    <input type="text" id="studentNumber" name="studentNumber" placeholder="Enter your student number" required 
-                        pattern="^\d{11}$" maxlength="11" title="Student number must be exactly 11 digits">
+                    <input type="text" id="studentNumber" name="studentNumber" 
+                        placeholder="Enter your student number" 
+                        required
+                        minlength="11" 
+                        maxlength="11" 
+                        pattern="^\d{11}$" 
+                        title="Student number must be exactly 11 digits"
+                    >
+
                     
                     <div class="button-group">
                         <button type="button" onclick="prevStep(1)">Back</button>
-                        <button type="button" onclick="validateStep2()">Next</button>
+                        <button type="submit" onclick="validateStep2()">Next</button>
                     </div>
                 </div>
                 <div class="step" id="step3">
+                    <!-- Password Field -->
                     <label for="password">Password</label>
                     <div class="password-container">
-                        <input type="password" id="password" name="password" placeholder="Enter a password" required>
-                        <img src="../assets/eye-slash-fill.svg" id="toggleIcon" alt="Show/Hide Password" onclick="togglePasswordVisibility('password')">
+                        <input type="password" id="password" name="password" 
+                            placeholder="Enter a password" 
+                            required 
+                            minlength="8" 
+                            pattern="^(?=.*\d)(?=.*[\W_]).{8,}$" 
+                            title="Password must be at least 8 characters long, include at least 1 digit, and 1 symbol.">
+                        <img src="../assets/eye-slash-fill.svg" id="toggleIcon" 
+                            alt="Show/Hide Password" 
+                            onclick="togglePasswordVisibility('password')">
                     </div>
 
+                    <!-- Confirm Password Field -->
                     <label for="confirmPassword">Confirm Password</label>
                     <div class="password-container">
-                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
-                        <img src="../assets/eye-slash-fill.svg" id="toggleIconConfirm" alt="Show/Hide Password" onclick="togglePasswordVisibility('confirmPassword')">
+                        <input type="password" id="confirmPassword" name="confirmPassword" 
+                            placeholder="Confirm your password" 
+                            required 
+                            minlength="8" 
+                            pattern="^(?=.*\d)(?=.*[\W_]).{8,}$" 
+                            title="Password must match the above and follow the same rules.">
+                        <img src="../assets/eye-slash-fill.svg" id="toggleIconConfirm" 
+                            alt="Show/Hide Password" 
+                            onclick="togglePasswordVisibility('confirmPassword')">
                     </div>
+
                     <div class="button-group">
                         <button type="button" onclick="prevStep(2)">Back</button>
                         <button type="button" onclick="validatePassword()">Next</button>
@@ -93,5 +124,6 @@
     </div>
 
     <script src="../js/sign_up_script.js"></script>
+
 </body>
 </html>

@@ -32,6 +32,8 @@ body {
     display: block;
 }
 
+
+
 /* For WebKit browsers (Chrome, Safari) to remove autofill background */
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px inset rgba(0, 0, 0, 0); /* Set background to transparent */
@@ -283,7 +285,7 @@ button[type="submit"] {
     border: none;
     cursor: pointer;
     font-size: 14px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 button[type="button"]:hover {
