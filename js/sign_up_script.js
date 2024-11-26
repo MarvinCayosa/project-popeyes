@@ -96,13 +96,7 @@ function submitForm(event) {
     event.preventDefault();
 
     // Show the success message
-    alert("Account created successfully!");
-
-    // Optionally, you can reset the form after the success message
-    document.getElementById("signupForm").reset();
-
-    // Redirect to the sign-in page after the account is created
-    window.location.href = "index.php"; // Replace "index.php" with the URL of your sign-in page
+    document.getElementById("signupForm").submit();
 }
 
 function togglePasswordVisibility(inputId) {
