@@ -604,7 +604,6 @@ hr {
 .modal-backdrop.show {
   z-index: 10;
 }
-
 .modal-custom {
   max-width: 600px; /* Optional: Wider modal, adjust if needed */
   font-family: "Poppins", sans-serif;
@@ -612,11 +611,20 @@ hr {
 
 .table {
   margin-bottom: 20px;
+  text-align: left; /* Centers all table content by default */
+}
+.table td {
+  font-size: 14px;
+  vertical-align: middle; /* Vertically centers content inside table cells */
 }
 
-.qt_col{
-  text-align: center;
+.qt_col {
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
+ 
 
 .quantity-control {
   display: flex;
@@ -625,8 +633,10 @@ hr {
 }
 
 .quantity-control input {
-  width: 60px; /* Keep the input compact */
+  width: 80px; /* Increased width to accommodate larger numbers */
+  padding: 5px; /* Adds padding inside the input for better spacing */
   text-align: center; /* Ensures the text inside the input is centered */
+  font-size: 14px; /* Increases font size for better readability */
 }
 
 .quantity-control button {
@@ -636,7 +646,31 @@ hr {
 
 .modal-body {
   padding: 0;
+  background-color: transparent;
 }
+
+.table-custom {
+  background: none !important; /* Removes any background color */
+}
+
+.table-custom th,
+.table-custom td {
+  background: none !important; /* Removes background for table headers and cells */
+}
+
+.btn-suc-custom{
+  background-color: #149708;
+  color: #f7f7f7;
+}
+
+.btn{
+  margin-top: 10px;
+}
+
+.btn-suc-custom:hover{
+  background-color: #127a09;  
+}
+
 
 .modal-header,
 .modal-footer {
@@ -1060,6 +1094,23 @@ hr {
   .search-bar {
     color: #f6f6f6;
     background-color: #202633;
+  }
+
+  .table-custom {
+    background: none !important; /* Removes any background */
+    color: #f7f7f7 !important; /* Makes the text white */
+  }
+
+  .table-custom tbody tr,
+  .table-custom thead th {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.322); /* Lower-contrast row lines */
+  }
+  
+
+
+  .table-custom th,
+  .table-custom td {
+    color: #dfdfdf !important; /* Ensures headers and cells have white text */
   }
 
   .search-bar:focus {
