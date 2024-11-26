@@ -26,7 +26,7 @@
             </div>
 
             <!-- Form Section -->
-            <form id="signupForm">
+            <form id="signupForm" action="../signup/main.php" method="POST" enctype="multipart/form-data">
                 <div class="step active" id="step1">
                     <!-- <label for="fullName">Full Name</label>
                     <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required> -->
@@ -116,7 +116,7 @@
                     
                     <div class="button-group">
                         <button type="button" onclick="prevStep(3)">Back</button>
-                        <button type="button" onclick="submitForm(event)">Finish</button>
+                        <button type="submit" onclick="submitForm(event)">Finish</button>
                     </div>
                 </div>
             </form>
