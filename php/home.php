@@ -358,7 +358,7 @@
                                 <input
                                         type="text"
                                         class="form-control input-id"
-                                        id="itemIdd"
+                                        id="itemId"
                                         name="itemId"
                                         style="font-family: Poppins, sans-serif; font-size: 14px;"
                                         placeholder="#XXXX"
@@ -380,10 +380,10 @@
                         </div>
                     </div>
 
-                    <!-- Second row: Date Added and Total Quantity Inputs -->
+                    <!-- Second row: Total Quantity and Consumability Inputs -->
                     <div class="form-row">
                         <div class="input-group">
-                            <!-- Date Added Input -->
+                            <!-- Total Quantity Input -->
                             <div class="input-custom">
                                 <label for="totalQuantity" class="form-label">Quantity</label>
                                 <input
@@ -396,16 +396,18 @@
                                         required
                                 />
                             </div>
-                            <!-- Total Quantity Input -->
+                            <!-- Consumability Dropdown -->
                             <div class="input-custom">
-                                <label for="propertyType" class="form-label">Property</label>
+                                <label for="consumability" class="form-label">Property</label>
                                 <div class="dropdown-wrapper">
-                                    <select 
-                                    class="form-control input-property dropdown-toggle" 
-                                    id="propertyType" 
+                                    <select
+                                            class="form-control input-property dropdown-toggle"
+                                            id="consumability"
+                                            name="consumability"
+                                            required
                                     >
                                         <option value="" disabled selected style="display: none; font-family: 'Poppins', sans-serif; font-weight: 400;">Select a Property</option>
-                                        <option value="consumable" style="font-family: 'Poppins', sans-serif; ">Consumable</option>
+                                        <option value="consumable" style="font-family: 'Poppins', sans-serif;">Consumable</option>
                                         <option value="non-consumable" style="font-family: 'Poppins', sans-serif;">Non-Consumable</option>
                                     </select>
                                     <span class="dropdown-icon">&#9662;</span> <!-- dropdown arrow -->
@@ -420,24 +422,22 @@
                             <div class="input-custom">
                                 <label for="itemDescription" class="form-label">Item Description</label>
                                 <div class="textarea-wrapper">
-                                    <textarea
-                                        class="form-control input-description"
-                                        id="itemDescription"
-                                        rows="2"
-                                        maxlength="120"
-                                        oninput="updateCharacterCount()"
-                                        placeholder="Enter a brief description of the item."
-                                        style="font-family: Poppins, sans-serif; font-size: 14px;"
-                                    >
-                                    </textarea>
+                        <textarea
+                                class="form-control input-description"
+                                id="itemDescription"
+                                name="itemDescription"
+                                rows="2"
+                                maxlength="120"
+                                oninput="updateCharacterCount()"
+                                placeholder="Enter a brief description of the item."
+                                style="font-family: Poppins, sans-serif; font-size: 14px;"
+                                required
+                        ></textarea>
                                     <span id="charCount" class="char-counter">0/120</span>
                                 </div>
                             </div>
-                            
                         </div>
                     </div>
-
-                    <!-- Submit Button -->
                 </form>
 
                 <div class="image-preview-container">

@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Refactored sign_up.php">
+    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Minor Changes">
+      <change afterPath="$PROJECT_DIR$/php/date.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/delete_item.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/archives.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/archives.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/add_items.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/add_items.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/fetch_items.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/fetch_items.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/records.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/records.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/view_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/view_profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/read.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +102,11 @@
       <recent name="C:\xampp\htdocs\vinas-branch\SVG" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="date.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/php/date.php">
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -140,6 +148,9 @@
       <workItem from="1732352454307" duration="370000" />
       <workItem from="1732352977774" duration="1850000" />
       <workItem from="1732364139908" duration="4024000" />
+      <workItem from="1732420525515" duration="245000" />
+      <workItem from="1732425325310" duration="2313000" />
+      <workItem from="1732597765302" duration="6377000" />
     </task>
     <task id="LOCAL-00001" summary="Added Log In conditions, only faculty can access faculty website, same goes to students,&#10;&#10;Included &quot;read.php&quot; for verifying credentials.">
       <option name="closed" value="true" />
@@ -229,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732365680694</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Minor Changes">
+      <option name="closed" value="true" />
+      <created>1732420588931</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732420588931</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +276,7 @@
     <MESSAGE value="Added Request Status and Quick Access, Backend needs to be implemented." />
     <MESSAGE value="Adjustment of Scaling" />
     <MESSAGE value="Refactored sign_up.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored sign_up.php" />
+    <MESSAGE value="Minor Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor Changes" />
   </component>
 </project>

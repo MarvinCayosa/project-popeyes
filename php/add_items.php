@@ -4,16 +4,19 @@ global $conn;
 include 'config.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Retrieve form inputs
+
     $itemName = $_POST['itemName'];
-    $dateAdded = $_POST['dateAdded'];
     $totalQuantity = $_POST['totalQuantity'];
-    $dateEdited = $_POST['dateEdited'];
-    $availableQuantity = $_POST['availableQuantity'];
+    $availableQuantity = $totalQuantity;
+    date_default_timezone_set('Asia/Singapore');
+    $dateAdded = $_POST['dateAdded'] ?? date('Y-m-d');
+    $consumability = $_POST['consumability'];
+    $item_description = $_POST['itemDescription'];
+
 
     // Prepare and bind statement to prevent SQL injection
-    $stmt = $conn->prepare("INSERT INTO items (item_name, total_quantity, available_quantity, date_added, date_edited) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("siiss", $itemName, $totalQuantity, $availableQuantity, $dateAdded, $dateEdited);
+    $stmt = $conn->prepare("INSERT INTO items (item_name, total_quantity, available_quantity, date_added, consumability, item_description) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("siisss", $itemName, $totalQuantity, $availableQuantity, $dateAdded, $consumability, $item_description);
 
     // Execute the statement
     if ($stmt->execute()) {

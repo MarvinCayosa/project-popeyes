@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2024 at 07:55 AM
+-- Generation Time: Nov 26, 2024 at 08:03 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -53,21 +53,24 @@ CREATE TABLE `items` (
   `total_quantity` int(3) NOT NULL,
   `available_quantity` int(3) NOT NULL,
   `date_added` date NOT NULL,
-  `date_edited` date NOT NULL
+  `consumability` varchar(64) NOT NULL,
+  `item_description` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `items`
 --
 
-INSERT INTO `items` (`item_id`, `item_name`, `total_quantity`, `available_quantity`, `date_added`, `date_edited`) VALUES
-(1, 'Arduino', 50, 50, '2024-11-15', '2024-11-15'),
-(2, 'Arduino', 23, 23, '2024-11-02', '2024-11-22'),
-(31, 'ESP32', 24, 42, '2024-10-30', '2024-12-07'),
-(33, 'Flame Sensor', 15, 15, '2024-11-07', '2024-12-07'),
-(34, 'Soldering Iron', 50, 50, '2024-11-01', '2024-11-23'),
-(35, 'Arduino', 12, 12, '2024-11-01', '2024-12-07'),
-(36, 'Arduino', 12, 12, '2024-10-31', '2024-12-05');
+INSERT INTO `items` (`item_id`, `item_name`, `total_quantity`, `available_quantity`, `date_added`, `consumability`, `item_description`) VALUES
+(1, 'Arduino', 75, 75, '2024-12-11', 'yes', 'Microcontroller'),
+(2, 'ESP32', 75, 75, '0000-00-00', 'yes', 'Microcontroller'),
+(3, 'Breadboard', 75, 75, '0000-00-00', 'yes', 'Breadboard'),
+(4, 'Breadboard', 75, 75, '0000-00-00', '', 'Breadboard'),
+(5, 'Breadboard', 75, 75, '0000-00-00', '', 'Breadboard'),
+(6, 'Arduino', 14, 14, '2024-11-26', 'consumable', 'MicroController'),
+(7, 'Ultrasonic Sensor', 2, 2, '2024-11-26', 'non-consumable', 'Sensors Distance using Sound Waves'),
+(8, 'Flame Sensor', 10, 10, '2024-11-26', 'consumable', 'Senses Flames'),
+(9, 'ESP32', 3, 3, '2024-11-26', 'consumable', 'klkl');
 
 -- --------------------------------------------------------
 
@@ -103,8 +106,7 @@ ALTER TABLE `faculty`
 -- Indexes for table `items`
 --
 ALTER TABLE `items`
-  ADD PRIMARY KEY (`item_id`),
-  ADD UNIQUE KEY `UNIQUE` (`item_id`,`item_name`) USING BTREE;
+  ADD PRIMARY KEY (`item_id`);
 
 --
 -- Indexes for table `students`
@@ -120,7 +122,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `item_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `item_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

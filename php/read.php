@@ -33,14 +33,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = $stmt->get_result();
 
         if ($result->num_rows == 1) {
-            // Successful login
-            header("Location: home.php");
-            exit();
+
+            $user_data = $result->fetch_assoc();
+
+            if ($user_type === 'faculty') {
+                header("Location: home.php");
+            }
+            else {
+                header("Location: stu_home.php");
+            }
+
         } else {
             // Failed login
             header("Location: ../index.php");
-            exit();
         }
+        exit();
 
         $stmt->close();
     }
