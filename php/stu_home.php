@@ -412,11 +412,11 @@
             </div>
 
             <div class="modal-body">
-                <table class="table">
+                <table class="table table-custom">
                     <thead>
                         <tr>
                             <th scope="col">Item Name</th>
-                            <th scope="qt_col">Quantity</th>
+                            <th class="qt_col" scope="col">Quantity</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -444,7 +444,7 @@
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                     Cancel
                 </button>
-                <button type="button" class="btn btn-success">
+                <button type="button" class="btn btn-suc-custom">
                     Save
                 </button>
             </div>
