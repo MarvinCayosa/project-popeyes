@@ -62,151 +62,261 @@
         id="studentModal"
         tabindex="-1"
         aria-labelledby="studentModalLabel"
-        aria-hidden="true"
-    >
-        <div class="modal-dialog inbox-modal">
-            <div class="modal-content">
-                <div class="modal-header d-flex flex-row">
-                    <div class="modal-student-picture">
-                        <div class="modal-pic"></div>
-                    </div>
+        aria-hidden="true">
 
-                    <div class="modal-student-info">
-                        <div class="modal-student-name">Alliya Bernadette Virtucio</div>
-                            <div class="subtext d-flex align-items-center">
-                                <p class="modal-student-email text mb-0">virtucio.alliyabernadette@ue.edu.ph</p>
-                            <div class="vertical-line mx-2"></div>
-                        <   p class="modal-student-num text mb-0">20220126227</p>
-                        </div>
-                     </div>
-
-                    <div class="modal-student-sched">
-                        <div class="modal-student-date">October 28, 2024</div>
-                        <div class="modal-student-time">11:59 PM</div>
-                    </div>
+        <div class="modal-dialog modal-dialog-centered inbox-modal modal-custom">
+          <div class="modal-content">
+            <div class="modal-header d-flex flex-row">
+              <div class="modal-student-picture">
+                <div class="modal-pic"></div>
+              </div>
+              
+              <div class="modal-student-info">
+                <div class="modal-student-name">Alliya Bernadette Virtucio</div>
+                  <div class="subtext d-flex align-items-center">
+                    <p class="modal-student-email text mb-0">virtucio.alliyabernadette@ue.edu.ph</p>
+                  <div class="vertical-line mx-2"></div>
+                    <p class="modal-student-num text mb-0">20220126227</p>
                 </div>
+              </div>
 
-                <hr class="modal-divider" />
-
-                <div class="modal-item-contents">
-                    <div class="modal-item-container">
-                        <div class="modal-item-label">
-                            <div class="item-label">Items</div>
-                            <div class="quantity-label">Quantity</div>
-                        </div>
-
-                        <div class="modal-item-section">
-                            <div class="item-name">Arduino UNO R4</div>
-
-                            <div class="quantity-number">1</div>
-                        </div>
-
-                        <div class="modal-item-section">
-                            <div class="item-name">ESP32</div>
-
-                            <div class="quantity-number">3</div>
-                        </div>
-
-                        <div class="modal-item-section">
-                            <div class="item-name">Flame Sensor</div>
-
-                            <div class="quantity-number">20</div>
-                        </div>
-
-                        <div class="modal-item-section">
-                            <div class="item-name">Piezo</div>
-
-                            <div class="quantity-number">100</div>
-                        </div>
-                    </div>
-
-                    <div class="modal-item-container2">
-                        <div class="modal-borrowID-and-date">
-                            <div class="modal-borrowID-label">
-                                <div class="borrowID-label">Borrow ID</div>
-                                <div class="borrowID-container">
-                                    <div class="borrowID">#1001</div>
-                                </div>
-                            </div>
-
-                            <div class="modal-date-label">
-                                <div class="date-label">Date of Return</div>
-                                <div class="date-container">
-                                    <div class="date">November 20, 2024</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="modal-purpose">
-                            <div class="purpose-label">Purpose</div>
-                            <div class="purpose-container">
-                                <div class="purpose">Testing purpose</div>
-                            </div>
-                        </div>
-
-                        <div class="modal-course">
-                            <div class="course-label">Course</div>
-
-                            <div class="course-container">
-                                <div class="course">
-                                    NCP_3106 : Software Design Laboratory
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="modal-status">
-                            <div class="status-label">Status</div>
-                            <div class="status-container">
-                                <div class="custom-dropdown" id="statusDropdown">
-                                    <div class="selected-status">
-                                        <span class="status-circle pending"></span>
-                                        <span class="status-text">Select Status</span>
-                                    </div>
-                                    <div class="dropdown-options" id="dropdownOptions">
-                                        <div
-                                            class="dropdown-option pending"
-                                            data-value="pending"
-                                        >
-                                            <span class="status-circle"></span> Pending
-                                        </div>
-                                        <div
-                                            class="dropdown-option approved"
-                                            data-value="approved"
-                                        >
-                                            <span class="status-circle"></span> Approved
-                                        </div>
-                                        <div
-                                            class="dropdown-option rejected"
-                                            data-value="rejected"
-                                        >
-                                            <span class="status-circle"></span> Rejected
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="finalization-container">
-                            <div class="cancel-status">
-                                <button class="cancel">Cancel</button>
-                            </div>
-
-                            <div class="save-status">
-                                <button class="save">Save</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              <div class="modal-student-sched">
+                <div class="modal-student-date">October 28, 2024</div>
+                <div class="modal-student-time">11:59 PM</div>
+              </div>
             </div>
+
+            <hr class="modal-divider"> 
+
+            <div class="modal-item-contents">
+              <div class="modal-item-container">
+                <div class="modal-item-label">
+                  <div class="item-label">Items</div>
+                  <div class="quantity-label">Quantity</div>
+                  <div class="select-label">Select</div> <!-- New Select Column -->
+                </div>
+            
+                <div class="modal-item-section">
+                  <div class="item-name">Arduino UNO R4</div>
+                  <div class="quantity-number">1</div>
+                  <div class="select-checkbox">
+                    <input type="checkbox" class="item-checkbox" id="arduino-uno" />
+                  </div>
+                </div>
+            
+                <div class="modal-item-section">
+                  <div class="item-name">ESP32</div>
+                  <div class="quantity-number">3</div>
+                  <div class="select-checkbox">
+                    <input type="checkbox" class="item-checkbox" id="esp32" />
+                  </div>
+                </div>
+            
+                <div class="modal-item-section">
+                  <div class="item-name">Flame Sensor</div>
+                  <div class="quantity-number">20</div>
+                  <div class="select-checkbox">
+                    <input type="checkbox" class="item-checkbox" id="flame-sensor" />
+                  </div>
+                </div>
+            
+                <div class="modal-item-section">
+                  <div class="item-name">Piezo</div>
+                  <div class="quantity-number">100</div>
+                  <div class="select-checkbox">
+                    <input type="checkbox" class="item-checkbox" id="piezo" />
+                  </div>
+                </div>
+
+                <div class="modal-item-section">
+                  <div class="item-name">Piezo</div>
+                  <div class="quantity-number">100</div>
+                  <div class="select-checkbox">
+                    <input type="checkbox" class="item-checkbox" id="piezo" />
+                  </div>
+                </div>
+
+                <div class="modal-item-section">
+                  <div class="item-name">Piezo</div>
+                  <div class="quantity-number">100</div>
+                  <div class="select-checkbox">
+                    <input type="checkbox" class="item-checkbox" id="piezo" />
+                  </div>
+                </div>
+
+                <div class="modal-item-section">
+                  <div class="item-name">Piezo</div>
+                  <div class="quantity-number">100</div>
+                  <div class="select-checkbox">
+                    <input type="checkbox" class="item-checkbox" id="piezo" />
+                  </div>
+                </div>
+
+                <div class="modal-item-section">
+                  <div class="item-name">Piezo</div>
+                  <div class="quantity-number">100</div>
+                  <div class="select-checkbox">
+                    <input type="checkbox" class="item-checkbox" id="piezo" />
+                  </div>
+                </div>
+
+                <div class="modal-item-section">
+                  <div class="item-name">Piezo</div>
+                  <div class="quantity-number">100</div>
+                  <div class="select-checkbox">
+                    <input type="checkbox" class="item-checkbox" id="piezo" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-body">
+                <!-- First row: ID and Date -->
+                <div class="form-row">
+                  <div class="input-group">
+                    <div class="input-custom">
+                      <label for="itemId" class="form-label">Borrow ID</label>
+                      <input 
+                        type="text" 
+                        class="form-control input-id" 
+                        id="itemId" 
+                        placeholder="#XXXX" 
+                        disabled/>
+                    </div>
+                    <div class="input-custom">
+                      <label for="dateReturn" class="form-label">Date of Return</label>
+                      <input 
+                      type="date" 
+                      class="form-control input-date" 
+                      id="dateAdded" 
+                      style="font-family: Poppins, sans-serif; font-size: 12px; font-weight: 400; color: #717171"
+                      disabled
+                      />
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Second row: Purpose -->
+                <div class="form-row">
+                  <div class="input-purpose">
+                    <div class="input-custom">
+                      <label for="itemDescription" class="form-label">Purpose</label>
+                      <div class="textarea-container">
+                        <textarea 
+                          class="form-control input-description" 
+                          id="itemDescription" 
+                          rows="2" 
+                          maxlength="120" 
+                          oninput="updateCharacterCount()"
+                          style="font-family: Poppins, sans-serif; font-size: 12px; font-weight: 400;"
+                          placeholder="The purpose of the item request here..."
+                          disabled></textarea>
+                        <span id="charCount" class="char-counter">0/120</span>
+                      </div> 
+                    </div>               
+                  </div>
+                </div>
+              
+                <!-- Third row: Course -->
+                <div class="form-row">
+                  <div class="input-group">
+                    <div class="input-custom">
+                      <div class="input-custom">
+                        <label for="itemName" class="form-label">Course</label>
+                        <input 
+                          type="text" 
+                          class="form-control input-course" 
+                          id="itemName" 
+                          placeholder="NCP3105 - Software Design" 
+                          disabled/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Fourth row: Status -->
+                <div class="form-row">
+                  <div class="input-group">
+                    <div class="input-custom">
+                      <label for="propertyType" class="form-label">Status</label>
+                      <div class="custom-dropdown" id="statusDropdown">
+                        <div class="selected-status">
+                          <span class="status-circle grey"></span>
+                          <span class="status-text">Select Status</span>
+                          <span class="dropdown-icon">&#9662;</span> <!-- Dropdown arrow -->
+                        </div>
+                        <div class="dropdown-options" id="dropdownOptions">
+                          <div class="dropdown-option pending" data-value="pending">
+                            <span class="status-circle"></span> Pending
+                          </div>
+                          <div class="dropdown-option approved" data-value="approved">
+                            <span class="status-circle"></span> Approved
+                          </div>
+                          <div class="dropdown-option rejected" data-value="rejected">
+                            <span class="status-circle"></span> Rejected
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn-cancel" data-bs-dismiss="modal">
+                Cancel
+              </button>
+              <button type="button" class="btn-save-changes" data-bs-dismiss="modal"
+                onclick="showTemporaryAlert('Item Added!', 3000)">
+                Save Changes
+              </button>
+            </div>
+          </div>
         </div>
     </div>
+
+
+
 </div>
-<!-- Modal -->
-
-<!-- JavaScript for Sidebar Toggle -->
 
 
+<!-- JavaScript -->
 
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const selectedStatus = document.querySelector('.selected-status');
+      const dropdownOptions = document.getElementById('dropdownOptions');
+      const options = document.querySelectorAll('.dropdown-option');
+      const statusText = document.querySelector('.status-text');
+      const statusCircle = document.querySelector('.selected-status .status-circle');
+
+      // Toggle dropdown visibility
+      selectedStatus.addEventListener('click', function () {
+        dropdownOptions.style.display = dropdownOptions.style.display === 'block' ? 'none' : 'block';
+      });
+
+      // Handle option selection
+      options.forEach(option => {
+        option.addEventListener('click', function () {
+          const selectedValue = option.getAttribute('data-value');
+          statusText.innerText = option.innerText.trim();
+          statusCircle.className = `status-circle ${selectedValue}`;
+
+          // Close dropdown after selection
+          dropdownOptions.style.display = 'none';
+        });
+      });
+
+      // Close dropdown if clicked outside
+      document.addEventListener('click', function (e) {
+        if (!selectedStatus.contains(e.target) && !dropdownOptions.contains(e.target)) {
+          dropdownOptions.style.display = 'none';
+        }
+      });
+    });
+</script>
 
 <script>
     // JavaScript to add the active class
