@@ -825,18 +825,13 @@
 /* Section styling */
 
 .status-section {
-  position: absolute;
-  flex-grow: 1;
-  display: flex;
-  justify-content: center; /* Center content horizontally */
-  background-color: none; /* Light background for contrast */
-  width: 20%;
+  position: fixed; /* Use fixed positioning for better control */
   top: 55px;
   right: 0;
-  margin-right: 10px;
-  overflow: hidden;
+  width: 20%;
+  background-color: none;
   max-height: calc(100vh - 65px); /* Prevent the section from exceeding the viewport */
-
+  overflow: hidden;
 }
 
 .status-container {
@@ -853,46 +848,62 @@
 .rectangle {
   border-radius: 20px;
   display: flex;
-  justify-content: flex-start; /* Keeps items aligned to the left */
-  position: relative;
-  flex-direction: column; /* Arrange elements vertically */
+  flex-direction: column;
+  gap: 15px; /* Space between elements inside the rectangle */
+  overflow: hidden; /* Prevent scrolling */
   width: 85%; /* Adjust width relative to container width */
-  padding: 25px; /* Padding in vw for better scaling */
+  padding: 20px; /* Padding in vw for better scaling */
   box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
 .request-status {
   background-color: #4285f4;
-  height: 365px; /* Adjust height for the first rectangle */
-  color: white; /* White text for contrast */
+  height: 320px; /* Adjust height for the request rectangle */
+  color: white;
   overflow: hidden;
+}
+
+.status-label-container {
+  display: flex; /* Enable flexbox layout */
+  justify-content: space-between; /* Space out the content to opposite ends */
+  align-items: center; /* Vertically align items */
+  margin-left: 5px; /* Adjust left margin */
+  margin-bottom: 0;
+  font-size: 14px; 
+  font-weight: 700; 
+  font-family: 'Poppins', sans-serif;
+  color: white; /* Ensure the text is readable */
 }
 
 .quick-access-circle {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  margin-top: -35px;
-  margin-left:85%; /* Adjust margin to keep the circle relative to the text */
+  margin-top: -18px;
+  flex-shrink: 0; /* Prevent the circle from resizing in small containers */
 }
 
 .request {
   background-color: #f0ad4e; /* Orange */
 }
 
-.separator-line {
-  width: 95%; /* Adjust the width as desired */
-  height: 0.5px; /* Thickness of the line */
-  background-color: #dddddd86; /* Color of the separator line */
-  align-self: center; /* Center the line horizontally */
-  margin-top: 9%;
-  margin-bottom: 20px;
+.request-student-container-list {
+  display: flex;
+  flex-direction: column; /* Stack the student entries vertically */
+  overflow: hidden; /* Ensure no scrollbars appear */
+  margin-top: -20px;
+}
+
+.return-student-container-list {
+  display: flex;
+  flex-direction: column; /* Stack the student entries vertically */
+  overflow: hidden; /* Ensure no scrollbars appear */
+  margin-top: -15px;
 }
 
 .student-container {
   display: flex;
   align-items: center; /* Align items (image and text) vertically */
-  gap: 5px; /* Space between the picture and the text */
 }
 
 .vertical-layout {
@@ -936,8 +947,8 @@
 
 .return-status {
   background-color: #fbbc05;
-  height: 330px; /* Adjust height for the second rectangle */
-  color: white; /* Black text for contrast */
+  height: 320px; /* Adjust height for the return rectangle */
+  color: white;
   overflow: hidden;
 }
 
@@ -958,24 +969,72 @@
 }
 
 .see-more-container {
-  align-self: center; /* Centers content vertically */
+  background-color: #0d0f133b;
+  align-self: center; /* Centers content horizontally */
   justify-content: center; /* Centers content horizontally */
   align-items: center; /* Centers content vertically */
-  margin-bottom: -25px;
-  position: relative;
+  margin-top: auto; /* Push the 'See more' link to the bottom of the rectangle */
+  position: sticky;
+  bottom: 0; /* Stick to the bottom */
+  padding: 0; /* Optional: Adds spacing within the rectangle */
 }
 
 .see-more-link {
-  color: rgba(240, 248, 255, 0.432); /* Your custom color */
-  text-decoration: none; /* Optional: removes underline */
-  font-family: 'Poppins', sans-serif; /* Optional: apply your font */
-  font-size: 12px; /* Adjust size as needed */
+  color: rgba(240, 248, 255, 0.432); /* Customize color */
+  text-decoration: none; /* Removes underline */
+  font-family: 'Poppins', sans-serif; /* Apply your preferred font */
+  font-size: 11px; /* Adjust size */
+  text-align: center; /* Center the text */
 }
 
 /* Status Section Responsiveness */
+.request-student-container-list, 
+.return-student-container-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: -20px;
+  height: auto; /* Allow dynamic height */
+  max-height: 350px; /* Default max-height */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+@media (max-height: 900px) {
+  .request-student-container-list, 
+  .return-student-container-list {
+    max-height: 250px; /* Adjust to ensure the list fits */
+    padding-bottom: 10px; /* Optional: Adjust bottom padding to prevent cutting off */
+  }
+}
+
+@media (max-height: 800px) {
+  .request-student-container-list, 
+  .return-student-container-list {
+    max-height: 200px; /* Adjust to ensure the list fits */
+    padding-bottom: 10px; /* Optional: Adjust bottom padding to prevent cutting off */
+  }
+}
+
+@media (max-height: 700px) {
+  .request-student-container-list, 
+  .return-student-container-list {
+    max-height: 150px; /* Adjust to ensure the list fits */
+    padding-bottom: 10px; /* Optional: Adjust bottom padding to prevent cutting off */
+  }
+}
+
+@media (max-height: 600px) {
+  .request-student-container-list, 
+  .return-student-container-list {
+    max-height: 100px; /* Adjust to ensure the list fits */
+    padding-bottom: 10px; /* Optional: Adjust bottom padding to prevent cutting off */
+  }
+}
+
+
+/* Hide the section entirely below 500px */
 @media (max-height: 500px) {
   .status-container {
-    display: none; 
+    display: none; /* Hide the container */
   }
 }
 

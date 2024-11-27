@@ -212,97 +212,100 @@
 
                     <!-- Request Status Section -->
                     <div class="rectangle request-status">
-                        <p style="margin-left: 5px; font-size: 14px; font-weight: 700; font-family: 'Poppins', sans-serif;">
-                            Request Inbox
-                        </p>
-                        <div class="request quick-access-circle"></div>
-                        <div class="separator-line"></div>
-
-                        <!-- Request Entries -->
-                        <div class="student-container">
-                            <div class="student_pic"></div>
-                            <div class="vertical-layout">
-                                <p class="student-name">Alliya Virtucio</p>
-                                <p class="request-date">Nov. 19, 2024</p>
-                            </div>
+                        <div class="status-label-container">
+                            <p class="status-label">Request Inbox</p>
+                            <div class="quick-access-circle request"></div>
                         </div>
 
-                        <div class="student-container">
-                            <div class="student_pic"></div>
-                            <div class="vertical-layout">
-                                <p class="student-name">Marvin Cayosa</p>
-                                <p class="request-date">Nov. 21, 2024</p>
+                        <div class="request-student-container-list">
+                            <!-- Request Entries -->
+                            <div class="student-container">
+                                <div class="student_pic"></div>
+                                <div class="vertical-layout">
+                                    <p class="student-name">Alliya Virtucio</p>
+                                    <p class="request-date">Nov. 19, 2024</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="student-container">
-                            <div class="student_pic"></div>
-                            <div class="vertical-layout">
-                                <p class="student-name">Clarizza Reyes</p>
-                                <p class="request-date">Nov. 30, 2024</p>
+                            <div class="student-container">
+                                <div class="student_pic"></div>
+                                <div class="vertical-layout">
+                                    <p class="student-name">Marvin Cayosa</p>
+                                    <p class="request-date">Nov. 21, 2024</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="student-container">
-                            <div class="student_pic"></div>
-                            <div class="vertical-layout">
-                                <p class="student-name">Vincent Vinas</p>
-                                <p class="request-date">Dec. 21, 2024</p>
+                            <div class="student-container">
+                                <div class="student_pic"></div>
+                                <div class="vertical-layout">
+                                    <p class="student-name">Clarizza Reyes</p>
+                                    <p class="request-date">Nov. 30, 2024</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- See More Link -->
-                        <div class="see-more-container">
-                            <a href="#" class="see-more-link" onclick="toggleRequestStatus()">
-                                See more
-                            </a>
+                            <div class="student-container">
+                                <div class="student_pic"></div>
+                                <div class="vertical-layout">
+                                    <p class="student-name">Vincent Vinas</p>
+                                    <p class="request-date">Dec. 21, 2024</p>
+                                </div>
+                            </div>
+
+                            <!-- See More Link -->
+                            <div class="see-more-container">
+                                <a href="#" class="see-more-link" onclick="toggleRequestStatus()">
+                                    See more
+                                </a>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Return Status Section -->
                     <div class="rectangle return-status">
-                        <p style="margin-left: 5px; font-size: 14px; font-weight: 700; font-family: 'Poppins', sans-serif;">
-                            Due Date
-                        </p>
-                        <div class="return quick-access-circle"></div>
-                        <div class="separator-line"></div>
+                        <div class="status-label-container">
+                            <p class="status-label">Due Date</p>
+                            <div class="quick-access-circle return"></div>
+                        </div>
+
+                        <div class="return-student-container-list">
 
                         <!-- Return Entries -->
-                        <div class="student-container">
-                            <div class="two-column-layout">
-                                <p class="student-name">Marvin Cayosa</p>
-                                <p class="return-date">Nov. 21, 2024</p>
+                            <div class="student-container">
+                                <div class="two-column-layout">
+                                    <p class="student-name">Marvin Cayosa</p>
+                                    <p class="return-date">Nov. 21, 2024</p>
 
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="student-container">
-                            <div class="two-column-layout">
-                                <p class="student-name">Vincent Vinas</p>
-                                <p class="return-date">Nov. 21, 2024</p>
+                            <div class="student-container">
+                                <div class="two-column-layout">
+                                    <p class="student-name">Vincent Vinas</p>
+                                    <p class="return-date">Nov. 21, 2024</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="student-container">
-                            <div class="two-column-layout">
-                                <p class="student-name">Clarizza Reyes</p>
-                                <p class="return-date">Nov. 21, 2024</p>
+                            <div class="student-container">
+                                <div class="two-column-layout">
+                                    <p class="student-name">Clarizza Reyes</p>
+                                    <p class="return-date">Nov. 21, 2024</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="student-container">
-                            <div class="two-column-layout">
-                                <p class="student-name">Bernadette Virtucio</p>
-                                <p class="return-date">Nov. 21, 2024</p>
+                            <div class="student-container">
+                                <div class="two-column-layout">
+                                    <p class="student-name">Bernadette Virtucio</p>
+                                    <p class="return-date">Nov. 21, 2024</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- See More Link -->
-                        <div class="see-more-container">
-                            <a href="#" class="see-more-link" onclick="toggleRequestStatus()">
-                                See more
-                            </a>
-                        </div>
+                            <!-- See More Link -->
+                            <div class="see-more-container">
+                                <a href="#" class="see-more-link" onclick="toggleRequestStatus()">
+                                    See more
+                                </a>
+                            </div>
+                        </div>    
                     </div>
 
                 </div>
@@ -727,7 +730,6 @@
 </div>
 
 <script>
-
     // Status Section Hidden Feature
     function toggleStatusSection() {
         const statusSection = document.querySelector(".status-section");
