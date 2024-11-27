@@ -170,7 +170,7 @@
               </div>
 
               <div class="modal-body">
-                <!-- First row: ID and Date -->
+                <!-- First row: ID Input and Item Name Input -->
                 <div class="form-row">
                   <div class="input-group">
                     <div class="input-custom">
@@ -195,7 +195,7 @@
                   </div>
                 </div>
               
-                <!-- Second row: Purpose -->
+                <!-- Second row: Quantity and Property -->
                 <div class="form-row">
                   <div class="input-purpose">
                     <div class="input-custom">
@@ -216,7 +216,7 @@
                   </div>
                 </div>
               
-                <!-- Third row: Course -->
+                <!-- Third row: Description -->
                 <div class="form-row">
                   <div class="input-group">
                     <div class="input-custom">
@@ -233,7 +233,7 @@
                   </div>
                 </div>
 
-                <!-- Fourth row: Status -->
+                <!-- Fourth row: Description -->
                 <div class="form-row">
                   <div class="input-group">
                     <div class="input-custom">
@@ -245,13 +245,13 @@
                           <span class="dropdown-icon">&#9662;</span> <!-- Dropdown arrow -->
                         </div>
                         <div class="dropdown-options" id="dropdownOptions">
-                          <div class="dropdown-option pending" data-value="pending">
+                          <div class="dropdown-option-click pending" data-value="pending">
                             <span class="status-circle"></span> Pending
                           </div>
-                          <div class="dropdown-option approved" data-value="approved">
+                          <div class="dropdown-option-click approved" data-value="approved">
                             <span class="status-circle"></span> Approved
                           </div>
-                          <div class="dropdown-option rejected" data-value="rejected">
+                          <div class="dropdown-option-click rejected" data-value="rejected">
                             <span class="status-circle"></span> Rejected
                           </div>
                         </div>
@@ -259,6 +259,8 @@
                     </div>
                   </div>
                 </div>
+                
+
               </div>
             </div>
 
@@ -273,7 +275,7 @@
             </div>
           </div>
         </div>
-    </div>
+      </div>
 
 
 
@@ -281,42 +283,49 @@
 
 
 <!-- JavaScript -->
-
-
-
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const selectedStatus = document.querySelector('.selected-status');
-      const dropdownOptions = document.getElementById('dropdownOptions');
-      const options = document.querySelectorAll('.dropdown-option');
-      const statusText = document.querySelector('.status-text');
-      const statusCircle = document.querySelector('.selected-status .status-circle');
+document.addEventListener("DOMContentLoaded", () => {
+  const statusDropdown = document.getElementById("statusDropdown");
+  const dropdownOptions = document.getElementById("dropdownOptions");
+  const statusText = statusDropdown.querySelector(".status-text");
+  const statusCircle = statusDropdown.querySelector(".status-circle");
 
-      // Toggle dropdown visibility
-      selectedStatus.addEventListener('click', function () {
-        dropdownOptions.style.display = dropdownOptions.style.display === 'block' ? 'none' : 'block';
-      });
+  // Toggle dropdown visibility on click (don't close when clicking the dropdown container)
+  statusDropdown.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevent the click from bubbling up to the document listener
+    dropdownOptions.classList.toggle("visible");
+  });
 
-      // Handle option selection
-      options.forEach(option => {
-        option.addEventListener('click', function () {
-          const selectedValue = option.getAttribute('data-value');
-          statusText.innerText = option.innerText.trim();
-          statusCircle.className = `status-circle ${selectedValue}`;
-
-          // Close dropdown after selection
-          dropdownOptions.style.display = 'none';
-        });
-      });
-
-      // Close dropdown if clicked outside
-      document.addEventListener('click', function (e) {
-        if (!selectedStatus.contains(e.target) && !dropdownOptions.contains(e.target)) {
-          dropdownOptions.style.display = 'none';
-        }
-      });
+  // Handle option selection
+  dropdownOptions.querySelectorAll(".dropdown-option-click").forEach(option => {
+    option.addEventListener("click", (e) => {
+        const selectedValue = option.getAttribute("data-value");
+        statusText.innerText = option.innerText.trim();
+        
+        // Update the circle's color
+        statusCircle.className = `status-circle ${selectedValue}`;
+        
+        // Log before and after class removal
+        console.log("Before:", dropdownOptions.classList);
+        dropdownOptions.classList.remove("visible");
+        console.log("After:", dropdownOptions.classList);
     });
+    });
+
+
+  // Hide dropdown if clicked outside
+  document.addEventListener("click", (e) => {
+    if (statusDropdown.contains(e.target)) {
+      dropdownOptions.classList.remove("visible");
+    }
+  });
+});
+
+
+
 </script>
+
+
 
 <script>
     // JavaScript to add the active class
@@ -354,7 +363,7 @@
 
     // Handle option selection
     dropdownOptions.addEventListener("click", (event) => {
-        if (event.target.classList.contains("dropdown-option")) {
+        if (event.target.classList.contains("dropdown-option-click")) {
             const selectedValue = event.target.dataset.value;
 
             // Update the selected status display

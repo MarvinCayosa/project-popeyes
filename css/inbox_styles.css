@@ -216,7 +216,6 @@ body{
   padding: 0px 50px 35px 25px; /* top right bottom left */
 }
 
-
 /* Set modal content to the desired height */
 .modal-content { 
   border-radius: 20px; /* Adjust the value for more or less rounded corners */
@@ -257,7 +256,7 @@ body{
 }
 
 .modal-student-email, .modal-student-num {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal; /* Optional: Make the text bold */
   margin: 0;
 }
@@ -282,7 +281,7 @@ body{
 
 .modal-student-date,
 .modal-student-time {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .modal-student-time {
@@ -316,7 +315,7 @@ body{
   border-style: solid;
   border-color: #c6c6c63d;
   border-radius: 20px;
-  margin-left: 9%;
+  margin-left: 8.5%;
   padding: 15px;
   overflow-y: auto;
   position: relative;
@@ -340,7 +339,7 @@ body{
 .quantity-label,
 .select-label {
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   color:#1E1E1E;
 }
 
@@ -371,14 +370,14 @@ body{
 
 .item-name {
   width: 40%; /* First column for item names */
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   margin-left: 5%;
 }
 
 .quantity-number {
   width: 30%; /* Second column for quantity */
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   margin-left: -5%;
   text-align: center;
@@ -397,13 +396,13 @@ body{
 }
 
 .modal-body {
-  margin-left: 5px;
+  margin-left: 20px;
   padding: 10px;
 }
 
 input::placeholder {
   font-family: 'Poppins', sans-serif; /* Replace with your preferred font */
-  font-size: 12px; /* Adjust the font size */
+  font-size: 14px; /* Adjust the font size */
   font-weight: 400;
   color: #b0b0b0; /* Optional: Adjust the placeholder color */
 }
@@ -413,11 +412,10 @@ input::placeholder {
 }
 
 .input-group {
-  margin-right: 60px; /* Optional: Space between the inputs */
-  margin-top: -20px;
+  margin-right: 45px; /* Optional: Space between the inputs */
+  margin-top: -5px;
   display: flex;
   flex: 1;
-  margin-top: -5px;
   margin-bottom: 20px;
 }
 
@@ -433,7 +431,7 @@ input::placeholder {
 }
 
 .form-label {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   margin-bottom: 3px;
   margin-top: -5px;
@@ -443,7 +441,7 @@ input::placeholder {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .textarea-wrapper {
@@ -483,7 +481,7 @@ textarea {
   width: 100%;
   height: 80px; /* Adjust to your preference */
   padding: 10px;
-  font-size: 14px;
+  font-size: 16px;
   resize: none;
   box-sizing: border-box;
 }
@@ -501,7 +499,7 @@ select.form-control {
   appearance: none; /* Remove default styles */
   padding-right: 30px;
   background: #fff url('data:image/svg+xml;base64,...') no-repeat right 10px center;
-  background-size: 12px;
+  background-size: 14px;
 }
 
 .btn-cancel {
@@ -513,7 +511,7 @@ select.form-control {
   border-radius: 8px; /* Optional: Rounded corners */
   cursor: pointer;
   font-weight: 400;
-  font-size: 12px; /* Optional: Font size */
+  font-size: 14px; /* Optional: Font size */
   transition: background-color 0.3s ease; /* Optional: Smooth hover transition */
 }
 
@@ -532,7 +530,7 @@ select.form-control {
   border-radius: 8px; /* Optional: Rounded corners */
   cursor: pointer;
   font-weight: 400;
-  font-size: 12px; /* Optional: Font size */
+  font-size: 14px; /* Optional: Font size */
   transition: background-color 0.3s ease; /* Optional: Smooth hover transition */
 }
 
@@ -559,7 +557,7 @@ select.form-control {
   position: relative;
   width: 150px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 7px;
   cursor: pointer;
 }
 
@@ -567,7 +565,8 @@ select.form-control {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 3px;
+  margin-left: 5px;
 }
 
 .status-circle {
@@ -579,11 +578,10 @@ select.form-control {
 
 .dropdown-icon {
   margin-left: auto;
-  font-size: 18px;
+  font-size: 20px;
   color: #333;
   pointer-events: none; /* Prevent interactions with icon */
 }
-
 
 .status-circle.grey {
   background-color: #ccc; /* Grey */
@@ -602,27 +600,27 @@ select.form-control {
 }
 
 .status-text{
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .dropdown-options {
-  display: none; /* Hide options by default */
+  display: none; /* Hidden by default */
   position: absolute;
-  top: 0; /* Align with the top of the dropdown */
-  top: 100%; /* Position to the right of the dropdown */
+  top: 100%;
+  left: 0;
   border: 1px solid #ccc;
   background-color: white;
   z-index: 1000;
   border-radius: 5px;
-  font-size: 12px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  white-space: nowrap; /* Prevent wrapping of options */
+  font-size: 14px;
+  white-space: nowrap; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: max-height 0.3s ease-out;
 }
 
-.dropdown-option {
+.dropdown-option-click {
   padding: 10px;
   width: 150px;
   display: flex;
@@ -630,11 +628,9 @@ select.form-control {
   cursor: pointer;
 }
 
-.dropdown-option:hover {
+.dropdown-option-click:hover {
   background-color: #f1f1f1; /* Highlight on hover */
 } 
-
-
 
 @media only screen and (min-width: 700px){
 
@@ -771,12 +767,12 @@ select.form-control {
 }
 
 .due-label {
-  font-size: 12px;
+  font-size: 14px;
   color: #4d4d4d;
 }
 
 .due-date {
-  font-size: 12px;
+  font-size: 14px;
   background-color: #f9a825;
   color: white;
   padding: 5px 10px;
