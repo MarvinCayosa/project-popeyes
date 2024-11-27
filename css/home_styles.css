@@ -837,7 +837,7 @@
 
 .status-section {
   position: fixed; /* Use fixed positioning for better control */
-  top: 35px;
+  top: 55px;
   right: 0;
   width: 20%;
   background-color: none;
@@ -858,6 +858,7 @@
 }
 
 .rectangle {
+  position: relative; /* Add this */
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -979,13 +980,15 @@
   margin-left: 30px;
 }
 
+/* Keep "See more" fixed at the bottom without overlap */
 .see-more-container {
-  align-self: center; /* Centers content horizontally */
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
-  margin-top: auto; /* Push the 'See more' link to the bottom of the rectangle */
-  position: sticky;
-  padding: 0px; /* Optional: Adds spacing within the rectangle */
+  position: absolute; /* Position at the bottom of the section */
+  bottom: 0;          /* Stick to the bottom */
+  width: 100%;        /* Ensure full width */
+  align-self: center;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1;         /* Ensure it stays above other content */
 }
 
 .see-more-link {
@@ -1035,8 +1038,6 @@
     max-height: calc(170px - 40px); /* Reserve space for "See more" */
   }
 }
-
-
 
 /* Hide the section entirely below 500px */
 @media (max-height: 500px) {
