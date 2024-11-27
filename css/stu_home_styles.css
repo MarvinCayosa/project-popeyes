@@ -111,6 +111,10 @@ hr {
   box-shadow: 0 0 0px;
 }
 
+.btn{
+  font-size: 14px;
+}
+
 .search-btn {
   align-items: center;
   justify-content: center;
@@ -355,19 +359,6 @@ hr {
   display: none; /* For Chrome, Safari, and Opera */
 }
 
-.card {
-  width: 100%; /* Ensure the card takes full width of the grid column */
-  height: auto; /* Height is dynamic */
-  background-color: #fafafa;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-  padding: 20px;
-  text-align: center;
-  border: none;
-  font-family: "Poppins", sans-serif;
-  transition: background-color 0.3s ease-out, transform 0.3s ease-out;
-}
-
 .card:hover {
   transform: scale(1.02); /* Slightly increase the size of the card on hover */
 }
@@ -470,7 +461,7 @@ hr {
 .card {
   width: 100%; /* Ensure the card takes full width of the grid column */
   height: auto; /* Height is dynamic */
-  background-color: #fafafa;
+  background-color: #ffffff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   padding: 20px;
@@ -528,7 +519,7 @@ hr {
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
-  color: #000000;
+  color: #1a1a1a;
   margin-top: -10px;
   justify-content: flex-start;
   display: flex;
@@ -556,7 +547,7 @@ hr {
 }
 
 .stock-number {
-  background-color: #313231; /* Light background color for contrast */
+  background-color: #313231d3; /* Light background color for contrast */
   padding: 1px 5px; /* Padding around the text */
   border-radius: 5px; /* Rounded corners */
   color: #ffffff; /* Main red color */
@@ -572,9 +563,8 @@ hr {
   font-size: 14px;
 }
 
-/* ADD-EDIT Modal */
-/* Remove border from modal header and footer */
 
+/*  Modal */
 
 .delete-btn {
   margin-bottom: 1%;
@@ -604,6 +594,102 @@ hr {
 .modal-backdrop.show {
   z-index: 10;
 }
+
+.modal-custom.review-modal{
+  max-width: 900px;
+}
+
+.table-custom.review th:nth-child(2),
+.table-custom.review td:nth-child(2) {
+    width: 15%; /* Adjust the width as needed */
+    text-align: center;
+}
+
+.table-custom.review th:nth-child(3),
+.table-custom.review td:nth-child(3) {
+    width: 10%; /* Adjust the width as needed */
+    text-align: center;
+}
+
+.table-custom.review .icon-delete-btn {
+    width: 16px;
+    height: 16px;
+}
+
+.table-wrapper {
+  border-radius: 20px;
+}
+
+.table-custom.review .delete-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin: 0;
+}
+
+.table-container {
+  background-color: #f7f7f7; 
+  padding: 20px; 
+  border-radius: 12px; 
+  max-width: 100%; 
+  overflow-x: auto; 
+}
+
+.table-wrapper {
+  max-height: 300px; 
+  overflow-y: auto; /* Enable vertical scrolling */
+  display: block; /* Ensures that the table wrapper is scrollable */
+}
+
+.table-custom.review {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff; /* Table text color */
+  table-layout: fixed; /* Ensure the table takes up the full width */
+}
+
+.table-custom.review th,
+.table-custom.review td {
+  padding: 12px 16px; /* Table cell padding */
+  text-align: left; 
+  border-bottom: 1px solid #b8b8b8; /* Row separation */
+}
+
+.table-custom.review thead {
+  background-color: #ececec ; /* Solid background color for header */
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  position: sticky; /* Fix header at top */
+  top: 0; /* Stick to top of table body when scrolling */
+  z-index: 1; /* Ensure header stays above the table content */
+
+}
+
+h2#reviewItemsModalLabel {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.table-custom.review tbody tr {
+  transition: all 0.3s ease; /* Smooth row hover effect */
+}
+
+.table-custom.review tbody tr:hover {
+  background-color: #ffffff; /* Row hover effect */
+}
+
+.table-custom.review .delete-btn:hover {
+  color: #e74c3c; /* Highlight delete button on hover */
+}
+
+
+
+
+
 .modal-custom {
   max-width: 600px; /* Optional: Wider modal, adjust if needed */
   font-family: "Poppins", sans-serif;
@@ -614,6 +700,7 @@ hr {
   text-align: left; /* Centers all table content by default */
 }
 .table td {
+  padding: 15px;
   font-size: 14px;
   vertical-align: middle; /* Vertically centers content inside table cells */
 }
@@ -624,7 +711,7 @@ hr {
     align-items: center;
     justify-content: center; 
 }
- 
+
 
 .quantity-control {
   display: flex;
@@ -669,13 +756,26 @@ hr {
 
 .btn-suc-custom:hover{
   background-color: #127a09;  
+  color: #f7f7f7;
 }
 
+
+h2#addToListModalLabel {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
 
 .modal-header,
 .modal-footer {
   border: none;
   padding: 0 0 30px 0; /* Removes the border */
+}
+
+.modal-footer{
+  padding-top: 30px;
+  padding-bottom: 0;
 }
 
 .modal-content {
@@ -871,36 +971,41 @@ hr {
   display: none;
 }
 
+.btn .btn-secondary{
+  padding: 0.375rem 0.75rem;
+  margin: 0;
+}
+
 .btn-cancel {
   font-family: "Poppins", sans-serif;
   padding: 0.375rem 0.75rem;
-  background-color: #6c757d; /* Set the background color to red */
-  color: white; /* Set the text color to white */
-  border: none; /* Remove border */
-  border-radius: 8px; /* Optional: Rounded corners */
+  background-color: #6c757d; 
+  color: white; 
+  border: none; 
+  border-radius: 8px;
   cursor: pointer;
   font-weight: 400;
-  font-size: 1rem; /* Optional: Font size */
-  transition: background-color 0.3s ease; /* Optional: Smooth hover transition */
+  font-size: 14px; 
+  transition: background-color 0.3s ease;
 }
 
 .btn-cancel:hover {
-  color: white; /* Set the text color to white */
-  background-color: #4f555b; /* Darker red on hover */
+  color: white; 
+  background-color: #4f555b; 
 }
 
 /* Style for the Save Changes button */
 .btn-save-changes {
   font-family: "Poppins", sans-serif;
   padding: 0.375rem 0.75rem;
-  background-color: #149708; /* Set the background color to red */
-  color: white; /* Set the text color to white */
-  border: none; /* Remove border */
-  border-radius: 8px; /* Optional: Rounded corners */
+  background-color: #149708; 
+  color: white;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: 400;
-  font-size: 1rem; /* Optional: Font size */
-  transition: background-color 0.3s ease; /* Optional: Smooth hover transition */
+  font-size: 14px;
+  transition: background-color 0.3s ease;
 }
 
 .btn-save-changes:hover {
@@ -909,8 +1014,6 @@ hr {
 }
 
 /* Status Container Right */
-
-/* Section styling */
 
 .status-section {
   position: absolute;
@@ -1248,4 +1351,37 @@ hr {
     background-color: #2b313dab;
     border-color: #cccccc6e;
   }
+
+  .icon-reset{
+    fill: #f6f6f6;
+  }
+
+  .filter-header {
+    color: #f6f6f6;
+  }
+  .filter-category {
+    color: #f6f6f6;
+  }
+
+  h2#addToListModalLabel {
+    color: #f6f6f6;
+  }
+
+  h2#reviewItemsModalLabel {
+    color: #f6f6f6;
+  }
+
+  .table-custom.review thead{
+    background-color: #1b1f28 ;
+  }
+  .table-custom.review tbody tr:hover {
+    background-color: #303741; /* Row hover effect */
+    
+  }
+
+  .table-container {
+    background-color: rgba(0, 0, 0, 0.16); 
+  }
+
+
 }

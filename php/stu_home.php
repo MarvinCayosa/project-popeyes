@@ -149,249 +149,43 @@
             </section>
 
             <section class="scrollable-section">
-            <div>
-                <button
-                    class="btn add-btn"
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#addModal"
-                >
-                    <svg
-                        class="add-btn-svg"
-                        width="50"
-                        height="50"
-                        viewBox="0 0 70 70"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
+                <div>
+                    <button
+                        class="btn add-btn"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#reviewItemsModal"
                     >
-                        <rect width="70" height="70" rx="20" fill="#C00411" />
-                        <path
-                            d="M34.823 10.8038C30.0724 10.8038 25.4286 12.2125 21.4787 14.8518C17.5287 17.491 14.4501 21.2423 12.6322 25.6312C10.8142 30.0202 10.3386 34.8496 11.2654 39.5089C12.1921 44.1681 14.4797 48.4479 17.8389 51.8071C21.198 55.1662 25.4778 57.4538 30.1371 58.3806C34.7963 59.3074 39.6258 58.8317 44.0147 57.0137C48.4036 55.1958 52.1549 52.1172 54.7941 48.1673C57.4334 44.2174 58.8421 39.5735 58.8421 34.823C58.8421 31.6687 58.2208 28.5454 57.0138 25.6312C55.8067 22.7171 54.0374 20.0693 51.8071 17.8389C49.5767 15.6085 46.9288 13.8393 44.0147 12.6322C41.1006 11.4251 37.9772 10.8038 34.823 10.8038ZM34.823 54.0383C31.0225 54.0383 27.3075 52.9113 24.1475 50.7999C20.9876 48.6885 18.5247 45.6875 17.0703 42.1763C15.616 38.6652 15.2355 34.8016 15.9769 31.0742C16.7183 27.3468 18.5484 23.923 21.2357 21.2357C23.923 18.5484 27.3469 16.7183 31.0743 15.9769C34.8017 15.2354 38.6652 15.616 42.1764 17.0703C45.6875 18.5247 48.6885 20.9876 50.7999 24.1475C52.9113 27.3075 54.0383 31.0225 54.0383 34.823C54.0383 39.9192 52.0138 44.8067 48.4102 48.4102C44.8067 52.0138 39.9192 54.0383 34.823 54.0383ZM44.4306 32.421H37.2249V25.2153C37.2249 24.5783 36.9718 23.9673 36.5214 23.5169C36.0709 23.0665 35.46 22.8134 34.823 22.8134C34.1859 22.8134 33.575 23.0665 33.1246 23.5169C32.6741 23.9673 32.4211 24.5783 32.4211 25.2153V32.421H25.2153C24.5783 32.421 23.9674 32.6741 23.5169 33.1246C23.0665 33.575 22.8134 34.1859 22.8134 34.823C22.8134 35.46 23.0665 36.0709 23.5169 36.5214C23.9674 36.9718 24.5783 37.2249 25.2153 37.2249H32.4211V44.4306C32.4211 45.0676 32.6741 45.6786 33.1246 46.129C33.575 46.5795 34.1859 46.8325 34.823 46.8325C35.46 46.8325 36.0709 46.5795 36.5214 46.129C36.9718 45.6786 37.2249 45.0676 37.2249 44.4306V37.2249H44.4306C45.0677 37.2249 45.6786 36.9718 46.129 36.5214C46.5795 36.0709 46.8325 35.46 46.8325 34.823C46.8325 34.1859 46.5795 33.575 46.129 33.1246C45.6786 32.6741 45.0677 32.421 44.4306 32.421Z"
-                            fill="white"
-                        />
-                    </svg>
-                    <span>Add Item</span>
-                </button>
-            </div>
-                <div class="card-container">
-                    <link rel="stylesheet" href="../css/stu_home_styles.css" />
-                    <?php include 'fetch_items_student.php'; ?>
-            </section>
-
-        </div>
-    </div>
-</div>
-
-<!-- Add Modal -->
-<div
-    class="modal fade"
-    id="addModal"
-    data-bs-backdrop="true"
-    tabindex="-1"
-    aria-labelledby="addModalLabel"
-    aria-hidden="true"
->
-    <div
-        class="modal-dialog modal-dialog-centered modal-custom"
-        role="document"
-    >
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title" id="editModalLabel">
-                    Add
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="40"
-                        height="40"
-                        fill="currentColor"
-                        class="bi bi-pencil-square"
-                        viewBox="0 0 20 20"
-                    >
-                        <path
-                            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
-                        />
-                        <path
-                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
-                        />
-                    </svg>
-                </h2>
-            </div>
-
-            <div class="modal-body">
-                <form method="POST" action="add_items.php" id="add_items">
-                    <!-- First row: ID Input and Item Name Input -->
-                    <div class="form-row">
-                        <div class="input-group">
-                            <!-- ID Input -->
-                            <div class="input-custom-1">
-                                <label for="itemId" class="form-label">ID</label>
-                                <input
-                                        type="text"
-                                        class="form-control input-id"
-                                        id="itemIdd"
-                                        name="itemId"
-                                        style="font-family: Poppins, sans-serif; font-size: 14px;"
-                                        placeholder="#XXXX"
-                                />
-                            </div>
-                            <!-- Item Name Input -->
-                            <div class="input-custom-1">
-                                <label for="itemName" class="form-label">Item Name</label>
-                                <input
-                                        type="text"
-                                        class="form-control input-item-name"
-                                        id="itemName"
-                                        name="itemName"
-                                        style="font-family: Poppins, sans-serif; font-size: 14px;"
-                                        placeholder="Item Name"
-                                        required
-                                />
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Second row: Date Added and Total Quantity Inputs -->
-                    <div class="form-row">
-                        <div class="input-group">
-                            <!-- Date Added Input -->
-                            <div class="input-custom">
-                                <label for="totalQuantity" class="form-label">Quantity</label>
-                                <input
-                                        type="number"
-                                        class="form-control input-quantity"
-                                        id="totalQuantity"
-                                        name="totalQuantity"
-                                        style="font-family: Poppins, sans-serif; font-size: 14px;"
-                                        placeholder=""
-                                        required
-                                />
-                            </div>
-                            <!-- Total Quantity Input -->
-                            <div class="input-custom">
-                                <label for="propertyType" class="form-label">Property</label>
-                                <div class="dropdown-wrapper">
-                                    <select 
-                                    class="form-control input-property dropdown-toggle" 
-                                    id="propertyType" 
-                                    >
-                                        <option value="" disabled selected style="display: none; font-family: 'Poppins', sans-serif;">Select a Property</option>
-                                        <option value="consumable" style="font-family: 'Poppins', sans-serif; ">Consumable</option>
-                                        <option value="non-consumable" style="font-family: 'Poppins', sans-serif;">Non-Consumable</option>
-                                    </select>
-                                    <span class="dropdown-icon">&#9662;</span> <!-- dropdown arrow -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Third row: Edit Description -->
-                    <div class="form-row">
-                        <div class="input-group">
-                            <div class="input-custom">
-                                <label for="itemDescription" class="form-label">Item Description</label>
-                                <div class="textarea-wrapper">
-                                    <textarea
-                                        class="form-control input-description"
-                                        id="itemDescription"
-                                        rows="2"
-                                        maxlength="120"
-                                        oninput="updateCharacterCount()"
-                                        placeholder="Enter a brief description of the item."
-                                        style="font-family: Poppins, sans-serif; font-size: 14px;"
-                                    >
-                                    </textarea>
-                                    <span id="charCount" class="char-counter">0/120</span>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                    <!-- Submit Button -->
-                </form>
-
-                <div class="image-preview-container">
-                    <!-- Image Preview -->
-                    <div class="image-preview" style="background-color: #47474771">
-                        <!-- Added translucent grey background -->
-                        <img id="imagePreview" src="" alt="" class="preview-img" />
-
-                        <!-- SVG Icon that appears by default -->
                         <svg
+                            class="add-btn-svg"
+                            width="50"
+                            height="50"
+                            viewBox="0 0 70 70"
+                            fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                            width="40"
-                            height="40"
-                            fill="#FDFDFD"
-                            class="bi bi-image"
-                            viewBox="0 0 16 16"
-                            style="
-                                position: absolute;
-                                top: 45%;
-                                left: 50%;
-                                transform: translate(-50%, -100%);
-                                "
                         >
-                            <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                            <rect width="70" height="70" rx="20" fill="#C00411" />
                             <path
-                                d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"
+                                d="M34.823 10.8038C30.0724 10.8038 25.4286 12.2125 21.4787 14.8518C17.5287 17.491 14.4501 21.2423 12.6322 25.6312C10.8142 30.0202 10.3386 34.8496 11.2654 39.5089C12.1921 44.1681 14.4797 48.4479 17.8389 51.8071C21.198 55.1662 25.4778 57.4538 30.1371 58.3806C34.7963 59.3074 39.6258 58.8317 44.0147 57.0137C48.4036 55.1958 52.1549 52.1172 54.7941 48.1673C57.4334 44.2174 58.8421 39.5735 58.8421 34.823C58.8421 31.6687 58.2208 28.5454 57.0138 25.6312C55.8067 22.7171 54.0374 20.0693 51.8071 17.8389C49.5767 15.6085 46.9288 13.8393 44.0147 12.6322C41.1006 11.4251 37.9772 10.8038 34.823 10.8038ZM34.823 54.0383C31.0225 54.0383 27.3075 52.9113 24.1475 50.7999C20.9876 48.6885 18.5247 45.6875 17.0703 42.1763C15.616 38.6652 15.2355 34.8016 15.9769 31.0742C16.7183 27.3468 18.5484 23.923 21.2357 21.2357C23.923 18.5484 27.3469 16.7183 31.0743 15.9769C34.8017 15.2354 38.6652 15.616 42.1764 17.0703C45.6875 18.5247 48.6885 20.9876 50.7999 24.1475C52.9113 27.3075 54.0383 31.0225 54.0383 34.823C54.0383 39.9192 52.0138 44.8067 48.4102 48.4102C44.8067 52.0138 39.9192 54.0383 34.823 54.0383ZM44.4306 32.421H37.2249V25.2153C37.2249 24.5783 36.9718 23.9673 36.5214 23.5169C36.0709 23.0665 35.46 22.8134 34.823 22.8134C34.1859 22.8134 33.575 23.0665 33.1246 23.5169C32.6741 23.9673 32.4211 24.5783 32.4211 25.2153V32.421H25.2153C24.5783 32.421 23.9674 32.6741 23.5169 33.1246C23.0665 33.575 22.8134 34.1859 22.8134 34.823C22.8134 35.46 23.0665 36.0709 23.5169 36.5214C23.9674 36.9718 24.5783 37.2249 25.2153 37.2249H32.4211V44.4306C32.4211 45.0676 32.6741 45.6786 33.1246 46.129C33.575 46.5795 34.1859 46.8325 34.823 46.8325C35.46 46.8325 36.0709 46.5795 36.5214 46.129C36.9718 45.6786 37.2249 45.0676 37.2249 44.4306V37.2249H44.4306C45.0677 37.2249 45.6786 36.9718 46.129 36.5214C46.5795 36.0709 46.8325 35.46 46.8325 34.823C46.8325 34.1859 46.5795 33.575 46.129 33.1246C45.6786 32.6741 45.0677 32.421 44.4306 32.421Z"
+                                fill="white"
                             />
                         </svg>
-
-                        <!-- Button that replaces SVG on hover -->
-                        <button
-                            onclick="document.getElementById('fileInput').click();"
-                            style="
-                                position: absolute;
-                                bottom: 40%;
-                                left: 50%;
-                                transform: translate(-50%, 50%);
-                                padding: 9px 9px;
-                                background-color: #4285f4;
-                                color: white;
-                                border: none;
-                                border-radius: 5px;
-                                cursor: pointer;
-                                font-family: 'Poppins', sans-serif;
-                                font-size: 11.5px;
-                                width: 150px;
-                            "
-                        >
-                            Select From Computer
-                        </button>
-                        <input
-                            type="file"
-                            id="fileInput"
-                            style="display: none"
-                            onchange="previewImage(event)"
-                        />
-                    </div>
-                </div>
-
-                <div class="modal-footer">
-                    <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                    >
-                        Cancel
-                    </button>
-                    <button
-                        type="submit"
-                        class="btn-save-changes"
-                        data-bs-dismiss="modal"
-                        form="add_items"
-                        name="addItem"
-                        onclick="showTemporaryAlert('Changes saved!', 3000)"
-                    >
-                        Add Item
+                        <span>Process Request</span>
                     </button>
                 </div>
-            </div>
+                <div class="card-container">
+                        <link rel="stylesheet" href="../css/stu_home_styles.css" />
+                        <?php include 'fetch_items_student.php'; ?>
+            
+
+                </div>
+            </section>
         </div>
     </div>
 </div>
 
-<!-- Edit Modal -->
+
+<!-- Add to list Modal -->
 <div
     class="modal fade"
     id="addToListModal"
@@ -451,6 +245,127 @@
         </div>
     </div>
 </div>
+
+
+<!-- Process Request -->
+<div
+    class="modal fade"
+    id="reviewItemsModal"
+    data-bs-backdrop="true"
+    tabindex="-1"
+    aria-labelledby="reviewItemsModalLabel"
+    aria-hidden="true"
+>
+    <div
+        class="modal-dialog modal-dialog-centered modal-custom review-modal"
+        role="document"
+    >
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="reviewItemsModalLabel">
+                    Review Items
+                </h2>
+            </div>
+
+            <div class="modal-body">
+                <div class="table-container">
+                    <div class="table-wrapper">
+                        <table class="table table-custom review">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Item Name</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="itemsTable">
+                                <tr>
+                                    <td>Arduino Uno R3</td>
+                                    <td>1</td>
+                                    <td>
+                                        <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
+                                            <svg class="icon-delete-btn" fill="currentColor">
+                                                <use xlink:href="icons.svg#icon-delete-item"></use>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ESP 32</td>
+                                    <td>3</td>
+                                    <td>
+                                        <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
+                                            <svg class="icon-delete-btn" fill="currentColor">
+                                                <use xlink:href="icons.svg#icon-delete-item"></use>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Flame Sensor</td>
+                                    <td>5</td>
+                                    <td>
+                                        <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
+                                            <svg class="icon-delete-btn" fill="currentColor">
+                                                <use xlink:href="icons.svg#icon-delete-item"></use>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Arduino Uno R3</td>
+                                    <td>5</td>
+                                    <td>
+                                        <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
+                                            <svg class="icon-delete-btn" fill="currentColor">
+                                                <use xlink:href="icons.svg#icon-delete-item"></use>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Arduino Uno R3</td>
+                                    <td>5</td>
+                                    <td>
+                                        <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
+                                            <svg class="icon-delete-btn" fill="currentColor">
+                                                <use xlink:href="icons.svg#icon-delete-item"></use>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Arduino Uno R3</td>
+                                    <td>5</td>
+                                    <td>
+                                        <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
+                                            <svg class="icon-delete-btn" fill="currentColor">
+                                                <use xlink:href="icons.svg#icon-delete-item"></use>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <!-- More rows if necessary -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Cancel
+                </button>
+                <button type="button" class="btn btn-suc-custom">
+                    Next
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 <script>
@@ -562,6 +477,7 @@
 });
 
 
+
 </script>
 
 <script>
@@ -618,6 +534,8 @@
             })
             .catch(error => console.error('Error:', error));
     });
+
+
 </script>
 </body>
 </html>
