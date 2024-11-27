@@ -837,7 +837,7 @@
 
 .status-section {
   position: fixed; /* Use fixed positioning for better control */
-  top: 55px;
+  top: 35px;
   right: 0;
   width: 20%;
   background-color: none;
@@ -848,6 +848,7 @@
 .status-container {
   display: flex;
   flex-direction: column; /* Stack rectangles vertically */
+  justify-content: space-between; /* Automatically keeps 'See more' at bottom */
   gap: 20px; /* Add space between the rectangles */
   align-items: center; /* Center rectangles horizontally */
   width: 100%; /* Make container take full width of section */
@@ -860,7 +861,6 @@
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Space between elements inside the rectangle */
   overflow: hidden; /* Prevent scrolling */
   width: 85%; /* Adjust width relative to container width */
   padding: 20px; /* Padding in vw for better scaling */
@@ -869,7 +869,6 @@
 
 .request-status {
   background-color: #4285f4;
-  height: 320px; /* Adjust height for the request rectangle */
   color: white;
   overflow: hidden;
 }
@@ -879,7 +878,7 @@
   justify-content: space-between; /* Space out the content to opposite ends */
   align-items: center; /* Vertically align items */
   margin-left: 5px; /* Adjust left margin */
-  margin-bottom: 0;
+  margin-bottom: 5px;
   font-size: 14px; 
   font-weight: 700; 
   font-family: 'Poppins', sans-serif;
@@ -902,7 +901,7 @@
   display: flex;
   flex-direction: column; /* Stack the student entries vertically */
   overflow: hidden; /* Ensure no scrollbars appear */
-  margin-top: -20px;
+  margin-top: -15px;
 }
 
 .return-student-container-list {
@@ -910,6 +909,7 @@
   flex-direction: column; /* Stack the student entries vertically */
   overflow: hidden; /* Ensure no scrollbars appear */
   margin-top: -15px;
+
 }
 
 .student-container {
@@ -920,7 +920,7 @@
 .vertical-layout {
   display: flex;
   flex-direction: column; /* Ensure vertical arrangement */
-  margin-top: 5px;
+  margin-top: 9px;
   margin-left: 10px;
 }
 
@@ -958,7 +958,6 @@
 
 .return-status {
   background-color: #fbbc05;
-  height: 320px; /* Adjust height for the return rectangle */
   color: white;
   overflow: hidden;
 }
@@ -967,6 +966,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two equal-width columns */
   align-items:center; /* Center vertically in each row */
+  margin-top: 7px;
 }
 
 .return-date {
@@ -980,14 +980,12 @@
 }
 
 .see-more-container {
-  background-color: #0d0f133b;
   align-self: center; /* Centers content horizontally */
   justify-content: center; /* Centers content horizontally */
   align-items: center; /* Centers content vertically */
   margin-top: auto; /* Push the 'See more' link to the bottom of the rectangle */
   position: sticky;
-  bottom: 0; /* Stick to the bottom */
-  padding: 0; /* Optional: Adds spacing within the rectangle */
+  padding: 0px; /* Optional: Adds spacing within the rectangle */
 }
 
 .see-more-link {
@@ -996,31 +994,15 @@
   font-family: 'Poppins', sans-serif; /* Apply your preferred font */
   font-size: 11px; /* Adjust size */
   text-align: center; /* Center the text */
+  cursor: pointer;
 }
 
 /* Status Section Responsiveness */
-.request-student-container-list, 
-.return-student-container-list {
-  display: flex;
-  flex-direction: column;
-  margin-top: -20px;
-  height: auto; /* Allow dynamic height */
-  max-height: 350px; /* Default max-height */
-  flex-shrink: 0; /* Prevent shrinking */
-}
-
-@media (max-height: 900px) {
-  .request-student-container-list, 
-  .return-student-container-list {
-    max-height: 250px; /* Adjust to ensure the list fits */
-    padding-bottom: 10px; /* Optional: Adjust bottom padding to prevent cutting off */
-  }
-}
 
 @media (max-height: 800px) {
   .request-student-container-list, 
   .return-student-container-list {
-    max-height: 200px; /* Adjust to ensure the list fits */
+    max-height: 270px; /* Adjust to ensure the list fits */
     padding-bottom: 10px; /* Optional: Adjust bottom padding to prevent cutting off */
   }
 }
@@ -1028,7 +1010,7 @@
 @media (max-height: 700px) {
   .request-student-container-list, 
   .return-student-container-list {
-    max-height: 150px; /* Adjust to ensure the list fits */
+    max-height: 220px; /* Adjust to ensure the list fits */
     padding-bottom: 10px; /* Optional: Adjust bottom padding to prevent cutting off */
   }
 }
@@ -1036,10 +1018,24 @@
 @media (max-height: 600px) {
   .request-student-container-list, 
   .return-student-container-list {
-    max-height: 100px; /* Adjust to ensure the list fits */
+    max-height: 170px; /* Adjust to ensure the list fits */
     padding-bottom: 10px; /* Optional: Adjust bottom padding to prevent cutting off */
   }
 }
+
+@media (max-height: 700px) {
+  .request-student-container-list, 
+  .return-student-container-list {
+    max-height: calc(220px - 40px); /* Adjust to fit "See more" */
+  }
+}
+@media (max-height: 600px) {
+  .request-student-container-list, 
+  .return-student-container-list {
+    max-height: calc(170px - 40px); /* Reserve space for "See more" */
+  }
+}
+
 
 
 /* Hide the section entirely below 500px */

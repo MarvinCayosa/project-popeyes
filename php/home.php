@@ -254,7 +254,7 @@
 
                             <!-- See More Link -->
                             <div class="see-more-container">
-                                <a href="#" class="see-more-link" onclick="toggleRequestStatus()">
+                                <a href="inbox.php" class="see-more-link" onclick="toggleRequestStatus()">
                                     See more
                                 </a>
                             </div>
@@ -302,7 +302,7 @@
 
                             <!-- See More Link -->
                             <div class="see-more-container">
-                                <a href="#" class="see-more-link" onclick="toggleRequestStatus()">
+                                <a href="records.php" class="see-more-link" onclick="toggleRequestStatus()">
                                     See more
                                 </a>
                             </div>
