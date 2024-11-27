@@ -1,3 +1,8 @@
+<?php
+$current_page = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+?>
+
+
 <div
     class="sidebar_custom sidebar d-flex flex-column flex-shrink-0 p-3 fixed-top"
     style="width: 110px; height: 100vh"
@@ -11,7 +16,7 @@
         aria-expanded="false"
     >
         <span class="icon_name">Marvin Cayosa</span>
-        <span class="icon_name identifier">Administrator</span>
+        <span class="icon_name identifier">Student</span>
         <svg
             xmlns="http://www.w3.org/2000/svg"
             class="avatar bi bi-person-circle"
@@ -26,38 +31,34 @@
         </svg>
     </a>
     <ul class="user_dropdown dropdown-menu">
-        <li><a class="dropdown-item" href="../../php/view_profile.php">View Profile</a></li>
-        <li><a class="dropdown-item" href="../../index.php">Log Out</a></li>
+        <li><a class="dropdown-item" href="../php/stu_view_profile.php">View Profile</a></li>
+        <li><a class="dropdown-item" href="../index.php">Log Out</a></li>
     </ul>
 
     <hr />
     <!--Navigation Icons-->
     <ul class="nav nav-pills flex-column d-flex align-items-center">
-        <li
-            class="nav-item nav-link active d-flex justify-content-center icon-container"
-        >
-            <a href="home.php">
+        <li class="nav-item nav-link d-flex justify-content-center icon-container <?= $current_page == 'stu_home.php' ? 'active' : '' ?>">
+            <a href="stu_home.php">
                 <svg class="icon" fill="currentColor">
                     <use xlink:href="icons.svg#icon-home"></use>
                 </svg>
             </a>
             <span class="icon_name">Home</span>
         </li>
-        <li class="nav-item d-flex justify-content-center icon-container">
-            <a href="inbox.php">
+        <li class="nav-item nav-link d-flex justify-content-center icon-container <?= $current_page == 'stu_inbox.php' ? 'active' : '' ?>">
+            <a href="stu_inbox.php">
                 <svg class="icon" fill="currentColor">
                     <use xlink:href="icons.svg#icon-inbox"></use>
                 </svg>
             </a>
             <span
                 class="position-absolute translate-middle badge rounded-pill bg-danger"
-            >10</span
-            >
+            >10</span>
             <span class="icon_name">Inbox</span>
         </li>
-
-        <li class="nav-item d-flex justify-content-center icon-container">
-            <a href="records.php">
+        <li class="nav-item nav-link d-flex justify-content-center icon-container <?= $current_page == 'stu_records.php' ? 'active' : '' ?>">
+            <a href="stu_records.php">
                 <svg class="icon" fill="currentColor">
                     <use xlink:href="icons.svg#icon-profile"></use>
                 </svg>
