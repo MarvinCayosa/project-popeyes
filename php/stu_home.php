@@ -15,6 +15,8 @@
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -246,8 +248,7 @@
     </div>
 </div>
 
-
-<!-- Process Request -->
+<!-- Process Modal -->
 <div
     class="modal fade"
     id="reviewItemsModal"
@@ -256,119 +257,301 @@
     aria-labelledby="reviewItemsModalLabel"
     aria-hidden="true"
 >
-    <div
-        class="modal-dialog modal-dialog-centered modal-custom review-modal"
-        role="document"
-    >
+    <div class="modal-dialog modal-dialog-centered modal-custom review-modal" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title" id="reviewItemsModalLabel">
-                    Review Items
-                </h2>
+                <h2 class="modal-title" id="reviewItemsModalLabel">Review Items</h2>
+                
             </div>
 
             <div class="modal-body">
-                <div class="table-container">
-                    <div class="table-wrapper">
-                        <table class="table table-custom review">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Item Name</th>
-                                    <th scope="col">Quantity</th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody id="itemsTable">
-                                <tr>
-                                    <td>Arduino Uno R3</td>
-                                    <td>1</td>
-                                    <td>
-                                        <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
-                                            <svg class="icon-delete-btn" fill="currentColor">
-                                                <use xlink:href="icons.svg#icon-delete-item"></use>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>ESP 32</td>
-                                    <td>3</td>
-                                    <td>
-                                        <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
-                                            <svg class="icon-delete-btn" fill="currentColor">
-                                                <use xlink:href="icons.svg#icon-delete-item"></use>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Flame Sensor</td>
-                                    <td>5</td>
-                                    <td>
-                                        <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
-                                            <svg class="icon-delete-btn" fill="currentColor">
-                                                <use xlink:href="icons.svg#icon-delete-item"></use>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Arduino Uno R3</td>
-                                    <td>5</td>
-                                    <td>
-                                        <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
-                                            <svg class="icon-delete-btn" fill="currentColor">
-                                                <use xlink:href="icons.svg#icon-delete-item"></use>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Arduino Uno R3</td>
-                                    <td>5</td>
-                                    <td>
-                                        <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
-                                            <svg class="icon-delete-btn" fill="currentColor">
-                                                <use xlink:href="icons.svg#icon-delete-item"></use>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Arduino Uno R3</td>
-                                    <td>5</td>
-                                    <td>
-                                        <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
-                                            <svg class="icon-delete-btn" fill="currentColor">
-                                                <use xlink:href="icons.svg#icon-delete-item"></use>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <!-- More rows if necessary -->
-                            </tbody>
-                        </table>
+                <!-- Step 1: Review Items -->
+                <div class="step active" id="step-1">
+                    <div class="table-container">
+                        <div class="table-wrapper">
+                            <table class="table table-custom review">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Item Name</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="itemsTable">
+                                    <tr>
+                                        <td>Arduino Uno R3</td>
+                                        <td>1</td>
+                                        <td>
+                                            <button class="btn delete-btn" title="Delete Item">
+                                                <svg class="icon-delete-btn" fill="currentColor">
+                                                    <use xlink:href="icons.svg#icon-delete-item"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>ESP 32</td>
+                                        <td>1</td>
+                                        <td>
+                                            <button class="btn delete-btn" title="Delete Item">
+                                                <svg class="icon-delete-btn" fill="currentColor">
+                                                    <use xlink:href="icons.svg#icon-delete-item"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Breadboard</td>
+                                        <td>1</td>
+                                        <td>
+                                            <button class="btn delete-btn" title="Delete Item">
+                                                <svg class="icon-delete-btn" fill="currentColor">
+                                                    <use xlink:href="icons.svg#icon-delete-item"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Flame Sensor</td>
+                                        <td>1</td>
+                                        <td>
+                                            <button class="btn delete-btn" title="Delete Item">
+                                                <svg class="icon-delete-btn" fill="currentColor">
+                                                    <use xlink:href="icons.svg#icon-delete-item"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>IR Sensor</td>
+                                        <td>1</td>
+                                        <td>
+                                            <button class="btn delete-btn" title="Delete Item">
+                                                <svg class="icon-delete-btn" fill="currentColor">
+                                                    <use xlink:href="icons.svg#icon-delete-item"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>74LS08</td>
+                                        <td>1</td>
+                                        <td>
+                                            <button class="btn delete-btn" title="Delete Item">
+                                                <svg class="icon-delete-btn" fill="currentColor">
+                                                    <use xlink:href="icons.svg#icon-delete-item"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Step 2: Request Form -->
+                <div class="step" id="step-2">
+                    <form>
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="idInput" class="form-label">ID</label>
+                                <input type="text" class="form-control" id="idInput" placeholder="#0000" disabled />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="returnDateInput" class="form-label">Return Date</label>
+                                <input type="date" class="form-control" id="returnDateInput" />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="courseDropdown" class="form-label">Course</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="courseDropdown"
+                                placeholder="Search for a course"
+                                autocomplete="off"
+                            />
+                            <ul class="dropdown-menu w-100 position-absolute" id="courseOptions">
+                                <li><button class="dropdown-item" type="button">NCP3106: Software Design Laboratory</button></li>
+                                <li><button class="dropdown-item" type="button">NCP3102: Embedded Systems Laboratory</button></li>
+                                <li><button class="dropdown-item" type="button">NCP3103: Computer Networks and Security Laboratory</button></li>
+                                <li><button class="dropdown-item" type="button">NCP 2102: Logic Circuits and Design Laboratory</button></li>
+                                <li><button class="dropdown-item" type="button">NEC 1206: Fundamentals of Electronic Circuits Laboratory</button></li>
+                                <li><button class="dropdown-item" type="button">NCP 1201: PC Troubleshooting and Maintenance</button></li>
+                                <li><button class="dropdown-item" type="button">NCP 2202: Computer Architecture and Organization Laboratory</button></li>
+                                <li><button class="dropdown-item" type="button">NCP 2205: Microprocessors Laboratory</button></li>
+                                <li><button class="dropdown-item" type="button">NCP 2207: Data and Digital Communications Laboratory</button></li>
+                                <li><button class="dropdown-item" type="button">Others</button></li>
+                            </ul>
+                        </div>
+                        <div class="mb-3">
+                            <label for="purposeInput" class="form-label">Purpose</label>
+                            <textarea
+                                class="form-control"
+                                id="purposeInput"
+                                rows="3"
+                                maxlength="120"
+                                oninput="updateCharacterCount()"
+                                placeholder="The purpose of the item request here..."
+                            ></textarea>
 
+                            <span id="charCount" class="char-counter">0/120</span>
+                        </div>
+                    </form>
+                   
+                </div>
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                    Cancel
-                </button>
-                <button type="button" class="btn btn-suc-custom">
-                    Next
-                </button>
+                <button type="button" class="btn btn-secondary" id="prevButton" onclick="changeStep(-1)">Back</button>
+                <button type="button" class="btn btn-secondary" id="cancelButton" onclick="resetModal()">Cancel</button>
+                <button type="button" class="btn btn-suc-custom" id="nextButton" onclick="changeStep(1)">Next</button>
+                <button type="button" class="btn btn-suc-custom" id="submitButton" onclick="submitForm()">Submit</button>
             </div>
         </div>
     </div>
 </div>
 
-
-
 <script>
+
+    // Process Req Step by Step
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const steps = document.querySelectorAll(".step");
+    const prevButton = document.getElementById("prevButton");
+    const cancelButton = document.getElementById("cancelButton");
+    const nextButton = document.getElementById("nextButton");
+    const submitButton = document.getElementById("submitButton");
+    const modalTitle = document.getElementById("reviewItemsModalLabel");
+
+    let currentStep = 0;
+
+    const stepTitles = ["Review Items", "Request Form"];
+
+    // Format the current date as Month Day, Year (e.g., "November 10, 2024")
+    function getCurrentDate() {
+        const currentDate = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return currentDate.toLocaleDateString('en-US', options);
+    }
+
+    // Update the UI based on the current step
+    function updateUI() {
+        steps.forEach((step, index) => {
+            step.style.display = index === currentStep ? "block" : "none";
+        });
+
+        modalTitle.textContent = stepTitles[currentStep];
+        prevButton.style.display = currentStep === 0 ? "none" : "inline-block";
+        cancelButton.style.display = currentStep === 0 ? "inline-block" : "none";
+        nextButton.style.display = currentStep === steps.length - 1 ? "none" : "inline-block";
+        submitButton.style.display = currentStep === steps.length - 1 ? "inline-block" : "none";
+
+        // Dynamically add the current date to the modal header in step 2
+       // Update the UI for Step 2
+        if (currentStep === 1) {
+            let dateSpan = document.getElementById("currentDate");
+            if (!dateSpan) {
+                // Create and insert the span element for the date if it doesn't exist
+                dateSpan = document.createElement('span');
+                dateSpan.id = "currentDate";
+                dateSpan.style.fontSize = "14px"; // Set font size to 14px
+                dateSpan.style.fontWeight = "400"; // Set font weight to 400
+                dateSpan.style.marginLeft = "auto"; // Push it to the far right
+                modalTitle.style.display = "flex"; // Ensure modalTitle uses flexbox
+                modalTitle.style.justifyContent = "space-between"; // Space out items
+                modalTitle.style.alignItems = "center"; // Vertically center items
+                modalTitle.style.width = "100%"; // Ensure full width for proper spacing
+                modalTitle.appendChild(dateSpan);
+            }
+            dateSpan.textContent = getCurrentDate();
+        }
+
+    }
+
+    window.changeStep = (direction) => {
+        currentStep += direction;
+        updateUI();
+    };
+
+        window.resetModal = () => {
+        currentStep = 0;
+        updateUI();
+        // Close the modal
+        $('#reviewItemsModal').modal('hide');
+    };
+
+    window.submitForm = () => {
+        alert("Form submitted!");
+        // Optionally close the modal
+        $('#reviewItemsModal').modal('hide');
+        resetModal();
+    };
+
+    // Initialize UI
+    updateUI();
+});
+
+
+
+    // Character Counter
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const purposeInput = document.getElementById("purposeInput");
+    const charCounter = document.getElementById("charCount");
+
+    // Function to update character count
+    window.updateCharacterCount = function() {
+        const currentLength = purposeInput.value.length;
+        const maxLength = purposeInput.getAttribute("maxlength");
+        charCounter.textContent = `${currentLength}/${maxLength}`;
+    };
+});
+
+
+    //Course Dropdown
+    document.addEventListener("DOMContentLoaded", () => {
+    const dropdownInput = document.getElementById("courseDropdown");
+    const dropdownMenu = document.getElementById("courseOptions");
+    const dropdownItems = Array.from(dropdownMenu.getElementsByClassName("dropdown-item"));
+
+    // Toggle dropdown visibility based on input focus
+    dropdownInput.addEventListener("focus", () => {
+        dropdownMenu.style.display = "block";
+    });
+
+    dropdownInput.addEventListener("blur", () => {
+        setTimeout(() => {
+            dropdownMenu.style.display = "none"; // Delay to allow item selection
+        }, 100);
+    });
+
+    // Filter dropdown options based on user input
+    dropdownInput.addEventListener("input", () => {
+        const query = dropdownInput.value.toLowerCase();
+
+        dropdownItems.forEach((item) => {
+            if (item.textContent.toLowerCase().includes(query)) {
+                item.style.display = ""; // Show matching items
+            } else {
+                item.style.display = "none"; // Hide non-matching items
+            }
+        });
+    });
+
+    // Set input value and hide dropdown on item click
+    dropdownMenu.addEventListener("click", (event) => {
+        if (event.target.classList.contains("dropdown-item")) {
+            dropdownInput.value = event.target.textContent;
+            dropdownMenu.style.display = "none"; // Hide dropdown after selection
+        }
+    });
+});
+
+
+
+
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
