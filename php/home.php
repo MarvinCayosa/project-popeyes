@@ -207,6 +207,7 @@
                     <!-- Example Card 8 -->
             </section>
 
+            <!-- Status Section: Quick Access -->
             <section class="status-section">
                 <div class="status-container">
 
@@ -397,6 +398,9 @@
                                         style="font-family: Poppins, sans-serif; font-size: 14px;"
                                         placeholder=""
                                         required
+                                        value="1"               
+                                        min="1"               
+                                        step="1"                
                                 />
                             </div>
                             <!-- Consumability Dropdown -->
@@ -425,23 +429,22 @@
                             <div class="input-custom">
                                 <label for="itemDescription" class="form-label">Item Description</label>
                                 <div class="textarea-wrapper">
-                        <textarea
-                                class="form-control input-description"
-                                id="itemDescription"
-                                name="itemDescription"
-                                rows="2"
-                                maxlength="120"
-                                oninput="updateCharacterCount()"
-                                placeholder="Enter a brief description of the item."
-                                style="font-family: Poppins, sans-serif; font-size: 14px;"
-                                required
-                        ></textarea>
+                                    <textarea
+                                        class="form-control input-description"
+                                        id="itemDescription"
+                                        rows="2"
+                                        maxlength="120"
+                                        oninput="updateCharacterCount()"
+                                        placeholder="Enter a brief description of the item."
+                                        style="font-family: Poppins, sans-serif; font-size: 14px;"
+                                    >
+                                    </textarea>
                                     <span id="charCount" class="char-counter">0/120</span>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
-                </form>
 
                 <div class="image-preview-container">
                     <!-- Image Preview -->
@@ -503,7 +506,7 @@
                 <div class="modal-footer">
                     <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn-cancel"
                         data-bs-dismiss="modal"
                     >
                         Cancel
@@ -619,7 +622,9 @@
                                     class="form-control input-quantity"
                                     id="totalQuantity"
                                     style="font-family: Poppins, sans-serif; font-size: 14px;"
-                                    placeholder="75"
+                                    placeholder="75"              
+                                    min="1"               
+                                    step="1"
                                 />
                             </div>
 
@@ -641,22 +646,21 @@
                     </div>
 
                    <!-- Third row: Edit Description -->
-                    <div class="form-row">
+                   <div class="form-row">
                         <div class="input-group">
                             <div class="input-custom">
-                                <label for="itemDescription" class="form-label">Item Description</label>
+                                <label for="editDescription" class="form-label">Item Description</label>
                                 <div class="textarea-wrapper">
-                                    <textarea
-                                        class="form-control input-description"
-                                        id="itemDescription"
-                                        rows="2"
-                                        maxlength="120"
-                                        oninput="updateCharacterCount()"
-                                        placeholder="Enter a brief description of the item."
-                                        style="font-family: Poppins, sans-serif; font-size: 14px;"
-                                        >
-                                    </textarea>
-                                    <span id="charCount" class="char-counter">0/120</span>
+                                <textarea
+                                    class="form-control edit-description"
+                                    id="editDescription"
+                                    rows="2"
+                                    maxlength="120"
+                                    oninput="updateEditCharacterCount()"
+                                    placeholder="Enter a brief description of the item."
+                                    style="font-family: Poppins, sans-serif; font-size: 14px;"
+                                ></textarea>
+                                    <span id="charCountEdit" class="char-counter">0/120</span>
                                 </div>
                             </div>
                             
@@ -710,7 +714,7 @@
                 <div class="modal-footer">
                     <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn-cancel"
                         data-bs-dismiss="modal"
                     >
                         Cancel
@@ -756,11 +760,17 @@
       charCount.textContent = `${textArea.value.length}/120`;
     }
 
+    function updateEditCharacterCount() {
+      const textArea = document.getElementById('editDescription');
+      const charCount = document.getElementById('charCountEdit');
+      charCount.textContent = `${textArea.value.length}/120`;
+    }
+
     // Run the function initially to check the window size
     toggleSearchInput();
     toggleStatusSection();
     updateCharacterCount();
-
+    updateEditCharacterCount();
 
     // Add event listener to adjust on window resize
     window.addEventListener("resize", toggleStatusSection);
