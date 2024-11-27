@@ -6,14 +6,6 @@
   --dark-mode: #1a1a1a;
 }
 
-hr {
-  color: #fdfdfd;
-  transition: all 0.3s ease-out;
-}
-
-.sidebar:hover hr {
-  width: 220%;
-}
 
 .user_dropdown {
   position: relative;
@@ -60,27 +52,7 @@ hr {
   z-index: 0;
 }
 
-/* Nav Bar */
 
-.user_profile .icon_name {
-  font-size: 12px;
-  width: fit-content;
-  white-space: nowrap;
-}
-
-.user_profile .identifier {
-  margin-top: 18px;
-  margin-left: 141px;
-  justify-content: start;
-  font-weight: 400;
-  font-size: 10px;
-  font-style: italic;
-  color: rgb(238, 238, 238);
-}
-
-.options .icon_name {
-  margin-top: 9px;
-}
 
 .navbar-main {
   margin: 0 40px 0 30px; /* Top: 0, Right: 40px, Bottom: 0, Left: 40px */
