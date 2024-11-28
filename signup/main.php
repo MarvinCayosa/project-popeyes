@@ -56,39 +56,47 @@
     }
   }
 
-
   function validateImage($file, $target_dir) {
     $uploadOk = 1;
-    $target_file = $target_dir . basename($file["name"]);
-    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-
-    // Check if file is an image
-    $check = getimagesize($file["tmp_name"]);
-    if ($check === false) {
-      return "File is not an image.";
-    }
-
-    // Check if file already exists
-    //Append the current date and time to the image upload to make its name unique
     $timestamp = date("Y-m-d_H-i-s");
-    $imageFileName = $timestamp . "_" . basename($_FILES["profilePicture"]["name"]);
-    $target_file = $target_dir . $imageFileName;
+    $imageFileName = "";
+    $target_file = "";
 
-    if (file_exists($target_file)) {
-      return "Sorry, file already exists.";
+    // Check if a file is uploaded
+    if ($file["size"] > 0) {
+        $imageFileType = strtolower(pathinfo($file["name"], PATHINFO_EXTENSION));
+        $imageFileName = $timestamp . "_" . basename($file["name"]);
+        $target_file = $target_dir . $imageFileName;
+
+        // Check if file is an image
+        $check = getimagesize($file["tmp_name"]);
+        if ($check === false) {
+            return "File is not an image.";
+        }
+
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            return "Sorry, file already exists.";
+        }
+
+        // Check file size (limit to 20MB)
+        if ($file["size"] > 20000000) {
+            return "Sorry, your file is too large.";
+        }
+
+        // Allow certain file formats
+        if (!in_array($imageFileType, ['jpg', 'jpeg', 'png'])) {
+            return "Sorry, only JPG, JPEG & PNG files are allowed.";
+        }
+    } else {
+        // No file uploaded, proceed without validating the file
+        return true;
     }
 
-    // Check file size (limit to 20MB)
-    if ($file["size"] > 20000000) {
-      return "Sorry, your file is too large.";
-    }
-
-    // Allow certain file formats
-    if (!in_array($imageFileType, ['jpg', 'jpeg', 'png'])) {
-      return "Sorry, only JPG, JPEG & PNG files are allowed.";
-    }
+    // If all validations pass, return true
     return true;
-  }
+}
+
 
   function registerAccount($conn, $student_number, $full_name, $email, $password, $target_file) {
     $role = "student";
