@@ -31,6 +31,7 @@
 <?php include 'config.php'; ?>
 
 
+
 <div class="frame_1">
     <div class="d-flex">
         <?php include 'faculty_sidebar.php'; ?>
@@ -398,9 +399,9 @@
                                         style="font-family: Poppins, sans-serif; font-size: 14px;"
                                         placeholder=""
                                         required
-                                        value="1"               
-                                        min="1"               
-                                        step="1"                
+                                        value="1"
+                                        min="1"
+                                        step="1"
                                 />
                             </div>
                             <!-- Consumability Dropdown -->
@@ -432,6 +433,7 @@
                                     <textarea
                                         class="form-control input-description"
                                         id="itemDescription"
+                                        name="itemDescription"
                                         rows="2"
                                         maxlength="120"
                                         oninput="updateCharacterCount()"
@@ -442,7 +444,7 @@
                                     <span id="charCount" class="char-counter">0/120</span>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
 
@@ -576,11 +578,11 @@
                         <div class="input-group">
                             <!-- ID Input -->
                             <div class="input-custom-1">
-                                <label for="itemId" class="form-label">ID</label>
+                                <label for="item_Id" class="form-label">ID</label>
                                 <input
                                     type="text"
                                     class="form-control input-id"
-                                    id="itemId"
+                                    id="item_Id"
                                     style="font-family: Poppins, sans-serif; font-size: 14px;"
                                     placeholder="0001"
                                     disabled
@@ -588,11 +590,11 @@
                             </div>
                             <!-- Item Name Input -->
                             <div class="input-custom-1">
-                                <label for="itemName" class="form-label">Item Name</label>
+                                <label for="item_name" class="form-label">Item Name</label>
                                 <input
                                     type="text"
                                     class="form-control input-item-name"
-                                    id="itemName"
+                                    id="item_Name"
                                     style="font-family: Poppins, sans-serif; font-size: 14px;"
                                     placeholder="Arduino Uno R3"
                                 />
@@ -605,35 +607,35 @@
                         <div class="input-group">
                             <!-- Date Added Input -->
                             <div class="input-custom">
-                                <label for="dateAdded" class="form-label">Date Added</label>
+                                <label for="date_added" class="form-label">Date Added</label>
                                 <input
                                     type="date"
                                     class="form-control input-date"
-                                    id="dateAdded"
+                                    id="date_added"
                                     style="font-family: Poppins, sans-serif; font-size: 14px;"
                                     disabled
                                 />
                             </div>
                             <!-- Total Quantity Input -->
                             <div class="input-custom">
-                                <label for="totalQuantity" class="form-label">Quantity</label>
+                                <label for="total_quantity" class="form-label">Quantity</label>
                                 <input
                                     type="number"
                                     class="form-control input-quantity"
-                                    id="totalQuantity"
+                                    id="total_quantity"
                                     style="font-family: Poppins, sans-serif; font-size: 14px;"
-                                    placeholder="75"              
-                                    min="1"               
+                                    placeholder="75"
+                                    min="1"
                                     step="1"
                                 />
                             </div>
 
                             <div class="input-custom">
-                                <label for="propertyType" class="form-label">Property</label>
+                                <label for="property_type" class="form-label">Property</label>
                                 <div class="dropdown-wrapper">
-                                    <select 
-                                    class="form-control input-property dropdown-toggle" 
-                                    id="propertyType" 
+                                    <select
+                                    class="form-control input-property dropdown-toggle"
+                                    id="property_type"
                                     >
                                         <option value="" disabled selected style="display: none; font-family: 'Poppins', sans-serif;">Select a Property</option>
                                         <option value="consumable" style="font-family: 'Poppins', sans-serif; ">Consumable</option>
@@ -649,11 +651,11 @@
                    <div class="form-row">
                         <div class="input-group">
                             <div class="input-custom">
-                                <label for="editDescription" class="form-label">Item Description</label>
+                                <label for="edit_description" class="form-label">Item Description</label>
                                 <div class="textarea-wrapper">
                                 <textarea
                                     class="form-control edit-description"
-                                    id="editDescription"
+                                    id="edit_description"
                                     rows="2"
                                     maxlength="120"
                                     oninput="updateEditCharacterCount()"
@@ -663,7 +665,7 @@
                                     <span id="charCountEdit" class="char-counter">0/120</span>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
 
@@ -733,6 +735,27 @@
     </div>
 </div>
 
+<script>
+    function populateModal(button) {
+        // Get data attributes from the button
+        const itemId = button.getAttribute('data-item-id');
+        const itemName = button.getAttribute('data-item-name');
+        const itemQuantity = button.getAttribute('data-item-quantity')
+        const itemDateAdded = button.getAttribute('data-item-date-added')
+        const itemDescription = button.getAttribute('data-item-description')
+        const itemConsumability = button.getAttribute('data-item-consumability')
+        // add lines here
+
+        // Populate the modal fields with the data
+        document.getElementById('item_Id').value = itemId;  // Set ID field (disabled)
+        document.getElementById('item_Name').value = itemName;  // Set item name
+        document.getElementById('total_quantity').value = itemQuantity;  // Set total quantity
+        document.getElementById('date_added').value = itemDateAdded;  // Set date added
+        document.getElementById('property_type').value = itemConsumability;  // Set consumability
+        document.getElementById('edit_description').value = itemDescription;  // Set description
+    }
+
+</script>
 <script>
     // Status Section Hidden Feature
     function toggleStatusSection() {
@@ -823,6 +846,8 @@
 
 
 </script>
+
+
 
 <script>
     document.getElementById("addItemForm").addEventListener("submit", function(e) {

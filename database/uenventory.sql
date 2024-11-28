@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 26, 2024 at 08:03 AM
+-- Generation Time: Nov 26, 2024 at 09:24 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -40,6 +40,32 @@ CREATE TABLE `faculty` (
 
 INSERT INTO `faculty` (`id`, `name`, `email`, `password`) VALUES
 (2147483647, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `inbox`
+--
+
+CREATE TABLE `inbox` (
+  `student_id` bigint(11) NOT NULL,
+  `student_name` varchar(64) NOT NULL,
+  `student_status` mediumtext NOT NULL,
+  `request_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `inbox`
+--
+
+INSERT INTO `inbox` (`student_id`, `student_name`, `student_status`, `request_date`) VALUES
+(20190126556, 'Clarizza M. Reyes', 'Approved', '2002-05-30'),
+(20202020201, 'Errol John Antonio', 'Approved', '2022-12-11'),
+(20202020202, 'Errol John Antonio', 'Rejected', '2022-12-11'),
+(20202020203, 'Errol John Antonio', 'Pending', '2022-12-11'),
+(20220125555, 'Sean Vincent Vien Viñas', 'Rejected', '2022-12-11'),
+(20220126555, 'Sean Vincent Vien Viñas', 'Approved', '2022-12-11'),
+(20220126556, 'Sean Vincent Vien Viñas', 'Pending', '2022-12-11');
 
 -- --------------------------------------------------------
 
@@ -101,6 +127,12 @@ INSERT INTO `students` (`id`, `name`, `email`, `password`) VALUES
 --
 ALTER TABLE `faculty`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `inbox`
+--
+ALTER TABLE `inbox`
+  ADD PRIMARY KEY (`student_id`);
 
 --
 -- Indexes for table `items`

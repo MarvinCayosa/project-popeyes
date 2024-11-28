@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Minor Changes">
-      <change afterPath="$PROJECT_DIR$/php/date.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/delete_item.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Adjusted Backend to accommodate Frontend.">
+      <change afterPath="$PROJECT_DIR$/php/edit" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/edit_items.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/fetch_item_data.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/pt2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/uenventory.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/uenventory.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/add_items.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/add_items.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/fetch_items.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/fetch_items.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/fetch_items_student.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/fetch_items_student.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/read.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +152,8 @@
       <workItem from="1732364139908" duration="4024000" />
       <workItem from="1732420525515" duration="245000" />
       <workItem from="1732425325310" duration="2313000" />
-      <workItem from="1732597765302" duration="6377000" />
+      <workItem from="1732597765302" duration="6977000" />
+      <workItem from="1732758377651" duration="9539000" />
     </task>
     <task id="LOCAL-00001" summary="Added Log In conditions, only faculty can access faculty website, same goes to students,&#10;&#10;Included &quot;read.php&quot; for verifying credentials.">
       <option name="closed" value="true" />
@@ -248,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732420588931</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Adjusted Backend to accommodate Frontend.">
+      <option name="closed" value="true" />
+      <created>1732604740226</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732604740226</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +288,7 @@
     <MESSAGE value="Adjustment of Scaling" />
     <MESSAGE value="Refactored sign_up.php" />
     <MESSAGE value="Minor Changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor Changes" />
+    <MESSAGE value="Adjusted Backend to accommodate Frontend." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted Backend to accommodate Frontend." />
   </component>
 </project>

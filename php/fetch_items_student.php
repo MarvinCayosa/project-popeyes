@@ -31,9 +31,8 @@ if ($result->num_rows > 0) {
                             <button
                                 class="btn card-menu-btn"
                                 type="button"
-                                data-bs-toggle="modal"
+                                data-bs-toggle="modal tooltip"
                                 data-bs-target="#addToListModal"
-                                data-bs-toggle="tooltip" 
                                 data-bs-title="Add to list"
                             >
                                 <svg
