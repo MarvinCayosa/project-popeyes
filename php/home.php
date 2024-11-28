@@ -756,10 +756,6 @@
         const itemDescription = document.getElementById('edit_description').value;
 
         // Validate inputs (simple validation)
-        if (!itemName || !totalQuantity || !propertyType || !itemDescription) {
-            alert('Please fill out all fields!');
-            return;
-        }
 
         // Create a FormData object (this mimics a regular form submission)
         const formData = new FormData();
