@@ -39,7 +39,6 @@ if ($result->num_rows > 0) {
                                 data-item-date-added = "<?php echo $row['date_added']; ?>"
                                 data-item-description = "<?php echo $row['item_description']; ?>"
                                 data-item-consumability ="<?php echo $row['consumability']; ?>"
-
                                 onclick="populateModal(this)"
                         >
                             <svg

@@ -5,7 +5,7 @@ include 'config.php';  // Database connection
 // Check if the 'id' parameter is passed
 if (isset($_GET['itemId'])) {
     $itemId = $_GET['itemId'];
-    echo "<script>console.log('Item ID: ', $itemId)</script>";
+
 
     // Fetch item data based on item_id
     $query = "SELECT * FROM items WHERE item_id = ?";

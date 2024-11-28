@@ -564,7 +564,15 @@
                     </svg>
                 </h2>
 
-                <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
+                <button
+                        id ="delete-btn"
+                        class="btn delete-btn"
+                        title="Delete Item"
+                        aria-label="Delete Item"
+                        aria-expanded="false"
+                        data-item-id="delete-item-id"
+
+                >
                     <svg class="icon-delete-btn" fill="currentColor">
                         <use xlink:href="icons.svg#icon-delete-item"></use>
                     </svg>
@@ -734,6 +742,38 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.getElementById('delete-btn').addEventListener('click', function () {
+        // Get the item ID from the input field
+        const itemId = document.getElementById('item_Id').value;
+
+        if (confirm('Are you sure you want to delete this item?')) {
+            // Send the delete request
+            fetch(`delete_item.php?itemId=${itemId}`, {
+                method: 'GET',
+            })
+                .then(response => response.text())
+                .then(data => {
+                    console.log(data); // Debug response
+
+                    if (data.includes('success')) {
+                        alert('Item deleted successfully!');
+                        // Close modal and optionally update UI
+                        location.reload(); // Refresh or dynamically update UI
+                    } else {
+                        alert('Failed to delete the item.');
+                    }
+                })
+                .catch(error => {
+                    alert('An error occurred while deleting the item.');
+                    console.error('Error:', error);
+                });
+        }
+    });
+
+</script>
+
 
 <script>
     function populateModal(button) {
