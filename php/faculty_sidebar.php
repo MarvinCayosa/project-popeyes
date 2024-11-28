@@ -54,7 +54,8 @@ $current_page = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
             </a>
             <span
                 class="position-absolute translate-middle badge rounded-pill bg-danger"
-            >10</span>
+                id="inbox_num"
+            ></span>
             <span class="icon_name">Inbox</span>
         </li>
         <li class="nav-item nav-link d-flex justify-content-center icon-container <?= $current_page == 'records.php' ? 'active' : '' ?>">
@@ -100,3 +101,25 @@ $current_page = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
         </svg>
     </a>
 </div>
+
+<script>
+    // Function to fetch the message count from the server
+    function updateMessageCount() {
+        fetch('inbox_count.php') // The PHP script we just created
+            .then(response => response.text()) // Parse the response as text
+            .then(count => {
+                // Get the element for the badge
+                const messageBadge = document.getElementById('inbox_num');
+                // Set the count as the text content (ensure it's a number or string without additional tags)
+                messageBadge.textContent = count.trim(); // Use .trim() to remove any unwanted whitespace or extra characters
+            })
+            .catch(error => {
+                console.error('Error fetching message count:', error);
+            });
+    }
+
+    // Call the function to update the message count on page load
+    window.onload = updateMessageCount;
+
+
+</script>

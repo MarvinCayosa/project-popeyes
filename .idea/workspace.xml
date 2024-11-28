@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Able to update items, though no arithmetic and total/available stock checking">
-      <change beforePath="$PROJECT_DIR$/php/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/home.php" afterDir="false" />
+    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Minor adjustments on scripts">
+      <change afterPath="$PROJECT_DIR$/php/inbox_count.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/faculty_sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/faculty_sidebar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +148,7 @@
       <workItem from="1732425325310" duration="2313000" />
       <workItem from="1732597765302" duration="6977000" />
       <workItem from="1732758377651" duration="9993000" />
-      <workItem from="1732802600318" duration="6284000" />
+      <workItem from="1732802600318" duration="7829000" />
     </task>
     <task id="LOCAL-00001" summary="Added Log In conditions, only faculty can access faculty website, same goes to students,&#10;&#10;Included &quot;read.php&quot; for verifying credentials.">
       <option name="closed" value="true" />
@@ -275,7 +278,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732808871805</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Minor adjustments on scripts">
+      <option name="closed" value="true" />
+      <created>1732809018277</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732809018277</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Minor adjustments on scripts">
+      <option name="closed" value="true" />
+      <created>1732809033265</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732809033265</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,6 +327,7 @@
     <MESSAGE value="able to display data to edit modal, will attempt to update it later. WALANG GAGALAW KASI DI KO KABISDO" />
     <MESSAGE value="Able to delete an item and refreshes the page automatically, using JS" />
     <MESSAGE value="Able to update items, though no arithmetic and total/available stock checking" />
-    <option name="LAST_COMMIT_MESSAGE" value="Able to update items, though no arithmetic and total/available stock checking" />
+    <MESSAGE value="Minor adjustments on scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor adjustments on scripts" />
   </component>
 </project>
