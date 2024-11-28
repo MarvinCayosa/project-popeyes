@@ -18,6 +18,7 @@ if (isset($_GET['itemId'])) {
         $item = $result->fetch_assoc();
         // Return the item data as JSON
         echo json_encode($item);
+        header("location: home.php");
     } else {
         // If no item is found, return an error message
         echo json_encode(['error' => 'Item not found']);

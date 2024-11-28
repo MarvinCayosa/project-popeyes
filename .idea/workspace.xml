@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="able to display data to edit modal, will attempt to update it later. WALANG GAGALAW KASI DI KO KABISDO">
+    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Able to delete an item and refreshes the page automatically, using JS">
+      <change afterPath="$PROJECT_DIR$/php/update_item.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/delete_item.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/delete_item.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/edit_items.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/fetch_item_data.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/fetch_item_data.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/fetch_items.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/fetch_items.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/home.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +147,7 @@
       <workItem from="1732425325310" duration="2313000" />
       <workItem from="1732597765302" duration="6977000" />
       <workItem from="1732758377651" duration="9993000" />
-      <workItem from="1732802600318" duration="2949000" />
+      <workItem from="1732802600318" duration="5911000" />
     </task>
     <task id="LOCAL-00001" summary="Added Log In conditions, only faculty can access faculty website, same goes to students,&#10;&#10;Included &quot;read.php&quot; for verifying credentials.">
       <option name="closed" value="true" />
@@ -264,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732768050170</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Able to delete an item and refreshes the page automatically, using JS">
+      <option name="closed" value="true" />
+      <created>1732805754717</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732805754717</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +300,7 @@
     <MESSAGE value="Minor Changes" />
     <MESSAGE value="Adjusted Backend to accommodate Frontend." />
     <MESSAGE value="able to display data to edit modal, will attempt to update it later. WALANG GAGALAW KASI DI KO KABISDO" />
-    <option name="LAST_COMMIT_MESSAGE" value="able to display data to edit modal, will attempt to update it later. WALANG GAGALAW KASI DI KO KABISDO" />
+    <MESSAGE value="Able to delete an item and refreshes the page automatically, using JS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Able to delete an item and refreshes the page automatically, using JS" />
   </component>
 </project>

@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
                                 data-bs-target="#editModal"
                                 data-item-id="<?php echo $row['item_id']; ?>"
                                 data-item-name ="<?php echo $row['item_name']; ?>"
-                                data-item-quantity = "<?php echo $row['available_quantity']; ?>"
+                                data-item-quantity = "<?php echo $row['total_quantity']; ?>"
                                 data-item-date-added = "<?php echo $row['date_added']; ?>"
                                 data-item-description = "<?php echo $row['item_description']; ?>"
                                 data-item-consumability ="<?php echo $row['consumability']; ?>"

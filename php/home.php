@@ -731,9 +731,10 @@
                     </button>
                     <button
                         type="button"
+                        id="save-btn"
                         class="btn-save-changes"
                         data-bs-dismiss="modal"
-                        onclick="showTemporaryAlert('Changes saved!', 5000)"
+                        onclick="saveChanges()"
                     >
                         Save changes
                     </button>
@@ -742,6 +743,60 @@
         </div>
     </div>
 </div>
+
+<script>
+    function saveChanges() {
+        // Get the item_id from the modal (assuming item_id is stored in a data attribute)
+        const itemId = document.getElementById('item_Id').value;
+
+        // Get the values from the input fields in the modal
+        const itemName = document.getElementById('item_Name').value;
+        const totalQuantity = document.getElementById('total_quantity').value;
+        const propertyType = document.getElementById('property_type').value;
+        const itemDescription = document.getElementById('edit_description').value;
+
+        // Validate inputs (simple validation)
+        if (!itemName || !totalQuantity || !propertyType || !itemDescription) {
+            alert('Please fill out all fields!');
+            return;
+        }
+
+        // Create a FormData object (this mimics a regular form submission)
+        const formData = new FormData();
+        formData.append('item_id', itemId);
+        formData.append('item_name', itemName);
+        formData.append('total_quantity', totalQuantity);
+        formData.append('property_type', propertyType);
+        formData.append('item_description', itemDescription);
+
+        // Send the data to the server using AJAX (with Fetch API)
+        fetch('update_item.php', {
+            method: 'POST',
+            body: formData // Send the form data
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Changes saved successfully!');
+                    showTemporaryAlert('Changes saved!', 5000)
+                    location.reload();
+                    // Optionally, you can close the modal here if it's a success
+                    $('#editModal').modal('hide');
+                } else {
+                    location.reload();
+                }
+            })
+            .catch(error => {
+                location.reload();
+            });
+    }
+
+    // Attach the saveChanges function to the "Save changes" button
+    document.querySelector('.btn-save-changes').addEventListener('click', saveChanges);
+
+
+
+</script>
 
 <script>
     document.getElementById('delete-btn').addEventListener('click', function () {
@@ -792,7 +847,7 @@
         document.getElementById('total_quantity').value = itemQuantity;  // Set total quantity
         document.getElementById('date_added').value = itemDateAdded;  // Set date added
         document.getElementById('property_type').value = itemConsumability;  // Set consumability
-        document.getElementById('edit_description').value = itemDescription;  // Set description
+        document.getElementById('edit_description').value = itemDescription;
     }
 
 </script>
