@@ -75,8 +75,15 @@ function validateStep2() {
     
     // Check if the email matches the UE email pattern
     const emailPattern = /^[a-z0-9._%+-]+@ue\.edu\.ph$/i; // Case-insensitive regex
+    
+    if (email === "") {
+        // alert("Please enter your name."); // Show alert if input is empty
+        return false;
+    }
+
+    
     if (!emailPattern.test(email)) {
-        alert("Please enter a valid UE email ending with @ue.edu.ph.");
+        // alert("Please enter a valid UE email ending with @ue.edu.ph.");
         return false;
     }
 
