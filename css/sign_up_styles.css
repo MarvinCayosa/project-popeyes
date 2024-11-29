@@ -280,7 +280,7 @@ button[type="button"]:nth-of-type(2) { /* Next button */
 }
 
 button[type="submit"] {
-    background-color: #4CAF50; /* Green for finish */
+    background-color: #4285F4;; /* Green for finish */
     color: white;
     border: none;
     cursor: pointer;

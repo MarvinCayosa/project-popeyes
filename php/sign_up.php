@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,27 +32,38 @@
                     <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required> -->
 
                     <label for="fullName">Full Name</label>
-                    <input type="text" placeholder="Enter your full name" name="fullName" required>
-
-                    
+                    <input type="text" id="fullName"
+                        placeholder="Enter your name"
+                        title="Please enter your name."
+                        required
+                    >
+                                    
                     <div class="button-group">
                         <button style="display: none;" type="button" onclick="prevStep(1)">Back</button>
-                        <button type="button" onclick="nextStep(2)">Next</button>
+                        <button onclick="validateName1()">Next</button>
                     </div>
                 </div>
 
 
                 <div class="step" id="step2">
                     <label for="email">UE Email</label>
-                    <input type="email" id="email" name="email" 
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
                         placeholder="example@ue.edu.ph" 
                         required 
-                        pattern="^[a-zA-Z0-9._%+-]+@ue\.edu\.ph$" 
-                        title="Email must end with @ue.edu.ph"
+                        pattern="^[a-zA-Z0-9._%+-]+@ue\\.edu\\.ph$" 
+                        title="Email must end with @ue.edu.ph" 
+                        style="display: block;" 
                     >
+
                         
                     <label for="studentNumber">Student Number</label>
-                    <input type="text" id="studentNumber" name="studentNumber" 
+                    <input
+                        type="text"
+                        id="studentNumber"
+                        name="studentNumber" 
                         placeholder="Enter your student number" 
                         required
                         minlength="11" 
@@ -61,12 +72,13 @@
                         title="Student number must be exactly 11 digits"
                     >
 
-                    
+                        
                     <div class="button-group">
                         <button type="button" onclick="prevStep(1)">Back</button>
                         <button type="submit" onclick="validateStep2()">Next</button>
-                    </div>
                 </div>
+                </div>
+
                 <div class="step" id="step3">
                     <!-- Password Field -->
                     <label for="password">Password</label>
