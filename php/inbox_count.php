@@ -4,7 +4,7 @@ global $conn;
 include 'config.php';
 
 // Query to get the count of messages (adjust if filtering by unread messages)
-$query = "SELECT COUNT(*) AS inbox_count FROM inbox";
+$query = "SELECT COUNT(*) AS inbox_count FROM inbox WHERE student_status = 'Pending'";
 $result = $conn->query($query);
 
 if ($result) {
