@@ -38,7 +38,8 @@
 
                 <div class="signin-form-container" id="signin-form-container">
                     <form method="POST" action="php/read.php" id="signin-form">
-                        <input type="hidden" name="form_name" value="signin_form">
+                        <!-- <input type="hidden" name="form_name" value="signin_form"> -->
+                        <input type="hidden" name="form_name" value="signin_form_2">
                         <input type="hidden" name="user_type" id="user_type" value="faculty">
 
                         <div class="signIn-container-content">

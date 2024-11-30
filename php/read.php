@@ -51,6 +51,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $stmt->close();
     }
+
+    if ($form_name = "signin_form_2") {
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $table = "accounts"; 
+        $query = "SELECT * FROM $table WHERE email = ? AND password = ?";
+        
+        // Check the connection first
+        if (!$conn) {
+            die("Database connection failed: " . mysqli_connect_error());
+            echo "<script>console.log('Error: Signup failed, DB connection error.')</script>";
+        }
+
+        // Prepare the statement
+        $stmt = $conn->prepare($query);
+        if (!$stmt) {
+            die("Prepare failed: " . $conn->error);
+        }
+
+        $stmt->bind_param("ss", $email, $password);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows == 1) {
+
+            $user_data = $result->fetch_assoc();
+            $user_type = $user_data['role'];
+
+            
+            if ($user_type === 'faculty') {
+                header("Location: home.php");
+            }
+            else {
+                header("Location: stu_home.php");
+            }
+
+        } else {
+            // Failed login
+            header("Location: ../index.php");
+        }
+        exit();
+
+        $stmt->close();
+    }
 }
 
 $conn->close();
