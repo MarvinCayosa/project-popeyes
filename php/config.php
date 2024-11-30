@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = ""; // Default password is empty for XAMPP
-$dbname = "uenventory_local";
+$dbname = "uenventory";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
