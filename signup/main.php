@@ -48,8 +48,9 @@
       echo "<script>
         alert('Account successfully created!');
         // After alert is shown, redirect the user
-        window.location.href = '/';  // Redirect to the root
       </script>";
+
+      header("Location: ../php/stu_home.php");
 
       exit();
 
