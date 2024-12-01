@@ -27,6 +27,7 @@
     <script src="../js/options.js" defer></script>
     <script src="../js/view_profile_script.js" defer></script>
     <link rel="stylesheet" href="../css/student_sidebar.css" />
+    
     <script src="../js/stu_side_bar_script.js" defer></script>
 </head>
 <body>
