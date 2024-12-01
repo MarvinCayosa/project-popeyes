@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
     </head>
 
-    <bodys>
+    <body>
         <?php include 'php/config.php'; ?>
 
         <div class="page-background-container">

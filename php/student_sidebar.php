@@ -2,6 +2,7 @@
 $current_page = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 ?>
 
+<?php include 'fetch_profile.php'; ?>
 
 <div
     class="sidebar_custom sidebar d-flex flex-column flex-shrink-0 p-3 fixed-top"
@@ -15,8 +16,8 @@ $current_page = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
         data-bs-toggle="dropdown"
         aria-expanded="false"
     >
-        <span class="icon_name">Marvin Cayosa</span>
-        <span class="icon_name identifier">Student</span>
+        <span class="icon_name"><?php echo htmlspecialchars($user_name)?></span>
+        <span class="icon_name identifier"><?php echo htmlspecialchars($capitalized_role)?></span>
         <svg
             xmlns="http://www.w3.org/2000/svg"
             class="avatar bi bi-person-circle"
@@ -70,8 +71,8 @@ $current_page = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
             <button class="btn" id="toggleSidebar">
                 <svg class="icon" fill="currentColor">
                     <use
-                        xlink:href="icons.svg#icon-right"
-                        id="sidebarToggleIcon"
+                            xlink:href="icons.svg#icon-right"
+                            id="sidebarToggleIcon"
                     ></use>
                 </svg>
             </button>

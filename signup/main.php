@@ -1,5 +1,6 @@
-<?php   
-  include '../php/config.php';
+<?php
+global $conn;
+include '../php/config.php';
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
@@ -118,4 +119,3 @@
     // Close the prepared statement
     $stmt->close();
   }
-?>

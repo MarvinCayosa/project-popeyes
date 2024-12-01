@@ -774,23 +774,26 @@
             .then(data => {
                 if (data.success) {
                     alert('Changes saved successfully!');
-                    showTemporaryAlert('Changes saved!', 5000)
                     location.reload();
+                    showTemporaryAlert('Changes saved!', 5000)
                     // Optionally, you can close the modal here if it's a success
                     $('#editModal').modal('hide');
+                    showTemporaryAlert('Changes saved!', 5000)
                 } else {
                     location.reload();
+                    showTemporaryAlert('Changes saved!', 5000)
                 }
             })
             .catch(error => {
                 location.reload();
+                showTemporaryAlert('Changes saved!', 5000)
             });
     }
 
     // Attach the saveChanges function to the "Save changes" button
     document.querySelector('.btn-save-changes').addEventListener('click', saveChanges);
 
-
+    showTemporaryAlert('Changes saved!', 5000)
 
 </script>
 

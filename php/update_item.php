@@ -28,12 +28,7 @@ if (isset($_POST['item_id'])) {
 
     if ($result->num_rows > 0) {
         // Item exists, proceed to update
-        $updateQuery = "UPDATE items SET 
-                        item_name = ?, 
-                        total_quantity = ?, 
-                        consumability = ?, 
-                        item_description = ? 
-                        WHERE item_id = ?";
+        $updateQuery = "UPDATE items SET item_name = ?, total_quantity = ?, consumability = ?, item_description = ? WHERE item_id = ?";
         $updateStmt = $conn->prepare($updateQuery);
         $updateStmt->bind_param("sisss", $itemName, $totalQuantity, $propertyType, $itemDescription, $itemId);
 

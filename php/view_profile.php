@@ -33,7 +33,6 @@
 
     <?php include 'config.php';?>
 
-
     <div class="frame_1">
       <div class="d-flex">
             <?php include 'faculty_sidebar.php'; ?>
@@ -52,7 +51,7 @@
                         <div class="field">
                             <div class="input-box">
                                 <label class="label">Name</label>
-                                <span class="editable-content" contenteditable="false">Marvin Cayosa</span>
+                                <span class="editable-content" contenteditable="false"><?php echo htmlspecialchars($user_name)?></span>
                                 <img 
                                     src="https://img.icons8.com/ios-glyphs/30/ffffff/edit.png" 
                                     alt="Edit" 
@@ -64,7 +63,7 @@
                         <div class="field">
                             <div class="input-box">
                                 <label class="label">UE Gmail</label>
-                                <span class="editable-content" contenteditable="false">cayosa.marvin@ue.edu.ph</span>
+                                <span class="editable-content" contenteditable="false"><?php echo htmlspecialchars($user_email)?></span>
                                 <img 
                                     src="https://img.icons8.com/ios-glyphs/30/ffffff/edit.png" 
                                     alt="Edit" 
@@ -76,7 +75,7 @@
                         <div class="field">
                             <div class="input-box">
                                 <label class="label">Student Number</label>
-                                <span class="editable-content" contenteditable="false">20200114814</span>
+                                <span class="editable-content" contenteditable="false"><?php echo htmlspecialchars($user_id)?></span>
                                 <img 
                                     src="https://img.icons8.com/ios-glyphs/30/ffffff/edit.png" 
                                     alt="Edit" 
@@ -93,7 +92,7 @@
                                         type="password" 
                                         class="password-input" 
                                         id="passwordInput" 
-                                        value="marvincayosa1234" 
+                                        value="<?php echo htmlspecialchars($user_password)?>"
                                         readonly
                                     />
                                     <img 
@@ -120,7 +119,7 @@
                         <h2 class="header">Profile Picture</h2>
                         <div class="avatar-container" style="position: relative;">
                             <button id="profileImageButton" class="profile-image-button" data-bs-toggle="tooltip" title="Choose picture">
-                                <img src="../png/user.png" alt="User Image" class="circle-img" id="profileImage">
+                                <img src="<?php echo htmlspecialchars($user_picture)?>" alt="User Image" class="circle-img" id="profileImage">
                             </button>
 
                             <input type="file" id="uploadImage" accept="image/*" style="display: none;" onchange="previewImage(event)">
