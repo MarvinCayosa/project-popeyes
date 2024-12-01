@@ -221,37 +221,7 @@
 
                         <div class="request-student-container-list">
                             <!-- Request Entries -->
-                            <div class="student-container">
-                                <div class="student_pic"></div>
-                                <div class="vertical-layout">
-                                    <p class="student-name">Alliya Virtucio</p>
-                                    <p class="request-date">Nov. 19, 2024</p>
-                                </div>
-                            </div>
-
-                            <div class="student-container">
-                                <div class="student_pic"></div>
-                                <div class="vertical-layout">
-                                    <p class="student-name">Marvin Cayosa</p>
-                                    <p class="request-date">Nov. 21, 2024</p>
-                                </div>
-                            </div>
-
-                            <div class="student-container">
-                                <div class="student_pic"></div>
-                                <div class="vertical-layout">
-                                    <p class="student-name">Clarizza Reyes</p>
-                                    <p class="request-date">Nov. 30, 2024</p>
-                                </div>
-                            </div>
-
-                            <div class="student-container">
-                                <div class="student_pic"></div>
-                                <div class="vertical-layout">
-                                    <p class="student-name">Vincent Vinas</p>
-                                    <p class="request-date">Dec. 21, 2024</p>
-                                </div>
-                            </div>
+                            <?php include 'fetch_inbox_req.php'; ?>
 
                             <!-- See More Link -->
                             <div class="see-more-container">

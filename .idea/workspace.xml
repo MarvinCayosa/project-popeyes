@@ -4,22 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Modified inbox counter to only count pending status">
-      <change afterPath="$PROJECT_DIR$/php/fetch_profile.php" afterDir="false" />
+    <list default="true" id="5b250168-c3dc-46d2-a8c5-9949946e5e99" name="Changes" comment="Able to see who's logged in, and view that persons profile.">
+      <change afterPath="$PROJECT_DIR$/php/fetch_inbox_req.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/faculty_sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/faculty_sidebar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/uenventory.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/uenventory.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/stu_side_bar_script .js" beforeDir="false" afterPath="$PROJECT_DIR$/js/stu_side_bar_script .js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/faculty_sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/faculty_sidebar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/read.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/stu_view_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/stu_view_profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/student_sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/student_sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/update_item.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/update_item.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/view_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/view_profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup/main.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +150,7 @@
       <workItem from="1732802600318" duration="8207000" />
       <workItem from="1732853702141" duration="3183000" />
       <workItem from="1732971304572" duration="724000" />
-      <workItem from="1733027872885" duration="8956000" />
+      <workItem from="1733027872885" duration="10605000" />
     </task>
     <task id="LOCAL-00001" summary="Added Log In conditions, only faculty can access faculty website, same goes to students,&#10;&#10;Included &quot;read.php&quot; for verifying credentials.">
       <option name="closed" value="true" />
@@ -324,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732854592916</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Able to see who's logged in, and view that persons profile.">
+      <option name="closed" value="true" />
+      <created>1733036942389</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1733036942389</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,6 +356,7 @@
     <MESSAGE value="Minor adjustments on scripts" />
     <MESSAGE value="Successfully added inbox counter." />
     <MESSAGE value="Modified inbox counter to only count pending status" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified inbox counter to only count pending status" />
+    <MESSAGE value="Able to see who's logged in, and view that persons profile." />
+    <option name="LAST_COMMIT_MESSAGE" value="Able to see who's logged in, and view that persons profile." />
   </component>
 </project>
