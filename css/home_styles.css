@@ -216,15 +216,16 @@
   margin-top: -7px;
 }
 
+
 .add-btn {
   position: absolute;
-  bottom: 5%;
-  right: 18%;
+  bottom: 0;
+  right: 230px;
+  margin: 20px;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px; /* Space between SVG and text */
   width: 55px;
   height: 55px;
   border-radius: 20px;
@@ -233,18 +234,30 @@
   overflow: hidden; /* Hide text when not expanded */
   white-space: nowrap; /* Prevent text wrapping */
   cursor: pointer;
-  padding: 0; /* Remove button padding */
+  padding: 0;
+  background-color: #C00411; /* Background color */
+  border: none;
+}
+
+.add-icon {
+  margin-left: 5px;
+  width: 80%; /* Makes the SVG responsive */
+  height: 80%; /* Adjusts based on container size */
+  max-width: 90px;
+  max-height: 90px;
+  transition: none; /* Remove transition on icon */
 }
 
 .add-btn:hover {
-  width: 150px; /* Expanded width */
+  width: 135px; /* Expanded width */
   padding: 0; /* Add padding to fit text */
-  background-color: #C00411; /* Red background color */
+  background-color: #c00411; /* Red background color */
 }
 
 .add-btn span {
   display: none; /* Hide text by default */
   color: white;
+  margin-right: 15px;
   font-size: 16px;
   font-weight: bold;
 }
@@ -258,6 +271,11 @@
 .add-btn:not(:hover) span {
   transition: opacity 0.9s ease-out;
 }
+
+.add-btn-svg {
+  margin-left: 5px;
+  display: block; /* Ensure no inline spacing */
+} 
 
 
 .add-btn svg {

@@ -251,7 +251,7 @@ hr {
   margin-top: -7px;
 }
 
-.add-btn {
+.request-btn {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -260,7 +260,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px; /* Space between SVG and text */
+  gap: 1px; /* Space between SVG and text */
   width: 55px;
   height: 55px;
   border-radius: 20px;
@@ -269,33 +269,49 @@ hr {
   overflow: hidden; /* Hide text when not expanded */
   white-space: nowrap; /* Prevent text wrapping */
   cursor: pointer;
-  padding: 0; /* Remove button padding */
+  padding: 0;
+  background-color: #C00411; /* Background color */
+  border: none;
 }
 
-.add-btn:hover {
-  width: 150px; /* Expanded width */
+.request-icon {
+  width: 80%; /* Makes the SVG responsive */
+  height: 80%; /* Adjusts based on container size */
+  max-width: 70px;
+  max-height: 70px;
+  transition: none; /* Remove transition on icon */
+}
+
+.request-btn:hover {
+  width: 180px; /* Expanded width */
   padding: 0; /* Add padding to fit text */
   background-color: #c00411; /* Red background color */
 }
 
-.add-btn span {
+.request-btn span {
   display: none; /* Hide text by default */
   color: white;
+  margin-right: 10px;
   font-size: 16px;
   font-weight: bold;
 }
 
-.add-btn:hover span {
+.request-btn:hover span {
   display: inline; /* Show text on hover */
   opacity: 1; /* Ensure opacity is visible */
   transition: opacity 0.5s ease; /* Smooth text appearance */
 }
 
-.add-btn:not(:hover) span {
+.request-btn:not(:hover) span {
   transition: opacity 0.9s ease-out;
 }
 
-.add-btn svg {
+.request-btn-svg {
+  margin-left: -5px;
+  display: block; /* Ensure no inline spacing */
+} 
+
+.add-btn-svg {
   margin-left: -5px;
   display: block; /* Ensure no inline spacing */
 }
