@@ -2,31 +2,38 @@
 
 global $conn;
 include 'config.php';
-include 'fetch_items.php';
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+if (isset($_GET['itemId'])) {
+    $itemId = $_GET['itemId'];
 
-// Get the item_id from the POST request
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $item_id = $_POST['item_id'] ?? null;
+    // Check if the item exists
+    $query = "SELECT * FROM items WHERE item_id = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $itemId);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    if ($item_id) {
-        // Prepare the delete query
-        $stmt = $conn->prepare("DELETE FROM items WHERE item_id = ?");
-        $stmt->bind_param("i", $item_id);
+    if ($result->num_rows > 0) {
+        // Item exists, proceed to delete
+        $deleteQuery = "DELETE FROM items WHERE item_id = ?";
+        $deleteStmt = $conn->prepare($deleteQuery);
+        $deleteStmt->bind_param("i", $itemId);
 
-        if ($stmt->execute()) {
-            header('Location: home.php');
+        if ($deleteStmt->execute()) {
+            echo "success"; // Respond with success
         } else {
-            echo "Error: " . $stmt->error;
+            echo "error: Unable to delete item.";
         }
 
-        $stmt->close();
+        $deleteStmt->close();
     } else {
-        echo "No item ID provided.";
+        echo "error: Item not found.";
     }
+
+    $stmt->close();
+} else {
+    echo "error: No item ID provided.";
 }
 
 $conn->close();
+

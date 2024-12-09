@@ -15,6 +15,8 @@
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -24,11 +26,11 @@
     <link rel="stylesheet" href="../css/stu_home_styles.css" />
     <link rel="stylesheet" href="../css/scrollbar.css" />
     <link rel="stylesheet" href="../css/student_sidebar.css">
+    <script src="../js/stu_home_script.js" defer></script>
 </head>
 <body>
 
 <?php include 'config.php'; ?>
-
 
 <div class="frame_1">
     <div class="d-flex">
@@ -246,8 +248,7 @@
     </div>
 </div>
 
-
-<!-- Process Request -->
+<!-- Process Modal -->
 <div
     class="modal fade"
     id="reviewItemsModal"
@@ -256,287 +257,161 @@
     aria-labelledby="reviewItemsModalLabel"
     aria-hidden="true"
 >
-    <div
-        class="modal-dialog modal-dialog-centered modal-custom review-modal"
-        role="document"
-    >
+    <div class="modal-dialog modal-dialog-centered modal-custom review-modal" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title" id="reviewItemsModalLabel">
-                    Review Items
-                </h2>
+                <h2 class="modal-title" id="reviewItemsModalLabel">Review Items</h2>
+                
             </div>
 
             <div class="modal-body">
-                <div class="table-container">
-                    <div class="table-wrapper">
-                        <table class="table table-custom review">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Item Name</th>
-                                    <th scope="col">Quantity</th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody id="itemsTable">
-                                <tr>
-                                    <td>Arduino Uno R3</td>
-                                    <td>1</td>
-                                    <td>
-                                        <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
-                                            <svg class="icon-delete-btn" fill="currentColor">
-                                                <use xlink:href="icons.svg#icon-delete-item"></use>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>ESP 32</td>
-                                    <td>3</td>
-                                    <td>
-                                        <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
-                                            <svg class="icon-delete-btn" fill="currentColor">
-                                                <use xlink:href="icons.svg#icon-delete-item"></use>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Flame Sensor</td>
-                                    <td>5</td>
-                                    <td>
-                                        <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
-                                            <svg class="icon-delete-btn" fill="currentColor">
-                                                <use xlink:href="icons.svg#icon-delete-item"></use>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Arduino Uno R3</td>
-                                    <td>5</td>
-                                    <td>
-                                        <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
-                                            <svg class="icon-delete-btn" fill="currentColor">
-                                                <use xlink:href="icons.svg#icon-delete-item"></use>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Arduino Uno R3</td>
-                                    <td>5</td>
-                                    <td>
-                                        <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
-                                            <svg class="icon-delete-btn" fill="currentColor">
-                                                <use xlink:href="icons.svg#icon-delete-item"></use>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Arduino Uno R3</td>
-                                    <td>5</td>
-                                    <td>
-                                        <button class="btn delete-btn" title="Delete Item" aria-label="Delete Item" aria-expanded="false">
-                                            <svg class="icon-delete-btn" fill="currentColor">
-                                                <use xlink:href="icons.svg#icon-delete-item"></use>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <!-- More rows if necessary -->
-                            </tbody>
-                        </table>
+                <!-- Step 1: Review Items -->
+                <div class="step active" id="step-1">
+                    <div class="table-container">
+                        <div class="table-wrapper">
+                            <table class="table table-custom review">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Item Name</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="itemsTable">
+                                    <tr>
+                                        <td>Arduino Uno R3</td>
+                                        <td>1</td>
+                                        <td>
+                                            <button class="btn delete-btn" title="Delete Item">
+                                                <svg class="icon-delete-btn" fill="currentColor">
+                                                    <use xlink:href="icons.svg#icon-delete-item"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>ESP 32</td>
+                                        <td>1</td>
+                                        <td>
+                                            <button class="btn delete-btn" title="Delete Item">
+                                                <svg class="icon-delete-btn" fill="currentColor">
+                                                    <use xlink:href="icons.svg#icon-delete-item"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Breadboard</td>
+                                        <td>1</td>
+                                        <td>
+                                            <button class="btn delete-btn" title="Delete Item">
+                                                <svg class="icon-delete-btn" fill="currentColor">
+                                                    <use xlink:href="icons.svg#icon-delete-item"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Flame Sensor</td>
+                                        <td>1</td>
+                                        <td>
+                                            <button class="btn delete-btn" title="Delete Item">
+                                                <svg class="icon-delete-btn" fill="currentColor">
+                                                    <use xlink:href="icons.svg#icon-delete-item"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>IR Sensor</td>
+                                        <td>1</td>
+                                        <td>
+                                            <button class="btn delete-btn" title="Delete Item">
+                                                <svg class="icon-delete-btn" fill="currentColor">
+                                                    <use xlink:href="icons.svg#icon-delete-item"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>74LS08</td>
+                                        <td>1</td>
+                                        <td>
+                                            <button class="btn delete-btn" title="Delete Item">
+                                                <svg class="icon-delete-btn" fill="currentColor">
+                                                    <use xlink:href="icons.svg#icon-delete-item"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Step 2: Request Form -->
+                <div class="step" id="step-2">
+                    <form>
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="idInput" class="form-label">ID</label>
+                                <input type="text" class="form-control" id="idInput" placeholder="#0000" disabled />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="returnDateInput" class="form-label">Return Date</label>
+                                <input type="date" class="form-control" id="returnDateInput" />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="courseDropdown" class="form-label">Course</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="courseDropdown"
+                                placeholder="Search for a course"
+                                autocomplete="off"
+                            />
+                            <ul class="dropdown-menu w-100 position-absolute" id="courseOptions">
+                                <li><button class="dropdown-item" type="button">NCP3106: Software Design Laboratory</button></li>
+                                <li><button class="dropdown-item" type="button">NCP3102: Embedded Systems Laboratory</button></li>
+                                <li><button class="dropdown-item" type="button">NCP3103: Computer Networks and Security Laboratory</button></li>
+                                <li><button class="dropdown-item" type="button">NCP 2102: Logic Circuits and Design Laboratory</button></li>
+                                <li><button class="dropdown-item" type="button">NEC 1206: Fundamentals of Electronic Circuits Laboratory</button></li>
+                                <li><button class="dropdown-item" type="button">NCP 1201: PC Troubleshooting and Maintenance</button></li>
+                                <li><button class="dropdown-item" type="button">NCP 2202: Computer Architecture and Organization Laboratory</button></li>
+                                <li><button class="dropdown-item" type="button">NCP 2205: Microprocessors Laboratory</button></li>
+                                <li><button class="dropdown-item" type="button">NCP 2207: Data and Digital Communications Laboratory</button></li>
+                                <li><button class="dropdown-item" type="button">Others</button></li>
+                            </ul>
+                        </div>
+                        <div class="mb-3">
+                            <label for="purposeInput" class="form-label">Purpose</label>
+                            <textarea
+                                class="form-control"
+                                id="purposeInput"
+                                rows="3"
+                                maxlength="120"
+                                oninput="updateCharacterCount()"
+                                placeholder="The purpose of the item request here..."
+                            ></textarea>
 
+                            <span id="charCount" class="char-counter">0/120</span>
+                        </div>
+                    </form>
+                   
+                </div>
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                    Cancel
-                </button>
-                <button type="button" class="btn btn-suc-custom">
-                    Next
-                </button>
+                <button type="button" class="btn btn-secondary" id="prevButton" onclick="changeStep(-1)">Back</button>
+                <button type="button" class="btn btn-secondary" id="cancelButton" onclick="resetModal()">Cancel</button>
+                <button type="button" class="btn btn-suc-custom" id="nextButton" onclick="changeStep(1)">Next</button>
+                <button type="button" class="btn btn-suc-custom" id="submitButton" onclick="submitForm()">Submit</button>
             </div>
         </div>
     </div>
 </div>
-
-
-
-<script>
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-
-    const toggleButton = document.getElementById("toggleSidebar");
-    const sidebar = document.querySelector(".sidebar_custom");
-    const iconNames = document.querySelectorAll(".icon_name");
-    const toggleIcon = document.getElementById("sidebarToggleIcon"); // Get the icon element
-
-    toggleButton.addEventListener("click", () => {
-        sidebar.classList.toggle("expanded");
-
-        // Toggle icon names visibility
-        iconNames.forEach((name) => {
-            name.classList.toggle("visible"); // Toggle visibility
-        });
-
-        // Change the icon based on sidebar state
-        if (sidebar.classList.contains("expanded")) {
-            toggleIcon.setAttribute("xlink:href", "icons.svg#icon-left"); // Change to icon-left
-        } else {
-            toggleIcon.setAttribute("xlink:href", "icons.svg#icon-right"); // Change to icon-right
-        }
-    });
-
-    // Cards Column Layout
-
-    // Status Section Hidden Feature
-    function toggleStatusSection() {
-        const statusSection = document.querySelector(".status-section");
-
-        if (window.innerWidth < 1370) {
-            statusSection.style.display = "none"; // Hide the status section
-        } else {
-            statusSection.style.display = "flex"; // Show the status section
-        }
-    }
-
-    function toggleSearchInput() {
-      const searchInput = document.getElementById('searchInput');
-      if (window.innerWidth < 1080) {
-        searchInput.style.display = 'none';
-      } else {
-        searchInput.style.display = 'block';
-      }
-    }
-
-    function updateCharacterCount() {
-      const textArea = document.getElementById('itemDescription');
-      const charCount = document.getElementById('charCount');
-      charCount.textContent = `${textArea.value.length}/120`;
-    }
-
-    // Run the function initially to check the window size
-    toggleSearchInput();
-    toggleStatusSection();
-    updateCharacterCount();
-
-
-    // Add event listener to adjust on window resize
-    window.addEventListener("resize", toggleStatusSection);
-    window.addEventListener('resize', toggleSearchInput);
-
-    //Save Changes Button
-    function showTemporaryAlert(message, duration) {
-        // Set default duration to 5000ms (5 seconds)
-        const alertBox = document.createElement("div");
-        alertBox.textContent = message;
-        alertBox.style.position = "fixed";
-        alertBox.style.bottom = "35px";
-        alertBox.style.right = "25px";
-        alertBox.style.backgroundColor = "#f8d7da";
-        alertBox.style.color = "#721c24";
-        alertBox.style.padding = "10px";
-        alertBox.style.border = "1px solid #f5c6cb";
-        alertBox.style.borderRadius = "10px";
-        alertBox.style.zIndex = "1000";
-        document.body.appendChild(alertBox);
-
-        setTimeout(() => {
-            alertBox.remove();
-        }, duration);
-    }
-
-
-    document.querySelectorAll('.clear-filters-btn').forEach((button) => {
-    button.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevent dropdown from closing
-        // Select all inputs with class "form-check-input" within the dropdown menu
-        const allInputs = document.querySelectorAll('.dropdown-menu .form-check-input');
-        // Deselect all inputs (radio buttons and checkboxes)
-        allInputs.forEach((input) => {
-            input.checked = false;
-        });
-    });
-});
-
-        // For the global "Clear All Filters" button
-    document.getElementById('clearAllFilters').addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevent dropdown from closing
-        // Select all inputs with class "form-check-input"
-        const allInputs = document.querySelectorAll('.dropdown-menu .form-check-input');
-        // Deselect all inputs
-        allInputs.forEach((input) => {
-            input.checked = false;
-    });
-});
-
-
-
-</script>
-
-<script>
-    document.getElementById("addItemForm").addEventListener("submit", function(e) {
-        e.preventDefault();  // Prevent form from submitting the normal way
-
-        // Create a FormData object to send the form data
-        const formData = new FormData(this);
-
-        // Send the data using AJAX
-        fetch('add_items.php', {
-            method: 'POST',
-            body: formData
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    // Create new item element in the same format as the form
-                    const itemElement = document.createElement("div");
-                    itemElement.classList.add("form-row");
-
-                    // HTML structure for displaying the item
-                    itemElement.innerHTML = `
-                    <div class="input-group">
-                        <div class="input-custom-1">
-                            <label for="itemId" class="form-label">ID</label>
-                            <input
-                                type="text"
-                                class="form-control input-id"
-                                value="${data.id}"
-                                readonly
-                            />
-                        </div>
-                        <div class="input-custom-1">
-                            <label for="itemName" class="form-label">Item Name</label>
-                            <input
-                                type="text"
-                                class="form-control input-item-name"
-                                value="${data.itemName}"
-                                readonly
-                            />
-                        </div>
-                    </div>
-                `;
-
-                    // Append the new item to the items list
-                    document.getElementById("itemsList").appendChild(itemElement);
-
-                    // Optionally, clear the form
-                    document.getElementById("addItemForm").reset();
-                } else {
-                    alert("Error adding item: " + data.error);
-                }
-            })
-            .catch(error => console.error('Error:', error));
-    });
-
-
-</script>
 </body>
 </html>
 

@@ -188,7 +188,7 @@
                       type="date" 
                       class="form-control input-date" 
                       id="dateAdded" 
-                      style="font-family: Poppins, sans-serif; font-size: 12px; font-weight: 400; color: #717171"
+                      style="font-family: Poppins, sans-serif; font-size: 14px; font-weight: 400; color: #717171"
                       disabled
                       />
                     </div>
@@ -207,10 +207,10 @@
                           rows="2" 
                           maxlength="120" 
                           oninput="updateCharacterCount()"
-                          style="font-family: Poppins, sans-serif; font-size: 12px; font-weight: 400;"
+                          style="font-family: Poppins, sans-serif; font-size: 14px; font-weight: 400;"
                           placeholder="The purpose of the item request here..."
                           disabled></textarea>
-                        <span id="charCount" class="char-counter">0/120</span>
+
                       </div> 
                     </div>               
                   </div>

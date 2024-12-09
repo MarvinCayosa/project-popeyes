@@ -11,8 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     date_default_timezone_set('Asia/Singapore');
     $dateAdded = $_POST['dateAdded'] ?? date('Y-m-d');
     $consumability = $_POST['consumability'];
-    $item_description = $_POST['itemDescription'];
-
+    $item_description = $_POST['itemDescription'] ?? null;
 
     // Prepare and bind statement to prevent SQL injection
     $stmt = $conn->prepare("INSERT INTO items (item_name, total_quantity, available_quantity, date_added, consumability, item_description) VALUES (?, ?, ?, ?, ?, ?)");

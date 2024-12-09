@@ -2,6 +2,7 @@
 $current_page = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 ?>
 
+<?php include 'fetch_profile.php'; ?>
 
 <div
     class="sidebar_custom sidebar d-flex flex-column flex-shrink-0 p-3 fixed-top"
@@ -15,20 +16,22 @@ $current_page = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
         data-bs-toggle="dropdown"
         aria-expanded="false"
     >
-        <span class="icon_name">Marvin Cayosa</span>
-        <span class="icon_name identifier">Administrator</span>
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="avatar bi bi-person-circle"
-            fill="currentColor"
-            viewBox="0 0 16 16"
-        >
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-            <path
-                fill-rule="evenodd"
-                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
-            />
-        </svg>
+        <span class="icon_name"><?php echo htmlspecialchars($user_name)?></span>
+        <span class="icon_name identifier"><?php echo htmlspecialchars($capitalized_role)?></span>
+        <div class="avatar-container">
+            <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="avatar bi bi-person-circle"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+            >
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                <path
+                        fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
+                />
+            </svg>
+        </div>
     </a>
     <ul class="user_dropdown dropdown-menu">
         <li><a class="dropdown-item" href="../php/view_profile.php">View Profile</a></li>
@@ -54,7 +57,8 @@ $current_page = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
             </a>
             <span
                 class="position-absolute translate-middle badge rounded-pill bg-danger"
-            >10</span>
+                id="inbox_num"
+            ></span>
             <span class="icon_name">Inbox</span>
         </li>
         <li class="nav-item nav-link d-flex justify-content-center icon-container <?= $current_page == 'records.php' ? 'active' : '' ?>">

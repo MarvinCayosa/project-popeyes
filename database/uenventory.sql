@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 26, 2024 at 08:03 AM
+-- Generation Time: Nov 26, 2024 at 11:05 PM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,33 @@ SET time_zone = "+00:00";
 --
 -- Database: `uenventory`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `accounts`
+--
+
+CREATE TABLE `accounts` (
+  `id` bigint(20) NOT NULL,
+  `account_id` bigint(20) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `picture` varchar(255) DEFAULT NULL,
+  `role` enum('admin','student','faculty') NOT NULL DEFAULT 'student'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `accounts`
+--
+
+INSERT INTO `accounts` (`id`, `account_id`, `name`, `email`, `password`, `picture`, `role`) VALUES
+(1, 78945612356, 'rizza', 'rizza@ue.edu.ph', 'yummy@awaw02', '../assets/profile_images/w2.jpg', 'student'),
+(3, 78945612374, 'rizza', 'clarizzareyes@ue.edu.ph', 'yummy@awaw09', '../assets/profile_images/w6.jpg', 'student'),
+(4, 78945612385, 'name', 'name@ue.edu.ph', 'name@011', '../assets/profile_images/w5.jpg', 'student'),
+(5, 78945612321, 'ghj', 'name2@ue.edu.ph', 'name2@09', '../assets/profile_images/w3.jpg', 'student'),
+(7, 32165498798, 'eyyy', 'ey@ue.edu.ph', 'name@ue.edu.ph1', '../assets/profile_images/image_2.jpg', 'student');
 
 -- --------------------------------------------------------
 
@@ -40,6 +67,32 @@ CREATE TABLE `faculty` (
 
 INSERT INTO `faculty` (`id`, `name`, `email`, `password`) VALUES
 (2147483647, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `inbox`
+--
+
+CREATE TABLE `inbox` (
+  `student_id` bigint(11) NOT NULL,
+  `student_name` varchar(64) NOT NULL,
+  `student_status` mediumtext NOT NULL,
+  `request_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `inbox`
+--
+
+INSERT INTO `inbox` (`student_id`, `student_name`, `student_status`, `request_date`) VALUES
+(20190126556, 'Clarizza M. Reyes', 'Approved', '2002-05-30'),
+(20202020201, 'Errol John Antonio', 'Approved', '2022-12-11'),
+(20202020202, 'Errol John Antonio', 'Rejected', '2022-12-11'),
+(20202020203, 'Errol John Antonio', 'Pending', '2022-12-11'),
+(20220125555, 'Sean Vincent Vien Viñas', 'Rejected', '2022-12-11'),
+(20220126555, 'Sean Vincent Vien Viñas', 'Approved', '2022-12-11'),
+(20220126556, 'Sean Vincent Vien Viñas', 'Pending', '2022-12-11');
 
 -- --------------------------------------------------------
 
@@ -97,10 +150,24 @@ INSERT INTO `students` (`id`, `name`, `email`, `password`) VALUES
 --
 
 --
+-- Indexes for table `accounts`
+--
+ALTER TABLE `accounts`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `account_id` (`account_id`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
 -- Indexes for table `faculty`
 --
 ALTER TABLE `faculty`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `inbox`
+--
+ALTER TABLE `inbox`
+  ADD PRIMARY KEY (`student_id`);
 
 --
 -- Indexes for table `items`
@@ -117,6 +184,12 @@ ALTER TABLE `students`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `accounts`
+--
+ALTER TABLE `accounts`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `items`

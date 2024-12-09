@@ -42,7 +42,7 @@ function validatePassword() {
 
     // Check if passwords do not match
     if (password !== confirmPassword) {
-        alert("Passwords do not match. Please try again.");
+        alert("Those passwords didn’t match. Try again.");
         return;
     }
 
@@ -56,12 +56,32 @@ function validatePassword() {
     nextStep(4);
 }
 
+function validateName1() {
+    const name = document.getElementById("fullName").value.trim(); // Get and trim the input value
+    
+    if (name === "") {
+        // alert("Please enter your name."); // Show alert if input is empty
+        return false;
+    }
+
+    nextStep(2); // Proceed to the next step if the name is entered
+    return true;
+}
+
+
 function validateStep2() {
     const email = document.getElementById("email").value;
     const studentNumber = document.getElementById("studentNumber").value;
     
     // Check if the email matches the UE email pattern
     const emailPattern = /^[a-z0-9._%+-]+@ue\.edu\.ph$/i; // Case-insensitive regex
+    
+    if (email === "") {
+        // alert("Please enter your name."); // Show alert if input is empty
+        return false;
+    }
+
+    
     if (!emailPattern.test(email)) {
         // alert("Please enter a valid UE email ending with @ue.edu.ph.");
         return false;
@@ -96,13 +116,7 @@ function submitForm(event) {
     event.preventDefault();
 
     // Show the success message
-    alert("Account created successfully!");
-
-    // Optionally, you can reset the form after the success message
-    document.getElementById("signupForm").reset();
-
-    // Redirect to the sign-in page after the account is created
-    window.location.href = "index.php"; // Replace "index.php" with the URL of your sign-in page
+    document.getElementById("signupForm").submit();
 }
 
 function togglePasswordVisibility(inputId) {

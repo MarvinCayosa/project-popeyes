@@ -246,7 +246,7 @@ body{
 }
 
 .modal-student-name {
-  font-size: 16px; /* Adjust font size */
+  font-size: 20px; /* Adjust font size */
   display: flex;
   align-items: center; /* Align name with image vertically */
   font-weight: bold; /* Optional: Make the text bold */
@@ -259,6 +259,7 @@ body{
   font-size: 14px;
   font-weight: normal; /* Optional: Make the text bold */
   margin: 0;
+  color: #8a8a8a; /* Optional: Adjust the text color */
 }
 
 .vertical-line {
@@ -282,6 +283,8 @@ body{
 .modal-student-date,
 .modal-student-time {
   font-size: 14px;
+  font-weight: 400;
+  color: #8a8a8a;
 }
 
 .modal-student-time {
@@ -315,7 +318,7 @@ body{
   border-style: solid;
   border-color: #c6c6c63d;
   border-radius: 20px;
-  margin-left: 8.5%;
+  margin-left: 70px;
   padding: 15px;
   overflow-y: auto;
   position: relative;
@@ -332,7 +335,6 @@ body{
   background-color: #fff;
   border-radius: 10px;
   padding: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for separation */
 }
 
 .item-label,
@@ -396,7 +398,7 @@ body{
 }
 
 .modal-body {
-  margin-left: 20px;
+  margin-left: 30px;
   padding: 10px;
 }
 
@@ -439,7 +441,7 @@ input::placeholder {
 
 .form-control {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc7e;
   border-radius: 5px;
   font-size: 16px;
 }
@@ -556,7 +558,7 @@ select.form-control {
 .custom-dropdown {
   position: relative;
   width: 150px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc7e;
   border-radius: 7px;
   cursor: pointer;
 }
@@ -911,6 +913,72 @@ select.form-control {
   }
   .dropdown-item{
     color: #ffffff;
+  }
+  
+  .modal-content {
+    background-color: #232935;
+    color: #f6f6f6;
+  }
+
+  .form-select{
+    background-color: transparent !important;
+  }
+
+  .modal-item-container {
+    background-color: #1a1e279f;
+    border-color: #202633;
+    color: #f6f6f6;
+  }
+  .modal-item-label {
+    background-color: #232935;
+    color: #f6f6f6;
+  }
+
+  .item-label{
+    color: #f6f6f6;
+  }
+  .quantity-label{
+    color: #f6f6f6;
+  }
+  .select-label{
+    color: #f6f6f6;
+  }
+
+  .modal-item-section {
+    background-color: #232935;
+    border-color: #202633;
+    color: #f6f6f6;
+  }
+
+  .vertical-line{
+    border-color: #ffffff;
+  }
+
+  .modal-student-date,
+  .modal-student-time {
+
+    color: #bebebe;
+  } 
+  .modal-student-email, .modal-student-num {
+
+    color: #bebebe; /* Optional: Adjust the text color */
+  }
+
+  .form-control:disabled{
+    background-color: #1a1a1a1f !important;
+  }
+
+  .form-control::placeholder{
+    color: #bebebe;
+  }
+
+  .dropdown-options{
+    background-color: #232935;
+    color: #f6f6f6;
+    border: none;
+  }
+  .dropdown-option-click:hover{
+    background-color: #2b313d;
   }
   
 }
