@@ -220,7 +220,7 @@
 .add-btn {
   position: absolute;
   bottom: 0;
-  right: 230px;
+  right: 0;
   margin: 20px;
   z-index: 1000;
   display: flex;
@@ -240,11 +240,8 @@
 }
 
 .add-icon {
-  margin-left: 5px;
   width: 80%; /* Makes the SVG responsive */
   height: 80%; /* Adjusts based on container size */
-  max-width: 90px;
-  max-height: 90px;
   transition: none; /* Remove transition on icon */
 }
 
@@ -273,15 +270,11 @@
 }
 
 .add-btn-svg {
-  margin-left: 5px;
+  margin-left: 15px;
   display: block; /* Ensure no inline spacing */
 } 
 
 
-.add-btn svg {
-  margin-left: -5px;
-  display: block; /* Ensure no inline spacing */
-}
 
 .filter-svg {
   flex-shrink: 0; /* Prevent SVG from resizing */

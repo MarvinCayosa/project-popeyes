@@ -182,8 +182,8 @@
                     data-bs-toggle="modal"
                     data-bs-target="#addModal"
                     aria-label="Add Item"
-
                 >
+
                 <svg 
                     class="add-icon"
                     width="70" 
